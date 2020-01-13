@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ParlaFarmaMVCCore
 {
-    public class Program
+    public class Program 
     {
         public static void Main(string[] args)
         {
