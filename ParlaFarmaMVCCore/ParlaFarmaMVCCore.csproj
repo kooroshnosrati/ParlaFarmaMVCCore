@@ -16,4 +16,22 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Areas\AZ\Controllers\" />
+    <Folder Include="Areas\AZ\Data\" />
+    <Folder Include="Areas\AZ\Models\" />
+    <Folder Include="Areas\AZ\Views\" />
+    <Folder Include="Areas\CPanel\Controllers\" />
+    <Folder Include="Areas\CPanel\Data\" />
+    <Folder Include="Areas\CPanel\Models\" />
+    <Folder Include="Areas\CPanel\Views\" />
+    <Folder Include="Areas\EN\Data\" />
+    <Folder Include="Areas\EN\Models\" />
+    <Folder Include="Areas\RU\Controllers\" />
+    <Folder Include="Areas\RU\Data\" />
+    <Folder Include="Areas\RU\Models\" />
+    <Folder Include="Areas\RU\Views\" />
+  </ItemGroup>
+
 </Project>
