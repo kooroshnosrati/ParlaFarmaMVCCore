@@ -72,7 +72,7 @@ namespace ParlaFarmaMVCCore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Test}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 //endpoints.MapAreaControllerRoute(
                 //     name: "areas", "areas",
                 //     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
