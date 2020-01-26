@@ -5792,10 +5792,12 @@ pattern0 {
 	padding: 40px;
 }
 
+.toppadding_0 {
+	padding-top: 10px;
+}
 .toppadding_10 {
 	padding-top: 10px;
 }
-
 .toppadding_20 {
 	padding-top: 20px;
 }
