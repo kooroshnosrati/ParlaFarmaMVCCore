@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    @*<meta name="viewport" content="width=device-width" />*@
+    @*<title>@ViewBag.Title</title>*@
+
+    <title>Pharma</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="~/lib/pharma/css/bootstrap.min.css" tppabs="http://webdesign-finder.com/html/pharma/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/animations.css" tppabs="http://webdesign-finder.com/html/pharma/css/animations.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/fonts.css" tppabs="http://webdesign-finder.com/html/pharma/css/fonts.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/main.css" tppabs="http://webdesign-finder.com/html/pharma/css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="~/lib/pharma/css/shop.css" tppabs="http://webdesign-finder.com/html/pharma/css/shop.css">
+    <link href="~/lib/pharma/css/flags.css" rel="stylesheet" />
+    <script src="~/lib/pharma/js/vendor/modernizr-2.6.2.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="~/lib/pharma/js/vendor/html5shiv.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/html5shiv.min.js"></script>
+        <script src="~/lib/pharma/js/vendor/respond.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/respond.min.js"></script>
+        <script src="~/lib/pharma/js/vendor/jquery-1.12.4.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="javascript:if(confirm(%27http://browsehappy.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://browsehappy.com/%27" tppabs="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+                <i class="rt-icon2-cross2"></i>
+            </span>
+        </button>
+        <div class="widget widget_search">
+            <form method="get" class="searchform search-form form-inline" action="http://webdesign-finder.com/html/pharma/">
+                <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button">Search</button>
+            </form>
+        </div>
+    </div>
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls with_padding">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+            <ul class="list-unstyled">
+                <li>Message To User</li>
+            </ul>
+            -->
+        </div>
+    </div>
+    <!-- eof .modal -->
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+            <!-- template sections -->
+            <section class="page_topline cs main_color2 table_section table_section_sm section_padding_top_5 section_padding_bottom_5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 text-center text-sm-left">
+                            <div> <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i> Opening Hours: Mon - Sat 9:00 – 18:00 </div>
+                        </div>
+                        <div class="col-sm-5 text-center text-sm-right greylinks">
+                            <div class="col-sm-8">
+                                <span class="rightpadding_10">Follow Us:</span>
+                                <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
+                                <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
+                                <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>
+                                <a class="social-icon color-icon soc-linkedin" href="#" title="Twitter"></a>
+                                <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
+                            </div>
+                            <div class="col-sm-4">
+                                @*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@
+                                <span class="rightpadding_10">Lang:</span>
+                                <a href="#" class="flag flag-en" style="border-width:1px;border-color:white;" alt="English" title="English"></a>
+                                <a href="#" class="flag flag-ru" alt="Russian" title="Russian"></a>
+                                <a href="#" class="flag flag-az" alt="Azerbaijani" title="Azerbaijani"></a>
+                            </div>
+                        </div>
+                        @*<div class="col-sm-2 text-center text-sm-right greylinks">
+                            </div>*@
+                    </div>
+            </section>
+            <header class="page_header header_darkgrey header_transparent toggler_right section_padding_25">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 display_table">
+                            <div class="header_left_logo display_table_cell">
+                                <a href="index.htm" tppabs="http://webdesign-finder.com/html/pharma/" class="logo top_logo">
+                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="http://webdesign-finder.com/html/pharma/images/logo-light.png" alt="" style="height:100px !important;">
+                                </a>
+                            </div>
+                            <div class="header_mainmenu display_table_cell text-right">
+                                @*<div class="header_mainmenu display_table_cell">*@
+                                <!-- main nav start -->
+                                <nav class="mainmenu_wrapper">
+                                    <ul class="mainmenu nav sf-menu">
+                                        <li class="active">
+                                            <a href="~/" tppabs="http://webdesign-finder.com/html/pharma/index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Portfolio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Scientific developments</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Press center</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Partners</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Career</a>
+                                        </li>
+                                        <li>
+                                            <a href="ContactUs">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- eof main nav -->
+                                <!-- header toggler --><span class="toggle_menu"><span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+
+
+
+            @RenderBody()
+
+
+
+
+
+
+            <footer class="page_footer ds ms section_padding_25">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="widget_text">
+                                <a href="~/" class="logo vertical_logo bottommargin_20">
+                                    <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="http://webdesign-finder.com/html/pharma/images/logo-light.png" alt="" class="toppadding_0" style="height:120px !important;">
+                                </a>
+                                <p>Improving health care access and quality of life</p>
+                                <p>Creating added value for  our customers, staff, business partner and  shareholders</p>
+                                @*<p>Follow Us:</p>
+                                    <p class="darklinks">
+                                        <a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+                                        <a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-google" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-linkedin" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-youtube" href="#" title="Youtube"></a>
+                                    </p>*@
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_30">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Why Us?</h3>
+                                <p>Consetetur sadipscing elitr, sed dinonumy eirmod tempor ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren.</p>
+                                <p class="topmargin_40"> <a href="#" class="theme_button">Buy Now!</a> </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_30">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <p> 16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor </p>
+                                <ul class="list1 no-bullets">
+                                    <li> <i class="rt-icon2-device-phone highlight2"></i> +99412 310 52 19 </li>
+                                    <li> <i class="rt-icon2-globe-outline highlight2"></i> <a href="~/" tppabs="http://ParlaPharma.Com">www.ParlaPharma.com</a> </li>
+                                    <li> <i class="rt-icon2-mail2 highlight2"></i> <a href="mailto:info@parlapharma.com">info@parlapharma.com</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_30">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Stay Tunned</h3>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-facebook"></a> </div>
+                                    <div class="media-body media-middle"> Facebook </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-twitter"></a> </div>
+                                    <div class="media-body media-middle"> Twitter </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-linkedin"></a> </div>
+                                    <div class="media-body media-middle"> LinkedIn </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a> </div>
+                                    <div class="media-body media-middle"> Pinterest </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            @*<footer class="page_footer ds color section_padding_top_100 section_padding_bottom_65 table_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="widget widget_text">
+                                    <a href="index.htm" tppabs="http://webdesign-finder.com/html/pharma/" class="logo vertical_logo bottommargin_20">
+                                        <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="http://webdesign-finder.com/html/pharma/images/logo-light.png" alt="" class="toppadding_10" style="height:120px !important;">
+                                    </a>
+                                    <p>Improving health care access and quality of life</p>
+                                    <p>Creating added value for  our customers, staff, business partner and  shareholders</p>
+                                    <p>Follow Us:</p>
+                                    <p class="darklinks">
+                                        <a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+                                        <a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-google" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-linkedin" href="#" title="Twitter"></a>
+                                        <a class="social-icon soc-youtube" href="#" title="Youtube"></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="widget widget_text topmargin_25">
+                                    <h4 class="widget-title">Contact Us</h4>
+                                    <div class="media">
+                                        <div class="media-left rightpadding_10"> <i class="fa fa-map-marker highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body"> 16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left rightpadding_10"> <i class="fa fa-phone highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body">+99412 310 52 19</div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left rightpadding_10"> <i class="fa fa-pencil highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body highlight2links"> <a href="mailto:info@parlapharma.com">mailto:info@parlapharma.com</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>*@
+            <section class="ds color darker page_copyright section_padding_15">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <p class="fontsize_12">&copy; Copyright 2020. All Rights Reserved.</p> @* ParlaPharma Co. &commat;*@
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+    <script src="~/lib/pharma/js/compressed.js" tppabs="http://webdesign-finder.com/html/pharma/js/compressed.js"></script>
+    <script src="~/lib/pharma/js/main.js" tppabs="http://webdesign-finder.com/html/pharma/js/main.js"></script>
+    <script src="~/lib/pharma/js/switcher.js" tppabs="http://webdesign-finder.com/html/pharma/js/switcher.js"></script>
+
+</body>
+</html>
