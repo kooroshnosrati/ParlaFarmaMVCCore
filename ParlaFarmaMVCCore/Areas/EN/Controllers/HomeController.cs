@@ -19,7 +19,26 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
 
             return View();
         }
-
+        public IActionResult Products()
+        {
+            return View();
+        }
+        public IActionResult ScientificDevelopments()
+        {
+            return View();
+        }
+        public IActionResult PressCenter()
+        {
+            return View();
+        }
+        public IActionResult Partners()
+        {
+            return View();
+        }
+        public IActionResult Career()
+        {
+            return View();
+        }
         public IActionResult ContactUs()
         {
             return View();
