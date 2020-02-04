@@ -10284,21 +10284,25 @@ section .intro_section .slide_description_wrapper {
 	}
 
 	.header_color ul a {
-		color: #ffffff;
+		color: black; /*#ffffff;*/
 	}
 
 	.header_color ul li.active > a {
-		color: #11333a;
+		/*color: #11333a;*/
+		color: #ec5c42;
 	}
 
 	.header_color ul li.active > a,
-  .header_color .sf-menu a:hover {
-		color: #11333a;
+	.header_color .sf-menu a:hover {
+		/*color: #11333a;*/
+		color: #ec5c42;
 	}
 
 	.header_color .sf-menu li > ul,
-  .header_color .sf-menu > li .mega-menu {
-		background-color: #ec5c42;
+	.header_color .sf-menu > li .mega-menu {
+		/*background-color:transparent;*/
+		background-color: rgba(255,255,255,0.7);/*#ec5c42;*/
+		color:black;
 	}
 
 	.sf-menu li:hover,
