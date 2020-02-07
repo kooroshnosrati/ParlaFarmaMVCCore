@@ -10158,7 +10158,7 @@ section .intro_section .slide_description_wrapper {
 ** Main Menu styles
 */
 .sf-menu a {
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 }
 
@@ -15165,3 +15165,82 @@ a.color-icon.border-icon:hover {
 .checkbox-slider--b-flat input + span:before {
 	box-shadow: none;
 }
+
+/* Added By Kourosh Nosrati */
+	.ds .Application-form.transparent-background .form-control {
+	border-color: rgba(152, 152, 152, 0.2);
+}
+
+	.Application-form-wrapper.background_cover {
+	background-image: url(../img/parallax/map-texture.png);
+}
+
+	.Application-form {
+	position: relative;
+	z-index: 3;
+}
+
+.Application-form.ls {
+	background-color: #fafafa;
+}
+
+.Application-form.ls.ms {
+	background-color: #efefef;
+}
+
+		.Application-form label[for] {
+			/* display: none; */
+		}
+
+.Application-form-message textarea {
+	min-height: 170px;
+}
+
+.Application-form.parallax {
+	padding: 50px 50px 35px;
+	background-image: url(../img/parallax/map.jpg);
+}
+
+.Application-form-respond {
+	display: block;
+	font-weight: 800;
+}
+
+	.Application-form-respond:before {
+		font-family: 'rt-icons-2';
+		content: "\e71a";
+		padding-right: 10px;
+	}
+
+.Application-form p {
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.Application-form-submit .theme_button {
+	margin-right: 6px;
+}
+
+.Application-form.transparent-background .form-control {
+	background-color: transparent;
+}
+
+.contact-email {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+	.contact-email {
+		font-size: 20px;
+		margin-bottom: 6px;
+	}
+
+	.Application-form.parallax {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 40px;
+	}
+}
+
+

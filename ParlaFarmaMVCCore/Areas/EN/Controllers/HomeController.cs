@@ -23,10 +23,6 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             return View();
         }
-        public IActionResult ScientificDevelopments()
-        {
-            return View();
-        }
         public IActionResult PressCenter()
         {
             return View();
@@ -43,6 +39,19 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             return View();
         }
+        public IActionResult Applicationform()
+        {
+            return View();
+        }
+        public IActionResult ExportDevelopment()
+        {
+            return View();
+        }
+        public IActionResult Distributors()
+        {
+            return View();
+        }
+        
 
     }
 }

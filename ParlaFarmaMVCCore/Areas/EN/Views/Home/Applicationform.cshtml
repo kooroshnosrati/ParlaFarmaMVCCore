@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewData["Title"] = "Applicationform";
+    Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
+}
+
+<section class="page_breadcrumbs ds color parallax section_padding_top_75 section_padding_bottom_75">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Job Application</h2>
+                @*<ol class="breadcrumb highlightlinks">
+                        <li>
+                            <a href="index.htm" tppabs="http://webdesign-finder.com/html/pharma/">
+                                Home
+                            </a>
+                        </li>
+                        <li> <a href="#">Pages</a> </li>
+                        <li class="active">About</li>
+                    </ol>*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ls columns_padding_25 section_padding_top_50 section_padding_bottom_100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="module-header">Job Application</h3>
+                <p>Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 to_animate" data-animation="scaleAppear"></div>
+            <div class="col-md-8 to_animate" data-animation="scaleAppear">
+                <form class="Application-form columns_padding_10 bottommargin_40" method="post" action="">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group bottommargin_0">
+                                <label for="FName"><b>Name </b><span class="required">*</span></label>
+                                @*<i class="fa fa-user highlight2"></i>*@
+                                <input type="text" aria-required="true" size="30" value="" name="FName" id="FName" class="form-control" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group bottommargin_0">
+                                <label for="LName"><span class="required">&nbsp;</span></label>
+                                @*<i class="fa fa-phone highlight2" aria-hidden="true"></i>*@
+                                <input type="text" aria-required="true" size="30" value="" name="LName" id="LName" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group bottommargin_0">
+                                <label for="Email"><b>Email address</b><span class="required">*</span></label>
+                                @*<i class="fa fa-envelope highlight2" aria-hidden="true"></i>*@
+                                <input type="Email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="Email Address">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group bottommargin_0">
+                                <label for="Phone"><b>Phone </b><span class="required">*</span></label>
+                                @*<i class="fa fa-phone highlight2" aria-hidden="true"></i>*@
+                                <input type="tel" aria-required="true" size="30" value="" name="Phone" id="Phone" class="form-control" placeholder="### ### ####">
+                            </div>
+                        </div>
+                        @*<div class="col-sm-4">
+                            <div class="form-group bottommargin_0">
+                                <label for="Phone"><span class="required">&nbsp;</span></label>
+                                <i class="fa fa-phone highlight2" aria-hidden="true"></i>
+                                <input type="tel" aria-required="true" size="30" value="" name="Phone" id="Phone" class="form-control" placeholder="###">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group bottommargin_0">
+                                <label for="Phone"><span class="required">&nbsp;</span></label>
+                                <i class="fa fa-phone highlight2" aria-hidden="true"></i>
+                                <input type="tel" aria-required="true" size="30" value="" name="Phone" id="Phone" class="form-control" placeholder="####">
+                            </div>
+                        </div>*@
+
+                        <div class="col-sm-12">
+                            <div class="form-group bottommargin_0">
+                                <label for="JobPosition"><b>What position are you applying for?</b> <span class="required">*</span></label>
+                                <br />
+                                @*<i class="fa fa-flag highlight2" aria-hidden="true"></i>*@
+                                <select id="JobPosition" name="JobPosition">
+                                    <option value="Job 1" data-index="0">Job 1</option>
+                                    <option value="Job 2" data-index="1">Job 2</option>
+                                    <option value="Job 3" data-index="2">Job 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="Application-form-message form-group bottommargin_0">
+                                <label for="StartDate"><b>Available start date </b> <span class="required">*</span></label>
+                                @*<i class="fa fa-comment highlight2" aria-hidden="true"></i>*@
+                                <input type="date" aria-required="true" size="30" value="" name="StartDate" id="StartDate" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="Application-form-message form-group bottommargin_0">
+                                <label for="EmploymentStatus"><b>What is your current employment status?</b> <span class="required">*</span>
+                                </label>
+                                @*<i class="fa fa-comment highlight2" aria-hidden="true"></i>*@
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" aria-required="true" value="" name="EmployeeStatus" id="EmployeeStatus">Employed
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" aria-required="true" value="" name="EmployeeStatus" id="EmployeeStatus">Self-Employed
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" aria-required="true" value="" name="EmployeeStatus" id="EmployeeStatus">Unemployed
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="radio" aria-required="true" value="" name="EmployeeStatus" id="EmployeeStatus">Student
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="Application-form-message form-group bottommargin_0">
+                                <label for="ResumeSubmit"><b>How do you prefer to submit your resume?</b> <span class="required">*</span></label>
+                                @*<i class="fa fa-comment highlight2" aria-hidden="true"></i>*@
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="radio" aria-required="true" value="" name="ResumeSubmit" id="EmployeeStatus">Upload File
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="radio" aria-required="true" value="" name="ResumeSubmit" id="EmployeeStatus">Provide URL
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12">
+                            <div class="Application-form-message form-group bottommargin_0">
+                                <label for="UploadResume"><b>Upload your resume</b> <span class="required"></span></label>
+                                @*<i class="fa fa-comment highlight2" aria-hidden="true"></i>*@
+                            </div>
+                            <input id="UploadResume" name="UploadResume" type="file" />
+                        </div>
+                        
+                        <div class="col-sm-12 bottommargin_0">
+                            <div class="Application-form-submit topmargin_10"> <button type="submit" id="Application_form_submit" name="Application_submit" class="theme_button color2 inverse wide_button margin_0">Send message</button> </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2 to_animate" data-animation="scaleAppear"></div>
+        </div>
+    </div>
+</section>
+
+
+
