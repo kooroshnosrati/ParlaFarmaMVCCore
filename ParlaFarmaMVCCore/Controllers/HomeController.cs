@@ -20,8 +20,8 @@ namespace ParlaFarmaMVCCore.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Home", new { area = "EN" });
-            //return View();
+            //return RedirectToAction("Index", "Home", new { area = "EN" });
+            return View();
         }
 
         public IActionResult Privacy()
@@ -34,5 +34,6 @@ namespace ParlaFarmaMVCCore.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

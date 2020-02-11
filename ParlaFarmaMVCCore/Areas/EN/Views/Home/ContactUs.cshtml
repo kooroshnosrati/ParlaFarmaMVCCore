@@ -1,4 +1,5 @@
-﻿
+﻿@model  ParlaFarmaMVCCore.Models.mdl_ContactUsIno
+
 @{
     ViewData["Title"] = "ContactUs";
     Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
@@ -22,25 +23,47 @@
         </div>
         <div class="row">
             <div class="col-md-8 to_animate" data-animation="scaleAppear">
-                <form class="contact-form columns_padding_10 bottommargin_40" method="post" action="http://webdesign-finder.com/html/pharma/">
+                <form asp-action="ContactUs" asp-controller="Home" method="post" class="contact-form columns_padding_10 bottommargin_40">
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="form-group bottommargin_0"> <label for="name">Full Name <span class="required">*</span></label> <i class="fa fa-user highlight2" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">											</div>
+                            <div class="form-group bottommargin_0">
+                                <label for="FullName">Full Name <span asp-validation-for="FullName" class="required">*</span></label>
+                                <i class="fa fa-user highlight2" aria-hidden="true"></i>
+                                <input asp-for="FullName" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Full Name"> @*name="FullName" id="FullName"*@
+                            </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="form-group bottommargin_0"> <label for="phone">Phone Number<span class="required">*</span></label> <i class="fa fa-phone highlight2" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">											</div>
+                            <div class="form-group bottommargin_0">
+                                <label for="PhoneNumber">Phone Number<span asp-validation-for="PhoneNumber" class="required">*</span></label>
+                                <i class="fa fa-phone highlight2" aria-hidden="true"></i>
+                                <input asp-for="PhoneNumber" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Phone Number"> @*name="phone" id="phone"*@
+                            </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="form-group bottommargin_0"> <label for="email">Email address<span class="required">*</span></label> <i class="fa fa-envelope highlight2" aria-hidden="true"></i> <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">											</div>
+                            <div class="form-group bottommargin_0">
+                                <label for="ContactEmail">Email address<span asp-validation-for="ContactEmail" class="required">*</span></label>
+                                <i class="fa fa-envelope highlight2" aria-hidden="true"></i>
+                                <input asp-for="ContactEmail" type="email" aria-required="true" size="30" value="" class="form-control" placeholder="Email Address"> @*name="email" id="email"*@
+                            </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="form-group bottommargin_0"> <label for="subject">Subject<span class="required">*</span></label> <i class="fa fa-flag highlight2" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Subject">											</div>
+                            <div class="form-group bottommargin_0">
+                                <label for="Subject">Subject<span asp-validation-for="Subject" class="required">*</span></label>  
+                                <i class="fa fa-flag highlight2" aria-hidden="true"></i>
+                                <input asp-for="Subject" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Subject"> @*name="subject" id="subject"*@
+                            </div>
                         </div>
                         <div class="col-sm-12">
-                            <div class="contact-form-message form-group bottommargin_0"> <label for="message">Message</label> <i class="fa fa-comment highlight2" aria-hidden="true"></i> <textarea aria-required="true" rows="3" cols="45" name="message" id="message" class="form-control" placeholder="Message"></textarea> </div>
+                            <div class="contact-form-message form-group bottommargin_0">
+                                <label for="MessageBody">Message<span asp-validation-for="MessageBody" class="required">*</span></label>
+                                <i class="fa fa-comment highlight2" aria-hidden="true"></i>
+                                <textarea asp-for="MessageBody" aria-required="true" rows="3" cols="45" class="form-control" placeholder="Message"></textarea>  @*name="message" id="message"*@
+                            </div>
                         </div>
                         <div class="col-sm-12 bottommargin_0">
-                            <div class="contact-form-submit topmargin_10"> <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color2 wide_button margin_0">Send message</button> </div>
+                            <div class="contact-form-submit topmargin_10">
+                                <button type="submit" class="theme_button color2 wide_button margin_0">Send message</button>  @*id="contact_form_submit" name="contact_submit"*@
+                            </div>
                         </div>
                     </div>
                 </form>
