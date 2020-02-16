@@ -1,0 +1,36 @@
+﻿@model ParlaFarmaMVCCore.Models.mdl_ContactUsIno
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form asp-controller="Test" asp-action="Create" method="post">
+        <div class="col-12">
+            <label asp-for="FullName"></label>
+            <input asp-for="FullName" />
+            <span asp-validation-for="FullName"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" />
+            <span asp-validation-for="PhoneNumber"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="ContactEmail"></label>
+            <input asp-for="ContactEmail" />
+            <span asp-validation-for="ContactEmail"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="Subject"></label>
+            <input asp-for="Subject" />
+            <span asp-validation-for="Subject"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="MessageBody"></label>
+            <input asp-for="MessageBody" />
+            <span asp-validation-for="MessageBody"></span>
+        </div>
+        <div class="col-12">
+            <button type="submit" value="salam"/>
+        </div>
+    </form>

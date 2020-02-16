@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -45,11 +46,12 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             return View();
         }
         [HttpPost]
-        public Task<IActionResult> ContactUs(mdl_ContactUsIno MyVar)
+        [ValidateAntiForgeryToken]
+        public IActionResult ContactUs([FromForm]mdl_ContactUsIno mdl_ContactUsIno)
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
                     SmtpClient smtpClient = new SmtpClient("mail.parlapharma.com", 587);
 
@@ -75,7 +77,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             {
                 ;
             }
-            return null;// RedirectTo("ContactUs", "Home");
+            return null;//RedirectToAction("ContactUs", "Home");
         }
         public IActionResult Applicationform()
         {
@@ -89,6 +91,5 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             return View();
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿@model  ParlaFarmaMVCCore.Models.mdl_ContactUsIno
+﻿@using ParlaFarmaMVCCore.Models
+@model mdl_ContactUsIno
 
 @{
     ViewData["Title"] = "ContactUs";
@@ -24,40 +25,41 @@
         <div class="row">
             <div class="col-md-8 to_animate" data-animation="scaleAppear">
                 <form asp-action="ContactUs" asp-controller="Home" method="post" class="contact-form columns_padding_10 bottommargin_40">
+                    @Html.AntiForgeryToken()
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
-                                <label for="FullName">Full Name <span asp-validation-for="FullName" class="required">*</span></label>
+                                @*<label as-for="FullName">Full Name </label>*@@*<span asp-validation-for="FullName" class="required">*</span>*@
                                 <i class="fa fa-user highlight2" aria-hidden="true"></i>
-                                <input asp-for="FullName" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Full Name"> @*name="FullName" id="FullName"*@
+                                <input asp-for="FullName" size="30" placeholder="Full Name" name="FullName" id="FullName"> @*name="FullName" id="FullName" aria-required="true" *@
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
-                                <label for="PhoneNumber">Phone Number<span asp-validation-for="PhoneNumber" class="required">*</span></label>
+                                @*<label asp-for="PhoneNumber">Phone Number</label>*@@*<span asp-validation-for="PhoneNumber" class="required">*</span>*@
                                 <i class="fa fa-phone highlight2" aria-hidden="true"></i>
-                                <input asp-for="PhoneNumber" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Phone Number"> @*name="phone" id="phone"*@
+                                <input asp-for="PhoneNumber" size="30" placeholder="Phone Number" name="PhoneNumber" id="PhoneNumber"> @*name="phone" id="phone" type="text" aria-required="true" *@
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
-                                <label for="ContactEmail">Email address<span asp-validation-for="ContactEmail" class="required">*</span></label>
+                                @*<label asp-for="ContactEmail">Email address</label>*@@*<span asp-validation-for="ContactEmail" class="required">*</span>*@
                                 <i class="fa fa-envelope highlight2" aria-hidden="true"></i>
-                                <input asp-for="ContactEmail" type="email" aria-required="true" size="30" value="" class="form-control" placeholder="Email Address"> @*name="email" id="email"*@
+                                <input asp-for="ContactEmail" size="30" placeholder="Email Address" name="ContactEmail" id="ContactEmail"> @*name="email" id="email"*@
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
-                                <label for="Subject">Subject<span asp-validation-for="Subject" class="required">*</span></label>  
+                                @*<label asp-for="Subject">Subject</label>*@@*<span asp-validation-for="Subject" class="required">*</span>*@
                                 <i class="fa fa-flag highlight2" aria-hidden="true"></i>
-                                <input asp-for="Subject" type="text" aria-required="true" size="30" value="" class="form-control" placeholder="Subject"> @*name="subject" id="subject"*@
+                                <input asp-for="Subject" size="30" placeholder="Subject" name="Subject" id="Subject"> @*name="subject" id="subject"*@
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="contact-form-message form-group bottommargin_0">
-                                <label for="MessageBody">Message<span asp-validation-for="MessageBody" class="required">*</span></label>
+                                @*<label asp-for="MessageBody">Message</label>*@@*<span asp-validation-for="MessageBody" class="required">*</span>*@
                                 <i class="fa fa-comment highlight2" aria-hidden="true"></i>
-                                <textarea asp-for="MessageBody" aria-required="true" rows="3" cols="45" class="form-control" placeholder="Message"></textarea>  @*name="message" id="message"*@
+                                <textarea asp-for="MessageBody" rows="3" cols="45" placeholder="Message" name="MessageBody" id="MessageBody"></textarea>  @*name="message" id="message"*@
                             </div>
                         </div>
                         <div class="col-sm-12 bottommargin_0">
