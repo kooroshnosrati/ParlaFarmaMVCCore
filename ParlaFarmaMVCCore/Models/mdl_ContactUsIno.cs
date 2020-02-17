@@ -14,7 +14,7 @@ namespace ParlaFarmaMVCCore.Models
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
-        public string ContactEmail { get; set; }
+        public string Email { get; set; }
         [Required]
         public string Subject { get; set; }
         [Required]

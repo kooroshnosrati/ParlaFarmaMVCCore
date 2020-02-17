@@ -20,7 +20,7 @@ namespace ParlaFarmaMVCCore.Controllers
 
         public IActionResult Index()
         {
-            //return RedirectToAction("Index", "Home", new { area = "EN" });
+            //return RedirectToAction("Index", "EN/Home");
             return View();
         }
 

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 using ParlaFarmaMVCCore.Models;
+using ParlaFarmaMVCCore.API;
 
 
 namespace ParlaFarmaMVCCore.Areas.EN.Controllers
@@ -51,33 +51,23 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
-                    SmtpClient smtpClient = new SmtpClient("mail.parlapharma.com", 587);
-
-                    smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "qEgqNSOSs4kp");
-                    // smtpClient.UseDefaultCredentials = true; // uncomment if you don't want to use the network credentials
-                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    //smtpClient.EnableSsl = true;
-                    MailMessage mail = new MailMessage();
-
-                    //Setting From , To and CC
-                    mail.From = new MailAddress("info@parlapharma.com", "info@parlapharma.com");
-                    mail.To.Add(new MailAddress("Koorosh.nosrati@live.com"));
-                    mail.CC.Add(new MailAddress("valeh.farid@parlapharma.com"));
-                    //mail.CC.Add(new MailAddress("MyEmailID@gmail.com"));
-                    //string bodyStr = string.Format("Dear Ino User : \n\r Mr./Miss {0} Has Sent you an email through Contact Us Page. His/Her Name : {1} " +
-                    //    "\n\r Phone Number : {2} \n\r Email : {3} \n\r Subject : {4} \n\r Message Body : {5}", modelContactVar.FullName, modelContactVar.FullName, modelContactVar.PhoneNumber, modelContactVar.ContactEmail, modelContactVar.Subject, modelContactVar.MessageBody);
-                    string bodyStr = "";
-                    mail.Body = bodyStr;
-                    smtpClient.Send(mail);
+                    cls_MailManagement cls_MailManagement = new cls_MailManagement();
+                    cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
+                    cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
+                    cls_MailManagement.To.Add(new cls_emailAccount("Info@parlapharma.com", "Info User of Parla Pharma"));
+                    cls_MailManagement.Subject = "Parla Pharma Contact US Page : " + mdl_ContactUsIno.Subject;
+                    cls_MailManagement.Body = string.Format("Dear Ino User : {6} Mr./Miss {0} Has Sent you an email through Contact Us Page. {6} His/Her Name : {1} " +
+                                                "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", mdl_ContactUsIno.FullName, mdl_ContactUsIno.FullName, mdl_ContactUsIno.PhoneNumber, mdl_ContactUsIno.Email, mdl_ContactUsIno.Subject, mdl_ContactUsIno.MessageBody, Environment.NewLine );
+                    cls_MailManagement.SendEmail();
                 }
             }
             catch (Exception)
             {
                 ;
             }
-            return null;//RedirectToAction("ContactUs", "Home");
+            return RedirectToAction("ContactUs", "EN/Home");
         }
         public IActionResult Applicationform()
         {

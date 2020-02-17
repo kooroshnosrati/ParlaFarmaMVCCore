@@ -34,7 +34,6 @@
     <Folder Include="Areas\CPanel\Controllers\" />
     <Folder Include="Areas\CPanel\Data\" />
     <Folder Include="Areas\CPanel\Models\" />
-    <Folder Include="Areas\CPanel\Views\" />
     <Folder Include="Areas\EN\Data\" />
     <Folder Include="Areas\EN\Models\" />
     <Folder Include="Areas\RU\Controllers\" />
