@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ParlaFarmaMVCCore.Models
 {
     public partial class TblSliders
     {
+        [Key]
         public int Id { get; set; }
         public string Image { get; set; }
         public string Title1 { get; set; }

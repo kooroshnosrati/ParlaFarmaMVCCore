@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Hosting;
+using Hosting = Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using ParlaFarmaMVCCore.Data;
@@ -14,14 +14,22 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace ParlaFarmaMVCCore
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly Hosting.IHostingEnvironment _env;
+        string RootDir = "", DataBaseDir = "";
+        public Startup(IConfiguration configuration, Hosting.IHostingEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
+            //var RootDir = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
+            var RootDir = env.ContentRootPath;
+            DataBaseDir = RootDir + "\\DB";
+            AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
         }
 
         public IConfiguration Configuration { get; }
