@@ -14,10 +14,6 @@
     <Compile Remove="Data\ParlaDBContext.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Remove="Views\Shared\_GeneralLayout.cshtml" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <Folder Include="Areas\AZ\Controllers\" />
@@ -26,6 +22,7 @@
     <Folder Include="Areas\AZ\Views\" />
     <Folder Include="Areas\CPanel\Data\" />
     <Folder Include="Areas\CPanel\Models\" />
+    <Folder Include="Areas\CP\Data\" />
     <Folder Include="Areas\EN\Data\" />
     <Folder Include="Areas\EN\Models\" />
     <Folder Include="Areas\RU\Controllers\" />
@@ -47,5 +44,8 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
+
+
+  <ProjectExtensions><VisualStudio><UserProperties libman_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

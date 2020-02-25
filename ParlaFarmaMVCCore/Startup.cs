@@ -77,11 +77,12 @@ namespace ParlaFarmaMVCCore
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
+                    //name: "AreaEN",
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "AreaEN",
                     pattern: "{area=EN}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "AreaAZ",
@@ -89,6 +90,12 @@ namespace ParlaFarmaMVCCore
                 endpoints.MapControllerRoute(
                     name: "AreaRU",
                     pattern: "{area=RU}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "AreaCPanel",
+                    pattern: "{area=CPanel}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "AreaCP",
+                    pattern: "{area=CP}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
 
