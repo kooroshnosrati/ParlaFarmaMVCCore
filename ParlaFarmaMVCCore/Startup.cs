@@ -29,7 +29,7 @@ namespace ParlaFarmaMVCCore
             //var RootDir = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
             var RootDir = env.ContentRootPath;
             DataBaseDir = RootDir + "\\DB";
-            AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
+            //AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
         }
 
         public IConfiguration Configuration { get; }
