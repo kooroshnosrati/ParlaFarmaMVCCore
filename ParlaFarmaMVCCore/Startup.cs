@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using ParlaFarmaMVCCore.Models;
 
 namespace ParlaFarmaMVCCore
 {
@@ -29,7 +30,7 @@ namespace ParlaFarmaMVCCore
             //var RootDir = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
             var RootDir = env.ContentRootPath;
             DataBaseDir = RootDir + "\\DB";
-            AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
+            //AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
         }
 
         public IConfiguration Configuration { get; }
@@ -37,11 +38,9 @@ namespace ParlaFarmaMVCCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<ParlaDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
