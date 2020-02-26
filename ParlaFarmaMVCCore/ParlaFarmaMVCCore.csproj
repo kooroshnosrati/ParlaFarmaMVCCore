@@ -22,7 +22,7 @@
     <Folder Include="Areas\AZ\Views\" />
     <Folder Include="Areas\CPanel\Data\" />
     <Folder Include="Areas\CPanel\Models\" />
-    <Folder Include="Areas\CP\Data\" />
+    <Folder Include="Areas\CPanel\Views\Shared\" />
     <Folder Include="Areas\EN\Data\" />
     <Folder Include="Areas\EN\Models\" />
     <Folder Include="Areas\RU\Controllers\" />

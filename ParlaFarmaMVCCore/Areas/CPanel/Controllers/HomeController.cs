@@ -11,8 +11,12 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
     {
         public IActionResult Index()
         {
-            //return RedirectToAction("Index", "Home", new { Area=""});
             return View();
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        
     }
 }

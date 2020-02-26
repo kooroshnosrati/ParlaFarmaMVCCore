@@ -21,15 +21,15 @@ namespace ParlaFarmaMVCCore
 {
     public class Startup
     {
-        private readonly Hosting.IHostingEnvironment _env;
-        string RootDir = "", DataBaseDir = "";
-        public Startup(IConfiguration configuration, Hosting.IHostingEnvironment env)
+        //private readonly Hosting.IHostingEnvironment _env;
+        //string RootDir = "", DataBaseDir = "";
+        public Startup(IConfiguration configuration) //, Hosting.IHostingEnvironment env
         {
             Configuration = configuration;
-            _env = env;
+            //_env = env;
             //var RootDir = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
-            var RootDir = env.ContentRootPath;
-            DataBaseDir = RootDir + "\\DB";
+            //var RootDir = env.ContentRootPath;
+            //DataBaseDir = RootDir + "\\DB";
             //AppDomain.CurrentDomain.SetData("DataDirectory", DataBaseDir);
         }
 
@@ -77,12 +77,11 @@ namespace ParlaFarmaMVCCore
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
-                    //name: "AreaEN",
                     name: "default",
+                    pattern: "{controller=Default}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "AreaEN",
                     pattern: "{area=EN}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "AreaAZ",
@@ -93,9 +92,6 @@ namespace ParlaFarmaMVCCore
                 endpoints.MapControllerRoute(
                     name: "AreaCPanel",
                     pattern: "{area=CPanel}/{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "AreaCP",
-                    pattern: "{area=CP}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
 
