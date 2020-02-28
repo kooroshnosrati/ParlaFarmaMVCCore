@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ParlaFarmaMVCCore.Data;
 using ParlaFarmaMVCCore.Models;
 
 namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
@@ -14,9 +15,9 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
     [Area("CPanel")]
     public class TblSlidersController : Controller
     {
-        private readonly ParlaDBContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public TblSlidersController(ParlaDBContext context)
+        public TblSlidersController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -24,7 +25,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         // GET: CPanel/TblSliders
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TblSliders.ToListAsync());
+            return View(await _context.Tbl_Sliders.ToListAsync());
         }
 
         // GET: CPanel/TblSliders/Details/5
@@ -35,7 +36,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.TblSliders
+            var tblSliders = await _context.Tbl_Sliders
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (tblSliders == null)
             {
@@ -56,7 +57,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
+        public async Task<IActionResult> Create([Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +76,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.TblSliders.FindAsync(id);
+            var tblSliders = await _context.Tbl_Sliders.FindAsync(id);
             if (tblSliders == null)
             {
                 return NotFound();
@@ -88,7 +89,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
         {
             if (id != tblSliders.Id)
             {
@@ -126,7 +127,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.TblSliders
+            var tblSliders = await _context.Tbl_Sliders
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (tblSliders == null)
             {
@@ -141,15 +142,15 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var tblSliders = await _context.TblSliders.FindAsync(id);
-            _context.TblSliders.Remove(tblSliders);
+            var tblSliders = await _context.Tbl_Sliders.FindAsync(id);
+            _context.Tbl_Sliders.Remove(tblSliders);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool TblSlidersExists(int id)
         {
-            return _context.TblSliders.Any(e => e.Id == id);
+            return _context.Tbl_Sliders.Any(e => e.Id == id);
         }
     }
 }

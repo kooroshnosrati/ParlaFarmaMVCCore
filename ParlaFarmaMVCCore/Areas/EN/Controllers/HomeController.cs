@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using ParlaFarmaMVCCore.Models;
 using ParlaFarmaMVCCore.API;
-
+using ParlaFarmaMVCCore.Data;
+using ParlaFarmaMVCCore.ViewModels;
 
 namespace ParlaFarmaMVCCore.Areas.EN.Controllers
 {
@@ -16,8 +17,19 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
     //[Route("EN/[controller]/[action]")]
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext _context;
+        public HomeController(ApplicationDbContext applicationDbContext)
+        {
+            _context = applicationDbContext;
+        }
         public IActionResult Index()
         {
+            List<TblSliders> LstTblSliders = new List<TblSliders>();
+            foreach (TblSliders item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
+            {
+                LstTblSliders.Add(item);
+            }
+            ViewBag.LstTblSliders = LstTblSliders.ToList();
             return View();
         }
         public IActionResult AboutUs()
@@ -47,7 +59,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ContactUs([FromForm]mdl_ContactUsIno mdl_ContactUsIno)
+        public IActionResult ContactUs([FromForm]vmdl_ContactUsIno vmdl_ContactUsIno)
         {
             try
             {
@@ -57,9 +69,9 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                     cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
                     cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
                     cls_MailManagement.To.Add(new cls_emailAccount("Info@parlapharma.com", "Info User of Parla Pharma"));
-                    cls_MailManagement.Subject = "Parla Pharma Contact US Page : " + mdl_ContactUsIno.Subject;
+                    cls_MailManagement.Subject = "Parla Pharma Contact US Page : " + vmdl_ContactUsIno.Subject;
                     cls_MailManagement.Body = string.Format("Dear Ino User : {6} Mr./Miss {0} Has Sent you an email through Contact Us Page. {6} His/Her Name : {1} " +
-                                                "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", mdl_ContactUsIno.FullName, mdl_ContactUsIno.FullName, mdl_ContactUsIno.PhoneNumber, mdl_ContactUsIno.Email, mdl_ContactUsIno.Subject, mdl_ContactUsIno.MessageBody, Environment.NewLine );
+                                                "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.PhoneNumber, vmdl_ContactUsIno.Email, vmdl_ContactUsIno.Subject, vmdl_ContactUsIno.MessageBody, Environment.NewLine );
                     cls_MailManagement.SendEmail();
                 }
             }

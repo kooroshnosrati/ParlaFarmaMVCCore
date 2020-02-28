@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Lang)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Image)
             </th>
             <th>
@@ -36,6 +39,25 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @{
+                    string LangStr = "";
+                    @if (@item.Lang == 1)
+                    {
+                        LangStr = "EN";
+                    }
+                    else if (@item.Lang == 2)
+                    {
+                        LangStr = "AZ";
+                    }
+                    else if (@item.Lang == 3)
+                    {
+                        LangStr = "RU";
+                    }
+                }
+                @Html.Label(LangStr)
+                @*@Html.DisplayFor(modelItem => item.Lang)*@
+            </td>
             <td>
                 <img src="~/@Html.DisplayFor(modelItem => item.Image)" style="width:100px;" />
             </td>

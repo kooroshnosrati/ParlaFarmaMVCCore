@@ -8,6 +8,7 @@ namespace ParlaFarmaMVCCore.Models
     {
         [Key]
         public int Id { get; set; }
+        public int Lang { get; set; }
         public string Image { get; set; }
         public string Title1 { get; set; }
         public string Title2 { get; set; }

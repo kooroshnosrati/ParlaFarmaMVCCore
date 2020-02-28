@@ -1,37 +1,747 @@
-<section class="page_toplogo table_section table_section_md ls section_padding_top_0 section_padding_bottom_5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 text-center text-md-left">
-                            <a href="index.htm" tppabs="http://webdesign-finder.com/html/pharma/" class="logo top_logo">
-                                <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="http://webdesign-finder.com/html/pharma/images/logo.png" alt="" style="height:100px !important;">
-                            </a>
+                    <div class="gallery-item rounded">
+                        <div class="item-media rounded overflow_hidden">
+                            <img src="~/lib/pharma/images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg" alt="">
+                            <div class="media-links inverse"> <a href="images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
                         </div>
-                        <div class="col-md-9 text-center text-md-right">
-                            <div class="inline-teasers-wrap">
-                                <div class="teaser small-teaser media">
-                                    <div class="media-left media-middle">
-                                        <div class="teaser_icon size_small border_icon highlight2 rounded"> <i class="rt-icon2-pen"></i> </div>
+                    </div>
+                    <div class="gallery-item rounded">
+                        <div class="item-media rounded overflow_hidden">
+                            <img src="~/lib/pharma/images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg" alt="">
+                            <div class="media-links inverse"> <a href="images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="intro_section page_mainslider ds color">
+        <div class="flexslider" data-dots="true" data-nav="false">
+            <ul class="slides">
+                <li>
+                    <img src="images/slide01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer with_corner_border with_padding huge-padding" data-animation="slideExpandUp">
+                                            <h5 class="thin"> Our researchers are focused on </h5>
+                                            <h2 class="highlight"> Developing Innovative<br> New Therapies... </h2>
+                                            <p> Our mission is to build a healthier tomorrow for patients<br> with progressive non-viral liver diseases </p> <a href="pipeline.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
+                                                Discover Now
+                                            </a> <span class="bottom_corners"></span>
+                                        </div>
                                     </div>
-                                    <div class="media-body media-middle">
-                                        <h4>+99412 310 52 19</h4>
-                                        <p class="greylinks fontsize_12"> <a href="mailto:info@parlapharma.com">info@parlapharma.com</a> </p>
-                                    </div>
+                                    <!-- eof .slide_description -->
                                 </div>
-                                <div class="teaser small-teaser media">
-                                    <div class="media-left media-middle">
-                                        <div class="teaser_icon size_small border_icon highlight2 rounded"> 
-                                            <a href="https://goo.gl/maps/G1ujoUUnifjwU4nJ6" target="_blank">
-                                                <i class="rt-icon2-map-pin"></i>
+                                <!-- eof .slide_description_wrapper -->
+                            </div>
+                            <!-- eof .col-* -->
+                        </div>
+                        <!-- eof .row -->
+                    </div>
+                    <!-- eof .container -->
+                </li>
+                <li>
+                    <img src="images/slide02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/slide02.jpg" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer with_corner_border with_padding huge-padding" data-animation="slideExpandUp">
+                                            <h5 class="thin"> We will Help You </h5>
+                                            <h2 class="highlight"> To Live Healthy Life </h2>
+                                            <p> Our mission is to build a healthier tomorrow for patients<br> with progressive non-viral liver diseases </p> <a href="pipeline.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
+                                                Discover Now
+                                            </a> <span class="bottom_corners"></span>
+                                        </div>
+                                    </div>
+                                    <!-- eof .slide_description -->
+                                </div>
+                                <!-- eof .slide_description_wrapper -->
+                            </div>
+                            <!-- eof .col-* -->
+                        </div>
+                        <!-- eof .row -->
+                    </div>
+                    <!-- eof .container -->
+                </li>
+                <li>
+                    <img src="images/slide03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/slide03.jpg" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer with_corner_border with_padding huge-padding" data-animation="slideExpandUp">
+                                            <h5 class="thin"> We are dedicated to the </h5>
+                                            <h2 class="highlight"> Discovery, Development &amp;<br> Commercialization </h2>
+                                            <p> Of innovative therapies intended to significantly improve outcomes in patients<br> suffering from life-threatening diseases. </p> <a href="pipeline.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
+                                                Discover Now
+                                            </a> <span class="bottom_corners"></span>
+                                        </div>
+                                    </div>
+                                    <!-- eof .slide_description -->
+                                </div>
+                                <!-- eof .slide_description_wrapper -->
+                            </div>
+                            <!-- eof .col-* -->
+                        </div>
+                        <!-- eof .row -->
+                    </div>
+                    <!-- eof .container -->
+                </li>
+            </ul>
+        </div>
+        <!-- eof flexslider -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="cs gradient section_padding_top_65 section_padding_bottom_50 columns_margin_bottom_20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+                <div class="teaser text-center">
+                    <h3 class="counter" data-from="0" data-to="25" data-speed="2100">0</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+            <div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+                <div class="teaser text-center">
+                    <h3 class="counter" data-from="0" data-to="893" data-speed="2100">0</h3>
+                    <p>Medicament Invented</p>
+                </div>
+            </div>
+            <div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+                <div class="teaser text-center">
+                    <h3 class="counter" data-from="0" data-to="75" data-speed="2100">0</h3>
+                    <p>Awards Winned</p>
+                </div>
+            </div>
+            <div class="col-md-20 col-sm-6 col-xs-6 col-xxs-12">
+                <div class="teaser text-center">
+                    <h3 class="counter-wrap"> <span class="counter" data-from="0" data-to="673" data-speed="2100"></span> <span class="counter-add">k</span> </h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            <div class="col-md-20 col-sm-6 col-xs-12">
+                <div class="teaser text-center">
+                    <h3 class="counter" data-from="0" data-to="751" data-speed="2100">0</h3>
+                    <p>Pharmacies Partners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pipeline" class="ds color background_cover page_features section_padding_top_150 section_padding_bottom_150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-md-offset-4 col-lg-offset-6">
+                <h2 class="section_header">Development pipeline</h2>
+                <p class="highlight bottommargin_20"><strong>Balanced mix of new substance developments and life cycle management opportunities.</strong></p>
+                <p>
+                    We focus on core competencies and its many years of experience. We thus hold a leading position in many therapeutic fields: for instance in the treatment of hemophilia and multiple sclerosis, in contrast media and oral contraception. We are also
+                    striving for such a leading position in oncology.
+                </p>
+                <div class="row topmargin_40 columns_margin_bottom_20">
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">01</p>
+                            <h5 class="margin_0">Research &amp; Preclinical</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">02</p>
+                            <h5 class="margin_0">Starting Phase</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">03</p>
+                            <h5 class="margin_0">Medium Phase</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">04</p>
+                            <h5 class="margin_0">Finishing Phase</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">05</p>
+                            <h5 class="margin_0">After Drug Approval</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6 col-xxs-12">
+                        <div class="vertical-item teaser clear-media hover_bg_teaser ls with_padding rounded with_shadow min_height_165">
+                            <p class="big highlight2 bottommargin_20 topmargin_5">06</p>
+                            <h5 class="margin_0">Drugs Production</h5>
+                            <div class="media-links clear-media"> <a href="pipeline-single.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline-single.html" class="abs-link"></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="blog" class="ls section_padding_top_150 section_padding_bottom_130">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section_header text-center">Our Recent Blogs</h2>
+                <div class="owl-carousel text-nav" data-nav="true" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group" id="posts-accordion1">
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse1">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>09</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">At vero eos et accusam justo duo</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sam C. Hood
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">87</span>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="media-body media-middle">
-                                        <h5>16E Keykab khanim Safaraliyeva, <br />Time Business Center, 6th floor</h5>
-                                        <p class="greylinks fontsize_12"> Baku , Azerbaijan </p>
+                                    <div id="blog-collapse1" class="panel-collapse collapse in">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse2" class="collapsed">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>07</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Dolores et ea rebum clita kasd</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sandra C. Vasquez
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="blog-collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse3" class="collapsed">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>04</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Gubergren no sea takimata sanctus</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Paul K. Reynolds
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="blog-collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="vertical-item content-absolute content-padding">
+                                <div class="item-media rounded overflow_hidden ds black">
+                                    <img src="~/lib/pharma/images/blog_post1.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/blog_post1.jpg" alt="">
+                                    <div class="date entry-meta-corner main_bg_color"> <span>04</span> <span>10/17</span> </div>
+                                </div>
+                                <div class="item-content ds">
+                                    <h4 class="entry-title highlight hover-color2 bottommargin_0"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Lorem ipsum dolor amet, consetetur sadipscing</a> </h4>
+                                    <div class="content-justify darklinks fontsize_12 regular">
+                                        <a href="#">
+                                            <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Margarita R. Miller
+                                        </a> <a href="#">
+                                            <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group" id="posts-accordion2">
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion2" href="#blog-collapse4">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>09</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">At vero eos et accusam justo duo</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sam C. Hood
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">87</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="blog-collapse4" class="panel-collapse collapse in">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion2" href="#blog-collapse5" class="collapsed">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>07</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Dolores et ea rebum clita kasd</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sandra C. Vasquez
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="blog-collapse5" class="panel-collapse collapse">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-blog-post">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#posts-accordion2" href="#blog-collapse6" class="collapsed">
+                                        </a>
+                                        <div class="date entry-meta-corner"> <span>04</span> <span>10/17</span> </div>
+                                        <h4 class="hover-color2"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Gubergren no sea takimata sanctus</a> </h4>
+                                        <div class="content-justify greylinks fontsize_12">
+                                            <a href="#">
+                                                <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Paul K. Reynolds
+                                            </a> <a href="#">
+                                                <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="blog-collapse6" class="panel-collapse collapse">
+                                        <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="vertical-item content-absolute content-padding">
+                                <div class="item-media rounded overflow_hidden ds black">
+                                    <img src="~/lib/pharma/images/blog_post1.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/blog_post1.jpg" alt="">
+                                    <div class="date entry-meta-corner main_bg_color"> <span>04</span> <span>10/17</span> </div>
+                                </div>
+                                <div class="item-content ds">
+                                    <h4 class="entry-title highlight hover-color2 bottommargin_0"> <a href="blog-single-right.html" tppabs="http://webdesign-finder.com/html/pharma/blog-single-right.html">Lorem ipsum dolor amet, consetetur sadipscing</a> </h4>
+                                    <div class="content-justify darklinks fontsize_12 regular">
+                                        <a href="#">
+                                            <i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Margarita R. Miller
+                                        </a> <a href="#">
+                                            <i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="testimonials" class="ds color parallax page_testimonials section_padding_top_150 section_padding_bottom_150">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section_header text-center"> Client Testimonials </h2>
+                <div class="owl-carousel" data-responsive-lg="3" data-nav="false" data-dots="true">
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/01.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Heidi J. Cobb</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="ls with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/02.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Felicia L. Brooks</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/03.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Frank C. McGee</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/01.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Heidi J. Cobb</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="ls with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/02.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Felicia L. Brooks</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/03.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Frank C. McGee</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/01.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Heidi J. Cobb</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="ls with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/02.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Felicia L. Brooks</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/faces/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/faces/03.jpg" alt=""> Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Frank C. McGee</a></h5>
+                            <p class="highlight2">Customer</p>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="cs gradient section_padding_top_50 section_padding_bottom_50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="owl-carousel partners-carousel" data-responsive-lg="9" data-responsive-md="6" data-responsive-sm="4" data-responsive-xs="2" data-nav="false" data-dots="false" data-center="true" data-loop="true">
+                    <a href="#">
+                        <img src="~/lib/pharma/images/partners/01.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/01.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/02.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/02.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/03.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/03.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/04.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/04.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/05.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/05.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/06.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/06.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/07.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/07.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/08.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/08.png" alt="">
+                    </a> <a href="#">
+                        <img src="~/lib/pharma/images/partners/09.png" tppabs="http://webdesign-finder.com/html/pharma/images/partners/09.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Sarmiento museum
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan2">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Proin imperdiet
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan3">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Aenean varius
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/08.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/08.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/08.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/08.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan4">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Praesent eleifend
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/09.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/09.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/09.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/09.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan4">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Phasellus volutpat
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/10.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/10.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/10.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/10.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan4">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Fusce a vestibulum
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/11.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/11.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/11.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/11.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan4">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Vivamus suscipit
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                                <div class="item-media">
+                                    <img src="images/gallery/12.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/12.jpg" alt="">
+                                    <div class="media-links">
+                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/12.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/12.jpg"></a> </div>
+                                    </div>
+                                </div>
+                                <div class="item-content plan4">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title margin_0">
+                                            <a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">
+                                                Proin congue
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div>
+                            </article>
+                        </div>

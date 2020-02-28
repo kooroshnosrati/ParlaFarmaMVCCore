@@ -1,4 +1,4 @@
-@import url("css-family=Roboto-300,300i,400,500,700.css")/*tpa=https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700*/;
+@import url("../../../../fonts.googleapis.com/css-family=Roboto-300,300i,400,500,700.css")/*tpa=https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700*/;
 /**
 *** Table Of Contents
 *
@@ -3050,11 +3050,10 @@ p > [class*="rt-icon"] + [class*="rt-icon"] {
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-	.flexslider .slides img {
-		width: 100%;
-		/*height: 550px;*/
-		display: block;
-	}
+.flexslider .slides img {
+	width: 100%;
+	display: block;
+}
 
 .flex-pauseplay span {
 	text-transform: capitalize;
@@ -4951,10 +4950,6 @@ body.boxed {
 	height: auto;
 }
 
-pattern0 {
-	background-image: url(../images/pattern0.png) /*tpa=http://webdesign-finder.com/html/pharma/img/pattern0.png*/;
-}
-
 .pattern1 {
 	background-image: url(../img/pattern1.png)/*tpa=http://webdesign-finder.com/html/pharma/img/pattern1.png*/;
 }
@@ -5793,12 +5788,10 @@ pattern0 {
 	padding: 40px;
 }
 
-.toppadding_0 {
-	padding-top: 10px;
-}
 .toppadding_10 {
 	padding-top: 10px;
 }
+
 .toppadding_20 {
 	padding-top: 20px;
 }
@@ -10010,7 +10003,7 @@ section .intro_section .slide_description_wrapper {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	/*height: 100%;*/
+	height: 100%;
 	font-size: 0;
 	z-index: 5;
 	padding: 30px 0;
@@ -10159,7 +10152,7 @@ section .intro_section .slide_description_wrapper {
 ** Main Menu styles
 */
 .sf-menu a {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 500;
 }
 
@@ -10285,25 +10278,21 @@ section .intro_section .slide_description_wrapper {
 	}
 
 	.header_color ul a {
-		color: black; /*#ffffff;*/
+		color: #ffffff;
 	}
 
 	.header_color ul li.active > a {
-		/*color: #11333a;*/
-		color: #ec5c42;
+		color: #11333a;
 	}
 
 	.header_color ul li.active > a,
-	.header_color .sf-menu a:hover {
-		/*color: #11333a;*/
-		color: #ec5c42;
+  .header_color .sf-menu a:hover {
+		color: #11333a;
 	}
 
 	.header_color .sf-menu li > ul,
-	.header_color .sf-menu > li .mega-menu {
-		/*background-color:transparent;*/
-		background-color: rgba(255,255,255,0.7);/*#ec5c42;*/
-		color:black;
+  .header_color .sf-menu > li .mega-menu {
+		background-color: #ec5c42;
 	}
 
 	.sf-menu li:hover,
@@ -15166,82 +15155,3 @@ a.color-icon.border-icon:hover {
 .checkbox-slider--b-flat input + span:before {
 	box-shadow: none;
 }
-
-/* Added By Kourosh Nosrati */
-	.ds .Application-form.transparent-background .form-control {
-	border-color: rgba(152, 152, 152, 0.2);
-}
-
-	.Application-form-wrapper.background_cover {
-	background-image: url(../img/parallax/map-texture.png);
-}
-
-	.Application-form {
-	position: relative;
-	z-index: 3;
-}
-
-.Application-form.ls {
-	background-color: #fafafa;
-}
-
-.Application-form.ls.ms {
-	background-color: #efefef;
-}
-
-		.Application-form label[for] {
-			/* display: none; */
-		}
-
-.Application-form-message textarea {
-	min-height: 170px;
-}
-
-.Application-form.parallax {
-	padding: 50px 50px 35px;
-	background-image: url(../img/parallax/map.jpg);
-}
-
-.Application-form-respond {
-	display: block;
-	font-weight: 800;
-}
-
-	.Application-form-respond:before {
-		font-family: 'rt-icons-2';
-		content: "\e71a";
-		padding-right: 10px;
-	}
-
-.Application-form p {
-	margin-bottom: 10px;
-	position: relative;
-}
-
-.Application-form-submit .theme_button {
-	margin-right: 6px;
-}
-
-.Application-form.transparent-background .form-control {
-	background-color: transparent;
-}
-
-.contact-email {
-	font-size: 40px;
-	text-transform: uppercase;
-}
-
-@media (max-width: 767px) {
-	.contact-email {
-		font-size: 20px;
-		margin-bottom: 6px;
-	}
-
-	.Application-form.parallax {
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-bottom: 40px;
-	}
-}
-
-
