@@ -1,34 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ParlaFarmaMVCCore.Data;
 using ParlaFarmaMVCCore.Models;
+using ParlaFarmaMVCCore.ViewModels;
 
 namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
 {
     [Authorize]
     [Area("CPanel")]
-    public class TblSlidersController : Controller
+    public class SlidersController : Controller
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
 
-        public TblSlidersController(ApplicationDbContext context)
+        public SlidersController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-        // GET: CPanel/TblSliders
+        // GET: CPanel/Sliders
         public async Task<IActionResult> Index()
         {
             return View(await _context.Tbl_Sliders.ToListAsync());
         }
 
-        // GET: CPanel/TblSliders/Details/5
+        // GET: CPanel/Sliders/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,39 +41,52 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.Tbl_Sliders
+            var Sliders = await _context.Tbl_Sliders
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (tblSliders == null)
+            if (Sliders == null)
             {
                 return NotFound();
             }
 
-            return View(tblSliders);
+            return View(Sliders);
         }
 
-        // GET: CPanel/TblSliders/Create
+        // GET: CPanel/Sliders/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: CPanel/TblSliders/Create
+        // POST: CPanel/Sliders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
+        public async Task<IActionResult> Create([Bind("Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] vmdl_Slider newSlider)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(tblSliders);
+                string uniqueFileName = UploadedFile(newSlider);
+
+                Slider slider = new Slider
+                {
+                    Lang = newSlider.Lang,
+                    Image = uniqueFileName,
+                    Title1 = newSlider.Title1,
+                    Title2 = newSlider.Title2,
+                    Title3 = newSlider.Title3,
+                    ButtonText = newSlider.ButtonText,
+                    ButtonLink = newSlider.ButtonLink
+                };
+
+                _context.Add(slider);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Cpanel/tblSliders");
+                return RedirectToAction("Index", "Cpanel/Sliders");
             }
-            return View(tblSliders);
+            return View(newSlider);
         }
 
-        // GET: CPanel/TblSliders/Edit/5
+        // GET: CPanel/Sliders/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -76,22 +94,22 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.Tbl_Sliders.FindAsync(id);
-            if (tblSliders == null)
+            var slider = await _context.Tbl_Sliders.FindAsync(id);
+            if (slider == null)
             {
                 return NotFound();
             }
-            return View(tblSliders);
+            return View(slider);
         }
 
-        // POST: CPanel/TblSliders/Edit/5
+        // POST: CPanel/Sliders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] TblSliders tblSliders)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] Slider slider)
         {
-            if (id != tblSliders.Id)
+            if (id != slider.Id)
             {
                 return NotFound();
             }
@@ -100,12 +118,12 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
             {
                 try
                 {
-                    _context.Update(tblSliders);
+                    _context.Update(slider);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TblSlidersExists(tblSliders.Id))
+                    if (!IsSliderExists(slider.Id))
                     {
                         return NotFound();
                     }
@@ -116,10 +134,10 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(tblSliders);
+            return View(slider);
         }
 
-        // GET: CPanel/TblSliders/Delete/5
+        // GET: CPanel/Sliders/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -127,30 +145,47 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var tblSliders = await _context.Tbl_Sliders
+            var slider = await _context.Tbl_Sliders
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (tblSliders == null)
+            if (slider == null)
             {
                 return NotFound();
             }
 
-            return View(tblSliders);
+            return View(slider);
         }
 
-        // POST: CPanel/TblSliders/Delete/5
+        // POST: CPanel/Sliders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var tblSliders = await _context.Tbl_Sliders.FindAsync(id);
-            _context.Tbl_Sliders.Remove(tblSliders);
+            var slider = await _context.Tbl_Sliders.FindAsync(id);
+            _context.Tbl_Sliders.Remove(slider);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TblSlidersExists(int id)
+        private bool IsSliderExists(int id)
         {
             return _context.Tbl_Sliders.Any(e => e.Id == id);
+        }
+
+        private string UploadedFile(vmdl_Slider model)
+        {
+            string uniqueFileName = null;
+
+            if (model.Image != null)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Image.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.Image.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
     }
 }

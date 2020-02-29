@@ -9,10 +9,10 @@
     <div class="flexslider" data-dots="true" data-nav="true">
         <ul class="slides">
             @{
-                foreach (var item in ViewBag.LstTblSliders)
+                foreach (var item in ViewBag.sliders)
                 {
                     <li>
-                        <img src="~/@item.Image" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
+                        <img src="~/Images/@item.Image" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 text-center">

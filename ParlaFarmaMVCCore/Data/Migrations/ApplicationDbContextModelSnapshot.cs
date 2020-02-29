@@ -219,7 +219,7 @@ namespace ParlaFarmaMVCCore.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("ParlaFarmaMVCCore.Models.TblSliders", b =>
+            modelBuilder.Entity("ParlaFarmaMVCCore.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

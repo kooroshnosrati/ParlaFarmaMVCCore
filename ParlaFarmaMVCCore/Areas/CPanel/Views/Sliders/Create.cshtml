@@ -1,4 +1,5 @@
-﻿@model ParlaFarmaMVCCore.Models.TblSliders
+﻿@using ParlaFarmaMVCCore.ViewModels
+@model ParlaFarmaMVCCore.ViewModels.vmdl_Slider
 
 @{
     ViewData["Title"] = "Create";
@@ -6,16 +7,16 @@
 
 <h1>Create</h1>
 
-<h4>TblSliders</h4>
+<h4>Sliders</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" asp-controller="TblSliders" asp-area="CPanel" method="post">
+        <form enctype="multipart/form-data"  asp-action="Create" asp-controller="CPanel/Sliders" asp-area="" method="post">
             @Html.AntiForgeryToken()
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Lang" class="control-label"></label>
-                <select asp-for="Lang" class="form-control" id="Lang" name="Lang" >
+                <select asp-for="Lang" class="form-control" id="Lang" name="Lang">
                     <option value="1">EN</option>
                     <option value="2">AZ</option>
                     <option value="3">RU</option>
@@ -25,7 +26,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Image" class="control-label"></label>
-                <input asp-for="Image" class="form-control" id="Image" name="Image" />
+                <div class="custom-file">
+                    <input asp-for="Image" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -65,5 +69,15 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    <script type="text/javascript">
+    // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
 }
+

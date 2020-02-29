@@ -9,7 +9,7 @@ namespace ParlaFarmaMVCCore.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public DbSet<TblSliders> Tbl_Sliders { get; set; }
+        public DbSet<Slider> Tbl_Sliders { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

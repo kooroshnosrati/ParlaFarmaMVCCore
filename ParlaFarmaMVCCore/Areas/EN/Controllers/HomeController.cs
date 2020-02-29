@@ -24,12 +24,12 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         }
         public IActionResult Index()
         {
-            List<TblSliders> LstTblSliders = new List<TblSliders>();
-            foreach (TblSliders item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
+            List<Slider> sliders = new List<Slider>();
+            foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
             {
-                LstTblSliders.Add(item);
+                sliders.Add(item);
             }
-            ViewBag.LstTblSliders = LstTblSliders.ToList();
+            ViewBag.sliders = sliders.ToList();
             return View();
         }
         public IActionResult AboutUs()
