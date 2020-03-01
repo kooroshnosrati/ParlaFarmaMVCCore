@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -63,7 +64,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] vmdl_Slider newSlider)
+        public async Task<IActionResult> Create(vmdl_Slider newSlider) //[Bind("Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] 
         {
             cls_UploadDownloadFiles cls_UploadDownloadFiles = new cls_UploadDownloadFiles();
             if (ModelState.IsValid)
@@ -88,6 +89,27 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
             return View(newSlider);
         }
 
+        private  vmdl_Slider ConvertSliderToViewModel(int? id)
+        {
+            Slider slider = _context.Tbl_Sliders.Find(id);
+            if (slider == null)
+            {
+                return null;
+            }
+
+            vmdl_Slider vmdl_Slider = new vmdl_Slider
+            {
+                Id = slider.Id,
+                Lang = slider.Lang,
+                Title1 = slider.Title1,
+                Title2 = slider.Title2,
+                Title3 = slider.Title3,
+                ButtonText = slider.ButtonText,
+                ButtonLink = slider.ButtonLink,
+                ImageStr = slider.Image
+            };
+            return vmdl_Slider;
+        }
         // GET: CPanel/Sliders/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -96,12 +118,9 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 return NotFound();
             }
 
-            var slider = await _context.Tbl_Sliders.FindAsync(id);
-            if (slider == null)
-            {
-                return NotFound();
-            }
-            return View(slider);
+            vmdl_Slider vmdl_Slider = ConvertSliderToViewModel(id);
+
+            return View(vmdl_Slider);
         }
 
         // POST: CPanel/Sliders/Edit/5
@@ -109,9 +128,10 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] Slider slider)
+        public async Task<IActionResult> Edit(int id, vmdl_Slider updateSlider) //[Bind("Id,Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")]
         {
-            if (id != slider.Id)
+            cls_UploadDownloadFiles cls_UploadDownloadFiles = new cls_UploadDownloadFiles();
+            if (id != updateSlider.Id)
             {
                 return NotFound();
             }
@@ -120,12 +140,25 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
             {
                 try
                 {
+                    string uniqueFileName = cls_UploadDownloadFiles.UploadedFile(_webHostEnvironment.WebRootPath, updateSlider.Image);
+
+                    Slider slider = new Slider
+                    {
+                        Lang = updateSlider.Lang,
+                        Image = uniqueFileName,
+                        Title1 = updateSlider.Title1,
+                        Title2 = updateSlider.Title2,
+                        Title3 = updateSlider.Title3,
+                        ButtonText = updateSlider.ButtonText,
+                        ButtonLink = updateSlider.ButtonLink
+                    };
+
                     _context.Update(slider);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!IsSliderExists(slider.Id))
+                    if (!IsSliderExists(updateSlider.Id))
                     {
                         return NotFound();
                     }
@@ -134,9 +167,11 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Cpanel/Sliders");
             }
-            return View(slider);
+
+            vmdl_Slider vmdl_Slider = ConvertSliderToViewModel(id);
+            return View(vmdl_Slider);
         }
 
         // GET: CPanel/Sliders/Delete/5
@@ -165,7 +200,7 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
             var slider = await _context.Tbl_Sliders.FindAsync(id);
             _context.Tbl_Sliders.Remove(slider);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Cpanel/Sliders");
         }
 
         private bool IsSliderExists(int id)

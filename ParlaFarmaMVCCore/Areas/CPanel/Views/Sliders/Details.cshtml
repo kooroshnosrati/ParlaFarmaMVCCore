@@ -10,45 +10,70 @@
     <h4>Sliders</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lang)
+        </dt>
+        <dd class="col-sm-10">
+
+            @{
+                string LangStr = "";
+                @if (Model.Lang == 1)
+                {
+                    LangStr = "EN";
+                }
+                else if (Model.Lang == 2)
+                {
+                    LangStr = "AZ";
+                }
+                else if (Model.Lang == 3)
+                {
+                    LangStr = "RU";
+                }
+            }
+            @Html.Label(LangStr)
+
+            @*@Html.DisplayFor(model => model.Lang)*@
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Image)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
+        <dd class="col-sm-10">
+            @*@Html.DisplayFor(model => model.Image)*@
+            <img src="~/Uploads/@Html.DisplayFor(model => model.Image)" style="width:100px;" />
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title1)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title1)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title2)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title2)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title3)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title3)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ButtonText)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ButtonText)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ButtonLink)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ButtonLink)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit"  asp-controller="CPanel/Sliders" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index" asp-controller="CPanel/Sliders">Back to List</a>
 </div>
