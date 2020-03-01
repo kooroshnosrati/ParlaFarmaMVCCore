@@ -9,39 +9,46 @@
     <div class="flexslider" data-dots="true" data-nav="true">
         <ul class="slides">
             @{
-                foreach (var item in ViewBag.sliders)
+                try
                 {
-                    <li>
-                        <img src="~/Images/@item.Image" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12 text-center">
-                                    <div class="slide_description_wrapper">
-                                        <div class="slide_description">
-                                            @*with_corner_border*@
-                                            <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
-                                                <h5 class="thin"> @item.Title1</h5>
-                                                <h2 class="highlight">@item.Title2</h2>
-                                                <p> @item.Title3 </p>
-                                                @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
-                                                {
-                                                    <a href="@item.ButtonLink" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
-                                                        @item.ButtonText
-                                                    </a>
-                                                    <span class="bottom_corners"></span>
-                                                }
+                    foreach (var item in ViewBag.sliders)
+                    {
+                        <li>
+                            <img src="~/Images/@item.Image" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                @*with_corner_border*@
+                                                <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                                    <h5 class="thin"> @item.Title1</h5>
+                                                    <h2 class="highlight">@item.Title2</h2>
+                                                    <p> @item.Title3 </p>
+                                                    @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
+                                                    {
+                                                        <a href="@item.ButtonLink" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
+                                                            @item.ButtonText
+                                                        </a>
+                                                        <span class="bottom_corners"></span>
+                                                    }
+                                                </div>
                                             </div>
+                                            <!-- eof .slide_description -->
                                         </div>
-                                        <!-- eof .slide_description -->
+                                        <!-- eof .slide_description_wrapper -->
                                     </div>
-                                    <!-- eof .slide_description_wrapper -->
+                                    <!-- eof .col-* -->
                                 </div>
-                                <!-- eof .col-* -->
+                                <!-- eof .row -->
                             </div>
-                            <!-- eof .row -->
-                        </div>
-                        <!-- eof .container -->
-                    </li>
+                            <!-- eof .container -->
+                        </li>
+                    }
+                }
+                catch (Exception)
+                {
+                    ;
                 }
             }
         </ul>

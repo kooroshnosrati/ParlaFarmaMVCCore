@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ParlaFarmaMVCCore.API;
 using ParlaFarmaMVCCore.Data;
 using ParlaFarmaMVCCore.Models;
 using ParlaFarmaMVCCore.ViewModels;
@@ -64,9 +65,10 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Lang,Image,Title1,Title2,Title3,ButtonText,ButtonLink")] vmdl_Slider newSlider)
         {
+            cls_UploadDownloadFiles cls_UploadDownloadFiles = new cls_UploadDownloadFiles();
             if (ModelState.IsValid)
             {
-                string uniqueFileName = UploadedFile(newSlider);
+                string uniqueFileName = cls_UploadDownloadFiles.UploadedFile(_webHostEnvironment.WebRootPath, newSlider.Image);
 
                 Slider slider = new Slider
                 {
@@ -171,21 +173,5 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
             return _context.Tbl_Sliders.Any(e => e.Id == id);
         }
 
-        private string UploadedFile(vmdl_Slider model)
-        {
-            string uniqueFileName = null;
-
-            if (model.Image != null)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Image.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    model.Image.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
     }
 }

@@ -14,7 +14,6 @@ using ParlaFarmaMVCCore.ViewModels;
 namespace ParlaFarmaMVCCore.Areas.EN.Controllers
 {
     [Area("EN")]
-    //[Route("EN/[controller]/[action]")]
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,13 +23,20 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         }
         public IActionResult Index()
         {
-            List<Slider> sliders = new List<Slider>();
-            foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
+            try
             {
-                sliders.Add(item);
+                List<Slider> sliders = new List<Slider>();
+                foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
+                {
+                    sliders.Add(item);
+                }
+                ViewBag.sliders = sliders.ToList();
+                return View();
             }
-            ViewBag.sliders = sliders.ToList();
-            return View();
+            catch (Exception)
+            {
+                return View();
+            }
         }
         public IActionResult AboutUs()
         {
