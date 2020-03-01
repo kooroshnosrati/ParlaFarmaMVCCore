@@ -68,6 +68,12 @@ namespace ParlaFarmaMVCCore
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\lib\\pharma")),
                 RequestPath = "/Pharma"
             });
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Uploads")),
+                RequestPath = "/Uploads"
+            });
             app.UseStaticFiles();
 
             app.UseRouting();

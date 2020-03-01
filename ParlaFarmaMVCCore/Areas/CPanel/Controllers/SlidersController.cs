@@ -141,18 +141,14 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
                 try
                 {
                     string uniqueFileName = cls_UploadDownloadFiles.UploadedFile(_webHostEnvironment.WebRootPath, updateSlider.Image);
-
-                    Slider slider = new Slider
-                    {
-                        Lang = updateSlider.Lang,
-                        Image = uniqueFileName,
-                        Title1 = updateSlider.Title1,
-                        Title2 = updateSlider.Title2,
-                        Title3 = updateSlider.Title3,
-                        ButtonText = updateSlider.ButtonText,
-                        ButtonLink = updateSlider.ButtonLink
-                    };
-
+                    Slider slider = _context.Tbl_Sliders.Find(id);
+                    slider.Lang = updateSlider.Lang;
+                    slider.Image = uniqueFileName;
+                    slider.Title1 = updateSlider.Title1;
+                    slider.Title2 = updateSlider.Title2;
+                    slider.Title3 = updateSlider.Title3;
+                    slider.ButtonText = updateSlider.ButtonText;
+                    slider.ButtonLink = updateSlider.ButtonLink;
                     _context.Update(slider);
                     await _context.SaveChangesAsync();
                 }

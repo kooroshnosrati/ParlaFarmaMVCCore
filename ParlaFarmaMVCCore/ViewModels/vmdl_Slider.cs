@@ -9,7 +9,7 @@ namespace ParlaFarmaMVCCore.ViewModels
     {
         public int Id { get; set; }
         public int Lang { get; set; }
-        [Required(ErrorMessage = "Please choose image")]
+        //[Required(ErrorMessage = "Please choose image")]
         [Display(Name = "Silder Image")] 
         public IFormFile Image { get; set; }
         public string ImageStr { get; set; }
