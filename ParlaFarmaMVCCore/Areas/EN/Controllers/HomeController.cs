@@ -21,10 +21,16 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             _context = applicationDbContext;
         }
-        public IActionResult Index()
+        public IActionResult Index(int? id, string ScrollId, int ScrollAmount)
         {
             try
             {
+                ViewBag.ScrollAmount = ScrollAmount;
+                ViewBag.PageName = "Index";
+                if (ScrollId != null)
+                {
+                    ViewBag.JumpToDivId = ScrollId;
+                }
                 List<Slider> sliders = new List<Slider>();
                 foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
                 {
@@ -38,9 +44,14 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 return View();
             }
         }
-        public IActionResult AboutUs()
+        public IActionResult AboutUs(int? id, string ScrollId, int ScrollAmount)
         {
-
+            ViewBag.ScrollAmount = ScrollAmount;
+            ViewBag.PageName = "AboutUs";
+            if (ScrollId != null)
+            {
+                ViewBag.JumpToDivId = ScrollId;
+            }
             return View();
         }
         public IActionResult Products()
@@ -96,6 +107,14 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             return View();
         }
         public IActionResult Distributors()
+        {
+            return View();
+        }
+        public IActionResult ParlaCulture()
+        {
+            return View();
+        }
+        public IActionResult OurValues()
         {
             return View();
         }

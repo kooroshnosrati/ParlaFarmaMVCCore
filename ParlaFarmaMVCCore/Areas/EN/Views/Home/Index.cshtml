@@ -1,8 +1,55 @@
 ﻿
 @{
     //ViewData["Title"] = "Index";
-    Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
+    //Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
 }
+
+@*<style>
+    .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem 1.5rem;
+        width: 24rem;
+        border-radius: 0.5rem;
+    }
+
+    .close-button {
+        float: right;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+    }
+
+        .close-button:hover {
+            background-color: darkgray;
+        }
+
+    .show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+</style>*@
 
 
 <section class="intro_section page_mainslider ds color">
@@ -14,7 +61,7 @@
                     foreach (var item in ViewBag.sliders)
                     {
                         <li>
-                            <img src="~/Uploads/@item.Image" tppabs="http://webdesign-finder.com/html/pharma/images/slide01.jpg" alt="">
+                            <img src="~/Uploads/@item.Image" alt="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12 text-center">
@@ -27,7 +74,7 @@
                                                     <p> @item.Title3 </p>
                                                     @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
                                                     {
-                                                        <a href="@item.ButtonLink" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse margin_0">
+                                                        <a href="@item.ButtonLink" class="theme_button color2 inverse margin_0">
                                                             @item.ButtonText
                                                         </a>
                                                         <span class="bottom_corners"></span>
@@ -55,50 +102,116 @@
     </div>
     <!-- eof flexslider -->
 </section>
-
-
-
-
 <section id="about" class="ls section_padding_top_150 section_padding_bottom_150">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="section_header"> Welcome to Our Site! </h2>
+                <h2 class="section_header"> Welcome to Our Web Site! </h2>
                 <p>We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.</p>
+
             </div>
         </div>
         <div class="row columns_margin_bottom_20">
+            <div id="ParlaTeam"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
-                    <h4 class="topmargin_20 hover-color2"><a href="team.html" tppabs="http://webdesign-finder.com/html/pharma/team.html">Parla Team</a></h4>
-                    <p class="content-3lines-ellipsis">Our professional team is one of our key values.</p>
-                    <p class="topmargin_30 bottommargin_0"> <a href="team.html" tppabs="http://webdesign-finder.com/html/pharma/team.html" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
+                    <h4 class="topmargin_20 hover-color2">Parla Team</h4>
+                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=ParlaTeam&ScrollAmount=-450')" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
                 </div>
             </div>
+            <div id="OurCulture"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center with_corner_border">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
-                    <h4 class="topmargin_20 hover-color2"><a href="departments.html" tppabs="http://webdesign-finder.com/html/pharma/departments.html">Parla culture</a></h4>
-                    <p class="content-3lines-ellipsis">We Interrogate the inner life of GPCR signaling to develop newest therapeutics.</p>
-                    <p class="topmargin_30 bottommargin_0"> <a href="departments.html" tppabs="http://webdesign-finder.com/html/pharma/departments.html" class="theme_button color2 min_width_button">Discover Now</a> </p> <span class="bottom_corners"></span>
+                    <h4 class="topmargin_20 hover-color2">Parla Culture</h4>
+                    <p class="topmargin_30 bottommargin_0">
+                        <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=OurCulture&ScrollAmount=-450')" class="theme_button color2 min_width_button">Discover Now</a>
+                    </p>
+                    <span class="bottom_corners"></span>
                 </div>
             </div>
+            <div id="SocialResponsibility"></div>
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
-                    <h4 class="topmargin_20 hover-color2"><a href="pipeline.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html">Social Responsibility</a></h4>
-                    <p class="content-3lines-ellipsis">Staying true to our mission, values and culture we focus on contributing to benefit our patients, society and environment.</p>
-                    <p class="topmargin_30 bottommargin_0"> <a href="pipeline.html" tppabs="http://webdesign-finder.com/html/pharma/pipeline.html" class="theme_button color2 inverse min_width_button">Check It</a> </p>
+                    <h4 class="topmargin_20 hover-color2">Social Responsibility</h4>
+                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=SocialResponsibility&ScrollAmount=-450')" class="theme_button color2 inverse min_width_button">Check It</a> </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+@*<section id="subscribe" class="section_subscribe cs main_color2 parallax section_padding_50 table_section table_section_md">*@
+@*<section id="testimonials" class="ds color parallax page_testimonials section_padding_top_150 section_padding_bottom_150">*@
+<div id="OurValues"></div>
+<section id="testimonials" class="cs color main_color2 parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section_header "> Our Values </h2>
+                <div class="owl-carousel" data-responsive-lg="5" data-nav="false" data-dots="true">
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/OurValues/Performance.jpg" alt="">
+                        @*Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam.*@
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Performance</a></h5>
+                            <p class="highlight2"></p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/OurValues/Professionalism.jpg" alt="">
+                        <div class="item-meta">
+                            <h6 class="highlight hover-dark-color"><a href="#">Professionalism</a></h6>
+                            <p class="highlight2"></p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/OurValues/Innovation.jpg" alt="">
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Innovation</a></h5>
+                            <p class="highlight2"></p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/OurValues/Teamwork.jpg" alt="">
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color"><a href="#">Teamwork</a></h5>
+                            <p class="highlight2"></p>
+                        </div>
+                    </blockquote>
+                    <blockquote class="with_border with_padding text-center rounded">
+                        <img src="~/lib/pharma/images/OurValues/Integrity.jpg" alt="">
+                        <div class="item-meta">
+                            <h5 class="highlight hover-dark-color black"><a href="#">Integrity</a></h5>
+                            <p class="highlight2"></p>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="row">
+                <div class="col-md-8 text-center text-md-left">
+                    <h3 class="bottommargin_0">Our Values</h3>
+                    <p class="fontsize_20 grey margin_0">Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <div class="widget widget_mailchimp">
+                    </div>
+                </div>
+            </div>*@
+    </div>
+</section>
+
+
+
 <section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
     <div class="container">
         <div class="row display_table_md">
-            @*<div class="col-md-6 col-md-push-6 display_table_cell_md"> <img src="~/lib/pharma/images/gallery/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/01.jpg" alt="" class="rounded"> </div>*@
+            @*<div class="col-md-6 col-md-push-6 display_table_cell_md"> <img src="~/lib/pharma/images/gallery/01.jpg" alt="" class="rounded"> </div>*@
             @*<div class="col-md-6 col-md-pull-6 display_table_cell_md">*@
             <h2 class="section_header">Products</h2>
             <p class="highlight bottommargin_20"><strong>We provide high quality products with  affordable price.</strong></p>
@@ -107,151 +220,265 @@
                     voluptua at vero eos et accusam et justo duo dolores.
                 </p>*@
             <p class="topmargin_30">
-                <a href="gallery-regular-3-cols.html" class="theme_button color2 inverse">See All Projects</a>
+                <a href="gallery-regular-3-cols.html" class="theme_button color2 inverse">See All Products</a>
             </p>
             @*</div>*@
         </div>
-        <center>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="owl-carousel related-photos-carousel with_border_items" data-margin="50" data-nav="true" data-loop="true" data-items="3">
-                        <div>
-                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
-                                <div class="item-media">
-                                    <img src="~/lib/pharma/images/endocrinology1.jpg" alt="">
-                                    <div class="media-links">
-                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/endocrinology1.jpg"></a> </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <header class="entry-header">
-                                        <h4 class="entry-title margin_0">
-                                            <a href="gallery-single.html" rel="bookmark">
-                                                endocrinology
-                                            </a>
-                                        </h4>
-                                    </header>
-                                </div>
-                            </article>
-                        </div>
-                        <div>
-                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
-                                <div class="item-media">
-                                    <img src="~/lib/pharma/Images/cardiovascular1.png" alt="">
-                                    <div class="media-links">
-                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/Images/cardiovascular1.png"></a> </div>
-                                    </div>
-                                </div>
-                                <div class="item-content plan2">
-                                    <header class="entry-header">
-                                        <h4 class="entry-title margin_0">
-                                            <a href="gallery-single.html" rel="bookmark">
-                                                cardiovascular
-                                            </a>
-                                        </h4>
-                                    </header>
-                                </div>
-                            </article>
-                        </div>
-                        <div>
-                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
-                                <div class="item-media">
-                                    <img src="~/lib/pharma/images/gastroenterology1.jpg" alt="">
-                                    <div class="media-links">
-                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/gastroenterology1.jpg" ></a> </div>
-                                    </div>
-                                </div>
-                                <div class="item-content plan3">
-                                    <header class="entry-header">
-                                        <h4 class="entry-title margin_0">
-                                            <a href="gallery-single.html" rel="bookmark">
-                                                gastroenterology
-                                            </a>
-                                        </h4>
-                                    </header>
-                                </div>
-                            </article>
-                        </div>
-                        <div>
-                            <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
-                                <div class="item-media">
-                                    <img src="~/lib/pharma/images/dermotology2.jpg" alt="">
-                                    <div class="media-links">
-                                        <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg" ></a> </div>
-                                    </div>
-                                </div>
-                                <div class="item-content plan4">
-                                    <header class="entry-header">
-                                        <h4 class="entry-title margin_0">
-                                            <a href="gallery-single.html" rel="bookmark">
-                                                dermotology
-                                            </a>
-                                        </h4>
-                                    </header>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </center>
-        <div class="row topmargin_30">
+        @*<center>*@
+        <div class="row">
             <div class="col-sm-12">
-                <div class="owl-carousel gallery-carousel" data-responsive-lg="5" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="1" data-nav="true" data-dots="false">
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" alt="">
-                            <div class="media-links inverse">
-                                <a href="~/lib/pharma/images/gallery/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a>
+                <div class="owl-carousel related-photos-carousel with_border_items" data-margin="50" data-nav="true" data-loop="true" data-items="3">
+                    <div>
+                        <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                            <div class="item-media">
+                                <img src="~/lib/pharma/images/endocrinology1.jpg" alt="">
+                                <div class="media-links">
+                                    <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/endocrinology1.jpg"></a> </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="item-content">
+                                <header class="entry-header">
+                                    <h4 class="entry-title margin_0">
+                                        <a href="gallery-single.html" rel="bookmark">
+                                            endocrinology
+                                        </a>
+                                    </h4>
+                                </header>
+                            </div>
+                        </article>
                     </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" alt="">
-                            <div class="media-links inverse"> <a href="images/gallery/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
+                    <div>
+                        <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                            <div class="item-media">
+                                <img src="~/lib/pharma/Images/cardiovascular1.png" alt="">
+                                <div class="media-links">
+                                    <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/Images/cardiovascular1.png"></a> </div>
+                                </div>
+                            </div>
+                            <div class="item-content plan2">
+                                <header class="entry-header">
+                                    <h4 class="entry-title margin_0">
+                                        <a href="gallery-single.html" rel="bookmark">
+                                            cardiovascular
+                                        </a>
+                                    </h4>
+                                </header>
+                            </div>
+                        </article>
                     </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/04.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" alt="">
-                            <div class="media-links inverse"> <a href="images/gallery/04.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
+                    <div>
+                        <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                            <div class="item-media">
+                                <img src="~/lib/pharma/images/gastroenterology1.jpg" alt="">
+                                <div class="media-links">
+                                    <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/gastroenterology1.jpg"></a> </div>
+                                </div>
+                            </div>
+                            <div class="item-content plan3">
+                                <header class="entry-header">
+                                    <h4 class="entry-title margin_0">
+                                        <a href="gallery-single.html" rel="bookmark">
+                                            gastroenterology
+                                        </a>
+                                    </h4>
+                                </header>
+                            </div>
+                        </article>
                     </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg" alt="">dermotology
-                            <div class="media-links inverse"> <a href="images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg" alt="">
-                            <div class="media-links inverse"> <a href="images/gallery/06.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/06.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg" alt="">
-                            <div class="media-links inverse"> <a href="images/gallery/07.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/07.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item rounded">
-                        <div class="item-media rounded overflow_hidden">
-                            <img src="~/lib/pharma/images/gallery/08.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/08.jpg" alt="">
-                            <div class="media-links inverse"> <a href="images/gallery/08.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/08.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
-                        </div>
+                    <div>
+                        <article class="vertical-item content-padding post format-standard with_border  overflow-hidden text-center">
+                            <div class="item-media">
+                                <img src="~/lib/pharma/images/dermotology2.jpg" alt="">
+                                <div class="media-links">
+                                    <div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg"></a> </div>
+                                </div>
+                            </div>
+                            <div class="item-content plan4">
+                                <header class="entry-header">
+                                    <h4 class="entry-title margin_0">
+                                        <a href="gallery-single.html" rel="bookmark">
+                                            dermotology
+                                        </a>
+                                    </h4>
+                                </header>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
+        @*</center>*@
+        @*<div class="row topmargin_30">
+                <div class="col-sm-12">
+                    <div class="owl-carousel gallery-carousel" data-responsive-lg="5" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="1" data-nav="true" data-dots="false">
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/02.jpg" alt="">
+                                <div class="media-links inverse">
+                                    <a href="~/lib/pharma/images/gallery/02.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/03.jpg" alt="">
+                                <div class="media-links inverse"> <a href="images/gallery/03.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/04.jpg" alt="">
+                                <div class="media-links inverse"> <a href="images/gallery/04.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/05.jpg" alt="">dermotology
+                                <div class="media-links inverse"> <a href="images/gallery/05.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/06.jpg" alt="">
+                                <div class="media-links inverse"> <a href="images/gallery/06.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/07.jpg" alt="">
+                                <div class="media-links inverse"> <a href="images/gallery/07.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded">
+                            <div class="item-media rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/gallery/08.jpg" alt="">
+                                <div class="media-links inverse"> <a href="images/gallery/08.jpg" class="abs-link prettyPhoto" title="" data-gal="prettyPhoto[gal]"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
     </div>
 </section>
+
+
+
+<div id="OurMission"></div>
+<section id="testimonials" class="cs color section_Mission parallax section_padding_top_50 section_padding_bottom_50">
+    @*main_color2*@
+    <div class="container">
+        <div class="row">
+            <h2 class="section_header "> Mission And Vission </h2>
+            <div class="col-sm-10 col-sm-push-1">
+                <article class="post side-item side-md content-padding with_border rounded topmargin_30">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="item-media top_rounded overflow_hidden">
+                                <img src="~/lib/pharma/images/LightIcon.jpg" alt="">
+                                <div class="media-links"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="item-content">
+                                <h3> Vision</h3>
+                                <br /><br />
+                                <p>
+                                    <ul style="font-size:23px;color:white;font-weight:bolder;">
+                                        <li>
+                                            Improving health care access and quality of life
+                                        </li>
+                                        <li>
+                                            Creating added value for  our customers, staff, business partner and  shareholders
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="post side-item side-md content-padding with_border rounded topmargin_30">
+                    <div class="row">
+                        <div class="col-12"><h2 class="section_header leftpadding_20 toppadding_20 owl-center"> Mission</h2></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="teaser media hover_icon">
+                                <div class="media-left">
+                                    <div > <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionDrugBox.jpg" /> </div>
+                                </div>
+                                <div class="media-body toppadding_10">
+                                    <h5 class="hover-color2">Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region</h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="teaser media hover_icon">
+                                <div class="media-left">
+                                    <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionMoney.jpg" /> </div>
+                                </div>
+                                <div class="media-body toppadding_10">
+                                    <h5 class="hover-color2">
+                                        Offering high quality products with most affordable prices for customers
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="teaser media hover_icon">
+                                <div class="media-left">
+                                    <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionHandShake.jpg" /> </div>
+                                </div>
+                                <div class="media-body toppadding_10">
+                                    <h5 class="hover-color2">
+                                        Developing customer orientation and leadership in the market
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    </h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="teaser media hover_icon">
+                                <div class="media-left">
+                                    <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionTeam.jpg" /> </div>
+                                </div>
+                                <div class="media-body toppadding_10">
+                                    <h5 class="hover-color2">
+                                        Creating raving fans among clients and customers
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    </h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!--eof .col-sm-* (main content)-->
+        </div>
+    </div>
+</section>
+
+
+
 <section id="features" class="ls section_padding_top_150 section_padding_bottom_130 columns_margin_bottom_30">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2 class="section_header">Why Choose Us?</h2> <a href="about.html" tppabs="http://webdesign-finder.com/html/pharma/about.html" class="theme_button color2 inverse min_width_button">About Us</a>
+                <h2 class="section_header">Why Choose Us?</h2> <a href="about.html" class="theme_button color2 inverse min_width_button">About Us</a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser media hover_icon">
@@ -259,8 +486,20 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-diamond2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2"><a href="#">Newest Technologies</a></h5>
-                        <p>Consetetur sadipscing elitr diam nonumy eirmod tempor invidunt.</p>
+                        <h5 class="hover-color2"><a href="#">High quality</a></h5>
+                        <p>
+                            We provide high quality pharmaceutical products with EU and GMP standards.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
@@ -268,8 +507,8 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2"><a href="#">Taking Care of Nature</a></h5>
-                        <p>Ut labore et dolore magna aliquyam erat sed diam voluptua.</p>
+                        <h5 class="hover-color2"><a href="#">Fair prices</a></h5>
+                        <p>We are determined to offer the most affordable price along with high quality.</p>
                     </div>
                 </div>
             </div>
@@ -279,8 +518,8 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2"><a href="#">Fair Prices</a></h5>
-                        <p>At vero eos et accusam ejusto duo dolores et ea rebum clita gubergren.</p>
+                        <h5 class="hover-color2"><a href="#">Newest technology</a></h5>
+                        <p>As the first science-based pharmaceutical company of Azerbaijan, we focus on the full production of high-tech products. Our portfolio also includes biotechnological and nanotechnological products.</p>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
@@ -288,15 +527,14 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2"><a href="#">High Customer Satisfaction</a></h5>
-                        <p>Nosea takimata sanctus est lorem ipsum dolor sit amet.</p>
+                        <h5 class="hover-color2"><a href="#">Corporate Culture</a></h5>
+                        <p>Business Ethics is a core of our business culture and our key values are transparency integrity, and accountability.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <section id="contact" class="ls section_padding_top_150 section_padding_bottom_150">
     <div class="container">
         <div class="row">
@@ -328,3 +566,71 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+@*<div class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Dear Visitor!</h1>
+        Are you a healthcare professional?
+        <input id="AreYouRadio" name="AreYouRadio" type="radio" value="0" /> NO
+        <input id="AreYouRadio" name="AreYouRadio" type="radio" value="1" />Yes
+        <br /><br />
+        <div style="text-align:right;">
+            <input id="BtnAreYou" type="button" value="Ok" style="padding: 10px 20px 10px 20px ;" />
+        </div>
+
+    </div>
+</div>*@
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/lib/pharma/js/Parla.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            //var modal = document.querySelector(".modal");
+            ////var trigger = document.querySelector(".trigger");
+            //var closeButton = document.querySelector(".close-button");
+            //var BtnAreYou = document.querySelector("#BtnAreYou");
+            //function toggleModal() {
+            //    modal.classList.toggle("show-modal");
+            //}
+            //function windowOnClick(event) {
+            //    if (event.target === modal) {
+            //        toggleModal();
+            //    }
+            //}
+            ////trigger.addEventListener("click", toggleModal);
+            //closeButton.addEventListener("click", toggleModal);
+            //BtnAreYou.addEventListener("click", toggleModal);
+            //window.addEventListener("click", windowOnClick);
+            //toggleModal();
+
+
+
+        });
+
+try {
+    var ScrollAmount = '@ViewBag.ScrollAmount';
+    var PageID = '@ViewBag.PageName';
+    var TagID = '@ViewBag.JumpToDivId';
+
+    ScrollObjects(TagID, ScrollAmount);
+} catch (e) {
+    //document.getElementById("demo").innerHTML = err.message;
+    alert(err.message);
+}    
+    </script>
+}
