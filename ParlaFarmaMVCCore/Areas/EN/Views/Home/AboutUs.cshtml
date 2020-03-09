@@ -14,7 +14,8 @@
     </div>
 </section>
 
-<section id="AboutParla" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="AboutParla"></div>
+<section id="AboutParla1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -113,7 +114,8 @@
     <!-- eof flexslider -->
 </section>
 
-<section id="OurMission" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="OurMission"></div>
+<section id="OurMission1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -128,7 +130,8 @@
     </p>
 </section>
 
-<section id="OurValues" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="OurValues"></div>
+<section id="OurValues1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -143,7 +146,8 @@
     </p>
 </section>
 
-<section id="OurCulture" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="OurCulture"></div>
+<section id="OurCulture1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -158,7 +162,8 @@
     </p>
 </section>
 
-<section id="SocialResponsibility" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="SocialResponsibility"></div>
+<section id="SocialResponsibility1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -173,7 +178,8 @@
     </p>
 </section>
 
-<section id="ParlaTeam" class="ls section_padding_top_150 section_padding_bottom_0">
+<div id="ParlaTeam"></div>
+<section id="ParlaTeam1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -252,10 +258,10 @@
 </section>
 
 @*<section id="" class="AboutUs_PageTeamPart">
-    <p class="leftpadding_30 rightpadding_30 bottompadding_30">
-        Our professional team is one of our key values
-    </p>
-</section>*@
+        <p class="leftpadding_30 rightpadding_30 bottompadding_30">
+            Our professional team is one of our key values
+        </p>
+    </section>*@
 
 
 <section id="about" class="ls section_padding_top_150 section_padding_bottom_0">
@@ -273,16 +279,38 @@
 @section Scripts {
     <script src="~/lib/pharma/js/Parla.js"></script>
     <script>
-        try {
-    var ScrollAmount = '@ViewBag.ScrollAmount';
-    var PageID = '@ViewBag.PageName';
-    var TagID = '@ViewBag.JumpToDivId';
+        $(document).ready(function () {
+            try {
+                var ScrollAmount = '@ViewBag.ScrollAmount';
+                var PageID = '@ViewBag.PageID';
+                var TagID = '@ViewBag.TagID';
+                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID), 5000);
+            } catch (e) {
+                //document.getElementById("demo").innerHTML = err.message;
+                alert(err.message);
+            }
 
-    ScrollObjects(TagID, ScrollAmount);
-} catch (e) {
-    //document.getElementById("demo").innerHTML = err.message;
-    alert(err.message);
-}
+            //var modal = document.querySelector(".modal");
+            ////var trigger = document.querySelector(".trigger");
+            //var closeButton = document.querySelector(".close-button");
+            //var BtnAreYou = document.querySelector("#BtnAreYou");
+            //function toggleModal() {
+            //    modal.classList.toggle("show-modal");
+            //}
+            //function windowOnClick(event) {
+            //    if (event.target === modal) {
+            //        toggleModal();
+            //    }
+            //}
+            ////trigger.addEventListener("click", toggleModal);
+            //closeButton.addEventListener("click", toggleModal);
+            //BtnAreYou.addEventListener("click", toggleModal);
+            //window.addEventListener("click", windowOnClick);
+            //toggleModal();
+
+
+
+        });
     </script>
 }
 

@@ -26,12 +26,13 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             try
             {
                 ViewBag.ScrollAmount = ScrollAmount;
-                ViewBag.PageName = "Index";
+                ViewBag.PageID = "Index";
                 if (ScrollId != null)
-                {
-                    ViewBag.JumpToDivId = ScrollId;
-                }
-                List<Slider> sliders = new List<Slider>();
+                    ViewBag.TagID = ScrollId;
+                else
+                    ViewBag.TagID = "";
+
+                List <Slider> sliders = new List<Slider>();
                 foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
                 {
                     sliders.Add(item);
@@ -47,11 +48,11 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         public IActionResult AboutUs(int? id, string ScrollId, int ScrollAmount)
         {
             ViewBag.ScrollAmount = ScrollAmount;
-            ViewBag.PageName = "AboutUs";
+            ViewBag.PageID = "AboutUs";
             if (ScrollId != null)
-            {
-                ViewBag.JumpToDivId = ScrollId;
-            }
+                ViewBag.TagID = ScrollId;
+            else
+                ViewBag.TagID = "";
             return View();
         }
         public IActionResult Products()

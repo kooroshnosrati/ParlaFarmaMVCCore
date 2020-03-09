@@ -117,7 +117,7 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Team</h4>
-                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=ParlaTeam&ScrollAmount=-450')" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
+                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=ParlaTeam&ScrollAmount=450')" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
                 </div>
             </div>
             <div id="OurCulture"></div>
@@ -126,7 +126,7 @@
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Culture</h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=OurCulture&ScrollAmount=-450')" class="theme_button color2 min_width_button">Discover Now</a>
+                        <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=OurCulture&ScrollAmount=450')" class="theme_button color2 min_width_button">Discover Now</a>
                     </p>
                     <span class="bottom_corners"></span>
                 </div>
@@ -136,7 +136,7 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Social Responsibility</h4>
-                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=SocialResponsibility&ScrollAmount=-450')" class="theme_button color2 inverse min_width_button">Check It</a> </p>
+                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=SocialResponsibility&ScrollAmount=450')" class="theme_button color2 inverse min_width_button">Check It</a> </p>
                 </div>
             </div>
         </div>
@@ -629,8 +629,16 @@
     <script src="~/lib/pharma/js/Parla.js"></script>
     <script>
         $(document).ready(function () {
-
-
+            try {
+                var ScrollAmount = '@ViewBag.ScrollAmount';
+                var PageID = '@ViewBag.PageID';
+                var TagID = '@ViewBag.TagID';
+                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID), 5000);
+            } catch (e) {
+                //document.getElementById("demo").innerHTML = err.message;
+                alert(err.message);
+            }
+            
             //var modal = document.querySelector(".modal");
             ////var trigger = document.querySelector(".trigger");
             //var closeButton = document.querySelector(".close-button");
@@ -653,15 +661,6 @@
 
         });
 
-try {
-    var ScrollAmount = '@ViewBag.ScrollAmount';
-    var PageID = '@ViewBag.PageName';
-    var TagID = '@ViewBag.JumpToDivId';
-
-    ScrollObjects(TagID, ScrollAmount);
-} catch (e) {
-    //document.getElementById("demo").innerHTML = err.message;
-    alert(err.message);
-}
+        
     </script>
 }
