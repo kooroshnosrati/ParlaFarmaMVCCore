@@ -1,11 +1,12 @@
-﻿//function ScrollObjects(TagID, ScrollAmount, PageID) {
-//    var elmnt = document.getElementById(TagID);
-//    elmnt.scrollIntoView();
-//}
-
-function ScrollObjects(TagID, ScrollAmount, PageID) {
-    //alert('ScrollAmount : ' + ScrollAmount + '--- PageID : ' + PageID + '--- TagID :' + TagID);
+﻿function ScrollObjects(TagID, ScrollAmount, PageID, URLRequested) {
     try {
+        if (URLRequested) {
+            console.log('URLRequested');
+            var elmnt = document.getElementById(TagID);
+            elmnt.scrollIntoView();
+            console.log('URLRequested');
+            return;
+        }
         var JumpTo = '#' + TagID;
         try {
             var offs = $(JumpTo).offset().top;
@@ -16,7 +17,7 @@ function ScrollObjects(TagID, ScrollAmount, PageID) {
         switch (TagID) {
             case 'AboutParla':
                 if (PageID == 'Index') {
-                    location.replace("EN/Home/AboutUs?ScrollId=AboutParla&ScrollAmount=-100")
+                    location.replace("EN/Home/AboutUs?ScrollId=AboutParla&ScrollAmount=-100&URLRequested=true")
                 }
                 else if (PageID == 'AboutUs') {
                     height = Number(height) + Number(ScrollAmount);
@@ -61,16 +62,21 @@ function ScrollObjects(TagID, ScrollAmount, PageID) {
                     height = Number(height) + Number(ScrollAmount);
                 }
                 break;
-
+            case 'Vacancies':
+                height = Number(height) - 220 + Number(ScrollAmount);
+                break;
+            case 'WhyPARLA':
+                height = Number(height) - 220 + Number(ScrollAmount);
+                break;
             default:
         }
         //height = $(window).innerHeight();
         var sum = Number(offs) + Number(height);
-        console.log('Sum : ' + sum + ' Offset :' + offs + ' Height : ' + height);
+        console.log('Sum : ' + sum + ' Offset :' + offs + ' Height : ' + height + ' ScrollAmount :' + ScrollAmount);
         $('html, body').animate({ scrollTop: sum + 'px' }, 'slow');
     }
     catch (err) {
         //document.getElementById("demo").innerHTML = err.message;
-        alert(err.message);
+        console.log(err.message);
     }
 }

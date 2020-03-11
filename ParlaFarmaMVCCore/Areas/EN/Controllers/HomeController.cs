@@ -21,7 +21,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             _context = applicationDbContext;
         }
-        public IActionResult Index(int? id, string ScrollId, int ScrollAmount)
+        public IActionResult Index(int? id, string ScrollId, int ScrollAmount, bool URLRequested)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                     ViewBag.TagID = ScrollId;
                 else
                     ViewBag.TagID = "";
-
+                ViewBag.URLRequested = URLRequested;
                 List <Slider> sliders = new List<Slider>();
                 foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
                 {
@@ -45,7 +45,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 return View();
             }
         }
-        public IActionResult AboutUs(int? id, string ScrollId, int ScrollAmount)
+        public IActionResult AboutUs(int? id, string ScrollId, int ScrollAmount, bool URLRequested)
         {
             ViewBag.ScrollAmount = ScrollAmount;
             ViewBag.PageID = "AboutUs";
@@ -53,6 +53,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 ViewBag.TagID = ScrollId;
             else
                 ViewBag.TagID = "";
+            ViewBag.URLRequested = URLRequested;
             return View();
         }
         public IActionResult Products()
@@ -69,6 +70,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         }
         public IActionResult Career()
         {
+            ViewBag.PageID = "Career";
             return View();
         }
         public IActionResult ContactUs()

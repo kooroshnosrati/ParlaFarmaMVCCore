@@ -4,28 +4,40 @@
     Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
 }
 
-<section id="AboutFirst" class="AboutUs_PageFirstPart">
+
+
+    <section class="page_breadcrumbs ds color parallax section_padding_top_130 section_padding_bottom_75">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+@*<section id="AboutFirst" class="AboutUs_PageFirstPart">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <center> <h2 class="section_header">Every thing about Parla Phama</h2></center>
+                <center> <h2 class="section_header"></h2></center>
             </div>
         </div>
     </div>
-</section>
+</section>*@
 
 <div id="AboutParla"></div>
-<section id="AboutParla1" class="ls section_padding_top_150 section_padding_bottom_0">
+<section id="AboutParla1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header">About Parla! </h2>
+                <h2 class="section_header">Our Company</h2>
             </div>
         </div>
     </div>
 </section>
 <section class="AboutParla_section page_mainslider">
-    <div class="flexslider" data-dots="true" data-nav="true">
+    <div class="flexslider" data-dots="false" data-nav="true">
         <ul class="slides">
             <li>
                 <img src="~/lib/pharma/images/slide06.jpg" alt="">
@@ -119,7 +131,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Mission! </h2>
+                <h2 class="section_header"> Our Mission </h2>
             </div>
         </div>
     </div>
@@ -130,12 +142,12 @@
     </p>
 </section>
 
-<div id="OurValues"></div>
+@*<div id="OurValues"></div>
 <section id="OurValues1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Values! </h2>
+                <h2 class="section_header"> Our Values </h2>
             </div>
         </div>
     </div>
@@ -144,14 +156,14 @@
     <p class="leftpadding_30 rightpadding_30 bottompadding_30">
         initial aim is to produce high quality pharmaceutical products with affordable price and our mission is to develop customer orientation and leadership in the pharmaceutical market and community. Exporting advanced biotechnological and nanotechnological products is one of the key focus areas.
     </p>
-</section>
+</section>*@
 
 <div id="OurCulture"></div>
 <section id="OurCulture1" class="ls section_padding_top_150 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Culture! </h2>
+                <h2 class="section_header"> Our Culture </h2>
             </div>
         </div>
     </div>
@@ -167,7 +179,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Social Responsibility! </h2>
+                <h2 class="section_header"> Social Responsibility </h2>
             </div>
         </div>
     </div>
@@ -183,7 +195,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Parla Team! </h2>
+                <h2 class="section_header"> Parla Team </h2>
             </div>
         </div>
     </div>
@@ -200,8 +212,8 @@
                                 <div class="slide_description">
                                     <div class="intro-layer " data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
-                                        <h4 style="color:white;text-align:left;">Our team is our main asset!</h4>
-                                        <p style="color:white;text-align:left;font-size:larger"> Parla is a young, talented, ambitious and agile team of professionals! </p>
+                                        <h4 style="color:white;text-align:left;">Our team is our main asset</h4>
+                                        <p style="color:white;text-align:left;font-size:larger"> Parla is a young, talented, ambitious and agile team of professionals </p>
                                         <span class="bottom_corners"></span>
                                     </div>
                                 </div>
@@ -242,7 +254,7 @@
                                         <h5 class="thin"> </h5>
                                         <h4 style="color:white;text-align:left;"></h4>
                                         <p style="color:white;text-align:left;font-size:larger">
-                                            With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do!
+                                            With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do
                                         </p>
                                         <span class="bottom_corners"></span>
                                     </div>
@@ -284,10 +296,17 @@
                 var ScrollAmount = '@ViewBag.ScrollAmount';
                 var PageID = '@ViewBag.PageID';
                 var TagID = '@ViewBag.TagID';
-                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID), 5000);
+                var URLRequested = '@ViewBag.URLRequested';
+                if (URLRequested == 'true') {
+                    URLRequested = true;
+                }
+                else if (URLRequested == 'false') {
+                    URLRequested = false;
+                }
+                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID, URLRequested), 5000);
             } catch (e) {
                 //document.getElementById("demo").innerHTML = err.message;
-                alert(err.message);
+                console.log(err.message);
             }
 
             //var modal = document.querySelector(".modal");

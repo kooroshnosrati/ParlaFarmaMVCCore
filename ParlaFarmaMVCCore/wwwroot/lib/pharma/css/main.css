@@ -10351,7 +10351,7 @@ section .intro_section .slide_description_wrapper {
 	.header_color .sf-menu li > ul,
 	.header_color .sf-menu > li .mega-menu {
 		/*background-color:transparent;*/
-		background-color: rgba(255,255,255,0);/*#ec5c42;*/
+		background-color: rgba(255,255,255,0.7);/*#ec5c42;*/
 		color:black;
 	}
 
@@ -15294,6 +15294,30 @@ a.color-icon.border-icon:hover {
 }
 
 /*Added By Kourosh Nosrati*/
+.WhyParla_PageFirstPart {
+	position: relative;
+	background-image: url(../images/WhyParla_PageFirstPart.jpeg);
+	background-size: cover;
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: 500px;
+}
+	.WhyParla_PageFirstPart p {
+		position: absolute;
+		bottom: 70px;
+		left: 10px;
+		//color: ;
+		//font-weight: bold;
+		font-size: 35px;
+	}
+	.WhyParla_PageFirstPart h6{
+		position: absolute;
+		bottom: 70px;
+		left: 50px;
+		color: white;
+		//font-weight: bold;
+		font-size: 15px;
+	}
 
 .AboutUs_PageFirstPart {
 	background-image: url(../images/DSC00116.jpg);
@@ -15316,7 +15340,7 @@ a.color-icon.border-icon:hover {
 		bottom: 0;
 		left: 0;
 		color: white;
-		font-weight: bold;
+		//font-weight: bold;
 		font-size: 20px;
 	}
 
@@ -15335,7 +15359,7 @@ a.color-icon.border-icon:hover {
 		bottom: 0;
 		left: 0;
 		color: white;
-		font-weight: bold;
+		//font-weight: bold;
 		font-size: 20px;
 	}
 
@@ -15353,7 +15377,7 @@ a.color-icon.border-icon:hover {
 		bottom: 0;
 		left: 0;
 		color: white;
-		font-weight: bold;
+		//font-weight: bold;
 		font-size: 20px;
 	}
 
@@ -15371,7 +15395,7 @@ a.color-icon.border-icon:hover {
 		bottom: 0;
 		left: 0;
 		color: white;
-		font-weight: bold;
+		//font-weight: bold;
 		font-size: 20px;
 	}
 
@@ -15389,7 +15413,7 @@ a.color-icon.border-icon:hover {
 	bottom: 0;
 	left: 0;
 	color: white;
-	font-weight: bold;
+	//font-weight: bold;
 	font-size: 20px;
 }
 
