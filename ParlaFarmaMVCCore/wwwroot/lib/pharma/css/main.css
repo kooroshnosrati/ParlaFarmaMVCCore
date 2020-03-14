@@ -10332,27 +10332,30 @@ section .intro_section .slide_description_wrapper {
 
 	/*Menu Text Color Changed By Kourosh*/
 	.header_color ul a {
-		color: black; /*#ffffff;*/
+		color: #19bcdb;
+		/*color: #11333a;*/
 	}
 
 	/*Menu Active Text Color Changed By Kourosh*/
 	.header_color ul li.active > a {
 		/*color: #11333a;*/
-		color: #ec5c42;
+		color: rgba(145,152,153,1);
 	}
 	/*Menu Active Text Color Changed By Kourosh*/
 	.header_color ul li.active > a,
 	.header_color .sf-menu a:hover {
-		/*color: #11333a;*/
-		color: #ec5c42;
+		color: rgba(145,152,153,1);
+		/*color: #ec5c42;*/
 	}
 
-	/*Edited By Kourosh --- Menu BAckground Color*/
+	/*Edited By Kourosh --- Menu Background Color*/
 	.header_color .sf-menu li > ul,
 	.header_color .sf-menu > li .mega-menu {
 		/*background-color:transparent;*/
-		background-color: rgba(255,255,255,0.7);/*#ec5c42;*/
-		color:black;
+		background-color: #11333a;
+		opacity:0.7;
+		/*rgba(145,152,153,0.7);*/ /*rgba(145,152,153,0.7);*/ /*#19bcdb;*/
+		//color: black;
 	}
 
 	.sf-menu li:hover,
@@ -15325,25 +15328,6 @@ a.color-icon.border-icon:hover {
 	padding-top: 18%;
 	padding-bottom: 18%;
 }
-
-.Home_PageMissionPart {
-	position: relative;
-	background-image: url(../images/20.jpg);
-	background-size: cover;
-	padding-top: 0;
-	padding-bottom: 0;
-	min-height: 500px;
-}
-
-	.Home_PageMissionPart p {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		color: white;
-		//font-weight: bold;
-		font-size: 20px;
-	}
-
 
 .AboutUs_PageValuesPart {
 	position: relative;

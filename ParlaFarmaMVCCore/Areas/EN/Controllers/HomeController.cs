@@ -105,18 +105,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             return View();
         }
-        public IActionResult ExportDevelopment()
-        {
-            return View();
-        }
-        public IActionResult Distributors()
-        {
-            return View();
-        }
-        public IActionResult ParlaCulture()
-        {
-            return View();
-        }
+
         public IActionResult OurValues()
         {
             return View();
