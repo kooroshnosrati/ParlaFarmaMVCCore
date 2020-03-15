@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-2 to_animate" data-animation="scaleAppear"></div>
             <div class="col-md-8 to_animate" data-animation="scaleAppear">
-                <form enctype="multipart/form-data" asp-action="Applicationform" asp-controller="Home" method="post" class="Application-form columns_padding_10 bottommargin_40">
+                <form enctype="multipart/form-data" asp-action="Applicationform" asp-controller="EN/Home" method="post" class="Application-form columns_padding_10 bottommargin_40">
                     @Html.AntiForgeryToken()
                     <div class="row">
                         <div class="col-sm-6">
@@ -114,13 +114,13 @@
                                 </label>
                             </div>
                             <div class="col-sm-12">
-                                <input type="radio" aria-required="true" value="1" name="ResumeType" id="ResumeUploadFile">Upload File
+                                <input type="radio" aria-required="true" value="1" name="ResumeType" id="ResumeUploadFile" checked>Upload File
                             </div>
                             <div class="col-sm-12">
                                 <input type="radio" aria-required="true" value="2" name="ResumeType" id="ResumeProvideURL">Provide URL
                             </div>
                         </div>
-                        <div class="col-sm-12" style="display:none;">
+                        <div class="col-sm-12" style="display:none;" id="DIVResumeURL">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="ResumeURL">
                                     <b>Type Your ResumeURL</b>
@@ -130,7 +130,7 @@
                                 <input asp-for="ResumeURL" type="text" aria-required="true" size="30" value="" name="ResumeURL" id="ResumeURL" class="form-control" placeholder="Resume URL">
                             </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12" id="DIVResumeFile">
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label asp-for="ResumeFile">
                                     <b>Upload your resume</b>
@@ -159,7 +159,13 @@
 @section Scripts{
     <script>
         $(document).ready(function () {
-            $("input[name=ResumeSubmit]:radio").click(function () {
+            $("#ResumeUploadFile").click(function () {
+                $("#DIVResumeURL").hide();
+                $("#DIVResumeFile").show();
+            });
+            $("#ResumeProvideURL").click(function () {
+                $("#DIVResumeURL").show();
+                $("#DIVResumeFile").hide();
             });
         });
     </script>

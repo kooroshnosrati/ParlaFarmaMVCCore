@@ -16,7 +16,7 @@
     </div>
 </section>
 
-<div id="AboutParla"></div>
+<div data-id="AboutParla"></div>
 <section id="AboutParla1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
@@ -97,8 +97,8 @@
     </div>
 </section>
 
-<div id="OurMission"></div>
-<section id="OurMission1" class="ls section_padding_top_150 section_padding_bottom_0">
+<div data-id="OurMission"></div>
+<section id="OurMission1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -130,24 +130,8 @@
     </div>
 </section>
 
-@*<div id="OurValues"></div>
-    <section id="OurValues1" class="ls section_padding_top_150 section_padding_bottom_0">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 ">
-                    <h2 class="section_header"> Our Values </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="" class="AboutUs_PageValuesPart">
-        <p class="leftpadding_30 rightpadding_30 bottompadding_30">
-            initial aim is to produce high quality pharmaceutical products with affordable price and our mission is to develop customer orientation and leadership in the pharmaceutical market and community. Exporting advanced biotechnological and nanotechnological products is one of the key focus areas.
-        </p>
-    </section>*@
-
-<div id="OurCulture"></div>
-<section id="OurCulture1" class="ls section_padding_top_150 section_padding_bottom_0">
+<div data-id="OurCulture"></div>
+<section id="OurCulture1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -179,8 +163,8 @@
     </div>
 </section>
 
-<div id="SocialResponsibility"></div>
-<section id="SocialResponsibility1" class="ls section_padding_top_150 section_padding_bottom_0">
+<div data-id="SocialResponsibility"></div>
+<section id="SocialResponsibility1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -212,8 +196,8 @@
     </div>
 </section>
 
-<div id="ParlaTeam"></div>
-<section id="ParlaTeam1" class="ls section_padding_top_150 section_padding_bottom_0">
+<div data-id="ParlaTeam"></div>
+<section id="ParlaTeam1" class="ls section_padding_top_50 section_padding_bottom_0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -291,48 +275,31 @@
 
 
 @section Scripts {
+
     <script src="~/lib/pharma/js/Parla.js"></script>
     <script>
         $(document).ready(function () {
-            try {
-                var ScrollAmount = '@ViewBag.ScrollAmount';
-                var PageID = '@ViewBag.PageID';
-                var TagID = '@ViewBag.TagID';
-                var URLRequested = '@ViewBag.URLRequested';
-                if (URLRequested == 'true') {
-                    URLRequested = true;
-                }
-                else if (URLRequested == 'false') {
-                    URLRequested = false;
-                }
-                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID, URLRequested), 5000);
-            } catch (e) {
-                //document.getElementById("demo").innerHTML = err.message;
-                console.log(err.message);
-            }
-
-            //var modal = document.querySelector(".modal");
-            ////var trigger = document.querySelector(".trigger");
-            //var closeButton = document.querySelector(".close-button");
-            //var BtnAreYou = document.querySelector("#BtnAreYou");
-            //function toggleModal() {
-            //    modal.classList.toggle("show-modal");
-            //}
-            //function windowOnClick(event) {
-            //    if (event.target === modal) {
-            //        toggleModal();
-            //    }
-            //}
-            ////trigger.addEventListener("click", toggleModal);
-            //closeButton.addEventListener("click", toggleModal);
-            //BtnAreYou.addEventListener("click", toggleModal);
-            //window.addEventListener("click", windowOnClick);
-            //toggleModal();
-
-
+            $("#AAboutParla").click(function () {
+                ScrollObjects('AboutParla', '@ViewBag.PageID', true);
+            });
+            $("#AOurMission").click(function () {
+                ScrollObjects('OurMission', '@ViewBag.PageID', true);
+            });
+            $("#AOurCulture").click(function () {
+                ScrollObjects('OurCulture', '@ViewBag.PageID', true);
+            });
+            $("#ASocialResponsibility").click(function () {
+                ScrollObjects('SocialResponsibility', '@ViewBag.PageID', true);
+            });
+            $("#AParlaTeam").click(function () {
+                ScrollObjects('ParlaTeam', '@ViewBag.PageID', true);
+            });
 
         });
+        if (location.hash != null || location.hash != '') {
+            var TagID = location.hash.replace('#', '');
+            console.log(2);
+            ScrollObjects(TagID, '@ViewBag.PageID', false);
+        }
     </script>
 }
-
-

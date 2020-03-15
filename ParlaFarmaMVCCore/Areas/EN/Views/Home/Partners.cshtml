@@ -15,6 +15,7 @@
     </div>
 </section>
 
+<div data-id="Distributors"></div>
 <section class="ls columns_padding_25 section_padding_top_50 section_padding_bottom_100">
     <div class="container">
         <div class="row">
@@ -149,7 +150,7 @@
 </section>
 
 
-
+<div data-id="ExportDevelopment"></div>
 <section class="ls columns_padding_25 section_padding_top_50 section_padding_bottom_100">
     <div class="container">
         <div class="row">
@@ -168,4 +169,23 @@
 </section>
 
 
+
+@section Scripts {
+
+    <script src="~/lib/pharma/js/Parla.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ADistributors").click(function () {
+                ScrollObjects('Distributors', '@ViewBag.PageID', true);
+            });
+            $("#AExportDevelopment").click(function () {
+                ScrollObjects('ExportDevelopment', '@ViewBag.PageID', true);
+            });
+        });
+        if (location.hash != null || location.hash != '') {
+            var TagID = location.hash.replace('#', '');
+            ScrollObjects(TagID, '@ViewBag.PageID', false);
+        }
+    </script>
+}
 

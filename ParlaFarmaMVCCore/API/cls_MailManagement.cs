@@ -21,7 +21,7 @@ namespace ParlaFarmaMVCCore.API
             To = new List<cls_emailAccount>();
             CC = new List<cls_emailAccount>();
             Attachments = new List<string>();
-            smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "qEgqNSOSs4kp");
+            smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "parlapharma2026");
             // smtpClient.UseDefaultCredentials = true; // uncomment if you don't want to use the network credentials
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             //smtpClient.EnableSsl = true;
@@ -46,7 +46,7 @@ namespace ParlaFarmaMVCCore.API
                 smtpClient.Send(mail);
                 return true;
             }
-            catch (Exception)
+            catch (Exception err)
             {
                 return false;
             }

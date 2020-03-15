@@ -24,7 +24,7 @@
                         <img src="~/lib/pharma/images/gallery/23.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('WhyPARLA', 0, '@ViewBag.PageID', false)">Why PARLA?</a> </h4>
+                        <h4> <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">Why PARLA?</a> </h4>
                         <p>Values of PARLA is a key to success of the team and the main accelerator of our business.</p>
                     </div>
                 </article>
@@ -35,7 +35,7 @@
                         <img src="~/lib/pharma/images/gallery/23.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('Vacancies', 0, '@ViewBag.PageID', false)">Vacancies </a> </h4>
+                        <h4> <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">Vacancies </a> </h4>
                         <p>Join the team of professionals in PARLA.</p>
                     </div>
                 </article>
@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<div id="WhyPARLA"></div>
+<div data-id="WhyPARLA"></div>
 <section class="cs color main_color2 parallax section_subscribe ls section_padding_top_30 section_padding_bottom_30 ">
     <div class="container">
         <div class="row bottompadding_20">
@@ -142,7 +142,7 @@
     </div>
 </section>
 
-<div id="Vacancies"></div>
+<div data-id="Vacancies"></div>
 <section class="ls columns_padding_25 section_padding_top_50 section_padding_bottom_100">
     <div class="container">
         <div class="row">
@@ -164,9 +164,17 @@
 
     <script src="~/lib/pharma/js/Parla.js"></script>
     <script>
+        $(document).ready(function () {
+            $("#AWhyPARLA").click(function () {
+                ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);
+            });
+            $("#AVacancies").click(function () {
+                ScrollObjects('Vacancies', '@ViewBag.PageID', true);
+            });
+        });
         if (location.hash != null || location.hash != '') {
             var TagID = location.hash.replace('#', '');
-            ScrollObjects(TagID, 0, '@ViewBag.PageID', false);
+            ScrollObjects(TagID, '@ViewBag.PageID', false);
         }
     </script>
 }

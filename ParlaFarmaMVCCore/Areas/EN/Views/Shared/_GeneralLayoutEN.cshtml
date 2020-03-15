@@ -54,11 +54,11 @@
     <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
         <div class="fw-messages-wrap ls with_padding">
             <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
-            <!--
-            <ul class="list-unstyled">
-                <li>Message To User</li>
+            @*<ul class="list-unstyled">
+                <li>Are you a healthcare professional?</li>
             </ul>
-            -->
+            <button id="ModalYes" value="Yes"></button>
+            <button id="ModalNo" value="No"></button>*@
         </div>
     </div>
     <!-- eof .modal -->
@@ -93,7 +93,7 @@
                         </div>
                     </div>
             </section>
-            <header class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
+            <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 display_table">
@@ -113,22 +113,22 @@
                                             <a href="~/EN/Home/AboutUs">About Us</a>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('AboutParla', 0, '@ViewBag.PageID', false)">Our Company</a>
+                                                    <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">Our Company</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('ParlaTeam', 0, '@ViewBag.PageID', false)">Our Team</a>
+                                                    <a id="AParlaTeam" href="@ViewBag.PageURL#ParlaTeam">Our Team</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('OurValues', 0, '@ViewBag.PageID', false)">Our Values</a>
+                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('OurCulture', 0, '@ViewBag.PageID', false)">Our Culture</a>
+                                                    <a id="AOurCulture" href="@ViewBag.PageURL#OurCulture">Our Culture</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('OurMission', 0, '@ViewBag.PageID', false)">Our Mission</a>
+                                                    <a id="AOurMission" href="@ViewBag.PageURL#OurMission">Our Mission</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:ScrollObjects('SocialResponsibility', 0, '@ViewBag.PageID', false)">Social Responsibility</a>
+                                                    <a id="ASocialResponsibility" href="@ViewBag.PageURL#SocialResponsibility">Social Responsibility</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -152,15 +152,15 @@
                                         <li>
                                             <a href="~/EN/Home/Partners">Partners</a>
                                             <ul>
-                                                <li> <a href="~/EN/Home/Partners#Distributors">Distributors</a> </li>
-                                                <li> <a href="~/EN/Home/Partners#ExportDevelopment">Export development</a> </li>
+                                                <li> <a id="ADistributors" href="~/EN/Home/Partners#Distributors">Distributors</a> </li>
+                                                <li> <a id="AExportDevelopment" href="~/EN/Home/Partners#ExportDevelopment">Export development</a> </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="~/EN/Home/Career">Careers</a>
                                             <ul>
-                                                <li> <a href="~/EN/Home/Career#WhyPARLA">Why Parla</a> </li>
-                                                <li> <a href="~/EN/Home/Career#Vacancies">Vacancies</a> </li>
+                                                <li> <a id="AWhyPARLA" href="~/EN/Home/Career#WhyPARLA">Why Parla</a> </li>
+                                                <li> <a id="AVacancies" href="~/EN/Home/Career#Vacancies">Vacancies</a> </li>
                                                 <li> <a href="~/EN/Home/Applicationform">Application form</a> </li>
                                             </ul>
                                         </li>

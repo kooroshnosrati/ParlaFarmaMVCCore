@@ -1,79 +1,57 @@
-﻿function ScrollObjects(TagID, ScrollAmount, PageID, URLRequested) {
+﻿function ScrollObjects(TagID, PageID, FromOwn) {
     try {
-        if (URLRequested) {
-            console.log('URLRequested');
-            var elmnt = document.getElementById(TagID);
-            elmnt.scrollIntoView();
-            console.log('URLRequested');
-            return;
-        }
         var JumpTo = '#' + TagID;
+        JumpTo = "div[data-id='" + TagID + "']";
+        console.log(JumpTo);
         try {
             var offs = $(JumpTo).offset().top;
-            var height = $(JumpTo).height();
+            var height = $(JumpTo).outerHeight();
         } catch (e) {
             ;
         }
         switch (TagID) {
-            case 'AboutParla':
-                if (PageID == 'Index') {
-                    location.replace("EN/Home/AboutUs?ScrollId=AboutParla&ScrollAmount=-100&URLRequested=true")
+            case 'SocialResponsibility':
+                if (!FromOwn) {
+                    height = Number(height) + 2002;
+                    break;
                 }
-                else if (PageID == 'AboutUs') {
-                    height = Number(height) + Number(ScrollAmount);
+            case 'OurCulture':
+                if (!FromOwn) {
+                    height = Number(height) + 1241;
                     break;
                 }
             case 'ParlaTeam':
                 if (PageID == 'Index') {
-                    height = Number(height) - 200 + Number(ScrollAmount);
+                    height = Number(height) - 200;
+                    break;
                 }
-                else if (PageID == 'AboutUs') {
-                    console.log('ScrollAmount : ' + ScrollAmount + '--- PageID : ' + PageID + '--- TagID :' + TagID);
-                    height = Number(height) + Number(ScrollAmount);
+                if (!FromOwn) {
+                    height = Number(height) + 2883;
+                    break;
                 }
-                break;
-            case 'OurCulture':
-                if (PageID == 'Index') {
-                    height = Number(height) - 200 + Number(ScrollAmount);
-                }
-                else if (PageID == 'AboutUs') {
-                    height = Number(height) + Number(ScrollAmount);
-                }
-                break;
-            case 'SocialResponsibility':
-                if (PageID == 'Index') {
-                    height = Number(height) - 200 + Number(ScrollAmount);
-                }
-                else if (PageID == 'AboutUs') {
-                    height = Number(height) + Number(ScrollAmount);
-                }
-                break;
             case 'OurValues':
-                if (PageID == 'Index') {
-                    height = Number(height) - 110 + Number(ScrollAmount);
-                } else if (PageID == 'AboutUs') {
-                    height = Number(height) + Number(ScrollAmount);
+                if (!FromOwn) {
+                    height = Number(height) + 342;
+                    break;
                 }
-                break;
             case 'OurMission':
-                if (PageID == 'Index') {
-                    height = Number(height) - 50 + Number(ScrollAmount);
-                } else if (PageID == 'AboutUs') {
-                    height = Number(height) + Number(ScrollAmount);
-                }
-                break;
+            case 'AboutParla':
+            case 'Distributors':
+            case 'ExportDevelopment':
             case 'Vacancies':
-                height = Number(height) - 220 + Number(ScrollAmount);
-                break;
             case 'WhyPARLA':
-                height = Number(height) - 220 + Number(ScrollAmount);
+                if (FromOwn) {
+                    height = Number(height) - 110;
+                }
+                else {
+                    height = Number(height) - 220;
+                }
                 break;
             default:
         }
-        //height = $(window).innerHeight();
         var sum = Number(offs) + Number(height);
-        console.log('Sum : ' + sum + ' Offset :' + offs + ' Height : ' + height + ' ScrollAmount :' + ScrollAmount);
-        $('html, body').animate({ scrollTop: sum + 'px' }, 'slow');
+        console.log('PageID:' + PageID + ' TagID:' + TagID + ' Sum :' + sum + ' Offset:' + offs + ' Height:' + height);
+        $('html, body').animate({ scrollTop: sum + 'px' }, 'slow', 'easeInOutExpo');
     }
     catch (err) {
         //document.getElementById("demo").innerHTML = err.message;

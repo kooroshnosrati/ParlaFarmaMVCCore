@@ -1166,11 +1166,20 @@ function windowLoadInit() {
 		}
 	});
 
+
+
 	//Unyson or other messages modal
 	var $messagesModal = jQuery('#messages_modal');
 	if ($messagesModal.find('ul').length) {
 		$messagesModal.modal('show');
 	}
+	$('#ModalYes').click(function () {
+		$messagesModal.modal('hide');
+	});
+
+	$('#ModalNo').click(function () {
+		$messagesModal.modal('hide');
+	});
 
 	//page preloader
 	jQuery(".preloaderimg").fadeOut(150);

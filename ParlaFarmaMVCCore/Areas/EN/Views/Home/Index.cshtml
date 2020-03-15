@@ -1,57 +1,4 @@
 ﻿
-@{
-    //ViewData["Title"] = "Index";
-    //Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
-}
-
-@*<style>
-        .modal {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transform: scale(1.1);
-            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 1rem 1.5rem;
-            width: 24rem;
-            border-radius: 0.5rem;
-        }
-
-        .close-button {
-            float: right;
-            width: 1.5rem;
-            line-height: 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 0.25rem;
-            background-color: lightgray;
-        }
-
-            .close-button:hover {
-                background-color: darkgray;
-            }
-
-        .show-modal {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1.0);
-            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-        }
-    </style>*@
-
-
 <section class="intro_section page_mainslider ds color">
     <div class="flexslider" data-dots="false" data-nav="true">
         <ul class="slides">
@@ -60,37 +7,37 @@
                 {
                     foreach (var item in ViewBag.sliders)
                     {
-                <li>
-                    <img src="~/Uploads/@item.Image" alt="">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12 text-center">
-                                <div class="slide_description_wrapper">
-                                    <div class="slide_description">
-                                        @*with_corner_border*@
-                                        <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
-                                            <h5 class="thin"> @item.Title1</h5>
-                                            <h2 class="highlight">@item.Title2</h2>
-                                            <p> @item.Title3 </p>
-                                            @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
+                        <li>
+                            <img src="~/Uploads/@item.Image" alt="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                @*with_corner_border*@
+                                                <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                                    <h5 class="thin"> @item.Title1</h5>
+                                                    <h2 class="highlight">@item.Title2</h2>
+                                                    <p> @item.Title3 </p>
+                                                    @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
                                                     {
-                                            <a href="@item.ButtonLink" class="theme_button color2 inverse margin_0">
-                                                @item.ButtonText
-                                            </a>
-                                            <span class="bottom_corners"></span>
+                                                        <a href="@item.ButtonLink" class="theme_button color2 inverse margin_0">
+                                                            @item.ButtonText
+                                                        </a>
+                                                        <span class="bottom_corners"></span>
                                                     }
+                                                </div>
+                                            </div>
+                                            <!-- eof .slide_description -->
                                         </div>
+                                        <!-- eof .slide_description_wrapper -->
                                     </div>
-                                    <!-- eof .slide_description -->
+                                    <!-- eof .col-* -->
                                 </div>
-                                <!-- eof .slide_description_wrapper -->
+                                <!-- eof .row -->
                             </div>
-                            <!-- eof .col-* -->
-                        </div>
-                        <!-- eof .row -->
-                    </div>
-                    <!-- eof .container -->
-                </li>
+                            <!-- eof .container -->
+                        </li>
                     }
                 }
                 catch (Exception)
@@ -112,41 +59,42 @@
             </div>
         </div>
         <div class="row columns_margin_bottom_20">
-            <div id="ParlaTeam"></div>
+            <div data-id="ParlaTeam"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Team</h4>
-                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=ParlaTeam&ScrollAmount=450&URLRequested=true')" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
+                    <p class="topmargin_30 bottommargin_0"> 
+                        <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">Our Team</a> 
+                    </p>
                 </div>
             </div>
-            <div id="OurCulture"></div>
+            <div data-id="OurCulture"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center with_corner_border">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Culture</h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=OurCulture&ScrollAmount=450&URLRequested=true')" class="theme_button color2 min_width_button">Discover Now</a>
+                        <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 min_width_button">Discover Now</a>
                     </p>
                     <span class="bottom_corners"></span>
                 </div>
             </div>
-            <div id="SocialResponsibility"></div>
+            <div data-id="SocialResponsibility"></div>
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Social Responsibility</h4>
-                    <p class="topmargin_30 bottommargin_0"> <a href="javascript:location.replace('EN/Home/AboutUs?ScrollId=SocialResponsibility&ScrollAmount=450&URLRequested=true')" class="theme_button color2 inverse min_width_button">Check It</a> </p>
+                    <p class="topmargin_30 bottommargin_0"> 
+                        <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">Check It</a> 
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
-@*<section id="subscribe" class="section_subscribe cs main_color2 parallax section_padding_50 table_section table_section_md">*@
-@*<section id="testimonials" class="ds color parallax page_testimonials section_padding_top_150 section_padding_bottom_150">*@
-<div id="OurValues"></div>
+<div data-id="OurValues"></div>
 <section id="testimonials" class="cs color main_color2 parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
     <div class="container">
         <div class="row">
@@ -165,7 +113,7 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                        Performance
+                                    Performance
                                     @*</a>*@
                                 </h4>
                             </header>
@@ -184,7 +132,7 @@
                                 <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                        Professionalism
+                                    Professionalism
                                     @*</a>*@
                                 </h4>
                             </header>
@@ -205,7 +153,7 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                        Innovation
+                                    Innovation
                                     @*</a>*@
                                 </h4>
                             </header>
@@ -226,7 +174,7 @@
                                 <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                        Teamwork
+                                    Teamwork
                                     @*</a>*@
                                 </h4>
                             </header>
@@ -247,7 +195,7 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                        Integrity
+                                    Integrity
                                     @*</a>*@
                                 </h4>
                             </header>
@@ -273,7 +221,7 @@
     </div>
 </section>
 
-<div id="OurMission"></div>
+<div data-id="OurMission"></div>
 <section id="OurMission" class="ls section_padding_top_100 section_padding_bottom_0">
     <div class="container">
         <div class="row">
@@ -305,112 +253,6 @@
         </ul>
     </div>
 </section>
-@*<section id="testimonials" class="cs color section_Mission parallax section_padding_top_50 section_padding_bottom_50">
-        <div class="container">
-            <div class="row">
-                <h2 class="section_header "> Mission And Vission </h2>
-                <div class="col-sm-10 col-sm-push-1">
-                    <article class="post side-item side-md content-padding with_border rounded topmargin_30">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="item-media top_rounded overflow_hidden">
-                                    <img src="~/lib/pharma/images/LightIcon.jpg" alt="">
-                                    <div class="media-links"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="item-content">
-                                    <h3> Vision</h3>
-                                    <br /><br />
-                                    <p>
-                                        <ul style="font-size:23px;color:white;font-weight:bolder;">
-                                            <li>
-                                                Improving health care access and quality of life
-                                            </li>
-                                            <li>
-                                                Creating added value for  our customers, staff, business partner and  shareholders
-                                            </li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="post side-item side-md content-padding with_border rounded topmargin_30">
-                        <div class="row">
-                            <div class="col-12"><h2 class="section_header leftpadding_20 toppadding_20 owl-center"> Mission</h2></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="teaser media hover_icon">
-                                    <div class="media-left">
-                                        <div > <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionDrugBox.jpg" /> </div>
-                                    </div>
-                                    <div class="media-body toppadding_10">
-                                        <h5 class="hover-color2">Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region</h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <div class="teaser media hover_icon">
-                                    <div class="media-left">
-                                        <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionMoney.jpg" /> </div>
-                                    </div>
-                                    <div class="media-body toppadding_10">
-                                        <h5 class="hover-color2">
-                                            Offering high quality products with most affordable prices for customers
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="teaser media hover_icon">
-                                    <div class="media-left">
-                                        <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionHandShake.jpg" /> </div>
-                                    </div>
-                                    <div class="media-body toppadding_10">
-                                        <h5 class="hover-color2">
-                                            Developing customer orientation and leadership in the market
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                                        </h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <div class="teaser media hover_icon">
-                                    <div class="media-left">
-                                        <div> <img style="border-radius:50%" class="leftpadding_20" src="~/lib/pharma/images/MissionTeam.jpg" /> </div>
-                                    </div>
-                                    <div class="media-body toppadding_10">
-                                        <h5 class="hover-color2">
-                                            Creating raving fans among clients and customers
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                                        </h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>*@
-
 
 <section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
     <div class="container">
@@ -437,8 +279,8 @@
                             <div class="item-media">
                                 <img src="~/lib/pharma/images/gallery/02.jpg" alt="">
                                 <div class="media-links">
-                                    <div class="links-wrap"> 
-                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/endocrinology1.jpg"></a>*@ 
+                                    <div class="links-wrap">
+                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/endocrinology1.jpg"></a>*@
                                     </div>
                                 </div>
                             </div>
@@ -458,7 +300,7 @@
                             <div class="item-media">
                                 <img src="~/lib/pharma/Images/gallery/03.jpg" alt="">
                                 <div class="media-links">
-                                    <div class="links-wrap"> 
+                                    <div class="links-wrap">
                                         @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/Images/cardiovascular1.png"></a>*@
                                     </div>
                                 </div>
@@ -479,8 +321,8 @@
                             <div class="item-media">
                                 <img src="~/lib/pharma/images/gallery/04.jpg" alt="">
                                 <div class="media-links">
-                                    <div class="links-wrap"> 
-                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/gastroenterology1.jpg"></a>*@ 
+                                    <div class="links-wrap">
+                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/gastroenterology1.jpg"></a>*@
                                     </div>
                                 </div>
                             </div>
@@ -500,8 +342,8 @@
                             <div class="item-media">
                                 <img src="~/lib/pharma/images/gallery/05.jpg" alt="">
                                 <div class="media-links">
-                                    <div class="links-wrap"> 
-                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg"></a>*@ 
+                                    <div class="links-wrap">
+                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg"></a>*@
                                     </div>
                                 </div>
                             </div>
@@ -521,8 +363,8 @@
                             <div class="item-media">
                                 <img src="~/lib/pharma/images/gallery/06.jpg" alt="">
                                 <div class="media-links">
-                                    <div class="links-wrap"> 
-                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg"></a>*@ 
+                                    <div class="links-wrap">
+                                        @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="~/lib/pharma/images/dermotology2.jpg"></a>*@
                                     </div>
                                 </div>
                             </div>
@@ -594,16 +436,11 @@
     </div>
 </section>
 
-
-
-
-
-
 <section id="features" class="ls section_padding_top_150 section_padding_bottom_130 columns_margin_bottom_30">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2 class="section_header">Why Parla?</h2> 
+                <h2 class="section_header">Why Parla?</h2>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser media hover_icon">
@@ -682,76 +519,34 @@
     </div>
 </section>
 
-
-
-
-
-
-
-
-@*<div class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h1>Dear Visitor!</h1>
-            Are you a healthcare professional?
-            <input id="AreYouRadio" name="AreYouRadio" type="radio" value="0" /> NO
-            <input id="AreYouRadio" name="AreYouRadio" type="radio" value="1" />Yes
-            <br /><br />
-            <div style="text-align:right;">
-                <input id="BtnAreYou" type="button" value="Ok" style="padding: 10px 20px 10px 20px ;" />
-            </div>
-
-        </div>
-    </div>*@
-
-
-
-
-
-
 @section Scripts {
     <script src="~/lib/pharma/js/Parla.js"></script>
     <script>
         $(document).ready(function () {
-            try {
-                var ScrollAmount = '@ViewBag.ScrollAmount';
-                var PageID = '@ViewBag.PageID';
-                var TagID = '@ViewBag.TagID';
-                var URLRequested = '@ViewBag.URLRequested';
-                if (URLRequested == 'true') {
-                    URLRequested = true;
-                }
-                else if (URLRequested == 'false') {
-                    URLRequested = false;
-                }
-                setTimeout(ScrollObjects(TagID, ScrollAmount, PageID, URLRequested), 5000);
-            } catch (e) {
-                //document.getElementById("demo").innerHTML = err.message;
-                console.log(err.message);
-            }
-            
-            //var modal = document.querySelector(".modal");
-            ////var trigger = document.querySelector(".trigger");
-            //var closeButton = document.querySelector(".close-button");
-            //var BtnAreYou = document.querySelector("#BtnAreYou");
-            //function toggleModal() {
-            //    modal.classList.toggle("show-modal");
-            //}
-            //function windowOnClick(event) {
-            //    if (event.target === modal) {
-            //        toggleModal();
-            //    }
-            //}
-            ////trigger.addEventListener("click", toggleModal);
-            //closeButton.addEventListener("click", toggleModal);
-            //BtnAreYou.addEventListener("click", toggleModal);
-            //window.addEventListener("click", windowOnClick);
-            //toggleModal();
+            $("#AParlaTeam").click(function () {
+                ScrollObjects('ParlaTeam', '@ViewBag.PageID', true);
+            });
+            $("#AOurCulture").click(function () {
+                ScrollObjects('OurCulture', '@ViewBag.PageID', true);
+            });
+            $("#ASocialResponsibility").click(function () {
+                ScrollObjects('SocialResponsibility', '@ViewBag.PageID', true);
+            });
+            $("#AOurValues").click(function () {
+                ScrollObjects('OurValues', '@ViewBag.PageID', true);
+            });
 
-
+            $("#AAboutParla").click(function () {
+                ScrollObjects('AboutParla', '@ViewBag.PageID', true);
+            });
+            $("#AOurMission").click(function () {
+                ScrollObjects('OurMission', '@ViewBag.PageID', true);
+            });
 
         });
-
-        
+        if (location.hash != null || location.hash != '') {
+            var TagID = location.hash.replace('#', '');
+            ScrollObjects(TagID, '@ViewBag.PageID', false);
+        }
     </script>
 }
