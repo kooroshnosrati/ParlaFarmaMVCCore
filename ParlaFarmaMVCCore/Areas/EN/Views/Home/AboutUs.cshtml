@@ -294,12 +294,10 @@
             $("#AParlaTeam").click(function () {
                 ScrollObjects('ParlaTeam', '@ViewBag.PageID', true);
             });
-
+            if (location.hash != null || location.hash != '') {
+                var TagID = location.hash.replace('#', '');
+                setTimeout(ScrollObjects(TagID, '@ViewBag.PageID', false), 5000);
+            }
         });
-        if (location.hash != null || location.hash != '') {
-            var TagID = location.hash.replace('#', '');
-            console.log(2);
-            ScrollObjects(TagID, '@ViewBag.PageID', false);
-        }
     </script>
 }

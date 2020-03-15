@@ -12,12 +12,12 @@
         switch (TagID) {
             case 'SocialResponsibility':
                 if (!FromOwn) {
-                    height = Number(height) + 2002;
+                    height = Number(height) + 2002 + 110;
                     break;
                 }
             case 'OurCulture':
                 if (!FromOwn) {
-                    height = Number(height) + 1241;
+                    height = Number(height) + 1241 + 110;
                     break;
                 }
             case 'ParlaTeam':
@@ -26,16 +26,20 @@
                     break;
                 }
                 if (!FromOwn) {
-                    height = Number(height) + 2883;
+                    height = Number(height) + 2883 + 110;
                     break;
                 }
             case 'OurValues':
                 if (!FromOwn) {
-                    height = Number(height) + 342;
+                    height = Number(height) + 342 + 110;
                     break;
                 }
             case 'OurMission':
             case 'AboutParla':
+                //if (!FromOwn) {
+                //    height = Number(height) - 110;
+                //    break;
+                //}
             case 'Distributors':
             case 'ExportDevelopment':
             case 'Vacancies':
@@ -44,7 +48,7 @@
                     height = Number(height) - 110;
                 }
                 else {
-                    height = Number(height) - 220;
+                    height = Number(height) - 110;
                 }
                 break;
             default:
