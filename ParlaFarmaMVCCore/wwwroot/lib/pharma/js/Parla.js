@@ -1,4 +1,5 @@
-﻿function ScrollObjects(TagID, PageID, FromOwn) {
+﻿var TotalSum = 0;
+function ScrollObjects(TagID, PageID, FromOwn) {
     try {
         var JumpTo = '#' + TagID;
         JumpTo = "div[data-id='" + TagID + "']";
@@ -9,56 +10,87 @@
         } catch (e) {
             ;
         }
+        var sum = Number(offs) + Number(height);
+
         switch (TagID) {
             case 'SocialResponsibility':
                 if (!FromOwn) {
-                    height = Number(height) + 2002 + 110;
+                    sum = Number(sum) + 2002;
                     break;
                 }
             case 'OurCulture':
                 if (!FromOwn) {
-                    height = Number(height) + 1241 + 110;
+                    sum = Number(sum) + 1241;
                     break;
                 }
             case 'ParlaTeam':
                 if (PageID == 'Index') {
-                    height = Number(height) - 200;
+                    console.log(2);
+                    sum = Number(sum) - 200;
                     break;
                 }
                 if (!FromOwn) {
-                    height = Number(height) + 2883 + 110;
+                    console.log(1);
+                    sum = Number(sum) + 2883;
                     break;
                 }
             case 'OurValues':
                 if (!FromOwn) {
-                    height = Number(height) + 342 + 110;
+                    sum = Number(sum) + 342;
                     break;
                 }
             case 'OurMission':
             case 'AboutParla':
-                //if (!FromOwn) {
-                //    height = Number(height) - 110;
-                //    break;
-                //}
             case 'Distributors':
             case 'ExportDevelopment':
             case 'Vacancies':
             case 'WhyPARLA':
                 if (FromOwn) {
-                    height = Number(height) - 110;
+                    sum = Number(sum) - 110;
                 }
                 else {
-                    height = Number(height) - 110;
+                    sum = Number(sum) - 220;
                 }
                 break;
             default:
         }
-        var sum = Number(offs) + Number(height);
-        console.log('PageID:' + PageID + ' TagID:' + TagID + ' Sum :' + sum + ' Offset:' + offs + ' Height:' + height);
-        $('html, body').animate({ scrollTop: sum + 'px' }, 'slow', 'easeInOutExpo');
+        //if (!FromOwn) {
+        //    sum = Number(sum) + 110;
+        //}
+
+
+
+
+        console.log('PageID:' + PageID + ' TagID:' + TagID + ' Sum :' + sum);
+
+        console.log('Start First Scroll');
+        $('html, body').animate({ scrollTop: sum + 'px' }, 'slow', animateCallback(sum)); //
+        console.log('End First Scroll ');
+
+        TotalSum = sum;
+
     }
     catch (err) {
         //document.getElementById("demo").innerHTML = err.message;
         console.log(err.message);
     }
 }
+
+
+function animateCallback(sum) {
+    console.log('Start Second Scroll');
+    //$('html, body').animate({ scrollTop: sum + 'px' }, 'slow');
+    console.log('End Second Scroll ');
+    TotalSum = sum;
+}
+
+
+function myfunction() {
+    console.log('myfunction');
+    $('html, body').animate({ scrollTop: TotalSum + 'px' }, 'slow');
+}
+
+
+window.onload = function () { // same as window.addEventListener('load', (event) => {
+    setTimeout(myfunction(), 10000);
+};
