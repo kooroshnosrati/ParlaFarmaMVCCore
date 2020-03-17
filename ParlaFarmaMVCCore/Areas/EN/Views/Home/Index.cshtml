@@ -1,59 +1,99 @@
 ﻿
+
 <section class="intro_section page_mainslider ds color">
     <div class="flexslider" data-dots="false" data-nav="true">
         <ul class="slides">
-            @{
-                try
-                {
-                    foreach (var item in ViewBag.sliders)
-                    {
-                        <li>
-                            <img src="~/Uploads/@item.Image" alt="">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12 text-center">
-                                        <div class="slide_description_wrapper">
-                                            <div class="slide_description">
-                                                @*with_corner_border*@
-                                                <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
-                                                    <h5 class="thin"> @item.Title1</h5>
-                                                    <h2 class="highlight">@item.Title2</h2>
-                                                    <p> @item.Title3 </p>
-                                                    @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
-                                                    {
-                                                        <a href="@item.ButtonLink" class="theme_button color2 inverse margin_0">
-                                                            @item.ButtonText
-                                                        </a>
-                                                        <span class="bottom_corners"></span>
-                                                    }
-                                                </div>
-                                            </div>
-                                            <!-- eof .slide_description -->
-                                        </div>
-                                        <!-- eof .slide_description_wrapper -->
+            <li>
+                <img src="~/lib/pharma/images/PublishedSiteSliderPics/01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                        <h5 class="thin"> </h5>
+                                        <h2 class="highlight">Shine for Health</h2>
+                                        <p> We promise a healthier tomorrow for our patients </p>
+                                        <a href="#" class="theme_button color2 inverse margin_0">
+                                            Discover Now
+                                        </a>
+                                        <span class="bottom_corners"></span>
                                     </div>
-                                    <!-- eof .col-* -->
                                 </div>
-                                <!-- eof .row -->
                             </div>
-                            <!-- eof .container -->
-                        </li>
-                    }
-                }
-                catch (Exception)
-                {
-                    ;
-                }
-            }
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="~/lib/pharma/images/PublishedSiteSliderPics/02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                        <h5 class="thin"> </h5>
+                                        <h2 class="highlight"></h2>
+                                        <p style="font-size:25px;"> Our aim is to improve healthcare access and quality of life	 </p>
+                                        @*<a href="#" class="theme_button color2 inverse margin_0">
+                                        Discover Now
+                                    </a>
+                                    <span class="bottom_corners"></span>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="~/lib/pharma/images/PublishedSiteSliderPics/03.jpeg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                        <h5 class="thin"> </h5>
+                                        <h2 class="highlight"></h2>
+                                        <p style="font-size:25px;"> We focus on contributing to benefit our patients, society and environment	 </p>
+                                        @*<a href="#" class="theme_button color2 inverse margin_0">
+                                        Discover Now
+                                    </a>
+                                    <span class="bottom_corners"></span>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
-    <!-- eof flexslider -->
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="about" class="ls section_padding_top_150 section_padding_bottom_150">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="section_header"> Welcome to Our Web Site! </h2>
+                <h2 class="section_header"> Welcome to Our Website </h2>
                 <p>We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.</p>
 
             </div>
@@ -64,8 +104,8 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Team</h4>
-                    <p class="topmargin_30 bottommargin_0"> 
-                        <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">Our Team</a> 
+                    <p class="topmargin_30 bottommargin_0">
+                        <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">Our Team</a>
                     </p>
                 </div>
             </div>
@@ -75,7 +115,7 @@
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Parla Culture</h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 min_width_button">Discover Now</a>
+                        <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 inverse min_width_button">Discover Now</a>
                     </p>
                     <span class="bottom_corners"></span>
                 </div>
@@ -85,8 +125,8 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
                     <h4 class="topmargin_20 hover-color2">Social Responsibility</h4>
-                    <p class="topmargin_30 bottommargin_0"> 
-                        <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">Check It</a> 
+                    <p class="topmargin_30 bottommargin_0">
+                        <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">Check It</a>
                     </p>
                 </div>
             </div>
@@ -95,7 +135,8 @@
 </section>
 
 <div data-id="OurValues"></div>
-<section id="testimonials" class="cs color main_color2 parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
+<section id="testimonials" class="cs color parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
+    @*main_color2*@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -103,7 +144,7 @@
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="3" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            <img src="~/lib/pharma/images/gallery/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/01.jpg" alt="">
+                            <img src="~/lib/pharma/images/OurValues/performanceFinal.jpg" alt="">
                             <div class="media-links">
                                 <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/01.jpg"></a>*@ </div>
                             </div>
@@ -122,7 +163,7 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            <img src="~/lib/pharma/images/gallery/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" alt="">
+                            <img src="~/lib/pharma/images/OurValues/ProfessionalismFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" alt="">
                             <div class="media-links">
                                 <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg"></a>*@ </div>
                             </div>
@@ -143,7 +184,7 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            <img src="~/lib/pharma/images/gallery/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" alt="">
+                            <img src="~/lib/pharma/images/OurValues/InnovationFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" alt="">
                             <div class="media-links">
                                 <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg"></a>*@ </div>
                             </div>
@@ -164,7 +205,7 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            <img src="~/lib/pharma/images/gallery/04.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" alt="">
+                            <img src="~/lib/pharma/images/OurValues/TeamworkFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" alt="">
                             <div class="media-links">
                                 <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/04.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg"></a>*@ </div>
                             </div>
@@ -185,7 +226,7 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            <img src="~/lib/pharma/images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg" alt="">
+                            <img src="~/lib/pharma/images/OurValues/IntegrityFinal.jpg" alt="">
                             <div class="media-links">
                                 <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg"></a>*@ </div>
                             </div>
@@ -226,7 +267,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Mission! </h2>
+                <h2 class="section_header"> Our Mission </h2>
             </div>
         </div>
     </div>
@@ -241,7 +282,7 @@
                         <div class="col-sm-12 text-center">
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
-                                    <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10" style="color:black;border-style:groove;border-color:black;width:100%;background-color:rgba(255, 255, 255, 0.5)">
+                                    <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
                                         Initial aim is to produce high quality pharmaceutical products with affordable price and our mission is to develop customer orientation and leadership in the pharmaceutical market and community. Exporting advanced biotechnological and nanotechnological products is one of the key focus areas.
                                     </div>
                                 </div>
@@ -257,15 +298,9 @@
 <section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
     <div class="container">
         <div class="row display_table_md">
-            @*<div class="col-md-6 col-md-push-6 display_table_cell_md"> <img src="~/lib/pharma/images/gallery/01.jpg" alt="" class="rounded"> </div>*@
-            @*<div class="col-md-6 col-md-pull-6 display_table_cell_md">*@
-            <h2 class="section_header">Products</h2>
-            <p class="highlight bottommargin_20"><strong>We provide high quality products with  affordable price.</strong></p>
-            @*<p>
-                    been significantly de-risked. At vero eos et accusam justo duo dolores etea rebuitet clita kasd gubergren nosea takimata sanctus est lorem ipsum dolor consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore magna aliquyam sedam
-                    voluptua at vero eos et accusam et justo duo dolores.
-                </p>*@
-            <p class="topmargin_30">
+            <h2 class="section_header leftpadding_25">Products</h2>
+            <p class="highlight bottommargin_20 leftpadding_25"><strong>We provide high quality products with  affordable price.</strong></p>
+            <p class="topmargin_30 leftpadding_25">
                 <a href="~/EN/Home/Products" class="theme_button color2 inverse">Product Strategy</a>
             </p>
             @*</div>*@
@@ -459,7 +494,7 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
                     </div>
                     <div class="media-body toppadding_10" style="height:210px;">
-                        <h5 class="hover-color2">Fair prices</h5>
+                        <h5 class="hover-color2">Affordable prices</h5>
                         <p>We are determined to offer the most affordable price along with high quality.</p>
                     </div>
                 </div>

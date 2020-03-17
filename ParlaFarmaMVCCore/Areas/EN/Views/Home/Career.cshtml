@@ -4,7 +4,36 @@
     Layout = "~/Areas/EN/Views/Shared/_GeneralLayoutEN.cshtml";
 }
 
-<section id="WhyParlaFirst" class="WhyParla_PageFirstPart">
+    <section class="intro_section page_mainslider">
+        <div class="flexslider" data-dots="false" data-nav="true">
+            <ul class="slides">
+                <li>
+                    <img src="~/lib/pharma/images/PublishedSiteSliderPics/03.jpeg" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                            <h5 class="thin"> </h5>
+                                            <h2 class="highlight">We shine for a better future!</h2>
+                                            <p style="color:white;font-size:20px;"> We know how to work and have fun at the same time </p>
+                                            @*<a href="#" class="theme_button color2 inverse margin_0">
+                                                Discover Now
+                                            </a>
+                                            <span class="bottom_corners"></span>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+@*<section id="WhyParlaFirst" class="WhyParla_PageFirstPart">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -13,7 +42,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@
 
 <section class="ls section_padding_top_30 section_padding_bottom_130">
     <div class="container">
@@ -21,7 +50,7 @@
             <div class="col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded">
                     <div class="item-media top_rounded overflow_hidden">
-                        <img src="~/lib/pharma/images/gallery/23.jpg" alt="">
+                        <img src="~/lib/pharma/images/WhyParla.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
                         <h4> <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">Why PARLA?</a> </h4>
@@ -32,7 +61,7 @@
             <div class="col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded">
                     <div class="item-media top_rounded overflow_hidden">
-                        <img src="~/lib/pharma/images/gallery/23.jpg" alt="">
+                        <img src="~/lib/pharma/images/Vacansies.jfif" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
                         <h4> <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">Vacancies </a> </h4>
@@ -43,11 +72,11 @@
             <div class="col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded">
                     <div class="item-media top_rounded overflow_hidden">
-                        <img src="~/lib/pharma/images/gallery/23.jpg" alt="">
+                        <img src="~/lib/pharma/images/job-application-form.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
                         <h4> <a href="~/EN/Home/Applicationform">Application Form </a> </h4>
-                        <p>Join us!</p>
+                        <p>Join us</p>
                     </div>
                 </article>
             </div>
@@ -56,7 +85,8 @@
 </section>
 
 <div data-id="WhyPARLA"></div>
-<section class="cs color main_color2 parallax section_subscribe ls section_padding_top_30 section_padding_bottom_30 ">
+<section class="parallax section_subscribe ls section_padding_top_30 section_padding_bottom_30 WhyParlaBackground">
+    @*cs color main_color2*@
     <div class="container">
         <div class="row bottompadding_20">
             <h1> Why PARLA? </h1>

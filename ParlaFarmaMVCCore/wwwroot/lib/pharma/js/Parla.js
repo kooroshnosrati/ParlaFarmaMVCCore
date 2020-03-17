@@ -43,13 +43,24 @@ function ScrollObjects(TagID, PageID, FromOwn) {
             case 'AboutParla':
             case 'Distributors':
             case 'ExportDevelopment':
-            case 'Vacancies':
-            case 'WhyPARLA':
                 if (FromOwn) {
+					console.log('FromOwn');
                     sum = Number(sum) - 110;
                 }
                 else {
+					console.log('! FromOwn');
                     sum = Number(sum) - 220;
+                }
+                break;
+            case 'Vacancies':
+            case 'WhyPARLA':
+                if (FromOwn) {
+					console.log('FromOwn');
+                    sum = Number(sum) - 110;
+                }
+                else {
+					console.log('! FromOwn');
+                    sum = Number(sum) - 220 + 562;
                 }
                 break;
             default:
@@ -63,9 +74,9 @@ function ScrollObjects(TagID, PageID, FromOwn) {
 
         console.log('PageID:' + PageID + ' TagID:' + TagID + ' Sum :' + sum);
 
-        console.log('Start First Scroll');
+        //console.log('Start First Scroll');
         $('html, body').animate({ scrollTop: sum + 'px' }, 'slow', animateCallback(sum)); //
-        console.log('End First Scroll ');
+        //console.log('End First Scroll ');
 
         TotalSum = sum;
 
@@ -78,15 +89,15 @@ function ScrollObjects(TagID, PageID, FromOwn) {
 
 
 function animateCallback(sum) {
-    console.log('Start Second Scroll');
+    //console.log('Start Second Scroll');
     //$('html, body').animate({ scrollTop: sum + 'px' }, 'slow');
-    console.log('End Second Scroll ');
+    //console.log('End Second Scroll ');
     TotalSum = sum;
 }
 
 
 function myfunction() {
-    console.log('myfunction');
+    //console.log('myfunction');
     $('html, body').animate({ scrollTop: TotalSum + 'px' }, 'slow');
 }
 

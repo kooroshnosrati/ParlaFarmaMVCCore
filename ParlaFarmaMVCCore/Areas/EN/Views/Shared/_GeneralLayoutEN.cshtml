@@ -116,19 +116,49 @@
                                                     <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">Our Company</a>
                                                 </li>
                                                 <li>
-                                                    <a id="AParlaTeam" href="@ViewBag.PageURL#ParlaTeam">Our Team</a>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                    }
                                                 </li>
                                                 <li>
                                                     <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
                                                 </li>
                                                 <li>
-                                                    <a id="AOurCulture" href="@ViewBag.PageURL#OurCulture">Our Culture</a>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
+                                                    }
+
                                                 </li>
                                                 <li>
-                                                    <a id="AOurMission" href="@ViewBag.PageURL#OurMission">Our Mission</a>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurMission" href="~/EN/Home/Index#OurMission">Our Mission</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">Our Mission</a>
+                                                    }
+
                                                 </li>
                                                 <li>
-                                                    <a id="ASocialResponsibility" href="@ViewBag.PageURL#SocialResponsibility">Social Responsibility</a>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    { 
+                                                        <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
+                                                    }
+                                                    else
+                                                    { 
+                                                        <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
+                                                    }
                                                 </li>
                                             </ul>
                                         </li>
@@ -229,8 +259,8 @@
                                 <p> 16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor </p>
                                 <ul class="list1 no-bullets">
                                     <li> <i class="rt-icon2-device-phone highlight2"></i> +99412 310 52 19 </li>
-                                    <li> <i class="rt-icon2-globe-outline highlight2"></i> <a href="~/EN/Home/Index" tppabs="http://ParlaPharma.Com">www.ParlaPharma.com</a> </li>
-                                    <li> <i class="rt-icon2-mail2 highlight2"></i> <a href="mailto:info@parlapharma.com">info@parlapharma.com</a> </li>
+                                    <li> <i class="rt-icon2-globe-outline highlight2"></i> <a href="~/EN/Home/Index" tppabs="http://Parlapharma.com">www.Parlapharma.com</a> </li>
+                                    <li> <i class="rt-icon2-mail2 highlight2"></i> <a href="mailto:info@parlapharma.com">info@Parlapharma.com</a> </li>
                                 </ul>
                             </div>
                         </div>

@@ -1,0 +1,50 @@
+<section class="intro_section page_mainslider ds color">
+    <div class="flexslider" data-dots="false" data-nav="true">
+        <ul class="slides">
+            @{
+                try
+                {
+                    foreach (var item in ViewBag.sliders)
+                    {
+                        <li>
+                            <img src="~/Uploads/@item.Image" alt="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                @*with_corner_border*@
+                                                <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
+                                                    <h5 class="thin"> @item.Title1</h5>
+                                                    <h2 class="highlight">@item.Title2</h2>
+                                                    <p> @item.Title3 </p>
+                                                    @if (@item.ButtonText != null && @item.ButtonText.Length > 0)
+                                                    {
+                                                        <a href="@item.ButtonLink" class="theme_button color2 inverse margin_0">
+                                                            @item.ButtonText
+                                                        </a>
+                                                        <span class="bottom_corners"></span>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <!-- eof .slide_description -->
+                                        </div>
+                                        <!-- eof .slide_description_wrapper -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container -->
+                        </li>
+                    }
+                }
+                catch (Exception)
+                {
+                    ;
+                }
+            }
+        </ul>
+    </div>
+    <!-- eof flexslider -->
+</section>
