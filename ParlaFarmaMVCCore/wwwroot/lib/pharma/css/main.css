@@ -5900,6 +5900,9 @@ pattern0 {
 .leftpadding_10 {
 	padding-left: 10px;
 }
+.leftpadding_15 {
+	padding-left: 15px;
+}
 
 .leftpadding_20 {
 	padding-left: 20px;
@@ -9881,7 +9884,17 @@ body.active-side-header.slide-right .page_header_side {
 
 .WhyParlaBackground {
 	background-image: url(../images/DSC001161.jpg) !important;
-	opacity:0.5 !important;
+	opacity: 0.5 !important;
+}
+
+.HomePageMissionBackground {
+	background-image: url(../images/20.jpg) !important;
+	opacity: 0.9 !important;
+}
+
+.HomePageVisionBackground {
+	background-image: url('../images/vision (1).jpg') !important;
+	opacity: 0.9 !important;
 }
 
 .section_Mission.parallax {
