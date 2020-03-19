@@ -118,26 +118,12 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                        <a id="AOurVision" href="~/EN/Home/Index#OurVision">Our Vision</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                        <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">Our Vision</a>
                                                     }
-                                                </li>
-                                                <li>
-                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
-                                                </li>
-                                                <li>
-                                                    @if (@ViewBag.PageID == "Index")
-                                                    {
-                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
-                                                    }
-                                                    else
-                                                    {
-                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
-                                                    }
-
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
@@ -151,12 +137,36 @@
 
                                                 </li>
                                                 <li>
+                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
+                                                </li>
+                                                <li>
                                                     @if (@ViewBag.PageID == "Index")
-                                                    { 
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                    }
+                                                </li>
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
+                                                    }
+                                                </li>
+
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
                                                         <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
                                                     }
                                                     else
-                                                    { 
+                                                    {
                                                         <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
                                                     }
                                                 </li>

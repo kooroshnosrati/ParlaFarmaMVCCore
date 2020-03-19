@@ -39,6 +39,8 @@ function ScrollObjects(TagID, PageID, FromOwn) {
                     sum = Number(sum) + 342;
                     break;
                 }
+                
+            case 'OurVision':
             case 'OurMission':
             case 'AboutParla':
             case 'Distributors':

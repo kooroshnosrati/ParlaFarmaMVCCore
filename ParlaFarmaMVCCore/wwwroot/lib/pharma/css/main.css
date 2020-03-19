@@ -9892,6 +9892,12 @@ body.active-side-header.slide-right .page_header_side {
 	opacity: 0.9 !important;
 }
 
+.HomePageMissionContent {
+	height: 125px;
+	padding: 25px !important;
+	text-align: left;
+}
+
 .HomePageVisionBackground {
 	background-image: url('../images/vision (1).jpg') !important;
 	opacity: 0.9 !important;
