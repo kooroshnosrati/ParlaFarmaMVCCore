@@ -10,10 +10,8 @@
     <StartupObject />
   </PropertyGroup>
 
-  <ItemGroup><!--<Compile Remove="Data\ParlaDBContext.cs" />-->
-  
-    <Compile Remove="Data\Migrations\20200227100708_addSliderTable.cs" />
-    <Compile Remove="Data\Migrations\20200227100708_addSliderTable.Designer.cs" />
+  <ItemGroup>
+    <!--<Compile Remove="Data\ParlaDBContext.cs" />-->
   </ItemGroup>
 
 

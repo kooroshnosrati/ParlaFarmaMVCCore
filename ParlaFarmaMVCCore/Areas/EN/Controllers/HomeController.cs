@@ -19,10 +19,10 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
     public class HomeController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly ApplicationDbContext _context;
-        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment)
+        //private readonly ApplicationDbContext _context;
+        public HomeController(IWebHostEnvironment webHostEnvironment) //ApplicationDbContext applicationDbContext, 
         {
-            _context = applicationDbContext;
+            //_context = applicationDbContext;
             _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
@@ -32,12 +32,12 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 string kk = $"{ this.Request.PathBase }";
                 ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/Index"; 
                 ViewBag.PageID = "Index";
-                List <Slider> sliders = new List<Slider>();
-                foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
-                {
-                    sliders.Add(item);
-                }
-                ViewBag.sliders = sliders.ToList();
+                //List <Slider> sliders = new List<Slider>();
+                //foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
+                //{
+                //    sliders.Add(item);
+                //}
+                //ViewBag.sliders = sliders.ToList();
                 return View();
             }
             catch (Exception)

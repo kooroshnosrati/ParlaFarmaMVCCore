@@ -16,7 +16,11 @@
     <![endif]-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    @*<link rel="icon" type="image/x-icon" href="~/favicon.ico">*@
+    <link rel="shortcut icon" href="~/favicon.ico" />
+
     <link rel="stylesheet" href="~/lib/pharma/css/bootstrap.min.css" tppabs="http://webdesign-finder.com/html/pharma/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/lib/pharma/css/animations.css" tppabs="http://webdesign-finder.com/html/pharma/css/animations.css">
     <link rel="stylesheet" href="~/lib/pharma/css/fonts.css" tppabs="http://webdesign-finder.com/html/pharma/css/fonts.css">
@@ -55,10 +59,10 @@
         <div class="fw-messages-wrap ls with_padding">
             <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
             @*<ul class="list-unstyled">
-                <li>Are you a healthcare professional?</li>
-            </ul>
-            <button id="ModalYes" value="Yes"></button>
-            <button id="ModalNo" value="No"></button>*@
+                    <li>Are you a healthcare professional?</li>
+                </ul>
+                <button id="ModalYes" value="Yes"></button>
+                <button id="ModalNo" value="No"></button>*@
         </div>
     </div>
     <!-- eof .modal -->
@@ -92,6 +96,7 @@
 
                         </div>
                     </div>
+                </div>
             </section>
             <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
                 <div class="container">
@@ -118,21 +123,21 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurVision" href="~/EN/Home/Index#OurVision">Our Vision</a>
+                                                    <a id="AOurVision" href="~/EN/Home/Index#OurVision">Our Vision</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">Our Vision</a>
+                                                    <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">Our Vision</a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurMission" href="~/EN/Home/Index#OurMission">Our Mission</a>
+                                                    <a id="AOurMission" href="~/EN/Home/Index#OurMission">Our Mission</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">Our Mission</a>
+                                                    <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">Our Mission</a>
                                                     }
 
                                                 </li>
@@ -142,32 +147,32 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                    <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                    <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
+                                                    <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
+                                                    <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
                                                     }
                                                 </li>
 
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
+                                                    <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
+                                                    <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
                                                     }
                                                 </li>
                                             </ul>
@@ -258,7 +263,7 @@
                                     <i class="fa fa-money"></i><span class="leftpadding_20"></span>Affordable prices
                                 </div>
                                 <div>
-                                    <i class="fa fa-globe" ></i><span class="leftpadding_20"></span>Corporate culture
+                                    <i class="fa fa-globe"></i><span class="leftpadding_20"></span>Corporate culture
                                 </div>
                             </div>
                         </div>
