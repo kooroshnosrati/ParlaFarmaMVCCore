@@ -30,6 +30,7 @@
     <Folder Include="Areas\RU\Data\" />
     <Folder Include="Areas\RU\Models\" />
     <Folder Include="Areas\RU\Views\" />
+    <Folder Include="wwwroot\Uploads\" />
   </ItemGroup>
 
 
