@@ -83,12 +83,12 @@ namespace ParlaFarmaMVCCore
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller=Default}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
-                    //name: "AreaEN",
+                    pattern: "{controller=Default}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    //name: "default",
+                    name: "AreaEN",
                     pattern: "{area=EN}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "AreaAZ",
