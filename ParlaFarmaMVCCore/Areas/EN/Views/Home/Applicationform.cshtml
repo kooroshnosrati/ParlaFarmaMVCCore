@@ -31,6 +31,10 @@
                 <form enctype="multipart/form-data" asp-action="Applicationform" asp-controller="EN/Home" method="post" class="Application-form columns_padding_10 bottommargin_40">
                     @Html.AntiForgeryToken()
                     <div class="row">
+                        <div class="col-sm-12">
+                            <span>@ViewBag.ErrorMessage</span>
+                        </div>
+                        
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="FirstName">

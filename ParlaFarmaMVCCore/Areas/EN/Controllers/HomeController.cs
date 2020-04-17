@@ -99,12 +99,17 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         }
         public IActionResult Applicationform()
         {
+            ViewBag.ErrorMessage = "";
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Applicationform(vmdl_ApplicationForm vmdl_ApplicationForm)
         {
+            ViewBag.ErrorMessage = "";
+            bool isSent = false;
+            string ErrorMessageStr = "";
+                 
             string AttachmentfilePath = "";
             bool hasAttachment = false;
             string ResumeStr = $"{this.Request.Scheme}://{this.Request.Host}/Uploads/"; // {this.Request.PathBase}";
@@ -146,8 +151,14 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                     vmdl_ApplicationForm.JobTitle,
                     ResumeStr,
                     Environment.NewLine);
-                cls_MailManagement.SendEmail();
+                ErrorMessageStr = cls_MailManagement.SendEmail();
+                if (ErrorMessageStr == "OK")
+                    isSent = true;
             }
+            if (isSent)
+                ViewBag.ErrorMessage = "Email is sent Succeessfully...";
+            else
+                ViewBag.ErrorMessage = "Error in sending Email... " + ErrorMessageStr;
             return View();
         }
         public IActionResult OurValues()

@@ -26,7 +26,7 @@ namespace ParlaFarmaMVCCore.API
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             //smtpClient.EnableSsl = true;
         }
-        public bool SendEmail()
+        public string SendEmail()
         {
             try
             {
@@ -44,11 +44,11 @@ namespace ParlaFarmaMVCCore.API
                 mail.Body = Body;
                 mail.Subject = Subject;
                 smtpClient.Send(mail);
-                return true;
+                return "OK";
             }
             catch (Exception err)
             {
-                return false;
+                return err.Message + "   " + err.InnerException;
             }
         }
     }
