@@ -133,16 +133,17 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 }
 
                 cls_MailManagement cls_MailManagement = new cls_MailManagement();
-                //cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
-                //cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
+                cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
+                cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
                 cls_MailManagement.To.Add(new cls_emailAccount("Info@parlapharma.com", "Info User of Parla Pharma"));
                 cls_MailManagement.Subject = "Parla Pharma Application Form Page" ;
                 if (hasAttachment)
                     cls_MailManagement.Attachments.Add(AttachmentfilePath);
+                cls_MailManagement.IsBodyHtml = true;
                 cls_MailManagement.Body = string.Format(
                     "Dear Info User : {7} Mr./Miss {0} Has Sent you an email through Application Form Page.{7}" +
                     "His/Her Name : {0} {7} Phone Number : {1} {7} Email : {2} {7} Available Start Date : {3} {7} " +
-                    "Emplyment Status : {4} {7} He/She Apply's for {5} {7} His/Her Resume : {6} {7}", 
+                    "Emplyment Status : {4} {7} He/She Apply's for {5} {7} His/Her Resume : <a href=\"{6}\">Resume Link</a> {7}", 
                     vmdl_ApplicationForm.FirstName + " " + vmdl_ApplicationForm.LastName, 
                     vmdl_ApplicationForm.Phone, 
                     vmdl_ApplicationForm.Email,
@@ -150,7 +151,8 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                     vmdl_ApplicationForm.EmploymentStatus,
                     vmdl_ApplicationForm.JobTitle,
                     ResumeStr,
-                    Environment.NewLine);
+                    "<br/>"); //Environment.NewLine
+
                 ErrorMessageStr = cls_MailManagement.SendEmail();
                 if (ErrorMessageStr == "OK")
                     isSent = true;

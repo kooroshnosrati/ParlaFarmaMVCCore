@@ -16,6 +16,7 @@ namespace ParlaFarmaMVCCore.API
         public string Subject { get; set; }
         public List<string> Attachments { get; set; }
         public string Body { get; set; }
+        public bool IsBodyHtml { get; set; }
         public cls_MailManagement()
         {
             To = new List<cls_emailAccount>();
@@ -43,6 +44,7 @@ namespace ParlaFarmaMVCCore.API
                     Attachment attachment = new Attachment(item);
                     mail.Attachments.Add(attachment);
                 }
+                mail.IsBodyHtml = IsBodyHtml;
                 mail.Body = Body;
                 mail.Subject = Subject;
                 smtpClient.Send(mail);
