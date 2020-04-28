@@ -133,8 +133,8 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 }
 
                 cls_MailManagement cls_MailManagement = new cls_MailManagement();
-                cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
-                cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
+                //cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
+                //cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
                 cls_MailManagement.To.Add(new cls_emailAccount("Info@parlapharma.com", "Info User of Parla Pharma"));
                 cls_MailManagement.Subject = "Parla Pharma Application Form Page" ;
                 if (hasAttachment)

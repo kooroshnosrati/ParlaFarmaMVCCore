@@ -9,7 +9,7 @@ namespace ParlaFarmaMVCCore.API
 {
     public class cls_MailManagement
     {
-        SmtpClient smtpClient = new SmtpClient("mail.parlapharma.com", 587);
+        SmtpClient smtpClient = null;
         public MailMessage mail = new MailMessage();
         public List<cls_emailAccount> To { get; set; }
         public List<cls_emailAccount> CC { get; set; }
@@ -21,10 +21,12 @@ namespace ParlaFarmaMVCCore.API
             To = new List<cls_emailAccount>();
             CC = new List<cls_emailAccount>();
             Attachments = new List<string>();
-            smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "parlapharma2026");
-            // smtpClient.UseDefaultCredentials = true; // uncomment if you don't want to use the network credentials
+
+            smtpClient = new SmtpClient("mail.parlapharma.com", 587);
+            //smtpClient.UseDefaultCredentials = false; // uncomment if you don't want to use the network credentials
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             //smtpClient.EnableSsl = true;
+            smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "parlapharma2026");
         }
         public string SendEmail()
         {
