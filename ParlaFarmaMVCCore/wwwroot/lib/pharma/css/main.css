@@ -9317,7 +9317,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .cs.parallax {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, .8);
 }
 
 .cs .ls .greylinks a {
@@ -15365,4 +15365,11 @@ a.color-icon.border-icon:hover {
 	width:100%;
 	background-color:rgba(255, 255, 255, 0.5);
 	font-size:20px;
+}
+
+/*
+	Developed By Kourosh
+*/
+.HomeWhyParlaMediaBody {
+	height: 290px;
 }
