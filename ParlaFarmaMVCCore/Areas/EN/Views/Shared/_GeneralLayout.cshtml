@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    @*<meta name="viewport" content="width=device-width" />*@
+    @*<title>@ViewBag.Title</title>*@
+
+    <title>Pharma</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    @*<link rel="icon" type="image/x-icon" href="~/favicon.ico">*@
+    <link rel="shortcut icon" href="~/favicon.ico" />
+
+    <link rel="stylesheet" href="~/lib/pharma/css/bootstrap.min.css" tppabs="http://webdesign-finder.com/html/pharma/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/animations.css" tppabs="http://webdesign-finder.com/html/pharma/css/animations.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/fonts.css" tppabs="http://webdesign-finder.com/html/pharma/css/fonts.css">
+    <link rel="stylesheet" href="~/lib/pharma/css/main.css" tppabs="http://webdesign-finder.com/html/pharma/css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="~/lib/pharma/css/shop.css" tppabs="http://webdesign-finder.com/html/pharma/css/shop.css">
+    @*<link href="~/lib/pharma/css/flags.css" rel="stylesheet" />*@
+    <script src="~/lib/pharma/js/vendor/modernizr-2.6.2.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="~/lib/pharma/js/vendor/html5shiv.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/html5shiv.min.js"></script>
+        <script src="~/lib/pharma/js/vendor/respond.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/respond.min.js"></script>
+        <script src="~/lib/pharma/js/vendor/jquery-1.12.4.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="javascript:if(confirm(%27http://browsehappy.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://browsehappy.com/%27" tppabs="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+                <i class="rt-icon2-cross2"></i>
+            </span>
+        </button>
+        <div class="widget widget_search">
+            <form method="get" class="searchform search-form form-inline" action="http://webdesign-finder.com/html/pharma/">
+                <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button">Search</button>
+            </form>
+        </div>
+    </div>
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls with_padding">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            @*<ul class="list-unstyled">
+                    <li>Are you a healthcare professional?</li>
+                </ul>
+                <button id="ModalYes" value="Yes"></button>
+                <button id="ModalNo" value="No"></button>*@
+        </div>
+    </div>
+    <!-- eof .modal -->
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+            <!-- template sections -->
+            <section class="page_topline cs main_color2 table_section table_section_sm section_padding_top_5 section_padding_bottom_5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 text-center text-sm-left">
+                            <div>
+                                <div style="border:1px;border-color:blue;"></div>
+                                <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i>
+                                Opening Hours: Mon - Sat 9:00 – 18:00
+                            </div>
+                        </div>
+                        <div class="col-sm-4 text-center text-sm-right greylinks">
+                            <span class="rightpadding_10">Follow Us:</span>
+                            <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
+                            <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
+                            <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>
+                            <a class="social-icon color-icon soc-linkedin" href="#" title="Twitter"></a>
+                            <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
+
+                            &nbsp;&nbsp;&nbsp;
+                            @*<a href="#" alt="English" title="English"></a>*@
+                            <a href="https://translate.google.com/translate?sl=en&tl=az&u=http%3A%2F%2Fparlapharma.com%2FEN%252FHome" alt="Azerbaijani" title="Azerbaijani" target="_blank">AZ</a>
+                            <a href="https://translate.google.com/translate?sl=en&tl=ru&u=http%3A%2F%2Fparlapharma.com%2FEN%252FHome" alt="Russian" title="Russian" target="_blank">RU</a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 display_table">
+                            <div class="header_left_logo display_table_cell" style="border-style:double;background-color:#ffffff;">
+                                <a href="~/EN/Home/Index" class="logo top_logo">
+                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt="" style="height:50px !important;"> @*~/lib/pharma/images/PARLA Logo.png*@
+                                </a>
+                            </div>
+                            <div class="header_mainmenu display_table_cell text-center">
+                                <!-- main nav start -->
+                                <nav class="mainmenu_wrapper">
+                                    <ul class="mainmenu nav sf-menu">
+                                        <li class="active">
+                                            <a href="~/EN/Home/Index">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/EN/Home/AboutUs">About Us</a>
+                                            <ul>
+                                                <li>
+                                                    <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">Our Company</a>
+                                                </li>
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurVision" href="~/EN/Home/Index#OurVision">Our Vision</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">Our Vision</a>
+                                                    }
+                                                </li>
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurMission" href="~/EN/Home/Index#OurMission">Our Mission</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">Our Mission</a>
+                                                    }
+
+                                                </li>
+                                                <li>
+                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
+                                                </li>
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                    }
+                                                </li>
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
+                                                    }
+                                                </li>
+
+                                                <li>
+                                                    @if (@ViewBag.PageID == "Index")
+                                                    {
+                                                        <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
+                                                    }
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="~/EN/Home/Products">Products</a>
+                                            <ul>
+                                                <li><a href="~/EN/Home/Products">Products</a></li>
+                                                <li><a href="~/EN/Home/Products">By alphabet</a></li>
+                                                <li><a href="~/EN/Home/Products">By problem</a></li>
+                                                <li><a href="~/EN/Home/Products">Phramacovigilance</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">News and Media</a>
+                                            <ul>
+                                                <li><a href="#">News</a></li>
+                                                <li><a href="#">Press-releases</a></li>
+                                                <li><a href="#">Media gallery</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="~/EN/Home/Partners">Partners</a>
+                                            <ul>
+                                                <li> <a id="ADistributors" href="~/EN/Home/Partners#Distributors">Distributors</a> </li>
+                                                <li> <a id="AExportDevelopment" href="~/EN/Home/Partners#ExportDevelopment">Export development</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="~/EN/Home/Career">Careers</a>
+                                            <ul>
+                                                <li> <a id="AWhyPARLA" href="~/EN/Home/Career#WhyPARLA">Why Parla</a> </li>
+                                                <li> <a id="AVacancies" href="~/EN/Home/Career#Vacancies">Vacancies</a> </li>
+                                                <li> <a href="~/EN/Home/Applicationform">Application form</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">R & D</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/EN/Home/ContactUs">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- eof main nav -->
+                                <!-- header toggler --><span class="toggle_menu"><span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+
+
+
+            @RenderBody()
+
+
+
+
+
+
+            <footer class="page_footer ds ms section_padding_0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="widget_text leftmargin_20">
+                                <a href="~/EN/Home/Index" class="logo vertical_logo bottommargin_20 ">
+                                    <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="http://webdesign-finder.com/html/pharma/images/logo-light.png" alt="" class="toppadding_0" style="height:90px !important;">
+                                </a>
+                                <p class="toppadding_10">Improving health care access and quality of life</p>
+                                <p>Creating added value for  our customers, staff, business partner and  shareholders</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_80">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Why Us?</h3>
+                                <div>
+                                    <i class="fa fa-thumbs-o-up"></i><span class="leftpadding_20"></span>High quality
+                                </div>
+                                <div>
+                                    <i class="fa fa-audio-description"></i><span class="leftpadding_15"></span>Advanced technology
+                                </div>
+                                <div>
+                                    <i class="fa fa-money"></i><span class="leftpadding_20"></span>Affordable prices
+                                </div>
+                                <div>
+                                    <i class="fa fa-globe"></i><span class="leftpadding_20"></span>Corporate culture
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_80">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <p> 16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor </p>
+                                <ul class="list1 no-bullets">
+                                    <li> <i class="rt-icon2-device-phone highlight2"></i> +99412 310 52 19 </li>
+                                    <li> <i class="rt-icon2-globe-outline highlight2"></i> <a href="~/EN/Home/Index" tppabs="http://Parlapharma.com">www.Parlapharma.com</a> </li>
+                                    <li> <i class="rt-icon2-mail2 highlight2"></i> <a href="mailto:info@parlapharma.com">info@Parlapharma.com</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 to_animate toppadding_80">
+                            <div class="widget_text">
+                                <h3 class="widget-title">Stay Tunned</h3>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-facebook"></a> </div>
+                                    <div class="media-body media-middle"> Facebook </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-twitter"></a> </div>
+                                    <div class="media-body media-middle"> Twitter </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-linkedin"></a> </div>
+                                    <div class="media-body media-middle"> LinkedIn </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a> </div>
+                                    <div class="media-body media-middle"> Pinterest </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <section class="ds color darker page_copyright section_padding_15">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <p class="fontsize_12">&copy; Copyright 2020. All Rights Reserved.</p> @* ParlaPharma Co. &commat;*@
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+
+
+
+
+    <script src="~/lib/pharma/js/compressed.js" tppabs="http://webdesign-finder.com/html/pharma/js/compressed.js"></script>
+    <script src="~/lib/pharma/js/main.js" tppabs="http://webdesign-finder.com/html/pharma/js/main.js"></script>
+    <script src="~/lib/pharma/js/switcher.js" tppabs="http://webdesign-finder.com/html/pharma/js/switcher.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
