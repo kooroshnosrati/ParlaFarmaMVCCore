@@ -101,27 +101,33 @@
 
             <style>
                 #MyDiv {
-                    background-image: radial-gradient(white, #19bcdb, #11333a 90%);
-                    border-radius: 15px;
+                    /*background-image: radial-gradient(white, #19bcdb, #11333a 90%);
+                    border-radius: 15px;*/
                 }
                     #MyDiv:hover {
                     }
                 #MyImg {
-                    transition: transform 1s;
-                    height: 50px !important;
+                    /*transition: transform 1s;*/
+                    height: 80px !important;
                 }
-                    #MyImg:hover {
+                    /*#MyImg:hover {
                         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-                    }
+                    }*/
             </style>
             <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 display_table">
-                            <div class="header_left_legoo display_table_cell">
-                                @*id="MyDiv"*@
+                            <div class="header_left_logo display_table_cell" style="display:none;">
                                 <a href="~/EN/Home/Index" class="logo top_logo">
                                     <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt=""> @*~/lib/pharma/images/PARLA Logo.png*@ @*id="MyImg"*@
+                                </a>
+                            </div>
+                            <div id="MyDiv" class="header_left_legoo display_table_cell">
+                                @*id="MyDiv"*@
+                                <a href="~/EN/Home/Index" class="logo">
+                                    @*top_logo*@
+                                    <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="" alt="" id="MyImg"> @*~/lib/pharma/images/PARLA Logo.png*@ @**@
                                 </a>
                             </div>
                             <div class="header_mainmenu display_table_cell text-center">
