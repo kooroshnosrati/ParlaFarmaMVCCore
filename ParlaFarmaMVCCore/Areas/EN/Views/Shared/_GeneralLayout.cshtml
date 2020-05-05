@@ -19,7 +19,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     @*<link rel="icon" type="image/x-icon" href="~/favicon.ico">*@
-    <link rel="shortcut icon" href="~/favicon.ico" />
+    @*<link rel="shortcut icon" href="~/favicon.ico" />*@
 
     <link rel="stylesheet" href="~/lib/pharma/css/bootstrap.min.css" tppabs="http://webdesign-finder.com/html/pharma/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/lib/pharma/css/animations.css" tppabs="http://webdesign-finder.com/html/pharma/css/animations.css">
@@ -98,13 +98,30 @@
                     </div>
                 </div>
             </section>
+
+            <style>
+                #MyDiv {
+                    background-image: radial-gradient(white, #19bcdb, #11333a 90%);
+                    border-radius: 15px;
+                }
+                    #MyDiv:hover {
+                    }
+                #MyImg {
+                    transition: transform 1s;
+                    height: 50px !important;
+                }
+                    #MyImg:hover {
+                        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+                    }
+            </style>
             <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 display_table">
-                            <div class="header_left_logo display_table_cell" style="border-style:double;background-color:#ffffff;">
+                            <div class="header_left_legoo display_table_cell">
+                                @*id="MyDiv"*@
                                 <a href="~/EN/Home/Index" class="logo top_logo">
-                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt="" style="height:50px !important;"> @*~/lib/pharma/images/PARLA Logo.png*@
+                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt=""> @*~/lib/pharma/images/PARLA Logo.png*@ @*id="MyImg"*@
                                 </a>
                             </div>
                             <div class="header_mainmenu display_table_cell text-center">

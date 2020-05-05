@@ -7048,7 +7048,24 @@ pattern0 {
 	z-index: 2;
 	padding: 5px 0;
 }
-
+/*-------------------------------------------------------------------------------------------------------*/
+.legoo {
+	display: inline-block;
+	word-break: break-word;
+	font-size: 24px;
+	position: relative;
+	z-index: 2;
+	padding: 5px 0;
+}
+.legoo img {
+	max-width: 300px;
+}
+@media (max-width: 1199px) {
+	.legoo img {
+		max-width: 200px;
+	}
+}
+/*-------------------------------------------------------------------------------------------------------*/
 .logo img {
 	max-width: 300px;
 }
@@ -7413,15 +7430,23 @@ pattern0 {
 	clear: both;
 }
 
-.header_left_logo {
-	position: relative;
-}
 
 .page_header {
 	height: auto;
 }
 
+/*.header_left_logo {
+}*/
+/*------------------------------------------------------------------------------------------------------*/
+.header_left_legoo {
+	position: relative;
+	white-space: nowrap;
+	padding: 0 25px;
+	overflow: visible;
+}
+/*------------------------------------------------------------------------------------------------------*/
 .header_left_logo {
+	position: relative;
 	white-space: nowrap;
 	padding: 0 25px;
 	overflow: visible;
