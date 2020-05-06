@@ -9,7 +9,21 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2>Job Application</h2>
+                <h2>
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Job Application
+                            break;
+                        case "az":
+                            @:Iş üçün müraciət forması
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </h2>
 
             </div>
         </div>
@@ -20,8 +34,36 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3 class="module-header">Job Application</h3>
-                <p>Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+                <h3 class="module-header">
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Job Application
+                            break;
+                        case "az":
+                            @:Iş üçün müraciət forması
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </h3>
+                <p>
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.
+                            break;
+                        case "az":
+                            @:Bizimlə işləməyə maraq göstərdiyiniz üçün təşəkkür edirik. Sizə uyğün mövcud iş imkanları üçün vakansiyalar bölməmizə baş çəkin və İş üçün Müraciət Formasını doldurmaqla ərizənizi bizə göndərin.
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </p>
             </div>
         </div>
         <div class="row">
@@ -64,7 +106,21 @@
                         <div class="col-sm-12">
                             <div class="form-group bottommargin_0">
                                 <label for="Phone">
-                                    <b>Phone </b>
+                                    <b>
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:Phone
+                                                break;
+                                            case "az":
+                                                @:Telefon
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
+
+                                    </b>
                                     <span asp-validation-for="Phone" class="required">*</span>
                                 </label>
                                 <input asp-for="Phone" type="tel" aria-required="true" size="30" value="" name="Phone" id="Phone" class="form-control" placeholder="### ### ####">
@@ -73,7 +129,21 @@
                         <div class="col-sm-12">
                             <div class="form-group bottommargin_0">
                                 <label for="JobPosition">
-                                    <b>What position are you applying for?</b>
+                                    <b>
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:What position are you applying for?
+                                                break;
+                                            case "az":
+                                                @:Hansı vəzifə üçün müraciət edirsiniz?
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
+
+                                    </b>
                                     <span asp-validation-for="JobTitle" class="required">*</span>
                                 </label>
                                 <br />
@@ -83,7 +153,21 @@
                         <div class="col-sm-12">
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label for="StartDate">
-                                    <b>Available start date </b>
+                                    <b>
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:Available start date
+                                                break;
+                                            case "az":
+                                                @:Mümkün başlama tarixi
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
+
+                                    </b>
                                     <span asp-validation-for="AvailableStartDate" class="required">*</span>
                                 </label>
                                 <input asp-for="AvailableStartDate" type="date" aria-required="true" size="30" value="" name="AvailableStartDate" id="AvailableStartDate" class="form-control" placeholder="">

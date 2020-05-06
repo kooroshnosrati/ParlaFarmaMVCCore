@@ -16,6 +16,10 @@
     <Compile Remove="Data\Migrations\20200227100708_addSliderTable.Designer.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Areas\EN\Views\Shared\_GeneralLayoutEN.cshtml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <Folder Include="Areas\AZ\Controllers\" />

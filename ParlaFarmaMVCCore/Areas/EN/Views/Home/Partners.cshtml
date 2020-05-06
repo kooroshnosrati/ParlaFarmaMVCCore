@@ -154,10 +154,50 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3 class="module-header">Export development</h3>
-                <p>Export development is an important element of the “Parla Pharmaceuticals” business strategy.</p>
+                <h3 class="module-header">
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Export development
+                            break;
+                        case "az":
+                            @:İxrac
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
 
-                <p> “Parla Pharmaceuticals” intends to export advanced biotechnological and nanotechnological products being developed in accordance with national and international GMP standards.</p>
+                </h3>
+                <p>
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Export development is an important element of the “Parla Pharmaceuticals” business strategy.
+                            break;
+                        case "az":
+                            @:Dərman məhsullarının ixracı “Parla Pharmaceuticals” şirkətinin biznes strategiyasının əsas istiqamətlərindən biridir.
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+                </p>
+
+                <p>
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:“Parla Pharmaceuticals” intends to export advanced biotechnological and nanotechnological products being developed in accordance with national and international GMP standards.
+                            break;
+                        case "az":
+                            @: “Parla Pharmaceuticals” beynəlxalq GMP standartlarına uyğun olaraq hazırlanan biotexnoloji və nanotexnoloji dərman məhsullarını ixrac etməyi planlaşdırır.
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+                </p>
 
                 <img src="~/lib/pharma/images/Export development.png" />
                 <p>&nbsp;</p>

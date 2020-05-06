@@ -12,10 +12,50 @@
                                 <div class="slide_description">
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
-                                        <h2 class="highlight">Shine for Health</h2>
-                                        <p> We promise a healthier tomorrow for our patients </p>
+                                        <h2 class="highlight">
+                                            @switch (@ViewBag.Language)
+                                            {
+                                                case "en":
+                                                    @:Shine for Health
+                                                    break;
+                                                case "az":
+                                                    @:Sağlamlıq naminə Parla!
+                                                    break;
+                                                case "ru":
+                                                    @:
+                                                    break;
+                                            }
+
+                                        </h2>
+                                        <p>
+                                            @switch (@ViewBag.Language)
+                                            {
+                                                case "en":
+                                                    @:We promise a healthier tomorrow for our patients
+                                                    break;
+                                                case "az":
+                                                    @:Biz daha sağlam gələcək naminə çalışırıq.
+                                                    break;
+                                                case "ru":
+                                                    @:
+                                                    break;
+                                            }
+
+                                        </p>
                                         <a href="#" class="theme_button color2 inverse margin_0">
-                                            Discover Now
+                                            @switch (@ViewBag.Language)
+                                            {
+                                                case "en":
+                                                    @:Discover Now
+                                                    break;
+                                                case "az":
+                                                    @:Daha ətraflı
+                                                    break;
+                                                case "ru":
+                                                    @:
+                                                    break;
+                                            }
+
                                         </a>
                                         <span class="bottom_corners"></span>
                                     </div>
@@ -35,7 +75,21 @@
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight"></h2>
-                                        <p style="font-size:25px;"> Our aim is to improve healthcare access and quality of life	 </p>
+                                        <p style="font-size:25px;">
+                                            @switch (@ViewBag.Language)
+                                            {
+                                                case "en":
+                                                    @:Our aim is to improve healthcare access and quality of life
+                                                    break;
+                                                case "az":
+                                                    @:Bizim məqsədimiz səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətlərini yaxşılaşdırmaqdır.
+                                                    break;
+                                                case "ru":
+                                                    @:
+                                                    break;
+                                            }
+
+                                        </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
                                             </a>
@@ -57,7 +111,21 @@
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight"></h2>
-                                        <p style="font-size:25px;"> We focus on contributing to benefit our patients, society and environment	 </p>
+                                        <p style="font-size:25px;">
+                                            @switch (@ViewBag.Language)
+                                            {
+                                                case "en":
+                                                    @:We focus on contributing to benefit our patientsWe focus on contributing to benefit our patients, society and environment
+                                                    break;
+                                                case "az":
+                                                    @:Cəmiyyətimizə, pasiyentlərimizə və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.
+                                                    break;
+                                                case "ru":
+                                                    @:
+                                                    break;
+                                            }
+
+                                        </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
                                             </a>
@@ -93,8 +161,36 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="section_header"> Welcome to Our Website </h2>
-                <p>We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.</p>
+                <h2 class="section_header">
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Welcome to Our Website
+                            break;
+                        case "az":
+                            @:Vebsaytımıza xoş gəlmisiniz!
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </h2>
+                <p>
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.
+                            break;
+                        case "az":
+                            @:“Parla Pharmaceuticals” yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir.
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </p>
 
             </div>
         </div>
@@ -103,9 +199,37 @@
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
-                    <h4 class="topmargin_20 hover-color2">Parla Team</h4>
+                    <h4 class="topmargin_20 hover-color2">
+                        @switch (@ViewBag.Language)
+                        {
+                            case "en":
+                                @:Parla Team
+                                break;
+                            case "az":
+                                @:Komandamız
+                                break;
+                            case "ru":
+                                @:
+                                break;
+                        }
+
+                    </h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">Our Team</a>
+                        <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:Our Team
+                                    break;
+                                case "az":
+                                    @:Daha ətraflı
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </a>
                     </p>
                 </div>
             </div>
@@ -113,9 +237,37 @@
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center with_corner_border">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
-                    <h4 class="topmargin_20 hover-color2">Parla Culture</h4>
+                    <h4 class="topmargin_20 hover-color2">
+                        @switch (@ViewBag.Language)
+                        {
+                            case "en":
+                                @:Parla Culture
+                                break;
+                            case "az":
+                                @:Korporativ mühit\a
+                                break;
+                            case "ru":
+                                @:
+                                break;
+                        }
+
+                    </h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 inverse min_width_button">Discover Now</a>
+                        <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 inverse min_width_button">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:Discover Now
+                                    break;
+                                case "az":
+                                    @:Daha ətraflı
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </a>
                     </p>
                     <span class="bottom_corners"></span>
                 </div>
@@ -124,9 +276,37 @@
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
-                    <h4 class="topmargin_20 hover-color2">Social Responsibility</h4>
+                    <h4 class="topmargin_20 hover-color2">
+                        @switch (@ViewBag.Language)
+                        {
+                            case "en":
+                                @:Social Responsibility
+                                break;
+                            case "az":
+                                @:Sosial məsuliyyət
+                                break;
+                            case "ru":
+                                @:
+                                break;
+                        }
+
+                    </h4>
                     <p class="topmargin_30 bottommargin_0">
-                        <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">Check It</a>
+                        <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:Check It
+                                    break;
+                                case "az":
+                                    @:Daha ətraflı
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </a>
                     </p>
                 </div>
             </div>

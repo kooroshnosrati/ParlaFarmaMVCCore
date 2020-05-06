@@ -1,4 +1,16 @@
 ﻿var TotalSum = 0;
+function ChangeLanguage(curLang, newLang) {
+    //alert(window.location.search);
+    var locStr = window.location.search;
+    if (locStr.indexOf("lang=") == -1) {
+        locStr += 'lang=' + newLang;
+    }
+    else {
+        locStr = locStr.replace('lang=' + curLang, 'lang=' + newLang);
+    }
+    //alert(locStr);
+    window.location.search = locStr;
+}
 function ScrollObjects(TagID, PageID, FromOwn) {
     try {
         var JumpTo = '#' + TagID;

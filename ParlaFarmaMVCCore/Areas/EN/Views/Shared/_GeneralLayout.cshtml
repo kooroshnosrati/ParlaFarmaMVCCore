@@ -89,11 +89,19 @@
                             <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
 
                             &nbsp;&nbsp;&nbsp;
-                            @*<a href="#" alt="English" title="English"></a>*@
-                            <a href="https://translate.google.com/translate?sl=en&tl=az&u=http%3A%2F%2Fparlapharma.com%2FEN%252FHome" alt="Azerbaijani" title="Azerbaijani" target="_blank">AZ</a>
-                            <a href="https://translate.google.com/translate?sl=en&tl=ru&u=http%3A%2F%2Fparlapharma.com%2FEN%252FHome" alt="Russian" title="Russian" target="_blank">RU</a>
-
-
+                            @if (@ViewBag.Language != "en")
+                            {
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
+                            }
+                            @if (@ViewBag.Language != "az")
+                            {
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
+                            }
+                            @if (@ViewBag.Language != "ru")
+                            { 
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>
+                            }
+                                
                         </div>
                     </div>
                 </div>
@@ -135,7 +143,20 @@
                                 <nav class="mainmenu_wrapper">
                                     <ul class="mainmenu nav sf-menu">
                                         <li class="active">
-                                            <a href="~/EN/Home/Index">Home</a>
+                                            <a href="~/EN/Home/Index">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                        @:Home
+                                                        break;
+                                                    case "az":
+                                                        @:Ev
+                                                        break;
+                                                    case "ru":
+                                                        @:Дом
+                                                        break;
+                                                }
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="~/EN/Home/AboutUs">About Us</a>

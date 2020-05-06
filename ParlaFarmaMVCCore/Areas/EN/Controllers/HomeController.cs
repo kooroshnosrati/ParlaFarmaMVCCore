@@ -25,8 +25,31 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             //_context = applicationDbContext;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        private void Setlanguage(string lang)
         {
+            try
+            {
+                switch (lang.ToLower())
+                {
+                    case "az":
+                        ViewBag.Language = "az";
+                        break;
+                    case "ru":
+                        ViewBag.Language = "ru";
+                        break;
+                    default:
+                        ViewBag.Language = "en";
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Language = "en";
+            }
+        }
+        public IActionResult Index(string lang)
+        {
+            Setlanguage(lang);
             try
             {
                 string kk = $"{ this.Request.PathBase }";
@@ -45,38 +68,46 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 return View();
             }
         }
-        public IActionResult AboutUs()
+        public IActionResult AboutUs(string lang)
         {
+            Setlanguage(lang);
+
             ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/AboutUs"; 
             ViewBag.PageID = "AboutUs";
             return View();
         }
-        public IActionResult Products()
+        public IActionResult Products(string lang)
         {
+            Setlanguage(lang);
             return View();
         }
-        public IActionResult PressCenter()
+        public IActionResult PressCenter(string lang)
         {
+            Setlanguage(lang);
             return View();
         }
-        public IActionResult Partners()
+        public IActionResult Partners(string lang)
         {
+            Setlanguage(lang);
             ViewBag.PageID = "Partners";
             return View();
         }
-        public IActionResult Career()
+        public IActionResult Career(string lang)
         {
+            Setlanguage(lang);
             ViewBag.PageID = "Career";
             return View();
         }
-        public IActionResult ContactUs()
+        public IActionResult ContactUs(string lang)
         {
+            Setlanguage(lang);
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ContactUs([FromForm]vmdl_ContactUsIno vmdl_ContactUsIno)
+        public IActionResult ContactUs(string lang, [FromForm]vmdl_ContactUsIno vmdl_ContactUsIno)
         {
+            Setlanguage(lang);
             try
             {
                 if (ModelState.IsValid)
@@ -97,15 +128,17 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             }
             return RedirectToAction("ContactUs", "EN/Home");
         }
-        public IActionResult Applicationform()
+        public IActionResult Applicationform(string lang)
         {
+            Setlanguage(lang);
             ViewBag.ErrorMessage = "";
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Applicationform(vmdl_ApplicationForm vmdl_ApplicationForm)
+        public IActionResult Applicationform(string lang, vmdl_ApplicationForm vmdl_ApplicationForm)
         {
+            Setlanguage(lang);
             ViewBag.ErrorMessage = "";
             bool isSent = false;
             string ErrorMessageStr = "";
@@ -163,8 +196,9 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
                 ViewBag.ErrorMessage = "Error in sending Email... " + ErrorMessageStr;
             return View();
         }
-        public IActionResult OurValues()
+        public IActionResult OurValues(string lang)
         {
+            Setlanguage(lang);
             return View();
         }
     }

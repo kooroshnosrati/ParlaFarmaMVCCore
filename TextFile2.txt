@@ -1,0 +1,12 @@
+@switch (@ViewBag.Language)
+{
+    case "en":
+        @:Home
+        break;
+    case "az":
+        @:Ev
+        break;
+    case "ru":
+        @:
+        break;
+}
