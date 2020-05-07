@@ -33,6 +33,13 @@
         <script src="~/lib/pharma/js/vendor/respond.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/respond.min.js"></script>
         <script src="~/lib/pharma/js/vendor/jquery-1.12.4.min.js" tppabs="http://webdesign-finder.com/html/pharma/js/vendor/jquery-1.12.4.min.js"></script>
     <![endif]-->
+    @{
+        string GetLangDictionary()
+        {
+            return "salam";
+        }
+    }
+
 </head>
 <body>
     <!--[if lt IE 9]>
@@ -77,11 +84,37 @@
                             <div>
                                 <div style="border:1px;border-color:blue;"></div>
                                 <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i>
-                                Opening Hours: Mon - Sat 9:00 – 18:00
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Opening Hours: Mon - Sat 9:00 – 18:00
+                                        break;
+                                    case "az":
+                                        @:Açılış saatları: Mon - Sat 9:00 - 18:00
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
                             </div>
                         </div>
                         <div class="col-sm-4 text-center text-sm-right greylinks">
-                            <span class="rightpadding_10">Follow Us:</span>
+                            <span class="rightpadding_10">
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Follow Us:
+                                        break;
+                                    case "az":
+                                        @:Bizi izlə:
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
+                            </span>
                             <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
                             <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
                             <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>
@@ -91,17 +124,17 @@
                             &nbsp;&nbsp;&nbsp;
                             @if (@ViewBag.Language != "en")
                             {
-                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
+                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
                             }
                             @if (@ViewBag.Language != "az")
                             {
-                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
+                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
                             }
                             @if (@ViewBag.Language != "ru")
-                            { 
-                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>
+                            {
+                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>
                             }
-                                
+
                         </div>
                     </div>
                 </div>
@@ -112,13 +145,15 @@
                     /*background-image: radial-gradient(white, #19bcdb, #11333a 90%);
                     border-radius: 15px;*/
                 }
+
                     #MyDiv:hover {
                     }
+
                 #MyImg {
                     /*transition: transform 1s;*/
                     height: 80px !important;
                 }
-                    /*#MyImg:hover {
+                /*#MyImg:hover {
                         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
                     }*/
             </style>
@@ -147,117 +182,556 @@
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
-                                                        @:Home
+                                                @:Home
                                                         break;
                                                     case "az":
-                                                        @:Ev
+                                                @:Ev
                                                         break;
                                                     case "ru":
-                                                        @:Дом
+                                                @:
                                                         break;
                                                 }
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/AboutUs">About Us</a>
+                                            <a href="~/EN/Home/AboutUs">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:About Us
+                                                        break;
+                                                    case "az":
+                                                @:Haqqımızda
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                             <ul>
                                                 <li>
-                                                    <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">Our Company</a>
+                                                    <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Company
+                                                                break;
+                                                            case "az":
+                                                        @:Şirkətimiz
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurVision" href="~/EN/Home/Index#OurVision">Our Vision</a>
+                                                    <a id="AOurVision" href="~/EN/Home/Index#OurVision">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Vision
+                                                                break;
+                                                            case "az":
+                                                        @:Our vision
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">Our Vision</a>
+                                                    <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Our Vision
+                                                            break;
+                                                        case "az":
+                                                        @:Our vision
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+                                                    </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurMission" href="~/EN/Home/Index#OurMission">Our Mission</a>
+                                                    <a id="AOurMission" href="~/EN/Home/Index#OurMission">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Mission
+                                                                break;
+                                                            case "az":
+                                                        @:Missiyamız
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">Our Mission</a>
+                                                    <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Our Mission
+                                                            break;
+                                                        case "az":
+                                                        @:Missiyamız
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+                                                    </a>
                                                     }
 
                                                 </li>
                                                 <li>
-                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">Our Values</a>
+                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Values
+                                                                break;
+                                                            case "az":
+                                                        @:Dəyərlərimiz
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">Our Team</a>
+                                                    <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Team
+                                                                break;
+                                                            case "az":
+                                                        @:Komandamız
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">Our Team</a>
+                                                    <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Our Team
+                                                            break;
+                                                        case "az":
+                                                        @:Komandamız
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+                                                    </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">Our Culture</a>
+                                                    <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Our Culture
+                                                                break;
+                                                            case "az":
+                                                        @:Korporativ mədəniyyət
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">Our Culture</a>
+                                                    <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Our Culture
+                                                            break;
+                                                        case "az":
+                                                        @:Korporativ mədəniyyət
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+                                                    </a>
                                                     }
                                                 </li>
 
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                        <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">Social Responsibility</a>
+                                                    <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Social Responsibility
+                                                                break;
+                                                            case "az":
+                                                        @:Sosial məsuliyyət
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
                                                     }
                                                     else
                                                     {
-                                                        <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">Social Responsibility</a>
+                                                    <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Social Responsibility
+                                                            break;
+                                                        case "az":
+                                                        @:Sosial məsuliyyət
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+
+                                                    </a>
                                                     }
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Products">Products</a>
+                                            <a href="~/EN/Home/Products">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:Products
+                                                        break;
+                                                    case "az":
+                                                @:Məhsullar
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                             <ul>
-                                                <li><a href="~/EN/Home/Products">Products</a></li>
-                                                <li><a href="~/EN/Home/Products">By alphabet</a></li>
-                                                <li><a href="~/EN/Home/Products">By problem</a></li>
-                                                <li><a href="~/EN/Home/Products">Phramacovigilance</a></li>
+                                                <li>
+                                                    <a href="~/EN/Home/Products">
+                                                        @switch (@ViewBag.Language)
+                                                    {
+                                                        case "en":
+                                                        @:Products
+                                                            break;
+                                                        case "az":
+                                                        @:Məhsullar
+                                                            break;
+                                                        case "ru":
+                                                        @:
+                                                            break;
+                                                    }
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="~/EN/Home/Products">
+                                                        @switch (@ViewBag.Language)
+    {
+        case "en":
+                                                        @:By alphabet
+            break;
+        case "az":
+                                                        @:Əlifba sırası üzrə
+            break;
+        case "ru":
+                                                        @:
+            break;
+    }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="~/EN/Home/Products">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:By problem
+                                                                break;
+                                                            case "az":
+                                                        @:Xəstəlik üzrə
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="~/EN/Home/Products">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Phramacovigilance
+                                                                break;
+                                                            case "az":
+                                                        @:Farmakonəzarət
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">News and Media</a>
+                                            <a href="#">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:News and Media
+                                                        break;
+                                                    case "az":
+                                                @:Xəbərlər
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                             <ul>
-                                                <li><a href="#">News</a></li>
-                                                <li><a href="#">Press-releases</a></li>
-                                                <li><a href="#">Media gallery</a></li>
+                                                <li>
+                                                    <a href="#">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:News
+                                                                break;
+                                                            case "az":
+                                                        @:Xəbərlər
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Press-releases
+                                                                break;
+                                                            case "az":
+                                                        @:Pres-relizlər
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Media gallery
+                                                                break;
+                                                            case "az":
+                                                        @:Media qalereya
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Partners">Partners</a>
+                                            <a href="~/EN/Home/Partners">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:Partners
+                                                        break;
+                                                    case "az":
+                                                @:Tərəfdaşlıq
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                             <ul>
-                                                <li> <a id="ADistributors" href="~/EN/Home/Partners#Distributors">Distributors</a> </li>
-                                                <li> <a id="AExportDevelopment" href="~/EN/Home/Partners#ExportDevelopment">Export development</a> </li>
+                                                <li>
+                                                    <a id="ADistributors" href="~/EN/Home/Partners#Distributors">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Distributors
+                                                                break;
+                                                            case "az":
+                                                        @:Distribyutorlar
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="AExportDevelopment" href="~/EN/Home/Partners#ExportDevelopment">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Export development
+                                                                break;
+                                                            case "az":
+                                                        @:İxrac xətti
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Career">Careers</a>
+                                            <a href="~/EN/Home/Career">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:Careers
+                                                        break;
+                                                    case "az":
+                                                @:Karyera
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                             <ul>
-                                                <li> <a id="AWhyPARLA" href="~/EN/Home/Career#WhyPARLA">Why Parla</a> </li>
-                                                <li> <a id="AVacancies" href="~/EN/Home/Career#Vacancies">Vacancies</a> </li>
-                                                <li> <a href="~/EN/Home/Applicationform">Application form</a> </li>
+                                                <li>
+                                                    <a id="AWhyPARLA" href="~/EN/Home/Career#WhyPARLA">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Why Parla
+                                                                break;
+                                                            case "az":
+                                                        @:PARLA-da iş
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="AVacancies" href="~/EN/Home/Career#Vacancies">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Vacancies
+                                                                break;
+                                                            case "az":
+                                                        @:Vakansiyalar
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="~/EN/Home/Applicationform">
+                                                        @switch (@ViewBag.Language)
+                                                        {
+                                                            case "en":
+                                                        @:Application form
+                                                                break;
+                                                            case "az":
+                                                        @:Müraciət formu
+                                                                break;
+                                                            case "ru":
+                                                        @:
+                                                                break;
+                                                        }
+
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="#">R & D</a>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/ContactUs">Contact Us</a>
+                                            <a href="~/EN/Home/ContactUs">
+                                                @switch (@ViewBag.Language)
+                                                {
+                                                    case "en":
+                                                @:Contact Us
+                                                        break;
+                                                    case "az":
+                                                @:Əlaqə
+                                                        break;
+                                                    case "ru":
+                                                @:
+                                                        break;
+                                                }
+
+                                            </a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -368,10 +842,10 @@
 
 
 
-    <script src="~/lib/pharma/js/compressed.js" tppabs="http://webdesign-finder.com/html/pharma/js/compressed.js"></script>
-    <script src="~/lib/pharma/js/main.js" tppabs="http://webdesign-finder.com/html/pharma/js/main.js"></script>
-    <script src="~/lib/pharma/js/switcher.js" tppabs="http://webdesign-finder.com/html/pharma/js/switcher.js"></script>
-
+    <script src="~/lib/pharma/js/compressed.js"></script>
+    <script src="~/lib/pharma/js/main.js"></script>
+    <script src="~/lib/pharma/js/switcher.js"></script>
+    <script src="~/lib/pharma/js/Language.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

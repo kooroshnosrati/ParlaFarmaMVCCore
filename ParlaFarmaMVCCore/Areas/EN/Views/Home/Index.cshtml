@@ -327,16 +327,54 @@
                     </div>
                     <div class="col-md-8">
                         <div class="item-content">
-                            <h2 class="bottommargin_0">Our Vision</h2>
+                            <h2 class="bottommargin_0">
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Our Vision
+                                        break;
+                                    case "az":
+                                        @:Görümüz
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
+                            </h2>
                             <br /><br /><br /><br />
                             <ul style="font-size:25px;">
                                 <li>
-                                    Improving health care access and quality of life
+                                    @switch (@ViewBag.Language)
+                                    {
+                                        case "en":
+                                            @:Improving health care access and quality of life
+                                            break;
+                                        case "az":
+                                            @:Səhiyyə xidmətlərinə çıxışı və pasiyentlərin həyat keyfiyyətini yaxşılaşdırmaq
+                                            break;
+                                        case "ru":
+                                            @:
+                                            break;
+                                    }
+
                                 </li>
                             </ul>
                             <ul style="font-size:25px;">
                                 <li>
-                                    Creating added value for  our customers, staff, business partner and  shareholders
+                                    @switch (@ViewBag.Language)
+                                    {
+                                        case "en":
+                                            @:Creating added value for  our customers, staff, business partner and  shareholders
+                                            break;
+                                        case "az":
+                                            @:Müştərilərimiz, əməkdaşlarımız, biznes tərəfdaşlarımız və səhmdarlarımız üçün əlavə dəyər yaratmaq
+                                            break;
+                                        case "ru":
+                                            @:
+                                            break;
+                                    }
+
                                 </li>
                             </ul>
                         </div>
@@ -369,7 +407,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="section_header "> Our Mission </h2>
+                <h2 class="section_header ">
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Our Mission
+                            break;
+                        case "az":
+                            @:Missiyamız
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="4" data-responsive-lg="4" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
@@ -381,7 +433,19 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region
+                                        break;
+                                    case "az":
+                                        @:Azərbaycanda və bütün MDB regionunda ən qabaqcıl əczaçılıq şirkətinə çevrilmək
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
                             </p>
                         </div>
                     </article>
@@ -396,7 +460,19 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                Developing customer orientation and leadership in the market
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Developing customer orientation and leadership in the market
+                                        break;
+                                    case "az":
+                                        @:Bazarda müştəri yönümlü yanaşma və liderliyi inkişaf etdirmək
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
                             </p>
                         </div>
                     </article>
@@ -410,7 +486,19 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                Offering high quality products with most affordable prices for customers
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Offering high quality products with most affordable prices for customers
+                                        break;
+                                    case "az":
+                                        @:Münasib qiymət və yüksək keyfiyyətli dərman məhsulları təmin etmək
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
                             </p>
                         </div>
                     </article>
@@ -424,7 +512,19 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                Creating raving fans among clients and customers
+                                @switch (@ViewBag.Language)
+                                {
+                                    case "en":
+                                        @:Creating raving fans among clients and customers
+                                        break;
+                                    case "az":
+                                        @:Müştərilər üçün güvənli tərəfdaşa çevrilmək
+                                        break;
+                                    case "ru":
+                                        @:
+                                        break;
+                                }
+
                             </p>
                         </div>
                     </article>
@@ -435,131 +535,7 @@
 </section>
 
 <div data-id="OurValues"></div>
-<section id="testimonials" class="cs color parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="section_header "> Our Values </h2>
-                <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="3" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/performanceFinal.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/01.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/01.jpg"></a>*@ </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
-                                <h4 class="entry-title topmargin_0">
-                                    @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    Performance
-                                    @*</a>*@
-                                </h4>
-                            </header>
-                            <p> As an ambitious company, we believe our work should be executed flawlessly, to guarantee added value for our patients, customers, shareholders and staff and ensure unparalleled quality in everything we do. </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/ProfessionalismFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/02.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg"></a>*@ </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
-                                <h4 class="entry-title topmargin_0">
-                                    @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    Professionalism
-                                    @*</a>*@
-                                </h4>
-                            </header>
-                            <p>
-                                We set our standards high and we are ready to help team to add on  their skillsso that Parla’s team can exceed expectations and strive for perfection in everything we do.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/InnovationFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/03.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg"></a>*@ </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
-                                <h4 class="entry-title topmargin_0">
-                                    @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    Innovation
-                                    @*</a>*@
-                                </h4>
-                            </header>
-                            <p>
-                                We constantly strive to redefine the standard of excellence in everything we do. We are open to ideas that challenge the conventional views and drive innovation.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/TeamworkFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/04.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg"></a>*@ </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
-                                <h4 class="entry-title topmargin_0">
-                                    @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    Teamwork
-                                    @*</a>*@
-                                </h4>
-                            </header>
-                            <p>
-                                Parla deeply believes in real team performance and integration. We put the interest of the team as success only comes when we work together.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/IntegrityFinal.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> @*<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="images/gallery/05.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/05.jpg"></a>*@ </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
-                                <h4 class="entry-title topmargin_0">
-                                    @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    Integrity
-                                    @*</a>*@
-                                </h4>
-                            </header>
-                            <p>
-                                Ethics is propriety in all what we do in Parla. We are honest, fair and open and we never compromise on those.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-
-        @*<div class="row">
-                <div class="col-md-8 text-center text-md-left">
-                    <h3 class="bottommargin_0">Our Values</h3>
-                    <p class="fontsize_20 grey margin_0">Sed ut perspiciatis unde omnis iste natus error sit.</p>
-                </div>
-                <div class="col-md-4 text-center text-md-right">
-                    <div class="widget widget_mailchimp">
-                    </div>
-                </div>
-            </div>*@
-    </div>
-</section>
+<partial name="_OurValuesPartial" />
 
 <section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
     <div class="container">
@@ -741,7 +717,21 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Why Parla? </h2>
+                <h2 class="section_header">
+                    @switch (@ViewBag.Language)
+                    {
+                        case "en":
+                            @:Why Parla?
+                            break;
+                        case "az":
+                            @:Nə üçün PARLA?
+                            break;
+                        case "ru":
+                            @:
+                            break;
+                    }
+
+                </h2>
             </div>
         </div>
     </div>
@@ -758,9 +748,35 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-diamond2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody" >
-                        <h5 class="hover-color2">We have passion to help patients</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:We have passion to help patients
+                                    break;
+                                case "az":
+                                    @:Pasiyentlər bizim üçün önəmlidir
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </h5>
                         <p>
-                            Improving quality of life of patients is focus of Parla. We make sure this will be the base of all our decisions and actions. we make our medicine available and affordable for the patients.
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:Improving quality of life of patients is focus of Parla. We make sure this will be the base of all our decisions and actions. we make our medicine available and affordable for the patients.
+                                    break;
+                                case "az":
+                                    @:PARLAnın əsas maraqlarından biri pasiyentlərin həyat keyfiyyətinin yaxşılaşdırılmasıdır. Bu, bizim aldığımız bütün qərarların və fəaliyyətimizin əsasında dayanır.
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
                         </p>
                     </div>
                 </div>
@@ -769,9 +785,35 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
-                        <h5 class="hover-color2">We offer a best place to work to our employees</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:We offer a best place to work to our employees
+                                    break;
+                                case "az":
+                                    @:Biz əməkdaşlarımıza ən yaxşı iş yeri təklif edirik
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </h5>
                         <p>
-                            We offer a nice and welcome working environment to help people to learn and grow. We believe in empowerment together with support which help people to develop their skills in high standards.
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:We offer a nice and welcome working environment to help people to learn and grow. We believe in empowerment together with support which help people to develop their skills in high standards.
+                                    break;
+                                case "az":
+                                    @:Xoş və rahat iş mühiti təmin etməklə, əməkdaşlarımızın öyrənərək inkişaf etməsinə şərait yaradırıq. Bizim üçün əməkdaşlarımızın peşəkar və fərdi inkişafı böyük önəm kəsb edir.
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
                         </p>
                     </div>
                 </div>
@@ -782,9 +824,35 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
-                        <h5 class="hover-color2">We use innovation and advance technology to provide the best products with high standards</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:We use innovation and advance technology to provide the best products with high standards
+                                    break;
+                                case "az":
+                                    @:İnnovasiya və yüksək texnologiya əsasında keyfiyyətli dərman məhsulları təmin edirik
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </h5>
                         <p>
-                            As the first science-based pharmaceutical company of Azerbaijan, we focus on the full production of high-tech products. Our portfolio also includes biotechnological and nanotechnological products. We provide high quality pharmaceutical products with high GMP standards.
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:As the first science-based pharmaceutical company of Azerbaijan, we focus on the full production of high-tech products. Our portfolio also includes biotechnological and nanotechnological products. We provide high quality pharmaceutical products with high GMP standards.
+                                    break;
+                                case "az":
+                                    @:Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq, yüksək texnologiyalı dərmanların istehsalını həyata keçirməyə yönəlmişik. Məhsul portfelimizə,həmçinin, biotexnoloji və nanotexnoloji dərmanlar da daxildir. Yüksək keyfiyyətli əczaçılıq məhsulları yüksək GMP standartlarına cavab verir.
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
                         </p>
                     </div>
                 </div>
@@ -793,9 +861,35 @@
                         <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
-                        <h5 class="hover-color2">We are responsible for our society and our environment</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:We are responsible for our society and our environment
+                                    break;
+                                case "az":
+                                    @:Biz cəmiyyət və ətraf mühit qarşısındakı məsuliyyətlərimizi dərk edirik
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
+                        </h5>
                         <p>
-                            To have a sustainable business, Parla is responsible for its society and environment. We collaborate with related stakeholders in our disease areas as a part of social responsibility activities. Also, to keep our planet safe for all of us, we have some policies which underpins every decision and action we make.
+                            @switch (@ViewBag.Language)
+                            {
+                                case "en":
+                                    @:To have a sustainable business, Parla is responsible for its society and environment. We collaborate with related stakeholders in our disease areas as a part of social responsibility activities. Also, to keep our planet safe for all of us, we have some policies which underpins every decision and action we make.
+                                    break;
+                                case "az":
+                                    @:Biznesin dayanıqlılığına nail olmaq üçün PARLA öz qarşısına cəmiyyət və ətraf mühitlə bağlı məsuliyyətlər qoyub. Biz bütün fəaliyyətimizdə bu sosial məsuliyyət öhdəliklərini qəbul edir və bu istiqamətdə müvafiq tərəflərlə əməkdaşlıq edərək Korporativ Sosial Məsuliyyət (KSM) layihələri həyata keçiririk.
+                                    break;
+                                case "ru":
+                                    @:
+                                    break;
+                            }
+
                         </p>
                     </div>
                 </div>

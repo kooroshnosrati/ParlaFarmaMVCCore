@@ -15,8 +15,36 @@
                                 <div class="slide_description">
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
-                                        <h2 class="highlight">We shine for a better future!</h2>
-                                        <p style="color:white;font-size:20px;"> We know how to work and have fun at the same time </p>
+                                        <h2 class="highlight">
+                                            @switch (@ViewBag.Language)
+{
+    case "en":
+                                            @:We shine for a better future!
+        break;
+    case "az":
+                                            @:Daha parlaq gələcək naminə!
+        break;
+    case "ru":
+                                            @:
+        break;
+}
+
+                                        </h2>
+                                        <p style="color:white;font-size:20px;">
+                                            @switch (@ViewBag.Language)
+{
+    case "en":
+                                            @:We know how to work and have fun at the same time
+        break;
+    case "az":
+                                            @:Əgər siz də peşəkar komandamızın bir üzvü olmaq və daha parlaq gələcək üçün çalışmaq istəyirsinisə, bizə qoşulun!
+        break;
+    case "ru":
+                                            @:
+        break;
+}
+
+                                        </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
                                             </a>
@@ -52,8 +80,36 @@
                         <img src="~/lib/pharma/images/why.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">Why PARLA?</a> </h4>
-                        <p>Values of PARLA is a key to success of the team and the main accelerator of our business.</p>
+                        <h4> <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">
+    @switch (@ViewBag.Language)
+    {
+        case "en":
+    @:Why PARLA?
+            break;
+        case "az":
+    @:Nə üçün PARLAnı seçməlisiniz?
+            break;
+        case "ru":
+    @:
+            break;
+    }
+
+</a> </h4>
+                        <p>
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Values of PARLA is a key to success of the team and the main accelerator of our business.
+        break;
+    case "az":
+                            @:PARLA-da izlədiyimiz dəyərlər komandamızın uğurunun açarı və biznesimizin əsas mühərrikidir.
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </p>
                     </div>
                 </article>
             </div>
@@ -63,7 +119,21 @@
                         <img src="~/lib/pharma/images/vacancies.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">Vacancies </a> </h4>
+                        <h4> <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">
+    @switch (@ViewBag.Language)
+{
+    case "en":
+    @:Vacancies
+        break;
+    case "az":
+    @:Vakansiyalar
+        break;
+    case "ru":
+    @:
+        break;
+}
+    
+</a> </h4>
                         <p>Join the team of professionals in PARLA.</p>
                     </div>
                 </article>
@@ -88,7 +158,21 @@
     @*cs color main_color2*@
     <div class="container">
         <div class="row bottompadding_20">
-            <h1> Why PARLA? </h1>
+            <h1>
+                @switch (@ViewBag.Language)
+{
+    case "en":
+                @:Why PARLA?
+        break;
+    case "az":
+                @:Nə üçün PARLAnı seçməlisiniz?
+        break;
+    case "ru":
+                @:
+        break;
+}
+
+            </h1>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-6">
@@ -99,7 +183,21 @@
                         </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Professionalism</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Professionalism
+        break;
+    case "az":
+                            @:Professionallıq
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
@@ -107,7 +205,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Teamwork</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Teamwork
+        break;
+    case "az":
+                            @:Komanda işi
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
@@ -115,7 +227,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Innovation</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Innovation
+        break;
+    case "az":
+                            @:İnnovasiya
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -124,7 +250,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Performance</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Performance
+        break;
+    case "az":
+                            @:Performans
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -135,7 +275,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Motivation package</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Motivation package
+        break;
+    case "az":
+                            @:Motivasiya paketi
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -144,7 +298,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Development of talents</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Development of talents
+        break;
+    case "az":
+                            @:İstedadların inkişafı
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -153,7 +321,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Fun-loving corporate culture</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Fun-loving corporate culture
+        break;
+    case "az":
+                            @:Pozitiv korporativ mühit
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -162,7 +344,21 @@
                         <div class="teaser_icon rounded main_bg_color "> <i class="rt-icon2-tag2"></i> </div>
                     </div>
                     <div class="media-body toppadding_10">
-                        <h5 class="hover-color2">Comfortable workplace</h5>
+                        <h5 class="hover-color2">
+                            @switch (@ViewBag.Language)
+{
+    case "en":
+                            @:Comfortable workplace
+        break;
+    case "az":
+                            @:Rahat iş yeri
+        break;
+    case "ru":
+                            @:
+        break;
+}
+
+                        </h5>
 
                     </div>
                 </div>
@@ -191,8 +387,23 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3 class="module-header">Vacancies</h3>
-                <p>PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements</p>
+                <h3 class="module-header">
+                    @switch (@ViewBag.Language)
+{
+    case "en":
+                    @:Vacancies
+        break;
+    case "az":
+                    @:Vakansiyalar
+        break;
+    case "ru":
+                    @:
+        break;
+}
+
+                </h3>
+                <p>
+                PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements</p>
                 <p><b>We offer:</b></p>
                 <ul>
                     <li>opportunity to become professional in your sphere and to increase expertise in the related areas.</li>

@@ -217,112 +217,7 @@
 </section>
 
 <div data-id="OurValues"></div>
-<section id="testimonials" class="cs color parallax section_subscribe section_padding_top_50 section_padding_bottom_50">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="section_header "> Our Values </h2>
-                <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="3" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/performanceFinal.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> </div>
-                                <h4 class="entry-title topmargin_0">
-                                    
-                                    Performance
-                                </h4>
-                            </header>
-                            <p> We believe our work should be executed flawlessly, to guarantee added value for our customers, shareholders and staff and ensure unparalleled quality in everything we do. </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/ProfessionalismFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/02.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlightlinks"> </div>
-                                <h4 class="entry-title topmargin_0">
-                                    Professionalism
-                                </h4>
-                            </header>
-                            <p>
-                                We set our standards high so that we can exceed expectations and strive for perfection in everything we do.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/InnovationFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/03.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap">  </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> </div>
-                                <h4 class="entry-title topmargin_0">
-                                    Innovation
-                                </h4>
-                            </header>
-                            <p>
-                                We constantly strive to redefine the standard of excellence in everything we do. We are open to ideas that challenge the conventional views and drive innovation.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/TeamworkFinal.jpg" tppabs="http://webdesign-finder.com/html/pharma/images/gallery/04.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlightlinks"> </div>
-                                <h4 class="entry-title topmargin_0">
-                                    Teamwork
-                                </h4>
-                            </header>
-                            <p>
-                                We put the interest of the group first, before our individual interests, as we know that success only comes when we work together.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
-                        <div class="item-media">
-                            <img src="~/lib/pharma/images/OurValues/IntegrityFinal.jpg" alt="">
-                            <div class="media-links">
-                                <div class="links-wrap"> </div>
-                            </div>
-                        </div>
-                        <div class="item-content" style="height:300px;">
-                            <header class="entry-header">
-                                <div class="categories-links highlight2links"> </div>
-                                <h4 class="entry-title topmargin_0">
-                                    Integrity
-                                </h4>
-                            </header>
-                            <p>
-                                We are honest, fair and open in all our activities.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<partial name="_OurValuesPartial" />
 
 <div data-id="ParlaTeam"></div>
 <section id="ParlaTeam1" class="ls section_padding_top_50 section_padding_bottom_0">
@@ -345,7 +240,18 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        Our team is our main asset. Parla is a young, talented, ambitious and agile team of professionals
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:Our team is our main asset. Parla is a young, talented, ambitious and agile team of professionals
+                                                break;
+                                            case "az":
+                                                @:“Parla” gənc, istedadlı, məqsədyönlü və çevik peşəkarlar komandasıdır!
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -361,7 +267,19 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        We are a dynamic and energetic team of professionals who focus on excellence and success. Our people are equipped with many years of experience, along with the knowledge and confidence in their field of work. In Parla we believe in innovation, dedication and teamwork.
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:We are a dynamic and energetic team of professionals who focus on excellence and success. Our people are equipped with many years of experience, along with the knowledge and confidence in their field of work. In Parla we believe in innovation, dedication and teamwork.
+                                                break;
+                                            case "az":
+                                                @:Biz yüksək professionallıq və uğur qazanmaq yolunda  irəliləyən dinamik və enerjili peşəkarlardan ibarət komandayıq. Bizim əməkdaşlarımız öz sahələrində ekspert olmaqla yanaşı, həm də çoxillik təcrübəyə malikdirlər. “Parla” olaraq, biz innovasiya, sadiqlik və komanda işinə inanırıq.
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
+
                                     </div>
                                 </div>
                             </div>
@@ -377,7 +295,19 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do
+                                        @switch (@ViewBag.Language)
+                                        {
+                                            case "en":
+                                                @:With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do
+                                                break;
+                                            case "az":
+                                                @:Geniş təcrübəyə malik və çoxsaylı təlim keçmiş peşəkarlar komandası ilə, “Parla” Azərbaycanda qabaqcıl əczaçılıq şirkəti olmaqda qərarlıdır. Bizim uğurumuz əməkdaşlarımızın fəaliyyətindən yaranır. Çünki biz öz işimizi sevirik !
+                                                break;
+                                            case "ru":
+                                                @:
+                                                break;
+                                        }
+
                                     </div>
                                 </div>
                             </div>
@@ -399,13 +329,13 @@
                     @switch (@ViewBag.Language)
                     {
                         case "en":
-                            @:Our Culture
+                    @:Our Culture
                             break;
                         case "az":
-                            @:
+                    @:
                             break;
                         case "ru":
-                            @:
+                    @:
                             break;
                     }
 
@@ -428,13 +358,13 @@
                                         @switch (@ViewBag.Language)
                                         {
                                             case "en":
-                                                @:We believe that success of our business depends directly on personal contribution of every employee. Our teamwork is based on learning culture, effetive communication, constructive feedback and determination.
+                                        @:We believe that success of our business depends directly on personal contribution of every employee. Our teamwork is based on learning culture, effetive communication, constructive feedback and determination.
                                                 break;
                                             case "az":
-                                                @:Biz əminik ki, biznesin uğuru hər bir əməkdaşın fərdi tohfəsinə əsaslanır. Komanda fəaliyyətimzidə öyrənmək və inkişaf, şəffaf və açıq ünsiyyət, konstruktiv rəy və qərarlılıq prinsiplərini əsas tuturuq.
+                                        @:Biz əminik ki, biznesin uğuru hər bir əməkdaşın fərdi tohfəsinə əsaslanır. Komanda fəaliyyətimzidə öyrənmək və inkişaf, şəffaf və açıq ünsiyyət, konstruktiv rəy və qərarlılıq prinsiplərini əsas tuturuq.
                                                 break;
                                             case "ru":
-                                                @:
+                                        @:
                                                 break;
                                         }
 
@@ -473,13 +403,13 @@
                                         @switch (@ViewBag.Language)
                                         {
                                             case "en":
-                                                @:Staying true to our mission, values and culture we focus on contributing to benefit our patients, society and environment
+                                        @:Staying true to our mission, values and culture we focus on contributing to benefit our patients, society and environment
                                                 break;
                                             case "az":
-                                                @:Missiyamız, dəyərlərimiz və korporativ mədəniyyətimizə sadiq qalaraq, pasiyentlərimiz, cəmiyyətimiz və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.
+                                        @:Missiyamız, dəyərlərimiz və korporativ mədəniyyətimizə sadiq qalaraq, pasiyentlərimiz, cəmiyyətimiz və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.
                                                 break;
                                             case "ru":
-                                                @:
+                                        @:
                                                 break;
                                         }
 
