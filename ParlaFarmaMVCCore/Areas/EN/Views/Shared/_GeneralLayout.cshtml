@@ -178,23 +178,23 @@
                                 <nav class="mainmenu_wrapper">
                                     <ul class="mainmenu nav sf-menu">
                                         <li class="active">
-                                            <a href="~/EN/Home/Index">
+                                            <a href="javascript:navigateMe('/EN/Home/Index');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
-                                                @:Home
+                                                        @:Home
                                                         break;
                                                     case "az":
-                                                @:Ev
+                                                        @:Əsas səhifə
                                                         break;
                                                     case "ru":
-                                                @:
+                                                        @:
                                                         break;
                                                 }
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/AboutUs">
+                                            <a href="javascript:navigateMe('/EN/Home/AboutUs');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
@@ -211,7 +211,7 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a id="AAboutParla" href="~/EN/Home/AboutUs#AboutParla">
+                                                    <a id="AAboutParla" href="javascript:navigateMe('/EN/Home/AboutUs', '#AboutParla');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -230,7 +230,7 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurVision" href="~/EN/Home/Index#OurVision">
+                                                    <a id="AOurVision" href="javascript:navigateMe('/EN/Home/Index', '#OurVision');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -248,7 +248,7 @@
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurVision" href="~/EN/Home/AboutUs#OurVision">
+                                                    <a id="AOurVision" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurVision');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -267,7 +267,7 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurMission" href="~/EN/Home/Index#OurMission">
+                                                    <a id="AOurMission" href="javascript:navigateMe('/EN/Home/Index', '#OurMission');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -285,7 +285,7 @@
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurMission" href="~/EN/Home/AboutUs#OurMission">
+                                                    <a id="AOurMission" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurMission');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -303,7 +303,7 @@
 
                                                 </li>
                                                 <li>
-                                                    <a id="AOurValues" href="~/EN/Home/Index#OurValues">
+                                                    <a id="AOurValues" href="javascript:navigateMe('/EN/Home/Index', '#OurValues');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -322,7 +322,7 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AParlaTeam" href="~/EN/Home/Index#ParlaTeam">
+                                                    <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/Index', '#ParlaTeam');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -340,7 +340,7 @@
                                                     }
                                                     else
                                                     {
-                                                    <a id="AParlaTeam" href="~/EN/Home/AboutUs#ParlaTeam">
+                                                    <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -359,7 +359,7 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurCulture" href="~/EN/Home/Index#OurCulture">
+                                                    <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/Index', '#OurCulture');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -377,7 +377,7 @@
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurCulture" href="~/EN/Home/AboutUs#OurCulture">
+                                                    <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurCulture');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -397,7 +397,7 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="ASocialResponsibility" href="~/EN/Home/Index#SocialResponsibility">
+                                                    <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/Index', '#SocialResponsibility');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -415,7 +415,7 @@
                                                     }
                                                     else
                                                     {
-                                                    <a id="ASocialResponsibility" href="~/EN/Home/AboutUs#SocialResponsibility">
+                                                    <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/AboutUs', '#SocialResponsibility');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -435,7 +435,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Products">
+                                            <a href="javascript:navigateMe('/EN/Home/Products');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
@@ -452,7 +452,7 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="~/EN/Home/Products">
+                                                    <a href="javascript:navigateMe('/EN/Home/Products');">
                                                         @switch (@ViewBag.Language)
                                                     {
                                                         case "en":
@@ -468,7 +468,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="~/EN/Home/Products">
+                                                    <a href="javascript:navigateMe('/EN/Home/Products');">
                                                         @switch (@ViewBag.Language)
     {
         case "en":
@@ -485,7 +485,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="~/EN/Home/Products">
+                                                    <a href="javascript:navigateMe('/EN/Home/Products');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -502,7 +502,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="~/EN/Home/Products">
+                                                    <a href="javascript:navigateMe('/EN/Home/Products');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -591,7 +591,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Partners">
+                                            <a href="javascript:navigateMe('/EN/Home/Partners');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
@@ -608,7 +608,7 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a id="ADistributors" href="~/EN/Home/Partners#Distributors">
+                                                    <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -625,7 +625,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a id="AExportDevelopment" href="~/EN/Home/Partners#ExportDevelopment">
+                                                    <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -644,7 +644,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/Career">
+                                            <a href="javascript:navigateMe('/EN/Home/Career');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":
@@ -661,7 +661,7 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a id="AWhyPARLA" href="~/EN/Home/Career#WhyPARLA">
+                                                    <a id="AWhyPARLA" href="javascript:navigateMe('/EN/Home/Career', '#WhyPARLA');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -678,7 +678,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a id="AVacancies" href="~/EN/Home/Career#Vacancies">
+                                                    <a id="AVacancies" href="javascript:navigateMe('/EN/Home/Career', '#Vacancies');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -695,7 +695,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="~/EN/Home/Applicationform">
+                                                    <a href="javascript:navigateMe('/EN/Home/Applicationform');">
                                                         @switch (@ViewBag.Language)
                                                         {
                                                             case "en":
@@ -717,7 +717,7 @@
                                             <a href="#">R & D</a>
                                         </li>
                                         <li>
-                                            <a href="~/EN/Home/ContactUs">
+                                            <a href="javascript:navigateMe('/EN/Home/ContactUs');">
                                                 @switch (@ViewBag.Language)
                                                 {
                                                     case "en":

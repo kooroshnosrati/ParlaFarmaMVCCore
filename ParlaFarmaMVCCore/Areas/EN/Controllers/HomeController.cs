@@ -18,6 +18,11 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
     [Area("EN")]
     public class HomeController : Controller
     {
+        public List<string[]> DictStr = new List<string []>()
+        { 
+            new string []{ "Home", "EV", "Pome" },
+            new string []{ "Contact Us", "Elaqe", "Cantact" } 
+        };
         private readonly IWebHostEnvironment _webHostEnvironment;
         //private readonly ApplicationDbContext _context;
         public HomeController(IWebHostEnvironment webHostEnvironment) //ApplicationDbContext applicationDbContext, 
@@ -50,6 +55,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         public IActionResult Index(string lang)
         {
             Setlanguage(lang);
+            ViewBag.DictStr = DictStr;
             try
             {
                 string kk = $"{ this.Request.PathBase }";
