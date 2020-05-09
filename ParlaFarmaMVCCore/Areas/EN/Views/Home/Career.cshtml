@@ -16,34 +16,10 @@
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight">
-                                            @switch (@ViewBag.Language)
-{
-    case "en":
-                                            @:We shine for a better future!
-        break;
-    case "az":
-                                            @:Daha parlaq gələcək naminə!
-        break;
-    case "ru":
-                                            @:
-        break;
-}
-
+                                            @ViewBag.DictStr[66][@ViewBag.LanguageID]
                                         </h2>
                                         <p style="color:white;font-size:20px;">
-                                            @switch (@ViewBag.Language)
-{
-    case "en":
-                                            @:We know how to work and have fun at the same time
-        break;
-    case "az":
-                                            @:Əgər siz də peşəkar komandamızın bir üzvü olmaq və daha parlaq gələcək üçün çalışmaq istəyirsinisə, bizə qoşulun!
-        break;
-    case "ru":
-                                            @:
-        break;
-}
-
+                                            @ViewBag.DictStr[67][@ViewBag.LanguageID]
                                         </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
@@ -80,35 +56,13 @@
                         <img src="~/lib/pharma/images/why.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">
-    @switch (@ViewBag.Language)
-    {
-        case "en":
-    @:Why PARLA?
-            break;
-        case "az":
-    @:Nə üçün PARLAnı seçməlisiniz?
-            break;
-        case "ru":
-    @:
-            break;
-    }
-
-</a> </h4>
+                        <h4>
+                            <a href="javascript:ScrollObjects('WhyPARLA', '@ViewBag.PageID', true);">
+                                @ViewBag.DictStr[68][@ViewBag.LanguageID]
+                            </a>
+                        </h4>
                         <p>
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Values of PARLA is a key to success of the team and the main accelerator of our business.
-        break;
-    case "az":
-                            @:PARLA-da izlədiyimiz dəyərlər komandamızın uğurunun açarı və biznesimizin əsas mühərrikidir.
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[69][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </article>
@@ -119,21 +73,11 @@
                         <img src="~/lib/pharma/images/vacancies.jpg" alt="">
                     </div>
                     <div class="item-content" style="height:200px !important">
-                        <h4> <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">
-    @switch (@ViewBag.Language)
-{
-    case "en":
-    @:Vacancies
-        break;
-    case "az":
-    @:Vakansiyalar
-        break;
-    case "ru":
-    @:
-        break;
-}
-    
-</a> </h4>
+                        <h4>
+                            <a href="javascript:ScrollObjects('Vacancies', '@ViewBag.PageID', true);">
+                                @ViewBag.DictStr[24][@ViewBag.LanguageID]
+                            </a>
+                        </h4>
                         <p>Join the team of professionals in PARLA.</p>
                     </div>
                 </article>
@@ -159,19 +103,7 @@
     <div class="container">
         <div class="row bottompadding_20">
             <h1>
-                @switch (@ViewBag.Language)
-{
-    case "en":
-                @:Why PARLA?
-        break;
-    case "az":
-                @:Nə üçün PARLAnı seçməlisiniz?
-        break;
-    case "ru":
-                @:
-        break;
-}
-
+                @ViewBag.DictStr[68][@ViewBag.LanguageID]
             </h1>
         </div>
         <div class="row">
@@ -184,19 +116,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Professionalism
-        break;
-    case "az":
-                            @:Professionallıq
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[70][@ViewBag.LanguageID]
                         </h5>
                     </div>
                 </div>
@@ -206,19 +126,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Teamwork
-        break;
-    case "az":
-                            @:Komanda işi
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[71][@ViewBag.LanguageID]
                         </h5>
                     </div>
                 </div>
@@ -228,19 +136,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Innovation
-        break;
-    case "az":
-                            @:İnnovasiya
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[72][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -251,19 +147,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Performance
-        break;
-    case "az":
-                            @:Performans
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[73][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -276,19 +160,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Motivation package
-        break;
-    case "az":
-                            @:Motivasiya paketi
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[74][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -299,19 +171,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Development of talents
-        break;
-    case "az":
-                            @:İstedadların inkişafı
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[75][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -322,19 +182,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Fun-loving corporate culture
-        break;
-    case "az":
-                            @:Pozitiv korporativ mühit
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[76][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -345,19 +193,7 @@
                     </div>
                     <div class="media-body toppadding_10">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-{
-    case "en":
-                            @:Comfortable workplace
-        break;
-    case "az":
-                            @:Rahat iş yeri
-        break;
-    case "ru":
-                            @:
-        break;
-}
-
+                            @ViewBag.DictStr[77][@ViewBag.LanguageID]
                         </h5>
 
                     </div>
@@ -372,11 +208,13 @@
         background-color: lightgray;
         border-radius: 5px;
     }
+
     .fa-map-marker {
         padding: 5px;
         background-color: lightgray;
         border-radius: 5px;
     }
+
     .Vacancieslist {
         color: cornflowerblue !important;
         cursor: pointer !important;
@@ -388,22 +226,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3 class="module-header">
-                    @switch (@ViewBag.Language)
-{
-    case "en":
-                    @:Vacancies
-        break;
-    case "az":
-                    @:Vakansiyalar
-        break;
-    case "ru":
-                    @:
-        break;
-}
-
+                    @ViewBag.DictStr[24][@ViewBag.LanguageID]
                 </h3>
                 <p>
-                PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements</p>
+                    PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements
+                </p>
                 <p><b>We offer:</b></p>
                 <ul>
                     <li>opportunity to become professional in your sphere and to increase expertise in the related areas.</li>
@@ -411,8 +238,8 @@
                 </ul>
             </div>
             @*<div class="col-sm-12">
-            <h4 class="module-header">Vacancies list</h4><hr />
-        </div>*@
+                    <h4 class="module-header">Vacancies list</h4><hr />
+                </div>*@
             <div class="col-sm-12" id="MedicalrepresentativeBaku">
                 <h3 class="module-header Vacancieslist">
                     Medical representative, Baku
@@ -549,104 +376,104 @@
             </div>
         </div>
         @*<div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs topmargin_40" role="tablist">
-                    <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Vacancies</a></li>
-                    <li><a href="#tab2" role="tab" data-toggle="tab">Medical representative vacancy</a></li>
-                    <li><a href="#tab3" role="tab" data-toggle="tab">Sales representative vacancy</a></li>
-                </ul>
-                <div class="tab-content big-padding top-color-border bottommargin_40">
-                    <div class="tab-pane fade in active" id="tab1">
-                        <h3 class="module-header">Vacancies</h3>
-                        <p>PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements</p>
-                        <p><b>We offer:</b></p>
-                        <ul>
-                            <li>opportunity to become professional in your sphere and to increase expertise in the related areas.</li>
-                            <li>to become company’s development driver, to implement ideas, innovations, projects together with the company.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="tab2">
-                        <h3 class="module-header">Medical representative, Baku</h3>
-                        <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
-                        <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs topmargin_40" role="tablist">
+                        <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Vacancies</a></li>
+                        <li><a href="#tab2" role="tab" data-toggle="tab">Medical representative vacancy</a></li>
+                        <li><a href="#tab3" role="tab" data-toggle="tab">Sales representative vacancy</a></li>
+                    </ul>
+                    <div class="tab-content big-padding top-color-border bottommargin_40">
+                        <div class="tab-pane fade in active" id="tab1">
+                            <h3 class="module-header">Vacancies</h3>
+                            <p>PARLA is a company attracting talents for realization potential and creates favourable working conditions for future success and achievements</p>
+                            <p><b>We offer:</b></p>
+                            <ul>
+                                <li>opportunity to become professional in your sphere and to increase expertise in the related areas.</li>
+                                <li>to become company’s development driver, to implement ideas, innovations, projects together with the company.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            <h3 class="module-header">Medical representative, Baku</h3>
+                            <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
+                            <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
 
-                        <p></p>
-                        <p><b>Key responsibilities include:</b></p>
-                        <ul>
-                            <li>Introduce company products</li>
-                            <li>Daily visits to healthcare and medical staff (endocrinologists, cardiologists, therapists, pharmacists, etc.)</li>
-                            <li>Conduct market analysis</li>
-                            <li>Track sales dynamics</li>
-                            <li>Develop and implement an action plan and register in the electronic system</li>
-                            <li>Implement educational activities, social projects</li>
-                        </ul>
+                            <p></p>
+                            <p><b>Key responsibilities include:</b></p>
+                            <ul>
+                                <li>Introduce company products</li>
+                                <li>Daily visits to healthcare and medical staff (endocrinologists, cardiologists, therapists, pharmacists, etc.)</li>
+                                <li>Conduct market analysis</li>
+                                <li>Track sales dynamics</li>
+                                <li>Develop and implement an action plan and register in the electronic system</li>
+                                <li>Implement educational activities, social projects</li>
+                            </ul>
 
-                        <p></p>
-                        <p><b>Required qualifications and skills:</b></p>
-                        <ul>
-                            <li>Higher medical or pharmaceutical education;</li>
-                            <li>Work experience: at least 3 years in the sales system in the pharmaceutical business;</li>
-                            <li>Communicative, responsible and able to work in a team;</li>
-                            <li>Analytical thinking ability;</li>
-                            <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
-                            <li>Azerbaijani - native, English and Russian are desirable;</li>
-                            <li>Driver's license - Category B.</li>
-                        </ul>
+                            <p></p>
+                            <p><b>Required qualifications and skills:</b></p>
+                            <ul>
+                                <li>Higher medical or pharmaceutical education;</li>
+                                <li>Work experience: at least 3 years in the sales system in the pharmaceutical business;</li>
+                                <li>Communicative, responsible and able to work in a team;</li>
+                                <li>Analytical thinking ability;</li>
+                                <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
+                                <li>Azerbaijani - native, English and Russian are desirable;</li>
+                                <li>Driver's license - Category B.</li>
+                            </ul>
 
-                        <p></p>
-                        <p><b>We offer:</b></p>
-                        <ul>
-                            <li>Training and development opportunities within the company;</li>
-                            <li>Corporate culture and professional work environment;</li>
-                            <li>Private Health Insurance;</li>
-                            <li>Corporate number;</li>
-                            <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
-                        </ul>
-                        <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
-                    </div>
-                    <div class="tab-pane fade" id="tab3">
-                        <h3 class="module-header">Sales representative, Baku</h3>
-                        <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
-                        <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
+                            <p></p>
+                            <p><b>We offer:</b></p>
+                            <ul>
+                                <li>Training and development opportunities within the company;</li>
+                                <li>Corporate culture and professional work environment;</li>
+                                <li>Private Health Insurance;</li>
+                                <li>Corporate number;</li>
+                                <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                            </ul>
+                            <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab3">
+                            <h3 class="module-header">Sales representative, Baku</h3>
+                            <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
+                            <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
 
-                        <p></p>
-                        <p><b>Key responsibilities include:</b></p>
-                        <ul>
-                            <li>Introduce company products</li>
-                            <li>Daily visits to pharmacies and other medical facilities;</li>
-                            <li>Conduct market analysis;</li>
-                            <li>Track sales dynamics;</li>
-                            <li>Develop and implement an action plan and register in the electronic system;</li>
-                            <li>Implement educational activities, social projects.</li>
-                        </ul>
+                            <p></p>
+                            <p><b>Key responsibilities include:</b></p>
+                            <ul>
+                                <li>Introduce company products</li>
+                                <li>Daily visits to pharmacies and other medical facilities;</li>
+                                <li>Conduct market analysis;</li>
+                                <li>Track sales dynamics;</li>
+                                <li>Develop and implement an action plan and register in the electronic system;</li>
+                                <li>Implement educational activities, social projects.</li>
+                            </ul>
 
-                        <p></p>
-                        <p><b>Required qualifications and skills:</b></p>
-                        <ul>
-                            <li>Strong sales skills;</li>
-                            <li>Work experience: minimum 1 year in the sales system;</li>
-                            <li>Communicative, responsible and able to work in a team;</li>
-                            <li>Analytical thinking ability;</li>
-                            <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
-                            <li>Azerbaijani - native, English and Russian are desirable;</li>
-                            <li>Driver's license - Category B is desirable;</li>
-                            <li>Candidates with pharmaceutical background will be preferred.</li>
-                        </ul>
+                            <p></p>
+                            <p><b>Required qualifications and skills:</b></p>
+                            <ul>
+                                <li>Strong sales skills;</li>
+                                <li>Work experience: minimum 1 year in the sales system;</li>
+                                <li>Communicative, responsible and able to work in a team;</li>
+                                <li>Analytical thinking ability;</li>
+                                <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
+                                <li>Azerbaijani - native, English and Russian are desirable;</li>
+                                <li>Driver's license - Category B is desirable;</li>
+                                <li>Candidates with pharmaceutical background will be preferred.</li>
+                            </ul>
 
-                        <p></p>
-                        <p><b>We offer:</b></p>
-                        <ul>
-                            <li>Training and development opportunities within the company;</li>
-                            <li>Corporate culture and professional work environment;</li>
-                            <li>Private Health Insurance;</li>
-                            <li>Corporate number;</li>
-                            <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
-                        </ul>
-                        <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                            <p></p>
+                            <p><b>We offer:</b></p>
+                            <ul>
+                                <li>Training and development opportunities within the company;</li>
+                                <li>Corporate culture and professional work environment;</li>
+                                <li>Private Health Insurance;</li>
+                                <li>Corporate number;</li>
+                                <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                            </ul>
+                            <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>*@
+            </div>*@
     </div>
 </section>
 
@@ -662,7 +489,7 @@
                 $("#MedicalrepresentativeBaku").click(function () {
                     $("#MedicalrepresentativeBakuDetail").toggle('slow');
                 });
-                
+
                 $("#SalesrepresentativeBaku").click(function () {
                     $("#SalesrepresentativeBakuDetail").toggle('slow');
                 });

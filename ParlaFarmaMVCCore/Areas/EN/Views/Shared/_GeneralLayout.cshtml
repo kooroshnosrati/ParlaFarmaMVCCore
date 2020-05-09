@@ -84,36 +84,12 @@
                             <div>
                                 <div style="border:1px;border-color:blue;"></div>
                                 <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Opening Hours: Mon - Sat 9:00 – 18:00
-                                        break;
-                                    case "az":
-                                        @:Açılış saatları: Mon - Sat 9:00 - 18:00
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[0][@ViewBag.LanguageID]
                             </div>
                         </div>
                         <div class="col-sm-4 text-center text-sm-right greylinks">
                             <span class="rightpadding_10">
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Follow Us:
-                                        break;
-                                    case "az":
-                                        @:Bizi izlə:
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[1][@ViewBag.LanguageID]
                             </span>
                             <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
                             <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
@@ -124,15 +100,16 @@
                             &nbsp;&nbsp;&nbsp;
                             @if (@ViewBag.Language != "en")
                             {
-                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
                             }
                             @if (@ViewBag.Language != "az")
                             {
-                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
                             }
                             @if (@ViewBag.Language != "ru")
                             {
-                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>
+                                @*<a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>*@
+                                <a href="#" alt="Russian" title="Russian" target="_self">RU</a>
                             }
 
                         </div>
@@ -179,218 +156,79 @@
                                     <ul class="mainmenu nav sf-menu">
                                         <li class="active">
                                             <a href="javascript:navigateMe('/EN/Home/Index');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                        @:Home
-                                                        break;
-                                                    case "az":
-                                                        @:Əsas səhifə
-                                                        break;
-                                                    case "ru":
-                                                        @:
-                                                        break;
-                                                }
+                                                @ViewBag.DictStr[2][@ViewBag.LanguageID]
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/AboutUs');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:About Us
-                                                        break;
-                                                    case "az":
-                                                @:Haqqımızda
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[3][@ViewBag.LanguageID]
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a id="AAboutParla" href="javascript:navigateMe('/EN/Home/AboutUs', '#AboutParla');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Company
-                                                                break;
-                                                            case "az":
-                                                        @:Şirkətimiz
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[4][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
                                                     <a id="AOurVision" href="javascript:navigateMe('/EN/Home/Index', '#OurVision');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Vision
-                                                                break;
-                                                            case "az":
-                                                        @:Our vision
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[5][@ViewBag.LanguageID]
                                                     </a>
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurVision" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurVision');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Our Vision
-                                                            break;
-                                                        case "az":
-                                                        @:Our vision
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
-                                                    </a>
+                                                <a id="AOurVision" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurVision');">
+                                                    @ViewBag.DictStr[5][@ViewBag.LanguageID]
+                                                </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
                                                     <a id="AOurMission" href="javascript:navigateMe('/EN/Home/Index', '#OurMission');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Mission
-                                                                break;
-                                                            case "az":
-                                                        @:Missiyamız
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[6][@ViewBag.LanguageID]
                                                     </a>
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurMission" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurMission');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Our Mission
-                                                            break;
-                                                        case "az":
-                                                        @:Missiyamız
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
-                                                    </a>
+                                                <a id="AOurMission" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurMission');">
+                                                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                                                </a>
                                                     }
 
                                                 </li>
                                                 <li>
                                                     <a id="AOurValues" href="javascript:navigateMe('/EN/Home/Index', '#OurValues');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Values
-                                                                break;
-                                                            case "az":
-                                                        @:Dəyərlərimiz
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[7][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
                                                     <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/Index', '#ParlaTeam');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Team
-                                                                break;
-                                                            case "az":
-                                                        @:Komandamız
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[8][@ViewBag.LanguageID]
                                                     </a>
                                                     }
                                                     else
                                                     {
-                                                    <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Our Team
-                                                            break;
-                                                        case "az":
-                                                        @:Komandamız
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
-                                                    </a>
+                                                <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');">
+                                                    @ViewBag.DictStr[8][@ViewBag.LanguageID]
+                                                </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
                                                     <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/Index', '#OurCulture');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Our Culture
-                                                                break;
-                                                            case "az":
-                                                        @:Korporativ mədəniyyət
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[9][@ViewBag.LanguageID]
                                                     </a>
                                                     }
                                                     else
                                                     {
-                                                    <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurCulture');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Our Culture
-                                                            break;
-                                                        case "az":
-                                                        @:Korporativ mədəniyyət
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
-                                                    </a>
+                                                <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurCulture');">
+                                                    @ViewBag.DictStr[9][@ViewBag.LanguageID]
+                                                </a>
                                                     }
                                                 </li>
 
@@ -398,317 +236,102 @@
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
                                                     <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/Index', '#SocialResponsibility');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Social Responsibility
-                                                                break;
-                                                            case "az":
-                                                        @:Sosial məsuliyyət
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[10][@ViewBag.LanguageID]
                                                     </a>
                                                     }
                                                     else
                                                     {
-                                                    <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/AboutUs', '#SocialResponsibility');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Social Responsibility
-                                                            break;
-                                                        case "az":
-                                                        @:Sosial məsuliyyət
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
-
-                                                    </a>
+                                                <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/AboutUs', '#SocialResponsibility');">
+                                                    @ViewBag.DictStr[10][@ViewBag.LanguageID]
+                                                </a>
                                                     }
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:Products
-                                                        break;
-                                                    case "az":
-                                                @:Məhsullar
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[11][@ViewBag.LanguageID]
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                        @switch (@ViewBag.Language)
-                                                    {
-                                                        case "en":
-                                                        @:Products
-                                                            break;
-                                                        case "az":
-                                                        @:Məhsullar
-                                                            break;
-                                                        case "ru":
-                                                        @:
-                                                            break;
-                                                    }
+                                                        @ViewBag.DictStr[11][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                        @switch (@ViewBag.Language)
-    {
-        case "en":
-                                                        @:By alphabet
-            break;
-        case "az":
-                                                        @:Əlifba sırası üzrə
-            break;
-        case "ru":
-                                                        @:
-            break;
-    }
-
+                                                        @ViewBag.DictStr[12][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:By problem
-                                                                break;
-                                                            case "az":
-                                                        @:Xəstəlik üzrə
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[13][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Phramacovigilance
-                                                                break;
-                                                            case "az":
-                                                        @:Farmakonəzarət
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[14][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:News and Media
-                                                        break;
-                                                    case "az":
-                                                @:Xəbərlər
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[15][@ViewBag.LanguageID]
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a href="#">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:News
-                                                                break;
-                                                            case "az":
-                                                        @:Xəbərlər
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[16][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Press-releases
-                                                                break;
-                                                            case "az":
-                                                        @:Pres-relizlər
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[17][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Media gallery
-                                                                break;
-                                                            case "az":
-                                                        @:Media qalereya
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[18][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/Partners');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:Partners
-                                                        break;
-                                                    case "az":
-                                                @:Tərəfdaşlıq
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[19][@ViewBag.LanguageID]
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Distributors
-                                                                break;
-                                                            case "az":
-                                                        @:Distribyutorlar
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[20][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Export development
-                                                                break;
-                                                            case "az":
-                                                        @:İxrac xətti
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[21][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/Career');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:Careers
-                                                        break;
-                                                    case "az":
-                                                @:Karyera
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[22][@ViewBag.LanguageID]
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a id="AWhyPARLA" href="javascript:navigateMe('/EN/Home/Career', '#WhyPARLA');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Why Parla
-                                                                break;
-                                                            case "az":
-                                                        @:PARLA-da iş
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[23][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a id="AVacancies" href="javascript:navigateMe('/EN/Home/Career', '#Vacancies');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Vacancies
-                                                                break;
-                                                            case "az":
-                                                        @:Vakansiyalar
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[24][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Applicationform');">
-                                                        @switch (@ViewBag.Language)
-                                                        {
-                                                            case "en":
-                                                        @:Application form
-                                                                break;
-                                                            case "az":
-                                                        @:Müraciət formu
-                                                                break;
-                                                            case "ru":
-                                                        @:
-                                                                break;
-                                                        }
-
+                                                        @ViewBag.DictStr[25][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
                                             </ul>
@@ -718,19 +341,7 @@
                                         </li>
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/ContactUs');">
-                                                @switch (@ViewBag.Language)
-                                                {
-                                                    case "en":
-                                                @:Contact Us
-                                                        break;
-                                                    case "az":
-                                                @:Əlaqə
-                                                        break;
-                                                    case "ru":
-                                                @:
-                                                        break;
-                                                }
-
+                                                @ViewBag.DictStr[26][@ViewBag.LanguageID]
                                             </a>
                                         </li>
                                     </ul>

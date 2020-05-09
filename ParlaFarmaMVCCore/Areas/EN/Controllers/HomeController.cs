@@ -18,10 +18,110 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
     [Area("EN")]
     public class HomeController : Controller
     {
+        //@ViewBag.DictStr[1][@ViewBag.LanguageID]
         public List<string[]> DictStr = new List<string []>()
-        { 
-            new string []{ "Home", "EV", "Pome" },
-            new string []{ "Contact Us", "Elaqe", "Cantact" } 
+        {
+            new string []{ "0", "Opening Hours: Mon - Sat 9:00 – 18:00", "Açılış saatları: Mon - Sat 9:00 - 18:00", "" },
+            new string []{ "1",  "Follow Us:", "Bizi izlə:", "" },
+            new string []{ "2", "Home", "Əsas səhifə", "" },
+            new string []{ "3", "About Us", "Haqqımızda", "" },
+            new string []{ "4", "Our Company", "Şirkətimiz", "" },
+            new string []{ "5", "Our Vision", "Vision", "" },
+            new string []{ "6", "Our Mission", "Missiyamız", "" },
+            new string []{ "7", "Our Values", "Dəyərlərimiz", "" },
+            new string []{ "8", "Our Team", "Komandamız", "" },
+            new string []{ "9", "Our Culture", "Korporativ mədəniyyət", "" },
+            new string []{ "10", "Social Responsibility", "Sosial məsuliyyət", "" },
+            new string []{ "11", "Products", "Məhsullar", "" },
+            new string []{ "12", "By alphabet", "Əlifba sırası üzrə", "" },
+            new string []{ "13", "By problem", "Xəstəlik üzrə", "" },
+            new string []{ "14", "Phramacovigilance", "Farmakonəzarət", "" },
+            new string []{ "15", "News and Media", "Xəbərlər", "" },
+            new string []{ "16", "News", "Xəbərlər", "" },
+            new string []{ "17", "Press-releases", "Pres-relizlər", "" },
+            new string []{ "18", "Media gallery", "Media qalereya", "" },
+            new string []{ "19", "Partners", "Tərəfdaşlıq", "" },
+            new string []{ "20", "Distributors", "Distribyutorlar", "" },
+            new string []{ "21", "Export development", "İxrac xətti", "" },
+            new string []{ "22", "Careers", "Karyera", "" },
+            new string []{ "23", "Why Parla", "PARLA-da iş", "" },
+            new string []{ "24", "Vacancies", "Vakansiyalar", "" },
+            new string []{ "25", "Application form", "Müraciət formu", "" },
+            new string []{ "26", "Contact Us", "Elaqe", "" },
+            new string []{ "27", "Shine for Health", "Sağlamlıq naminə Parla!", "" },
+            new string []{ "28", "We promise a healthier tomorrow for our patients", "Biz daha sağlam gələcək naminə çalışırıq.", "" },
+            new string []{ "29", "Discover Now", "Daha ətraflı", "" },
+            new string []{ "30", "Our aim is to improve healthcare access and quality of life", "Bizim məqsədimiz səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətlərini yaxşılaşdırmaqdır.", "" },
+            new string []{ "31", "We focus on contributing to benefit our patientsWe focus on contributing to benefit our patients, society and environment", "Cəmiyyətimizə, pasiyentlərimizə və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.", "" },
+            new string []{ "32", "Welcome to Our Website", "Vebsaytımıza xoş gəlmisiniz!", "" },
+            new string []{ "33", "We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.", "“Parla Pharmaceuticals” yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir.", "" },
+            new string []{ "34", "Parla Team", "Komandamız", "" },
+            new string []{ "35", "Parla Culture", "Korporativ mühit", "" },
+            new string []{ "36", "Check It", "Daha ətraflı", "" },
+            new string []{ "37", "Improving health care access and quality of life", "Səhiyyə xidmətlərinə çıxışı və pasiyentlərin həyat keyfiyyətini yaxşılaşdırmaq", "" },
+            new string []{ "38", "Creating added value for  our customers, staff, business partner and  shareholders", "Müştərilərimiz, əməkdaşlarımız, biznes tərəfdaşlarımız və səhmdarlarımız üçün əlavə dəyər yaratmaq", "" },
+            new string []{ "39", "Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region", "Azərbaycanda və bütün MDB regionunda ən qabaqcıl əczaçılıq şirkətinə çevrilmək", "" },
+            new string []{ "40", "Developing customer orientation and leadership in the market", "Bazarda müştəri yönümlü yanaşma və liderliyi inkişaf etdirmək", "" },
+            new string []{ "41", "Offering high quality products with most affordable prices for customers", "Münasib qiymət və yüksək keyfiyyətli dərman məhsulları təmin etmək", "" },
+            new string []{ "42", "Creating raving fans among clients and customers", "Müştərilər üçün güvənli tərəfdaşa çevrilmək", "" },
+            new string []{ "43", "Why Parla?", "Nə üçün PARLA?", "" },
+            new string []{ "44", "We have passion to help patients", "Pasiyentlər bizim üçün önəmlidir", "" },
+            new string []{ "45", "Improving quality of life of patients is focus of Parla. We make sure this will be the base of all our decisions and actions. we make our medicine available and affordable for the patients.", "PARLAnın əsas maraqlarından biri pasiyentlərin həyat keyfiyyətinin yaxşılaşdırılmasıdır. Bu, bizim aldığımız bütün qərarların və fəaliyyətimizin əsasında dayanır.", "" },
+            new string []{ "46", "We offer a best place to work to our employees", "Biz əməkdaşlarımıza ən yaxşı iş yeri təklif edirik", "" },
+            new string []{ "47", "We offer a nice and welcome working environment to help people to learn and grow. We believe in empowerment together with support which help people to develop their skills in high standards.", "Xoş və rahat iş mühiti təmin etməklə, əməkdaşlarımızın öyrənərək inkişaf etməsinə şərait yaradırıq. Bizim üçün əməkdaşlarımızın peşəkar və fərdi inkişafı böyük önəm kəsb edir.", "" },
+            new string []{ "48", "We use innovation and advance technology to provide the best products with high standards", "İnnovasiya və yüksək texnologiya əsasında keyfiyyətli dərman məhsulları təmin edirik", "" },
+            new string []{ "49", "As the first science-based pharmaceutical company of Azerbaijan, we focus on the full production of high-tech products. Our portfolio also includes biotechnological and nanotechnological products. We provide high quality pharmaceutical products with high GMP standards.", "Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq, yüksək texnologiyalı dərmanların istehsalını həyata keçirməyə yönəlmişik. Məhsul portfelimizə,həmçinin, biotexnoloji və nanotexnoloji dərmanlar da daxildir. Yüksək keyfiyyətli əczaçılıq məhsulları yüksək GMP standartlarına cavab verir.", "" },
+            new string []{ "50", "We are responsible for our society and our environment", "Biz cəmiyyət və ətraf mühit qarşısındakı məsuliyyətlərimizi dərk edirik", "" },
+            new string []{ "51", "To have a sustainable business, Parla is responsible for its society and environment. We collaborate with related stakeholders in our disease areas as a part of social responsibility activities. Also, to keep our planet safe for all of us, we have some policies which underpins every decision and action we make.", "Biznesin dayanıqlılığına nail olmaq üçün PARLA öz qarşısına cəmiyyət və ətraf mühitlə bağlı məsuliyyətlər qoyub. Biz bütün fəaliyyətimizdə bu sosial məsuliyyət öhdəliklərini qəbul edir və bu istiqamətdə müvafiq tərəflərlə əməkdaşlıq edərək Korporativ Sosial Məsuliyyət (KSM) layihələri həyata keçiririk.", "" },
+            new string []{ "52", "“Parla Pharmaceuticals” headquartered in Azerbaijan ,established in 2019, is the first science-based pharmaceutical company of Azerbaijan, focusing on the full production of high-technology medicines.", "“Parla Pharmaceuticals” Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir. Şirkətimiz 2019-cu ildə yaradılıb. Parlanın fəaliyyəti Azərbaycanda yüksək texnologiyalı dərmanların tam istehsalından ibarətdir.", "" },
+            new string []{ "53", "The initial aim is to increase quality of lives of patients and their access to high quality pharmaceutical products with affordable price produced by Parla Pharmaceuticals. Our mission is to develop customer orientation and leadership in the pharmaceutical market and community.", "Əsas məqsədimiz əhalinin həyat keyfiyyətinin artırıılması, yüksək keyfiyyətli əczaçılıq məhsulları istehsal edərək münasib qiymətlərlə insanlara təqdim etməkdir. Biz həmçinin, əczaçılıq bazarında və cəmiyyətdə pasiyent yönümlü yanaşmanı və liderliyi inkişaf etdirməyə yönəlmişik.", "" },
+            new string []{ "54", "Exporting advanced biotechnological and nanotechnological products by developing an international culture, structure and performanceis one of the key focus areas. Parla is ambitious to be Azerbaijan’s best Pharmaceutical brand, worldwide.", "Məhsul portfelimizdə klassik dərman vasitələri ilə yanaşı müasir biotexnoloji və nanotexnoloji məhsullar da olacaq. Parla bu məhsulların Azərbaycanda satışı ilə yanaşı, onların ixracını da həyata keçirəcək. Parla Azərbaycanın qabaqcıl əczaçılıq brendi olmaqda iddialıdır.", "" },
+            new string []{ "55", "With the footprint and commitment to improving access to healthcare and improving quality of life, Parla works tirelessly to make a difference to people’s lives every day and focuses on transferring scientific innovation. This will be aligned with social and environmental focus.", "Səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətinin yaxşılaşdıırlmasına öz töhfəsini vermək üçün Parla dayanmadan çalışır və elmi innovasiyanın, yeniliklərin tətbiqini də diqqətdə saxlayır. Biz həmçinin sosial və ətraf  mühitlə bağlı öhdəliklərimizi də həyata keçiririk.", "" },
+            new string []{ "56", "Our team is our main asset. Parla is a young, talented, ambitious and agile team of professionals", "“Parla” gənc, istedadlı, məqsədyönlü və çevik peşəkarlar komandasıdır!", "" },
+            new string []{ "57", "We are a dynamic and energetic team of professionals who focus on excellence and success. Our people are equipped with many years of experience, along with the knowledge and confidence in their field of work. In Parla we believe in innovation, dedication and teamwork.", "Biz yüksək professionallıq və uğur qazanmaq yolunda  irəliləyən dinamik və enerjili peşəkarlardan ibarət komandayıq. Bizim əməkdaşlarımız öz sahələrində ekspert olmaqla yanaşı, həm də çoxillik təcrübəyə malikdirlər. “Parla” olaraq, biz innovasiya, sadiqlik və komanda işinə inanırıq.", "" },
+            new string []{ "58", "With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do", "Geniş təcrübəyə malik və çoxsaylı təlim keçmiş peşəkarlar komandası ilə, “Parla” Azərbaycanda qabaqcıl əczaçılıq şirkəti olmaqda qərarlıdır. Bizim uğurumuz əməkdaşlarımızın fəaliyyətindən yaranır. Çünki biz öz işimizi sevirik !", "" },
+            new string []{ "59", "We believe that success of our business depends directly on personal contribution of every employee. Our teamwork is based on learning culture, effetive communication, constructive feedback and determination.", "Biz əminik ki, biznesin uğuru hər bir əməkdaşın fərdi tohfəsinə əsaslanır. Komanda fəaliyyətimzidə öyrənmək və inkişaf, şəffaf və açıq ünsiyyət, konstruktiv rəy və qərarlılıq prinsiplərini əsas tuturuq.", "" },
+            new string []{ "60", "Staying true to our mission, values and culture we focus on contributing to benefit our patients, society and environment", "Missiyamız, dəyərlərimiz və korporativ mədəniyyətimizə sadiq qalaraq, pasiyentlərimiz, cəmiyyətimiz və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.", "" },
+            new string []{ "61", "Job Application", "Iş üçün müraciət forması", "" },
+            new string []{ "62", "Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.", "Bizimlə işləməyə maraq göstərdiyiniz üçün təşəkkür edirik. Sizə uyğün mövcud iş imkanları üçün vakansiyalar bölməmizə baş çəkin və İş üçün Müraciət Formasını doldurmaqla ərizənizi bizə göndərin.", "" },
+            new string []{ "63", "Phone", "Telefon", "" },
+            new string []{ "64", "What position are you applying for?", "Hansı vəzifə üçün müraciət edirsiniz?", "" },
+            new string []{ "65", "Available start date", "Mümkün başlama tarixi", "" },
+            new string []{ "66", "We shine for a better future!", "Daha parlaq gələcək naminə!", "" },
+            new string []{ "67", "We know how to work and have fun at the same time", "Əgər siz də peşəkar komandamızın bir üzvü olmaq və daha parlaq gələcək üçün çalışmaq istəyirsinisə, bizə qoşulun!", "" },
+            new string []{ "68", "Why PARLA?", "Nə üçün PARLAnı seçməlisiniz?", "" },
+            new string []{ "69", "Values of PARLA is a key to success of the team and the main accelerator of our business.", "PARLA-da izlədiyimiz dəyərlər komandamızın uğurunun açarı və biznesimizin əsas mühərrikidir.", "" },
+            new string []{ "70", "Professionalism", "Professionallıq", "" },
+            new string []{ "71", "Teamwork", "Komanda işi", "" },
+            new string []{ "72", "Innovation", "İnnovasiya", "" },
+            new string []{ "73", "Performance", "Performans", "" },
+            new string []{ "74", "Motivation package", "Motivasiya paketi", "" },
+            new string []{ "75", "Development of talents", "İstedadların inkişafı", "" },
+            new string []{ "76", "Fun-loving corporate culture", "Pozitiv korporativ mühit", "" },
+            new string []{ "77", "Comfortable workplace", "Rahat iş yeri", "" },
+            new string []{ "78", "To potential distributors:", "Potensial distribyutorlara:", "" },
+            new string []{ "79", "PARLA is interested in engaging new partners:", "PARLA bu meyarlar üzrə yeni tərəfdaşlar cəlb etməkdə maraqlıdır:", "" },
+            new string []{ "80", "Actively developing sales of medicinal products.", "Dərman məhsullarının satışını aktiv inkişaf etdirmək;", "" },
+            new string []{ "81", "Having strong positions at local markets.", "Yerli bazarlarda güclü mövqeyə sahib olmaq;", "" },
+            new string []{ "82", "Having marketing resources to promote medicinal products of PARLA.", "PARLAnın dərman vasitələrini tanıtmaq üçün marketinq resurslarına sahib olmaq.", "" },
+            new string []{ "83", "The purpose of promotion is defining objective criteria to choose potential Commercial partners and to assess current Commercial Partners as well as willing to make this process as understandable and transparent as possible.", "Tərəfdaşlıqda maraqlı olan mövcud və yeni partnyorlarla əməkdaşlıq təkliflərinə açığıq.", "" },
+            new string []{ "84", "Export development is an important element of the “Parla Pharmaceuticals” business strategy.", "Dərman məhsullarının ixracı “Parla Pharmaceuticals” şirkətinin biznes strategiyasının əsas istiqamətlərindən biridir.", "" },
+            new string []{ "85", "“Parla Pharmaceuticals” intends to export advanced biotechnological and nanotechnological products being developed in accordance with national and international GMP standards.", "“Parla Pharmaceuticals” beynəlxalq GMP standartlarına uyğun olaraq hazırlanan biotexnoloji və nanotexnoloji dərman məhsullarını ixrac etməyi planlaşdırır.", "" },
+            new string []{ "86", "As an ambitious company, we believe our work should be executed flawlessly, to guarantee added value for our patients, customers, shareholders and staff and ensure unparalleled quality in everything we do.", "İddialı bir şirkət olaraq, biz inanırıq ki, pasiyentlərimizə, müştərilərimizə, səhmdarlarımıza və işçi heyətimizə əlavə dəyər qatmaq və bütün fəaliyyətimizdə yüksək keyfiyyətə nail olmaq üçün işimizi qüsursuz icra etməliyik.", "" },
+            new string []{ "87", "We set our standards high and we are ready to help team to add on  their skillsso that Parla’s team can exceed expectations and strive for perfection in everything we do.", "Biz standartlarımızı yüksək təyin edir və komandamızın bu gözləntiləri doğrultması, eyni zamanda öz işində mükəmməl nəticələrə nail olması üçün onların səriştə və bacarıqlarının daim artırılmasına çalışırıq.", "" },
+            new string []{ "88", "We constantly strive to redefine the standard of excellence in everything we do. We are open to ideas that challenge the conventional views and drive innovation.", "Gördüyümüz hər işdə mükəmməllik standartlarını yenidən nəzərdən keçiririk. Biz ənənəvi baxış bucağına meydan oxuyan və yenilik gətirən fikirlərə hər zaman açığıq.", "" },
+            new string []{ "89", "Parla deeply believes in real team performance and integration. We put the interest of the team as success only comes when we work together.", "PARLAda biz həqiqi komanda işinə inanırıq. Bizim üçün komandanın marağı öndə gəlir, çünki güc birlikdədir.", "" },
+            new string []{ "90", "Integrity", "Dürüstlük", "" },
+            new string []{ "91", "Ethics is propriety in all what we do in Parla. We are honest, fair and open and we never compromise on those.", "Etik qaydalar bütün işimizin təməlidir. Biz dürüst, ədalətli və şəffafıq. Bu dəyərlərdə heç vaxt güzəştə getmirik.", "" }
+            //new string []{ "92", "", "", "" },
+            //new string []{ "93", "", "", "" },
+            //new string []{ "94", "", "", "" },
+            //new string []{ "95", "", "", "" },
+            //new string []{ "96", "", "", "" },
+            //new string []{ "97", "", "", "" },
+            //new string []{ "98", "", "", "" },
+            //new string []{ "99", "", "", "" },
+            //new string []{ "100", "", "", "" },
         };
         private readonly IWebHostEnvironment _webHostEnvironment;
         //private readonly ApplicationDbContext _context;
@@ -34,28 +134,39 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         {
             try
             {
+                ViewBag.DictStr = DictStr;
+                if (lang == null)
+                {
+                    ViewBag.Language = "en";
+                    ViewBag.LanguageID = 1;
+                    return;
+                }
                 switch (lang.ToLower())
                 {
                     case "az":
                         ViewBag.Language = "az";
+                        ViewBag.LanguageID = 2;
                         break;
                     case "ru":
                         ViewBag.Language = "ru";
+                        ViewBag.LanguageID = 3;
                         break;
                     default:
                         ViewBag.Language = "en";
+                        ViewBag.LanguageID = 1;
                         break;
                 }
             }
             catch (Exception)
             {
                 ViewBag.Language = "en";
+                ViewBag.LanguageID = 1;
             }
         }
         public IActionResult Index(string lang)
         {
             Setlanguage(lang);
-            ViewBag.DictStr = DictStr;
+            
             try
             {
                 string kk = $"{ this.Request.PathBase }";

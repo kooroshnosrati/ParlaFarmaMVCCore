@@ -10,19 +10,7 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 <h2>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Job Application
-                            break;
-                        case "az":
-                            @:Iş üçün müraciət forması
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[61][@ViewBag.LanguageID]
                 </h2>
 
             </div>
@@ -35,34 +23,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3 class="module-header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Job Application
-                            break;
-                        case "az":
-                            @:Iş üçün müraciət forması
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[61][@ViewBag.LanguageID]
                 </h3>
                 <p>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.
-                            break;
-                        case "az":
-                            @:Bizimlə işləməyə maraq göstərdiyiniz üçün təşəkkür edirik. Sizə uyğün mövcud iş imkanları üçün vakansiyalar bölməmizə baş çəkin və İş üçün Müraciət Formasını doldurmaqla ərizənizi bizə göndərin.
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[62][@ViewBag.LanguageID]
                 </p>
             </div>
         </div>
@@ -107,19 +71,7 @@
                             <div class="form-group bottommargin_0">
                                 <label for="Phone">
                                     <b>
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:Phone
-                                                break;
-                                            case "az":
-                                                @:Telefon
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[63][@ViewBag.LanguageID]
                                     </b>
                                     <span asp-validation-for="Phone" class="required">*</span>
                                 </label>
@@ -130,19 +82,7 @@
                             <div class="form-group bottommargin_0">
                                 <label for="JobPosition">
                                     <b>
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:What position are you applying for?
-                                                break;
-                                            case "az":
-                                                @:Hansı vəzifə üçün müraciət edirsiniz?
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[64][@ViewBag.LanguageID]
                                     </b>
                                     <span asp-validation-for="JobTitle" class="required">*</span>
                                 </label>
@@ -154,19 +94,7 @@
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label for="StartDate">
                                     <b>
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:Available start date
-                                                break;
-                                            case "az":
-                                                @:Mümkün başlama tarixi
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[65][@ViewBag.LanguageID]
                                     </b>
                                     <span asp-validation-for="AvailableStartDate" class="required">*</span>
                                 </label>

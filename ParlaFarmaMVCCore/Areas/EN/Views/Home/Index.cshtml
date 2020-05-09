@@ -13,49 +13,13 @@
                                     <div class="intro-layer with_padding small-padding" data-animation="slideExpandUp">
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight">
-                                            @switch (@ViewBag.Language)
-                                            {
-                                                case "en":
-                                                    @:Shine for Health
-                                                    break;
-                                                case "az":
-                                                    @:Sağlamlıq naminə Parla!
-                                                    break;
-                                                case "ru":
-                                                    @:
-                                                    break;
-                                            }
-
+                                            @ViewBag.DictStr[27][@ViewBag.LanguageID]
                                         </h2>
                                         <p>
-                                            @switch (@ViewBag.Language)
-                                            {
-                                                case "en":
-                                                    @:We promise a healthier tomorrow for our patients
-                                                    break;
-                                                case "az":
-                                                    @:Biz daha sağlam gələcək naminə çalışırıq.
-                                                    break;
-                                                case "ru":
-                                                    @:
-                                                    break;
-                                            }
-
+                                            @ViewBag.DictStr[28][@ViewBag.LanguageID]
                                         </p>
                                         <a href="#" class="theme_button color2 inverse margin_0">
-                                            @switch (@ViewBag.Language)
-                                            {
-                                                case "en":
-                                                    @:Discover Now
-                                                    break;
-                                                case "az":
-                                                    @:Daha ətraflı
-                                                    break;
-                                                case "ru":
-                                                    @:
-                                                    break;
-                                            }
-
+                                            @ViewBag.DictStr[29][@ViewBag.LanguageID]
                                         </a>
                                         <span class="bottom_corners"></span>
                                     </div>
@@ -76,19 +40,7 @@
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight"></h2>
                                         <p style="font-size:25px;">
-                                            @switch (@ViewBag.Language)
-                                            {
-                                                case "en":
-                                                    @:Our aim is to improve healthcare access and quality of life
-                                                    break;
-                                                case "az":
-                                                    @:Bizim məqsədimiz səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətlərini yaxşılaşdırmaqdır.
-                                                    break;
-                                                case "ru":
-                                                    @:
-                                                    break;
-                                            }
-
+                                            @ViewBag.DictStr[30][@ViewBag.LanguageID]
                                         </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
@@ -112,19 +64,7 @@
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight"></h2>
                                         <p style="font-size:25px;">
-                                            @switch (@ViewBag.Language)
-                                            {
-                                                case "en":
-                                                    @:We focus on contributing to benefit our patientsWe focus on contributing to benefit our patients, society and environment
-                                                    break;
-                                                case "az":
-                                                    @:Cəmiyyətimizə, pasiyentlərimizə və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.
-                                                    break;
-                                                case "ru":
-                                                    @:
-                                                    break;
-                                            }
-
+                                            @ViewBag.DictStr[31][@ViewBag.LanguageID]
                                         </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
                                                 Discover Now
@@ -162,34 +102,10 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 <h2 class="section_header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Welcome to Our Website
-                            break;
-                        case "az":
-                            @:Vebsaytımıza xoş gəlmisiniz!
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[32][@ViewBag.LanguageID]
                 </h2>
                 <p>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.
-                            break;
-                        case "az":
-                            @:“Parla Pharmaceuticals” yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir.
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[33][@ViewBag.LanguageID]
                 </p>
 
             </div>
@@ -200,35 +116,11 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
                     <h4 class="topmargin_20 hover-color2">
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Parla Team
-                                break;
-                            case "az":
-                                @:Komandamız
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[34][@ViewBag.LanguageID]
                     </h4>
                     <p class="topmargin_30 bottommargin_0">
                         <a href="~/EN/Home/AboutUs#ParlaTeam" class="theme_button color2 inverse min_width_button">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:Our Team
-                                    break;
-                                case "az":
-                                    @:Daha ətraflı
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[8][@ViewBag.LanguageID]
                         </a>
                     </p>
                 </div>
@@ -238,35 +130,11 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center with_corner_border">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
                     <h4 class="topmargin_20 hover-color2">
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Parla Culture
-                                break;
-                            case "az":
-                                @:Korporativ mühit
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[35][@ViewBag.LanguageID]
                     </h4>
                     <p class="topmargin_30 bottommargin_0">
                         <a href="~/EN/Home/AboutUs#OurCulture" class="theme_button color2 inverse min_width_button">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:Discover Now
-                                    break;
-                                case "az":
-                                    @:Daha ətraflı
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[29][@ViewBag.LanguageID]
                         </a>
                     </p>
                     <span class="bottom_corners"></span>
@@ -277,35 +145,11 @@
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
                     <div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
                     <h4 class="topmargin_20 hover-color2">
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Social Responsibility
-                                break;
-                            case "az":
-                                @:Sosial məsuliyyət
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[10][@ViewBag.LanguageID]
                     </h4>
                     <p class="topmargin_30 bottommargin_0">
                         <a href="~/EN/Home/AboutUs#SocialResponsibility" class="theme_button color2 inverse min_width_button">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:Check It
-                                    break;
-                                case "az":
-                                    @:Daha ətraflı
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[36][@ViewBag.LanguageID]
                         </a>
                     </p>
                 </div>
@@ -328,54 +172,17 @@
                     <div class="col-md-8">
                         <div class="item-content">
                             <h2 class="bottommargin_0">
-                                @*@ViewBag.DictStr[0][0]*@
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                @:Our Vision
-                                        break;
-                                    case "az":
-                                @:Vision
-                                        break;
-                                    case "ru":
-                                @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[5][@ViewBag.LanguageID]
                             </h2>
                             <br /><br /><br /><br />
                             <ul style="font-size:25px;">
                                 <li>
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Improving health care access and quality of life
-                                            break;
-                                        case "az":
-                                            @:Səhiyyə xidmətlərinə çıxışı və pasiyentlərin həyat keyfiyyətini yaxşılaşdırmaq
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[37][@ViewBag.LanguageID]
                                 </li>
                             </ul>
                             <ul style="font-size:25px;">
                                 <li>
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Creating added value for  our customers, staff, business partner and  shareholders
-                                            break;
-                                        case "az":
-                                            @:Müştərilərimiz, əməkdaşlarımız, biznes tərəfdaşlarımız və səhmdarlarımız üçün əlavə dəyər yaratmaq
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[38][@ViewBag.LanguageID]
                                 </li>
                             </ul>
                         </div>
@@ -386,42 +193,13 @@
     </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div data-id="OurMission"></div>
 <section id="testimonials" class="parallax section_subscribe ds section_padding_top_50 section_padding_bottom_50 HomePageMissionBackground">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="section_header ">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Our Mission
-                            break;
-                        case "az":
-                            @:Missiyamız
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
                 </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="4" data-responsive-lg="4" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
@@ -434,19 +212,7 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Establishing a first class Pharmaceutical company in Azerbaijan and all CIS region
-                                        break;
-                                    case "az":
-                                        @:Azərbaycanda və bütün MDB regionunda ən qabaqcıl əczaçılıq şirkətinə çevrilmək
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[39][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -461,19 +227,7 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Developing customer orientation and leadership in the market
-                                        break;
-                                    case "az":
-                                        @:Bazarda müştəri yönümlü yanaşma və liderliyi inkişaf etdirmək
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[40][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -487,19 +241,7 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Offering high quality products with most affordable prices for customers
-                                        break;
-                                    case "az":
-                                        @:Münasib qiymət və yüksək keyfiyyətli dərman məhsulları təmin etmək
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[41][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -513,19 +255,7 @@
                         </div>
                         <div class="item-content HomePageMissionContent">
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Creating raving fans among clients and customers
-                                        break;
-                                    case "az":
-                                        @:Müştərilər üçün güvənli tərəfdaşa çevrilmək
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[42][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -719,19 +449,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <h2 class="section_header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Why Parla?
-                            break;
-                        case "az":
-                            @:Nə üçün PARLA?
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[43][@ViewBag.LanguageID]
                 </h2>
             </div>
         </div>
@@ -750,34 +468,10 @@
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody" >
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:We have passion to help patients
-                                    break;
-                                case "az":
-                                    @:Pasiyentlər bizim üçün önəmlidir
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[44][@ViewBag.LanguageID]
                         </h5>
                         <p>
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:Improving quality of life of patients is focus of Parla. We make sure this will be the base of all our decisions and actions. we make our medicine available and affordable for the patients.
-                                    break;
-                                case "az":
-                                    @:PARLAnın əsas maraqlarından biri pasiyentlərin həyat keyfiyyətinin yaxşılaşdırılmasıdır. Bu, bizim aldığımız bütün qərarların və fəaliyyətimizin əsasında dayanır.
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[45][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>
@@ -787,34 +481,10 @@
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:We offer a best place to work to our employees
-                                    break;
-                                case "az":
-                                    @:Biz əməkdaşlarımıza ən yaxşı iş yeri təklif edirik
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[46][@ViewBag.LanguageID]
                         </h5>
                         <p>
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:We offer a nice and welcome working environment to help people to learn and grow. We believe in empowerment together with support which help people to develop their skills in high standards.
-                                    break;
-                                case "az":
-                                    @:Xoş və rahat iş mühiti təmin etməklə, əməkdaşlarımızın öyrənərək inkişaf etməsinə şərait yaradırıq. Bizim üçün əməkdaşlarımızın peşəkar və fərdi inkişafı böyük önəm kəsb edir.
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[47][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>
@@ -826,34 +496,10 @@
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:We use innovation and advance technology to provide the best products with high standards
-                                    break;
-                                case "az":
-                                    @:İnnovasiya və yüksək texnologiya əsasında keyfiyyətli dərman məhsulları təmin edirik
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[48][@ViewBag.LanguageID]
                         </h5>
                         <p>
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:As the first science-based pharmaceutical company of Azerbaijan, we focus on the full production of high-tech products. Our portfolio also includes biotechnological and nanotechnological products. We provide high quality pharmaceutical products with high GMP standards.
-                                    break;
-                                case "az":
-                                    @:Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq, yüksək texnologiyalı dərmanların istehsalını həyata keçirməyə yönəlmişik. Məhsul portfelimizə,həmçinin, biotexnoloji və nanotexnoloji dərmanlar da daxildir. Yüksək keyfiyyətli əczaçılıq məhsulları yüksək GMP standartlarına cavab verir.
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[49][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>
@@ -863,34 +509,10 @@
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:We are responsible for our society and our environment
-                                    break;
-                                case "az":
-                                    @:Biz cəmiyyət və ətraf mühit qarşısındakı məsuliyyətlərimizi dərk edirik
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[50][@ViewBag.LanguageID]
                         </h5>
                         <p>
-                            @switch (@ViewBag.Language)
-                            {
-                                case "en":
-                                    @:To have a sustainable business, Parla is responsible for its society and environment. We collaborate with related stakeholders in our disease areas as a part of social responsibility activities. Also, to keep our planet safe for all of us, we have some policies which underpins every decision and action we make.
-                                    break;
-                                case "az":
-                                    @:Biznesin dayanıqlılığına nail olmaq üçün PARLA öz qarşısına cəmiyyət və ətraf mühitlə bağlı məsuliyyətlər qoyub. Biz bütün fəaliyyətimizdə bu sosial məsuliyyət öhdəliklərini qəbul edir və bu istiqamətdə müvafiq tərəflərlə əməkdaşlıq edərək Korporativ Sosial Məsuliyyət (KSM) layihələri həyata keçiririk.
-                                    break;
-                                case "ru":
-                                    @:
-                                    break;
-                            }
-
+                            @ViewBag.DictStr[51][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>

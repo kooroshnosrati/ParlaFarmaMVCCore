@@ -9,7 +9,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2>About Us</h2>
+                <h2>
+                    @ViewBag.DictStr[3][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -20,7 +22,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header">Our Company</h2>
+                <h2 class="section_header">
+                    @ViewBag.DictStr[4][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -36,18 +40,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:“Parla Pharmaceuticals” headquartered in Azerbaijan ,established in 2019, is the first science-based pharmaceutical company of Azerbaijan, focusing on the full production of high-technology medicines.
-                                                break;
-                                            case "az":
-                                                @:“Parla Pharmaceuticals” Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir. Şirkətimiz 2019-cu ildə yaradılıb. Parlanın fəaliyyəti Azərbaycanda yüksək texnologiyalı dərmanların tam istehsalından ibarətdir.
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
+                                            @ViewBag.DictStr[52][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -63,18 +56,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:The initial aim is to increase quality of lives of patients and their access to high quality pharmaceutical products with affordable price produced by Parla Pharmaceuticals. Our mission is to develop customer orientation and leadership in the pharmaceutical market and community.
-                                                break;
-                                            case "az":
-                                                @:Əsas məqsədimiz əhalinin həyat keyfiyyətinin artırıılması, yüksək keyfiyyətli əczaçılıq məhsulları istehsal edərək münasib qiymətlərlə insanlara təqdim etməkdir. Biz həmçinin, əczaçılıq bazarında və cəmiyyətdə pasiyent yönümlü yanaşmanı və liderliyi inkişaf etdirməyə yönəlmişik.
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
+                                        @ViewBag.DictStr[53][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -90,18 +72,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:Exporting advanced biotechnological and nanotechnological products by developing an international culture, structure and performanceis one of the key focus areas. Parla is ambitious to be Azerbaijan’s best Pharmaceutical brand, worldwide.
-                                                break;
-                                            case "az":
-                                                @:Məhsul portfelimizdə klassik dərman vasitələri ilə yanaşı müasir biotexnoloji və nanotexnoloji məhsullar da olacaq. Parla bu məhsulların Azərbaycanda satışı ilə yanaşı, onların ixracını da həyata keçirəcək. Parla Azərbaycanın qabaqcıl əczaçılıq brendi olmaqda iddialıdır.
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
+                                        @ViewBag.DictStr[54][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -117,20 +88,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:With the footprint and commitment to improving access to healthcare and improving quality of life, Parla works tirelessly to make a difference to people’s lives every day and focuses on transferring scientific innovation. This will be aligned with social and environmental focus.
-                                                break;
-                                            case "az":
-                                                @:Səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətinin yaxşılaşdıırlmasına öz töhfəsini vermək üçün Parla dayanmadan çalışır və elmi innovasiyanın, yeniliklərin tətbiqini də diqqətdə saxlayır. Biz həmçinin sosial və ətraf  mühitlə bağlı öhdəliklərimizi də həyata keçiririk.
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
-
+                                        @ViewBag.DictStr[55][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +106,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Vision </h2>
+                <h2 class="section_header">
+                    @ViewBag.DictStr[5][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -188,7 +148,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Our Mission </h2>
+                <h2 class="section_header"> 
+                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -224,7 +186,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Parla Team </h2>
+                <h2 class="section_header">
+                    @ViewBag.DictStr[34][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -240,18 +204,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:Our team is our main asset. Parla is a young, talented, ambitious and agile team of professionals
-                                                break;
-                                            case "az":
-                                                @:“Parla” gənc, istedadlı, məqsədyönlü və çevik peşəkarlar komandasıdır!
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
+                                        @ViewBag.DictStr[56][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -267,19 +220,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:We are a dynamic and energetic team of professionals who focus on excellence and success. Our people are equipped with many years of experience, along with the knowledge and confidence in their field of work. In Parla we believe in innovation, dedication and teamwork.
-                                                break;
-                                            case "az":
-                                                @:Biz yüksək professionallıq və uğur qazanmaq yolunda  irəliləyən dinamik və enerjili peşəkarlardan ibarət komandayıq. Bizim əməkdaşlarımız öz sahələrində ekspert olmaqla yanaşı, həm də çoxillik təcrübəyə malikdirlər. “Parla” olaraq, biz innovasiya, sadiqlik və komanda işinə inanırıq.
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[57][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -295,19 +236,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                                @:With a well-trained professional team and abundance of experience behind them, Parla is determined to become a first-class pharmaceutical company in Azerbaijan. Our success is a reflection of our people and we love what we do
-                                                break;
-                                            case "az":
-                                                @:Geniş təcrübəyə malik və çoxsaylı təlim keçmiş peşəkarlar komandası ilə, “Parla” Azərbaycanda qabaqcıl əczaçılıq şirkəti olmaqda qərarlıdır. Bizim uğurumuz əməkdaşlarımızın fəaliyyətindən yaranır. Çünki biz öz işimizi sevirik !
-                                                break;
-                                            case "ru":
-                                                @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[58][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -326,19 +255,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <h2 class="section_header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                    @:Our Culture
-                            break;
-                        case "az":
-                    @:
-                            break;
-                        case "ru":
-                    @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[9][@ViewBag.LanguageID]
                 </h2>
             </div>
         </div>
@@ -355,19 +272,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                        @:We believe that success of our business depends directly on personal contribution of every employee. Our teamwork is based on learning culture, effetive communication, constructive feedback and determination.
-                                                break;
-                                            case "az":
-                                        @:Biz əminik ki, biznesin uğuru hər bir əməkdaşın fərdi tohfəsinə əsaslanır. Komanda fəaliyyətimzidə öyrənmək və inkişaf, şəffaf və açıq ünsiyyət, konstruktiv rəy və qərarlılıq prinsiplərini əsas tuturuq.
-                                                break;
-                                            case "ru":
-                                        @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[59][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>
@@ -384,7 +289,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
-                <h2 class="section_header"> Social Responsibility </h2>
+                <h2 class="section_header">
+                    @ViewBag.DictStr[10][@ViewBag.LanguageID]
+                </h2>
             </div>
         </div>
     </div>
@@ -400,19 +307,7 @@
                             <div class="slide_description_wrapper" style="width:100%;position:absolute;">
                                 <div class="slide_description" style="vertical-align:bottom;text-align:center;width:100%;">
                                     <div class="intro-layer toppadding_20 bottompadding_20 leftpadding_10 rightpadding_10 CustomSlider">
-                                        @switch (@ViewBag.Language)
-                                        {
-                                            case "en":
-                                        @:Staying true to our mission, values and culture we focus on contributing to benefit our patients, society and environment
-                                                break;
-                                            case "az":
-                                        @:Missiyamız, dəyərlərimiz və korporativ mədəniyyətimizə sadiq qalaraq, pasiyentlərimiz, cəmiyyətimiz və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq.
-                                                break;
-                                            case "ru":
-                                        @:
-                                                break;
-                                        }
-
+                                        @ViewBag.DictStr[60][@ViewBag.LanguageID]
                                     </div>
                                 </div>
                             </div>

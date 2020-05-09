@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="section_header "> Our Values </h2>
+                <h2 class="section_header ">
+                    @ViewBag.DictStr[7][@ViewBag.LanguageID]
+                </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="3" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="true" data-dots="false">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
@@ -16,36 +18,12 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Performance
-                                            break;
-                                        case "az":
-                                            @:Performans
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[73][@ViewBag.LanguageID]
                                     @*</a>*@
                                 </h4>
                             </header>
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:As an ambitious company, we believe our work should be executed flawlessly, to guarantee added value for our patients, customers, shareholders and staff and ensure unparalleled quality in everything we do.
-                                        break;
-                                    case "az":
-                                        @:İddialı bir şirkət olaraq, biz inanırıq ki, pasiyentlərimizə, müştərilərimizə, səhmdarlarımıza və işçi heyətimizə əlavə dəyər qatmaq və bütün fəaliyyətimizdə yüksək keyfiyyətə nail olmaq üçün işimizi qüsursuz icra etməliyik.
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[86][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -61,36 +39,12 @@
                                 <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Professionalism
-                                            break;
-                                        case "az":
-                                            @:Peşəkarlıq
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[70][@ViewBag.LanguageID]
                                     @*</a>*@
                                 </h4>
                             </header>
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:We set our standards high and we are ready to help team to add on  their skillsso that Parla’s team can exceed expectations and strive for perfection in everything we do.
-                                        break;
-                                    case "az":
-                                        @:Biz standartlarımızı yüksək təyin edir və komandamızın bu gözləntiləri doğrultması, eyni zamanda öz işində mükəmməl nəticələrə nail olması üçün onların səriştə və bacarıqlarının daim artırılmasına çalışırıq.
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[87][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -106,36 +60,12 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Innovation
-                                            break;
-                                        case "az":
-                                            @:İnnovasiya
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[72][@ViewBag.LanguageID]
                                     @*</a>*@
                                 </h4>
                             </header>
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:We constantly strive to redefine the standard of excellence in everything we do. We are open to ideas that challenge the conventional views and drive innovation.
-                                        break;
-                                    case "az":
-                                        @:Gördüyümüz hər işdə mükəmməllik standartlarını yenidən nəzərdən keçiririk. Biz ənənəvi baxış bucağına meydan oxuyan və yenilik gətirən fikirlərə hər zaman açığıq.
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[88][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -151,36 +81,12 @@
                                 <div class="categories-links highlightlinks"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Teamwork
-                                            break;
-                                        case "az":
-                                            @:Komanda işi
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[71][@ViewBag.LanguageID]
                                     @*</a>*@
                                 </h4>
                             </header>
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Parla deeply believes in real team performance and integration. We put the interest of the team as success only comes when we work together.
-                                        break;
-                                    case "az":
-                                        @:PARLAda biz həqiqi komanda işinə inanırıq. Bizim üçün komandanın marağı öndə gəlir, çünki güc birlikdədir.
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[89][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>
@@ -196,36 +102,12 @@
                                 <div class="categories-links highlight2links"> @*<a href="#"></a>*@ </div>
                                 <h4 class="entry-title topmargin_0">
                                     @*<a href="gallery-single.html" tppabs="http://webdesign-finder.com/html/pharma/gallery-single.html" rel="bookmark">*@
-                                    @switch (@ViewBag.Language)
-                                    {
-                                        case "en":
-                                            @:Integrity
-                                            break;
-                                        case "az":
-                                            @:Dürüstlük
-                                            break;
-                                        case "ru":
-                                            @:
-                                            break;
-                                    }
-
+                                    @ViewBag.DictStr[90][@ViewBag.LanguageID]
                                     @*</a>*@
                                 </h4>
                             </header>
                             <p>
-                                @switch (@ViewBag.Language)
-                                {
-                                    case "en":
-                                        @:Ethics is propriety in all what we do in Parla. We are honest, fair and open and we never compromise on those.
-                                        break;
-                                    case "az":
-                                        @:Etik qaydalar bütün işimizin təməlidir. Biz dürüst, ədalətli və şəffafıq. Bu dəyərlərdə heç vaxt güzəştə getmirik.
-                                        break;
-                                    case "ru":
-                                        @:
-                                        break;
-                                }
-
+                                @ViewBag.DictStr[91][@ViewBag.LanguageID]
                             </p>
                         </div>
                     </article>

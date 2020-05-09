@@ -20,98 +20,26 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3 class="module-header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:To potential distributors:
-                            break;
-                        case "az":
-                            @:Potensial distribyutorlara:
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[78][@ViewBag.LanguageID]
                 </h3>
 
                 <p><b>
-    @switch (@ViewBag.Language)
-    {
-        case "en":
-            @:PARLA is interested in engaging new partners:
-            break;
-        case "az":
-            @:PARLA bu meyarlar üzrə yeni tərəfdaşlar cəlb etməkdə maraqlıdır:
-            break;
-        case "ru":
-            @:
-            break;
-    }
-
+    @ViewBag.DictStr[79][@ViewBag.LanguageID]
 </b></p>
                 <ul>
                     <li>
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Actively developing sales of medicinal products.
-                                break;
-                            case "az":
-                                @:Dərman məhsullarının satışını aktiv inkişaf etdirmək;
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[80][@ViewBag.LanguageID]
                     </li>
                     <li>
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Having strong positions at local markets.
-                                break;
-                            case "az":
-                                @:Yerli bazarlarda güclü mövqeyə sahib olmaq;
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[81][@ViewBag.LanguageID]
                     </li>
                     <li>
-                        @switch (@ViewBag.Language)
-                        {
-                            case "en":
-                                @:Having marketing resources to promote medicinal products of PARLA.
-                                break;
-                            case "az":
-                                @:PARLAnın dərman vasitələrini tanıtmaq üçün marketinq resurslarına sahib olmaq.
-                                break;
-                            case "ru":
-                                @:
-                                break;
-                        }
-
+                        @ViewBag.DictStr[82][@ViewBag.LanguageID]
                     </li>
                 </ul>
 
                 <p>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:The purpose of promotion is defining objective criteria to choose potential Commercial partners and to assess current Commercial Partners as well as willing to make this process as understandable and transparent as possible.
-                            break;
-                        case "az":
-                            @:Tərəfdaşlıqda maraqlı olan mövcud və yeni partnyorlarla əməkdaşlıq təkliflərinə açığıq.
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[83][@ViewBag.LanguageID]
                 </p>
                 @*<p>We are striving to establish long-term partnerships with our distributors based on mutual interest in promoting GEROPHARM medicinal products.</p>
 
@@ -239,48 +167,14 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3 class="module-header">
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Export development
-                            break;
-                        case "az":
-                            @:İxrac
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
-
+                    @ViewBag.DictStr[21][@ViewBag.LanguageID]
                 </h3>
                 <p>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:Export development is an important element of the “Parla Pharmaceuticals” business strategy.
-                            break;
-                        case "az":
-                            @:Dərman məhsullarının ixracı “Parla Pharmaceuticals” şirkətinin biznes strategiyasının əsas istiqamətlərindən biridir.
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
+                    @ViewBag.DictStr[84][@ViewBag.LanguageID]
                 </p>
 
                 <p>
-                    @switch (@ViewBag.Language)
-                    {
-                        case "en":
-                            @:“Parla Pharmaceuticals” intends to export advanced biotechnological and nanotechnological products being developed in accordance with national and international GMP standards.
-                            break;
-                        case "az":
-                            @: “Parla Pharmaceuticals” beynəlxalq GMP standartlarına uyğun olaraq hazırlanan biotexnoloji və nanotexnoloji dərman məhsullarını ixrac etməyi planlaşdırır.
-                            break;
-                        case "ru":
-                            @:
-                            break;
-                    }
+                    @ViewBag.DictStr[85][@ViewBag.LanguageID]
                 </p>
 
                 <img src="~/lib/pharma/images/Export development.png" />
