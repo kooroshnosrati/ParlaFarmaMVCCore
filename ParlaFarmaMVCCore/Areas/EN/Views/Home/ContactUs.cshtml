@@ -18,7 +18,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3 class="module-header">Contact Form</h3>
+                <h3 class="module-header">
+                    @ViewBag.DictStr[92][@ViewBag.LanguageID]
+                </h3>
             </div>
         </div>
         <div class="row">
@@ -32,36 +34,38 @@
                                 <label asp-for="FullName">
                                     Full Name <span asp-validation-for="FullName" class="required">*</span>
                                 </label>
-                                <input asp-for="FullName" type="text" aria-required="true" size="30" value="" name="FullName" id="FullName" class="form-control" placeholder="Full Name">
+                                <input asp-for="FullName" type="text" aria-required="true" size="30" value="" name="FullName" id="FullName" class="form-control" placeholder="@ViewBag.DictStr[93][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <i class="fa fa-phone highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="PhoneNumber">Phone Number <span asp-validation-for="PhoneNumber" class="required">*</span></label>
-                                <input asp-for="PhoneNumber" type="text" aria-required="true" size="30" value="" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="Phone Number">
+                                <input asp-for="PhoneNumber" type="text" aria-required="true" size="30" value="" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="@ViewBag.DictStr[95][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <i class="fa fa-envelope highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="Email">Email address <span asp-validation-for="Email" class="required">*</span></label>
-                                <input asp-for="Email" type="email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="Email Address">
+                                <input asp-for="Email" type="email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="@ViewBag.DictStr[94][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <i class="fa fa-flag highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="Subject">Subject <span asp-validation-for="Subject" class="required">*</span></label>
-                                <input asp-for="Subject" type="text" aria-required="true" size="30" value="" name="Subject" id="Subject" class="form-control" placeholder="Subject">
+                                <input asp-for="Subject" type="text" aria-required="true" size="30" value="" name="Subject" id="Subject" class="form-control" placeholder="@ViewBag.DictStr[96][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="contact-form-message form-group bottommargin_0">
                                 <i class="fa fa-comment highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="MessageBody">Message <span asp-validation-for="MessageBody" class="required">*</span></label>
-                                <textarea asp-for="MessageBody" aria-required="true" rows="3" cols="45" name="MessageBody" id="MessageBody" class="form-control" placeholder="Message"></textarea>
+                                <textarea asp-for="MessageBody" aria-required="true" rows="3" cols="45" name="MessageBody" id="MessageBody" class="form-control" placeholder="@ViewBag.DictStr[97][@ViewBag.LanguageID]"></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12 bottommargin_0">
                             <div class="contact-form-submit topmargin_10">
-                                <button type="submit" class="theme_button color2 wide_button margin_0">Send message</button>  @*id="contact_form_submit" name="contact_submit"*@
+                                <button type="submit" class="theme_button color2 wide_button margin_0">
+                                    @ViewBag.DictStr[97][@ViewBag.LanguageID]
+                                </button>  @*id="contact_form_submit" name="contact_submit"*@
                             </div>
                         </div>
                     </div>
@@ -73,7 +77,9 @@
                         <div class="media">
                             <div class="media-left"> <i class="rt-icon2-shop highlight2 fontsize_18"></i> </div>
                             <div class="media-body">
-                                <h5 class="media-heading grey">Postal Address:</h5>
+                                <h5 class="media-heading grey">
+                                    @ViewBag.DictStr[119][@ViewBag.LanguageID]
+                                </h5>
                                 16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor
                                 <p class="greylinks fontsize_12"> Baku , Azerbaijan </p>
                             </div>
@@ -83,7 +89,9 @@
                         <div class="media">
                             <div class="media-left"> <i class="rt-icon2-phone5 highlight2 fontsize_18"></i> </div>
                             <div class="media-body">
-                                <h5 class="media-heading grey">Phone:</h5> +99412 310 52 19
+                                <h5 class="media-heading grey">
+                                    @ViewBag.DictStr[63][@ViewBag.LanguageID]:
+                                </h5> +99412 310 52 19
                             </div>
                         </div>
                     </li>
@@ -91,7 +99,9 @@
                         <div class="media">
                             <div class="media-left"> <i class="rt-icon2-stack4 highlight2 fontsize_18"></i> </div>
                             <div class="media-body">
-                                <h5 class="media-heading grey">Fax:</h5> +99412 310 52 19
+                                <h5 class="media-heading grey">
+                                    @ViewBag.DictStr[120][@ViewBag.LanguageID]
+                                </h5> +99412 310 52 19
                             </div>
                         </div>
                     </li>
