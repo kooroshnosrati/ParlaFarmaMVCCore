@@ -43,28 +43,34 @@
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="FirstName">
-                                    <b>First Name </b>
+                                    <b>
+                                        @ViewBag.DictStr[122][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="FirstName" class="required">*</span>
                                 </label>
-                                <input asp-for="FirstName" type="text" aria-required="true" size="30" value="" name="FirstName" id="FirstName" class="form-control" placeholder="First Name">
+                                <input asp-for="FirstName" type="text" aria-required="true" size="30" value="" name="FirstName" id="FirstName" class="form-control" placeholder="@ViewBag.DictStr[122][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="LastName">
-                                    <b>Last Name </b>
+                                    <b>
+                                        @ViewBag.DictStr[129][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="LastName" class="required">*</span>
                                 </label>
-                                <input asp-for="LastName" type="text" aria-required="true" size="30" value="" name="LastName" id="LastName" class="form-control" placeholder="Last Name">
+                                <input asp-for="LastName" type="text" aria-required="true" size="30" value="" name="LastName" id="LastName" class="form-control" placeholder="@ViewBag.DictStr[129][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="Email">
-                                    <b>Email address</b>
+                                    <b>
+                                        @ViewBag.DictStr[94][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="Email" class="required">*</span>
                                 </label>
-                                <input asp-for="Email" type="Email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="Email Address">
+                                <input asp-for="Email" type="Email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="@ViewBag.DictStr[94][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -87,7 +93,7 @@
                                     <span asp-validation-for="JobTitle" class="required">*</span>
                                 </label>
                                 <br />
-                                <input asp-for="JobTitle" type="text" aria-required="true" size="30" value="" name="JobTitle" id="JobTitle" class="form-control" placeholder="Job Title">
+                                <input asp-for="JobTitle" type="text" aria-required="true" size="30" value="" name="JobTitle" id="JobTitle" class="form-control" placeholder="@ViewBag.DictStr[140][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -104,62 +110,80 @@
                         <div class="col-sm-12">
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label for="EmploymentStatus">
-                                    <b>What is your current employment status?</b>
+                                    <b>
+                                        @ViewBag.DictStr[130][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="EmploymentStatus" class="required">*</span>
                                 </label>
                             </div>
                             <div class="col-sm-6">
-                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Employed" name="EmploymentStatus" id="EmploymentStatus">Employed
+                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Employed" name="EmploymentStatus" id="EmploymentStatus">
+                                @ViewBag.DictStr[131][@ViewBag.LanguageID]
                             </div>
                             <div class="col-sm-6">
-                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Self-Employed" name="EmploymentStatus" id="EmploymentStatus">Self-Employed
+                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Self-Employed" name="EmploymentStatus" id="EmploymentStatus">
+                                @ViewBag.DictStr[132][@ViewBag.LanguageID]
                             </div>
                             <div class="col-sm-6">
-                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Unemployed" name="EmploymentStatus" id="EmploymentStatus">Unemployed
+                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Unemployed" name="EmploymentStatus" id="EmploymentStatus">
+                                @ViewBag.DictStr[133][@ViewBag.LanguageID]
                             </div>
                             <div class="col-sm-6">
-                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Student" name="EmploymentStatus" id="EmploymentStatus">Student
+                                <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Student" name="EmploymentStatus" id="EmploymentStatus">
+                                @ViewBag.DictStr[134][@ViewBag.LanguageID]
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label for="ResumeSubmit">
-                                    <b>How do you prefer to submit your resume?</b>
+                                    <b>
+                                        @ViewBag.DictStr[135][@ViewBag.LanguageID]
+                                    </b>
                                     <span class="required">*</span>
                                 </label>
                             </div>
                             <div class="col-sm-12">
-                                <input type="radio" aria-required="true" value="1" name="ResumeType" id="ResumeUploadFile" checked>Upload File
+                                <input type="radio" aria-required="true" value="1" name="ResumeType" id="ResumeUploadFile" checked>
+                                @ViewBag.DictStr[136][@ViewBag.LanguageID]
                             </div>
                             <div class="col-sm-12">
-                                <input type="radio" aria-required="true" value="2" name="ResumeType" id="ResumeProvideURL">Provide URL
+                                <input type="radio" aria-required="true" value="2" name="ResumeType" id="ResumeProvideURL">
+                                @ViewBag.DictStr[137][@ViewBag.LanguageID]
                             </div>
                         </div>
                         <div class="col-sm-12" style="display:none;" id="DIVResumeURL">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="ResumeURL">
-                                    <b>Type Your ResumeURL</b>
+                                    <b>
+                                        @ViewBag.DictStr[98][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="ResumeURL" class="required">*</span>
                                 </label>
                                 <br />
-                                <input asp-for="ResumeURL" type="text" aria-required="true" size="30" value="" name="ResumeURL" id="ResumeURL" class="form-control" placeholder="Resume URL">
+                                <input asp-for="ResumeURL" type="text" aria-required="true" size="30" value="" name="ResumeURL" id="ResumeURL" class="form-control" placeholder="@ViewBag.DictStr[141][@ViewBag.LanguageID]">
                             </div>
                         </div>
                         <div class="col-sm-12" id="DIVResumeFile">
                             <div class="Application-form-message form-group bottommargin_0">
                                 <label asp-for="ResumeFile">
-                                    <b>Upload your resume</b>
+                                    <b>
+                                        @ViewBag.DictStr[138][@ViewBag.LanguageID]
+                                    </b>
                                     <span asp-validation-for="ResumeFile" class="required"></span>
                                 </label>
                             </div>
                             <div class="custom-file">
                                 <input asp-for="ResumeFile" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                <label class="custom-file-label" for="customFile">
+                                    @ViewBag.DictStr[139][@ViewBag.LanguageID]
+                                </label>
                             </div>
                         </div>
                         <div class="col-sm-12 bottommargin_0">
                             <div class="Application-form-submit topmargin_10">
-                                <button type="submit" id="Application_form_submit" name="Application_submit" class="theme_button color2 inverse wide_button margin_0">Send message</button>
+                                <button type="submit" id="Application_form_submit" name="Application_submit" class="theme_button color2 inverse wide_button margin_0">
+                                    @ViewBag.DictStr[97][@ViewBag.LanguageID]
+                                </button>
                             </div>
                         </div>
                     </div>
