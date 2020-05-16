@@ -239,9 +239,11 @@
                 <p>
                     @ViewBag.DictStr[115][@ViewBag.LanguageID]
                 </p>
-                <p><b>
-                    @ViewBag.DictStr[116][@ViewBag.LanguageID]
-                </b></p>
+                <p>
+                    <b>
+                        @ViewBag.DictStr[116][@ViewBag.LanguageID]
+                    </b>
+                </p>
                 <ul>
                     <li>
                         @ViewBag.DictStr[117][@ViewBag.LanguageID]
@@ -252,142 +254,248 @@
                 </ul>
             </div>
             @*<div class="col-sm-12">
-                    <h4 class="module-header">Vacancies list</h4><hr />
-                </div>*@
-            <div class="col-sm-12" id="MedicalrepresentativeBaku">
-                <h3 class="module-header Vacancieslist">
-                    Medical representative, Baku
-                </h3>
-                <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
-                <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
-            </div>
-            <div class="col-sm-12" id="MedicalrepresentativeBakuDetail" style="display:none;">
+            <h4 class="module-header">Vacancies list</h4><hr />
+        </div>*@
+            @if (ViewBag.LanguageID == 1)
+            {
+                <div class="col-sm-12" id="MedicalrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Medical representative, Baku
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
+                </div>
+                <div class="col-sm-12" id="MedicalrepresentativeBakuDetail" style="display:none;">
 
-                <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
-                <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
-                <p></p>
-                <p><b>Key responsibilities include:</b></p>
-                <ul>
-                    <li>Introduce company products</li>
-                    <li>Daily visits to healthcare and medical staff (endocrinologists, cardiologists, therapists, pharmacists, etc.)</li>
-                    <li>Conduct market analysis</li>
-                    <li>Track sales dynamics</li>
-                    <li>Develop and implement an action plan and register in the electronic system</li>
-                    <li>Implement educational activities, social projects</li>
-                </ul>
-                <p></p>
-                <p><b>Required qualifications and skills:</b></p>
-                <ul>
-                    <li>Higher medical or pharmaceutical education;</li>
-                    <li>Work experience: at least 3 years in the sales system in the pharmaceutical business;</li>
-                    <li>Communicative, responsible and able to work in a team;</li>
-                    <li>Analytical thinking ability;</li>
-                    <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
-                    <li>Azerbaijani - native, English and Russian are desirable;</li>
-                    <li>Driver's license - Category B.</li>
-                </ul>
-                <p></p>
-                <p><b>We offer:</b></p>
-                <ul>
-                    <li>Training and development opportunities within the company;</li>
-                    <li>Corporate culture and professional work environment;</li>
-                    <li>Private Health Insurance;</li>
-                    <li>Corporate number;</li>
-                    <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
-                </ul>
-                <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
-            </div>
-            <hr />
-            <div class="col-sm-12" id="SalesrepresentativeBaku">
-                <h3 class="module-header Vacancieslist">
-                    Sales representative, Baku
-                </h3>
-                <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
-                <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
-            </div>
-            <div class="col-sm-12" id="SalesrepresentativeBakuDetail" style="display:none;">
-                <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
-                <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
-                <p></p>
-                <p><b>Key responsibilities include:</b></p>
-                <ul>
-                    <li>Introduce company products</li>
-                    <li>Daily visits to pharmacies and other medical facilities;</li>
-                    <li>Conduct market analysis;</li>
-                    <li>Track sales dynamics;</li>
-                    <li>Develop and implement an action plan and register in the electronic system;</li>
-                    <li>Implement educational activities, social projects.</li>
-                </ul>
-                <p></p>
-                <p><b>Required qualifications and skills:</b></p>
-                <ul>
-                    <li>Strong sales skills;</li>
-                    <li>Work experience: minimum 1 year in the sales system;</li>
-                    <li>Communicative, responsible and able to work in a team;</li>
-                    <li>Analytical thinking ability;</li>
-                    <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
-                    <li>Azerbaijani - native, English and Russian are desirable;</li>
-                    <li>Driver's license - Category B is desirable;</li>
-                    <li>Candidates with pharmaceutical background will be preferred.</li>
-                </ul>
-                <p></p>
-                <p><b>We offer:</b></p>
-                <ul>
-                    <li>Training and development opportunities within the company;</li>
-                    <li>Corporate culture and professional work environment;</li>
-                    <li>Private Health Insurance;</li>
-                    <li>Corporate number;</li>
-                    <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
-                </ul>
-                <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
-            </div>
-            <hr />
-            <div class="col-sm-12" id="BusinessanalystforSalesEffectivenessBaku">
-                <h3 class="module-header Vacancieslist">
-                    Business analyst for Sales Effectiveness, Baku
-                </h3>
-                <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
-                <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
-            </div>
-            <div class="col-sm-12" id="BusinessanalystforSalesEffectivenessBakuDetail" style="display:none;">
-                <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
-                <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
-                <p></p>
-                <p><b>Key responsibilities include:</b></p>
-                <ul>
-                    <li>Analysis of sales dynamics and development of management dashboard;</li>
-                    <li>Developing and maintaining database, analysis of data and reports to monitor Field Force performance using key performance indicators;</li>
-                    <li>Competitor analysis;</li>
-                    <li>Developing tools and resources to support field employees;</li>
-                    <li>Preparing weekly and monthly sales reports; </li>
-                    <li>Engagement in call plan and field resource optimisation;</li>
-                    <li>Sales team performance calculation and evaluation;</li>
-                    <li>Sales achievement and bonus calculation;</li>
-                    <li>CRM management</li>
-                </ul>
-                <p></p>
-                <p><b>Key requirements:</b></p>
-                <ul>
-                    <li>Business Industry & Sales Understanding;</li>
-                    <li>Strong strategic and analytical capabilities; </li>
-                    <li>Highly analytical with passion for figures and a strong bottom-up analytical approach;</li>
-                    <li>Minimum 2 years’ experience in the relevant field;</li>
-                    <li>Experience in pharmaceutical industry is desirable;</li>
-                    <li>Higher education in the relevant field;</li>
-                    <li>Strong command of Microsoft Office365, excellent working knowledge with Excel;</li>
-                    <li>Azerbaijani - native, English -intermediate.</li>
-                </ul>
-                <p></p>
-                <p><b>We offer:</b></p>
-                <ul>
-                    <li>Training and development opportunities within the company;</li>
-                    <li>Corporate culture and professional work environment;</li>
-                    <li>Private Health Insurance;</li>
-                    <li>Corporate number;</li>
-                    <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options;</li>
-                </ul>
-                <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
-            </div>
+                    <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
+                    <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
+                    <p></p>
+                    <p><b>Key responsibilities include:</b></p>
+                    <ul>
+                        <li>Introduce company products</li>
+                        <li>Daily visits to healthcare and medical staff (endocrinologists, cardiologists, therapists, pharmacists, etc.)</li>
+                        <li>Conduct market analysis</li>
+                        <li>Track sales dynamics</li>
+                        <li>Develop and implement an action plan and register in the electronic system</li>
+                        <li>Implement educational activities, social projects</li>
+                    </ul>
+                    <p></p>
+                    <p><b>Required qualifications and skills:</b></p>
+                    <ul>
+                        <li>Higher medical or pharmaceutical education;</li>
+                        <li>Work experience: at least 3 years in the sales system in the pharmaceutical business;</li>
+                        <li>Communicative, responsible and able to work in a team;</li>
+                        <li>Analytical thinking ability;</li>
+                        <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
+                        <li>Azerbaijani - native, English and Russian are desirable;</li>
+                        <li>Driver's license - Category B.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Private Health Insurance;</li>
+                        <li>Corporate number;</li>
+                        <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                    </ul>
+                    <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                </div>
+                <hr />
+            }
+            else if (ViewBag.LanguageID == 2)
+            {
+                <div class="col-sm-12" id="MedicalrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Tibbi nümayəndə, Bakı
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
+                </div>
+                <div class="col-sm-12" id="MedicalrepresentativeBakuDetail" style="display:none;">
+
+                    <p>İstedadlı insanlarla işləmək, professional mühitdə inkişaf etmək və potensialınızı həyata keçirmək üçün fürsət veririk.  Həmçinin ümid edirik ki, bizimlə birlikdə pasiyentlərin həyatını yaxşılaşdırmaq üçün mümkün olan hər şeyi edəcəksiniz!</p>
+                    <p>"Parla Pharmaceuticals" şirkəti, yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş, Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq 2019-cu ilin sentyabr ayında təsis edilmişdir. İlkin məqsəd əlverişli qiymətə yüksək keyfiyyətli əczaçılıq məhsulları istehsal etməkdir və missiyamız əczaçılıq bazarında və cəmiyyətdə müştəri yönümlü yanaşmanı və liderliyi inkişaf etdirməkdir. Qabaqcıl biotexnoloji və nanotexnoloji məhsulların ixracı əsas istiqamətlərdən biridir. Parla bütün dünyada Azərbaycanın ən yaxşı Əczaçılıq brendi olmaqda iddialıdır.</p>
+                    <p></p>
+                    <p><b>Vəzifə:</b></p>
+                    <ul>
+                        <li>Şirkət məhsullarını təqdim etmək</li>
+                        <li>Gündəlik tibb müəssisələrinə baş çəkmək (endokrinoloqlar, kardioloqlar,terapevtlər, əczaçılar və s.)</li>
+                        <li>Bazar təhlili aparmaq</li>
+                        <li>Satış dinamikasını izləmək</li>
+                        <li>Fəaliyyət planı tərtib  edərək həyata keçirmək və elektron sistemdə qeydiyyat aparmaq</li>
+                        <li>Maarifləndirici tədbirlər, sosial layihələr həyata keçirmək</li>
+                    </ul>
+                    <p></p>
+                    <p><b>Namizədə tələblər:</b></p>
+                    <ul>
+                        <li>Ali tibbi və ya əczaçılıq təhsili</li>
+                        <li>İş təcrübəsi: əczaçılıq biznesində satış sistemində ən azı 3 il</li>
+                        <li>Ünsiyyətcil, məsuliyyətli və komandada işləmək bacarığı olan</li>
+                        <li>Analitik düşünmə qabiliyyəti;</li>
+                        <li>Microsoft Office proqramların biliyi (World, Excel, Power Point);</li>
+                        <li>Azərbaycan dili əla, İngilis və Rus dilləri arzuolunandır;</li>
+                        <li>Sürücülük vəsiqəsi - B kateqoriyası.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Private Health Insurance;</li>
+                        <li>Corporate number;</li>
+                        <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                    </ul>
+                    <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                </div>
+                <hr />
+            }
+            
+            @if (ViewBag.LanguageID == 1)
+            {
+                <div class="col-sm-12" id="SalesrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Sales representative, Baku
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
+                </div>
+                <div class="col-sm-12" id="SalesrepresentativeBakuDetail" style="display:none;">
+                    <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
+                    <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the main focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
+                    <p></p>
+                    <p><b>Key responsibilities include:</b></p>
+                    <ul>
+                        <li>Introduce company products</li>
+                        <li>Daily visits to pharmacies and other medical facilities;</li>
+                        <li>Conduct market analysis;</li>
+                        <li>Track sales dynamics;</li>
+                        <li>Develop and implement an action plan and register in the electronic system;</li>
+                        <li>Implement educational activities, social projects.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>Required qualifications and skills:</b></p>
+                    <ul>
+                        <li>Strong sales skills;</li>
+                        <li>Work experience: minimum 1 year in the sales system;</li>
+                        <li>Communicative, responsible and able to work in a team;</li>
+                        <li>Analytical thinking ability;</li>
+                        <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
+                        <li>Azerbaijani - native, English and Russian are desirable;</li>
+                        <li>Driver's license - Category B is desirable;</li>
+                        <li>Candidates with pharmaceutical background will be preferred.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Private Health Insurance;</li>
+                        <li>Corporate number;</li>
+                        <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                    </ul>
+                    <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                </div>
+                <hr />
+            }
+            else if (ViewBag.LanguageID == 2)
+            {
+                <div class="col-sm-12" id="SalesrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Satış nümayəndəsi, Bakı
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
+                </div>
+                <div class="col-sm-12" id="SalesrepresentativeBakuDetail" style="display:none;">
+                    <p>İstedadlı insanlarla işləmək, professional mühitdə inkişaf etmək və potensialınızı həyata keçirmək üçün fürsət veririk. Həmçinin ümid edirik ki, bizimlə birlikdə pasiyentlərin həyatını yaxşılaşdırmaq üçün mümkün olan hər şeyi edəcəksiniz!</p>
+                    <p>"Parla Pharmaceuticals" şirkəti, yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş, Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq 2019-cu ilin sentyabr ayında təsis edilmişdir. İlkin məqsəd əlverişli qiymətə yüksək keyfiyyətli əczaçılıq məhsulları istehsal etməkdir və missiyamız əczaçılıq bazarında və cəmiyyətdə müştəri yönümlü yanaşmanı və liderliyi inkişaf etdirməkdir. Qabaqcıl biotexnoloji və nanotexnoloji məhsulların ixracı əsas istiqamətlərdən biridir. Parla bütün dünyada Azərbaycanın ən yaxşı Əczaçılıq brendi olmaqda iddialıdır.</p>
+                    <p></p>
+                    <p><b>Vəzifə:</b></p>
+                    <ul>
+                        <li>•	Şirkət məhsullarını təqdim etmək</li>
+                        <li>•	Gündəlik tibb və əczaçılıq müəssisələrinə baş çəkmək</li>
+                        <li>•	Bazar təhlili aparmaq</li>
+                        <li>•	Satış dinamikasını izləmək</li>
+                        <li>•	Fəaliyyət planı tərtib  edərək həyata keçirmək və elektron sistemdə qeydiyyat aparmaq</li>
+                        <li>•	Maarifləndirici tədbirlər, sosial layihələr həyata keçirmək</li>
+                    </ul>
+                    <p></p>
+                    <p><b> Namizədə tələblər:</b></p>
+                    <ul>
+                        <li>•	Yüksək satış bacarığı</li>
+                        <li>•	Satış sahəsində minimum 1 il təcrübə</li>
+                        <li>•	Ünsiyyətcil, məsuliyyətli və komandada işləmək bacarığı olan;</li>
+                        <li>•	Analitik düşünmə qabiliyyəti;</li>
+                        <li>•	Microsoft Office proqramların biliyi (World, Excel, Power Point);</li>
+                        <li>•	Azərbaycan dili əla, İngilis və Rus dilləri arzuolunandır;</li>
+                        <li>•	Sürücülük vəsiqəsi arzuolunandır;</li>
+                        <li>•	Əczaçılıq təhsili olanlara üstünlük veriləcək.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Private Health Insurance;</li>
+                        <li>Corporate number;</li>
+                        <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options.</li>
+                    </ul>
+                    <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                </div>
+                <hr />
+            }
+
+            @if (ViewBag.LanguageID == 1)
+            {
+                <div class="col-sm-12" id="BusinessanalystforSalesEffectivenessBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Business analyst for Sales Effectiveness, Baku
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2020-04-28 - 2020-05-25</i>
+                </div>
+                <div class="col-sm-12" id="BusinessanalystforSalesEffectivenessBakuDetail" style="display:none;">
+                    <p>We provide you an opportunity to work with talented people, develop in a professional environment and realize your potential. We also hope that you will do your best with us to improve the lives of patients!</p>
+                    <p>"Parla Pharmaceuticals", established in September 2019 as the first science-based pharmaceutical company in Azerbaijan, focuses on the full production of high-tech medicine. Our primary goal is to produce high quality pharmaceutical products at an affordable price, and our mission is to develop a customer-oriented approach and leadership in the pharmaceutical market and community. Export of advanced biotechnological and nanotechnological products is one of the focus areas. Parla is ambitious to be the best pharmaceutical brand of Azerbaijan in the world.</p>
+                    <p></p>
+                    <p><b>Key responsibilities include:</b></p>
+                    <ul>
+                        <li>Analysis of sales dynamics and development of management dashboard;</li>
+                        <li>Developing and maintaining database, analysis of data and reports to monitor Field Force performance using key performance indicators;</li>
+                        <li>Competitor analysis;</li>
+                        <li>Developing tools and resources to support field employees;</li>
+                        <li>Preparing weekly and monthly sales reports; </li>
+                        <li>Engagement in call plan and field resource optimisation;</li>
+                        <li>Sales team performance calculation and evaluation;</li>
+                        <li>Sales achievement and bonus calculation;</li>
+                        <li>CRM management</li>
+                    </ul>
+                    <p></p>
+                    <p><b>Key requirements:</b></p>
+                    <ul>
+                        <li>Business Industry & Sales Understanding;</li>
+                        <li>Strong strategic and analytical capabilities; </li>
+                        <li>Highly analytical with passion for figures and a strong bottom-up analytical approach;</li>
+                        <li>Minimum 2 years’ experience in the relevant field;</li>
+                        <li>Experience in pharmaceutical industry is desirable;</li>
+                        <li>Higher education in the relevant field;</li>
+                        <li>Strong command of Microsoft Office365, excellent working knowledge with Excel;</li>
+                        <li>Azerbaijani - native, English -intermediate.</li>
+                    </ul>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Private Health Insurance;</li>
+                        <li>Corporate number;</li>
+                        <li>A good work-life balance: 9 am - 6 pm from Monday to Friday, official vacation and extra day-off options;</li>
+                    </ul>
+                    <p>Please send your CVs to <a href="mailto:amira@parlapharma.com">amira@parlapharma.com</a>  no later than 25.05.2020.</p>
+                </div>
+                <hr />
+            }
         </div>
         @*<div class="row">
                 <div class="col-md-12">
