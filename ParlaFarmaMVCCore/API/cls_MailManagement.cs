@@ -23,18 +23,27 @@ namespace ParlaFarmaMVCCore.API
             CC = new List<cls_emailAccount>();
             Attachments = new List<string>();
 
-            smtpClient = new SmtpClient("mail.parlapharma.com", 587);
+            //smtpClient = new SmtpClient("mail.parlapharma.com", 587);
+            smtpClient = new SmtpClient("smtp.ionos.com", 587);
+
             //smtpClient.UseDefaultCredentials = false; // uncomment if you don't want to use the network credentials
+
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //smtpClient.EnableSsl = true;
-            smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "parlapharma2026");
+            
+            //smtpClient.EnableSsl = false;
+            smtpClient.EnableSsl = true;
+
+            //smtpClient.Credentials = new System.Net.NetworkCredential("info@parlapharma.com", "parlapharma2026");
+            smtpClient.Credentials = new System.Net.NetworkCredential("info.parlapharma@parlapharma.com", "Ii123!@#");
         }
         public string SendEmail()
         {
             try
             {
                 //Setting From , To and CC
-                mail.From = new MailAddress("info@parlapharma.com", "info@parlapharma.com");
+                //mail.From = new MailAddress("info@parlapharma.com", "info@parlapharma.com");
+                mail.From = new MailAddress("info.parlapharma@parlapharma.com", "info.parlapharma@parlapharma.com");
+                
                 foreach (cls_emailAccount item in To)
                     mail.To.Add(new MailAddress(item.Address, item.DisplayName));
                 foreach (cls_emailAccount item in CC)
