@@ -1,4 +1,5 @@
-﻿
+﻿@using ParlaFarmaMVCCore.ViewModels
+@model vmdl_ContactUsIno
 
 <section class="intro_section page_mainslider ds color">
     <div class="flexslider" data-dots="false" data-nav="true">
@@ -280,7 +281,7 @@
                 </strong>
             </p>
             <p class="topmargin_30 leftpadding_25">
-                <a href="~/EN/Home/Products" class="theme_button color2 inverse">
+                <a href="javascript:navigateMe('/EN/Home/Products');" class="theme_button color2 inverse">
                     @ViewBag.DictStr[143][@ViewBag.LanguageID]
                 </a>
             </p>
@@ -536,56 +537,48 @@
                     <h2 class="section_header">
                         @ViewBag.DictStr[92][@ViewBag.LanguageID]
                     </h2>
-                    <form class="contact-form row" method="post" action="http://webdesign-finder.com/html/pharma/">
-                        <div class="col-sm-6">
-                            <div class="contact-form-name">
-                                <label for="name">
-                                    @*@ViewBag.DictStr[93][@ViewBag.LanguageID]*@
-                                    <span class="required">*</span>
-                                </label> 
-                                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control text-center" placeholder="@ViewBag.DictStr[93][@ViewBag.LanguageID]">
+                    <form asp-action="ContactUs" asp-controller="EN/Home" method="post" class="contact-form columns_padding_10 bottommargin_40">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group bottommargin_0">
+                                    <i class="fa fa-user highlight2" aria-hidden="true"></i> &nbsp;
+                                    <label asp-for="FullName">
+                                        Full Name <span asp-validation-for="FullName" class="required">*</span>
+                                    </label>
+                                    <input asp-for="FullName" type="text" aria-required="true" size="30" value="" name="FullName" id="FullName" class="form-control" placeholder="@ViewBag.DictStr[93][@ViewBag.LanguageID]">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="contact-form-email">
-                                <label for="email">
-                                    @*@ViewBag.DictStr[94][@ViewBag.LanguageID]*@
-                                    <span class="required">*</span>
-                                </label> 
-                                <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control text-center" placeholder="@ViewBag.DictStr[94][@ViewBag.LanguageID]">
+                            <div class="col-sm-6">
+                                <div class="form-group bottommargin_0">
+                                    <i class="fa fa-phone highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="PhoneNumber">Phone Number <span asp-validation-for="PhoneNumber" class="required">*</span></label>
+                                    <input asp-for="PhoneNumber" type="text" aria-required="true" size="30" value="" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="@ViewBag.DictStr[95][@ViewBag.LanguageID]">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="contact-form-phone">
-                                <label for="phone">
-                                    @*@ViewBag.DictStr[95][@ViewBag.LanguageID]*@
-                                    <span class="required">*</span>
-                                </label> 
-                                <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control text-center" placeholder="@ViewBag.DictStr[95][@ViewBag.LanguageID]">
+                            <div class="col-sm-6">
+                                <div class="form-group bottommargin_0">
+                                    <i class="fa fa-envelope highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="Email">Email address <span asp-validation-for="Email" class="required">*</span></label>
+                                    <input asp-for="Email" type="email" aria-required="true" size="30" value="" name="Email" id="Email" class="form-control" placeholder="@ViewBag.DictStr[94][@ViewBag.LanguageID]">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="contact-form-subject">
-                                <label for="subject">
-                                    @*@ViewBag.DictStr[96][@ViewBag.LanguageID]*@
-                                    <span class="required">*</span>
-                                </label> 
-                                <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-center" placeholder="@ViewBag.DictStr[96][@ViewBag.LanguageID]">
+                            <div class="col-sm-6">
+                                <div class="form-group bottommargin_0">
+                                    <i class="fa fa-flag highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="Subject">Subject <span asp-validation-for="Subject" class="required">*</span></label>
+                                    <input asp-for="Subject" type="text" aria-required="true" size="30" value="" name="Subject" id="Subject" class="form-control" placeholder="@ViewBag.DictStr[96][@ViewBag.LanguageID]">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="contact-form-message">
-                                <label for="message">
-                                    @*@ViewBag.DictStr[97][@ViewBag.LanguageID]*@
-                                </label> 
-                                <textarea aria-required="true" rows="4" cols="45" name="message" id="message" class="form-control text-center" placeholder="@ViewBag.DictStr[146][@ViewBag.LanguageID]..."></textarea>
+                            <div class="col-sm-12">
+                                <div class="contact-form-message form-group bottommargin_0">
+                                    <i class="fa fa-comment highlight2" aria-hidden="true"></i>&nbsp;<label asp-for="MessageBody">Message <span asp-validation-for="MessageBody" class="required">*</span></label>
+                                    <textarea asp-for="MessageBody" aria-required="true" rows="3" cols="45" name="MessageBody" id="MessageBody" class="form-control" placeholder="@ViewBag.DictStr[146][@ViewBag.LanguageID]"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="contact-form-submit topmargin_10">
-                                <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color2 inverse min_width_button">
-                                    @ViewBag.DictStr[97][@ViewBag.LanguageID]
-                                </button>
+                            <div class="col-sm-12 bottommargin_0">
+                                <div class="contact-form-submit topmargin_10">
+                                    <button type="submit" class="theme_button color2 wide_button margin_0">
+                                        @ViewBag.DictStr[97][@ViewBag.LanguageID]
+                                    </button>  @*id="contact_form_submit" name="contact_submit"*@
+                                </div>
                             </div>
                         </div>
                     </form>

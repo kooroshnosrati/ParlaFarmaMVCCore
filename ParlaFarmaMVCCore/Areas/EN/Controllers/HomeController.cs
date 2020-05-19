@@ -274,6 +274,9 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult ContactUs(string lang, [FromForm]vmdl_ContactUsIno vmdl_ContactUsIno)
         {
+            string RefererStr = this.Request.Headers["Referer"];
+            string ResumeStr = $"{this.Request.Scheme}://{this.Request.Host}/Uploads/"; // {this.Request.PathBase}";
+
             Setlanguage(lang);
             try
             {
@@ -293,7 +296,8 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
             {
                 ;
             }
-            return RedirectToAction("ContactUs", "EN/Home");
+            return Redirect(RefererStr);
+            //return View();
         }
         public IActionResult Applicationform(string lang)
         {
