@@ -10073,9 +10073,11 @@ section .intro_section .slide_description_wrapper {
 	overflow: hidden;
 }
 
-.intro_section.ds img {
-	opacity: 0.3;
-}
+/*---------------------------------------------------------------Main Slider Opacity-----------------------------------------------------------------*/
+	.intro_section.ds img {
+		opacity: 1;
+		/*0.3*/
+	}
 
 .intro_section .flexslider:before, .intro_section .flexslider:after {
 	content: '';
@@ -14980,6 +14982,7 @@ a.color-icon.border-icon:hover {
 
 /*switcher styles*/
 #switcher {
+	display:none;
 	position: fixed;
 	top: 22%;
 	right: -200px;

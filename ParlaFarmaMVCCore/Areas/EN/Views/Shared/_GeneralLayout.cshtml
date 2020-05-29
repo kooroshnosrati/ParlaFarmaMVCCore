@@ -86,45 +86,46 @@
     <div id="canvas">
         <div id="box_wrapper">
             <!-- template sections -->
-            <section class="page_topline cs main_color2 table_section table_section_sm section_padding_top_5 section_padding_bottom_5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 text-center text-sm-left">
-                            <div>
-                                <div style="border:1px;border-color:blue;"></div>
-                                <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i>
-                                @ViewBag.DictStr[0][@ViewBag.LanguageID]
+            <section class="page_topline cs table_section table_section_sm section_padding_top_5 section_padding_bottom_5">
+                @*main_color2 rangeh narenji*@
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 text-center text-sm-left">
+                                    <div>
+                                        <div style="border:1px;border-color:blue;"></div>
+                                        <i class="fa fa-clock-o rightpadding_5" aria-hidden="true"></i>
+                                        @ViewBag.DictStr[0][@ViewBag.LanguageID]
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 text-center text-sm-right greylinks">
+                                    <span class="rightpadding_10">
+                                        @ViewBag.DictStr[1][@ViewBag.LanguageID]
+                                    </span>
+                                    @*<a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
+                                    <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
+                                    <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>*@
+                                    <a class="social-icon color-icon soc-linkedin" href="https://www.linkedin.com/company/parla-pharmaceuticals/" title="linkedin"></a>
+                                    @*<a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>*@
+
+                                    &nbsp;&nbsp;&nbsp;
+                                    @if (@ViewBag.Language != "en")
+                                    {
+                                        <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
+                                    }
+                                    @if (@ViewBag.Language != "az")
+                                    {
+                                        <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
+                                    }
+                                    @if (@ViewBag.Language != "ru")
+                                    {
+                                        @*<a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>*@
+                                        <a href="#" alt="Russian" title="Russian" target="_self">RU</a>
+                                    }
+
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 text-center text-sm-right greylinks">
-                            <span class="rightpadding_10">
-                                @ViewBag.DictStr[1][@ViewBag.LanguageID]
-                            </span>
-                            <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
-                            <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
-                            <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>
-                            <a class="social-icon color-icon soc-linkedin" href="#" title="Twitter"></a>
-                            <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
-
-                            &nbsp;&nbsp;&nbsp;
-                            @if (@ViewBag.Language != "en")
-                            {
-                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">EN</a>
-                            }
-                            @if (@ViewBag.Language != "az")
-                            {
-                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'az');" alt="Azerbaijani" title="Azerbaijani" target="_self">AZ</a>
-                            }
-                            @if (@ViewBag.Language != "ru")
-                            {
-                                @*<a href="javascript:ChangeLanguage('@ViewBag.Language', 'ru');" alt="Russian" title="Russian" target="_self">RU</a>*@
-                                <a href="#" alt="Russian" title="Russian" target="_self">RU</a>
-                            }
-
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
             <style>
                 #MyDiv {
@@ -438,22 +439,24 @@
                                 <h3 class="widget-title">
                                     @ViewBag.DictStr[128][@ViewBag.LanguageID]
                                 </h3>
-                                <div class="media small-teaser">
+                                @*<div class="media small-teaser">
                                     <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-facebook"></a> </div>
                                     <div class="media-body media-middle"> Facebook </div>
                                 </div>
                                 <div class="media small-teaser">
                                     <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-twitter"></a> </div>
                                     <div class="media-body media-middle"> Twitter </div>
-                                </div>
+                                </div>*@
                                 <div class="media small-teaser">
-                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-linkedin"></a> </div>
+                                    <div class="media-left media-middle"> 
+                                        <a href="https://www.linkedin.com/company/parla-pharmaceuticals/" target="_blank" class="social-icon color-icon border-icon -icon soc-linkedin"></a> 
+                                    </div>
                                     <div class="media-body media-middle"> LinkedIn </div>
                                 </div>
-                                <div class="media small-teaser">
+                                @*<div class="media small-teaser">
                                     <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a> </div>
                                     <div class="media-body media-middle"> Pinterest </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                     </div>
