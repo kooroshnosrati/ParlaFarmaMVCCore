@@ -3128,10 +3128,11 @@ html[xmlns] .slides {
 		font-size: 0;
 		text-align: center;
 		/*Kourosh Added*/
-		color: white !important;
+		color: #19bcdb !important;
 		/*bottom: 7%;*/
 		border-style: double;
-		border-color: #ec5c42;
+		border-color: #19bcdb;
+		//#ec5c42;
 		/*Kourosh Added*/
 	}
 
@@ -3140,9 +3141,10 @@ html[xmlns] .slides {
 }
 
 
-	.flex-direction-nav a:hover {
-		color: #ec5c42 !important;
-	}
+.flex-direction-nav a:hover {
+	color: #004b8f !important;
+	border-color: #004b8f;
+}
 
 
 .flex-direction-nav .flex-prev {
@@ -3811,7 +3813,7 @@ div.ppt {
 	font-size: 0;
 	color: transparent;
 	color: #ffffff;
-	background: #ec5c42;
+	background: #19bcdb;
 	border-radius: 3px;
 }
 
@@ -8403,6 +8405,11 @@ body.active-side-header.slide-right .page_header_side {
 	background-color: #1f232b;
 	color: #919899;
 }
+.ParlaLogo {
+	background: white;
+	color: #0e292e; //#19bcdb;
+}
+
 
 .ds.black {
 	background-color: #000;
@@ -10078,6 +10085,10 @@ section .intro_section .slide_description_wrapper {
 		opacity: 1;
 		/*0.3*/
 	}
+	.intro_section.ds img {
+		opacity: 1;
+		/*0.3*/
+	}
 
 .intro_section .flexslider:before, .intro_section .flexslider:after {
 	content: '';
@@ -10405,7 +10416,7 @@ section .intro_section .slide_description_wrapper {
 
 	.header_darkgrey .sf-menu > li > a:hover,
   .header_darkgrey .sf-menu > li.active > a {
-		color: #ec5c42;
+		/*color: #ec5c42;*/
 	}
 
 	/*Menu Text Color Changed By Kourosh*/
@@ -15413,4 +15424,7 @@ a.color-icon.border-icon:hover {
 */
 .HomeWhyParlaMediaBody {
 	height: 290px;
+}
+.AboutUsSildersContent{
+	font-size:20px;
 }
