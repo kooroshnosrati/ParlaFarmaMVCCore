@@ -3281,7 +3281,8 @@ html[xmlns] .slides {
 	width: 20px;
 	height: 20px;
 	display: block;
-	border: 2px solid #1f232b;
+	/*border: 2px solid #1f232b;*/
+	border: 2px solid #ffffff;
 	color: transparent;
 	cursor: pointer;
 	text-indent: -9999px;
@@ -3295,7 +3296,8 @@ html[xmlns] .slides {
 
 .flex-control-paging li a:hover,
 .flex-control-paging li a.flex-active {
-	background-color: #1f232b;
+	/*background-color: #1f232b;*/
+	background-color: #ffffff;
 }
 
 .cs .flex-control-paging li a:hover, .cs .flex-control-paging li a.flex-active,
@@ -10166,7 +10168,7 @@ section .intro_section .slide_description_wrapper {
 }
 
 .intro_section .slide_description {
-	font-size: 36px;
+	font-size: 36pt;
 	line-height: normal;
 }
 
@@ -10195,7 +10197,8 @@ section .intro_section .slide_description_wrapper {
 }
 
 .intro_section p {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
+	/*font-weight:bold;*/
 }
 
 @media (min-width: 992px) {
@@ -15487,6 +15490,7 @@ a.color-icon.border-icon:hover {
 }
 @media (min-width: 992px) {
 	.section_header {
-		font-size: 27px !important;
+		/*font-size: 27px !important;*/
+		line-height: normal;
 	}
 }
