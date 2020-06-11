@@ -3278,8 +3278,8 @@ html[xmlns] .slides {
 }
 
 .flex-control-paging li a {
-	width: 10px;
-	height: 10px;
+	width: 20px;
+	height: 20px;
 	display: block;
 	border: 2px solid #1f232b;
 	color: transparent;
@@ -10166,7 +10166,8 @@ section .intro_section .slide_description_wrapper {
 }
 
 .intro_section .slide_description {
-	font-size: 16px;
+	font-size: 36px;
+	line-height: normal;
 }
 
 .intro_section .slide_description_wrapper:before,
@@ -10224,7 +10225,7 @@ section .intro_section .slide_description_wrapper {
 
 @media (min-width: 1200px) {
 	.intro_section h2 {
-		font-size: 60px;
+		font-size: 48pt;
 	}
 }
 
@@ -15426,59 +15427,66 @@ a.color-icon.border-icon:hover {
 	height: 290px;
 }
 /*@media (min-width: 490px) {
-	.AboutUsSildersContent {
+	.AboutUsSlidersContent {
 		font-size: 14px !important;
 	}
 }*/
 
 @media (min-width: 768px) {
-	.AboutUsSildersContent {
+	.AboutUsSlidersContent {
+		text-align: justify;
+		text-justify: inter-word;
 		font-size: 14px !important;
 	}
 }
 
 @media (min-width: 992px) {
-	.AboutUsSildersContent {
+	.AboutUsSlidersContent {
+		text-align: justify;
+		text-justify: inter-word;
 		font-size: 14px !important;
 	}
 }
 
 @media (min-width: 1200px) {
-	.AboutUsSildersContent {
+	.AboutUsSlidersContent {
+		text-align: justify;
+		text-justify: inter-word;
 		font-size: 20px !important;
 	}
 }
 
-@media (min-width: 490px) {
-	#ParlaCultureContent {
-		font-size: 14px !important;
-	}
-}
-
-@media (min-width: 768px) {
-	#ParlaCultureContent {
-		font-size: 14px !important;
-	}
-}
-
 @media (min-width: 992px) {
 	#ParlaCultureContent {
-		font-size: 8px !important;
+		text-align: justify;
+		text-justify: inter-word;
+		font-size: 11px !important;
 	}
 }
 @media (min-width: 1055px) {
 	#ParlaCultureContent {
-		font-size: 10px !important;
+		text-align: justify;
+		text-justify: inter-word;
+		font-size: 13px !important;
 	}
 }
 @media (min-width: 1115px) {
 	#ParlaCultureContent {
-		font-size: 12px !important;
+		text-align: justify;
+		text-justify: inter-word;
+		font-size: 15px !important;
 	}
 }
 
 @media (min-width: 1200px) {
 	#ParlaCultureContent {
-		font-size: 14px !important;
+		text-align: justify;
+		text-justify: inter-word;
+		font-size: 17px !important;
+	}
+}
+@media (min-width: 992px) {
+	.section_header {
+		font-size: 27px !important;
 	}
 }
