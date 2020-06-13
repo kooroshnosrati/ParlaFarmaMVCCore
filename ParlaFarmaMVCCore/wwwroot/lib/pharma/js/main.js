@@ -707,8 +707,12 @@ function windowLoadInit() {
 					slider.find('.flex-active-slide .slide_description').children().each(function(index){
 						var self = jQuery(this);
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
-						setTimeout(function(){
-							self.addClass("animated "+animationClass);
+						setTimeout(function () {
+							//Commented by kourosh
+							//self.addClass("animated "+animationClass);
+							//self.addClass("animated "+animationClass);
+							self.addClass("animated");
+							//Commented by kourosh
 						}, index*200);
 					});
 					slider.find('.flex-control-nav').find('a').each(function() {
@@ -720,7 +724,10 @@ function windowLoadInit() {
 						var self = jQuery(this);
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
 						setTimeout(function(){
-							self.addClass("animated "+animationClass);
+							//Commented by kourosh
+							//self.addClass("animated "+animationClass);
+							self.addClass("animated");
+							//Commented by kourosh
 						}, index*200);
 					});
 				},
@@ -728,7 +735,10 @@ function windowLoadInit() {
 					slider.find('.slide_description').children().each(function() {
 						var self = jQuery(this);
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
-						self.removeClass('animated ' + animationClass).css({'visibility': 'hidden'});
+							//Commented by kourosh
+						//self.removeClass('animated ' + animationClass).css({'visibility': 'hidden'});
+						self.removeClass('animated').css({ 'visibility': 'hidden' });
+							//Commented by kourosh
 							// jQuery(this).attr('class', '');
 					});
 				},

@@ -31,6 +31,3 @@ function navigateMe(pathStr, hashStr) {
 }
 
 
-//function GetLangDictionary() {
-//    return 'salam';
-//}
