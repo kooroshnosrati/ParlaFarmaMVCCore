@@ -9931,7 +9931,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .WhyParlaBackground {
 	background-image: url(../images/DSC001161.jpg) !important;
-	opacity: 0.5 !important;
+	/*opacity: 0.5 !important;*/
 }
 
 .HomePageMissionBackground {
@@ -15493,4 +15493,9 @@ a.color-icon.border-icon:hover {
 		/*font-size: 27px !important;*/
 		line-height: normal;
 	}
+}
+
+.PartTitles {
+	font-size: 40px !important;
+	color: #0e292e !important;
 }

@@ -31,7 +31,7 @@ namespace ParlaFarmaMVCCore.API
             
             smtpClient.EnableSsl = true;
 
-            smtpClient.Credentials = new System.Net.NetworkCredential("info@s811227068.onlinehome.us", "Ii123!@#");
+            smtpClient.Credentials = new System.Net.NetworkCredential("info@s811227068.onlinehome.us", "Info123!@#");
         }
         public string SendEmail()
         {
