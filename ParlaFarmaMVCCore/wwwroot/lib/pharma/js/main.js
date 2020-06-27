@@ -709,9 +709,8 @@ function windowLoadInit() {
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
 						setTimeout(function () {
 							//Commented by kourosh
-							//self.addClass("animated "+animationClass);
-							//self.addClass("animated "+animationClass);
-							self.addClass("animated");
+							self.addClass("animated "+animationClass);
+							//self.addClass("animated");
 							//Commented by kourosh
 						}, index*200);
 					});
@@ -725,8 +724,8 @@ function windowLoadInit() {
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
 						setTimeout(function(){
 							//Commented by kourosh
-							//self.addClass("animated "+animationClass);
-							self.addClass("animated");
+							self.addClass("animated "+animationClass);
+							//self.addClass("animated");
 							//Commented by kourosh
 						}, index*200);
 					});
@@ -736,10 +735,10 @@ function windowLoadInit() {
 						var self = jQuery(this);
 						var animationClass = !self.data('animation') ? 'fadeInRight' : self.data('animation');
 							//Commented by kourosh
-						//self.removeClass('animated ' + animationClass).css({'visibility': 'hidden'});
-						self.removeClass('animated').css({ 'visibility': 'hidden' });
+						self.removeClass('animated ' + animationClass).css({'visibility': 'hidden'});
+						//self.removeClass('animated').css({ 'visibility': 'hidden' });
 							//Commented by kourosh
-							// jQuery(this).attr('class', '');
+							//jQuery(this).attr('class', '');
 					});
 				},
 
@@ -1008,12 +1007,12 @@ function windowLoadInit() {
 		jQuery('.to_animate').appear();
 
 		jQuery('.to_animate').filter(':appeared').each(function(index){
-			initAnimateElement(jQuery(this), index);
+			//initAnimateElement(jQuery(this), index); By Kourosh
 		});
 
 		$body.on('appear', '.to_animate', function(e, $affected ) {
 			jQuery($affected).each(function(index){
-				initAnimateElement(jQuery(this), index);
+				//initAnimateElement(jQuery(this), index); By Kourosh
 			});
 		});
 

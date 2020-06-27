@@ -15499,3 +15499,16 @@ a.color-icon.border-icon:hover {
 	font-size: 40px !important;
 	color: #0e292e !important;
 }
+.HomeContentCenter {
+	background: white !important;
+	color: #0e292e !important;
+	text-align: center !important;
+	font-size: 20px !important;
+}
+.HomeContentJustify {
+	text-align: justify !important;
+	text-justify: inter-word !important;
+	background: white !important;
+	color: #0e292e !important;
+	font-size: 20px !important;
+}

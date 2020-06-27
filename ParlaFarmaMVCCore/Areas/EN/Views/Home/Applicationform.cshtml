@@ -25,14 +25,16 @@
                 <h3 class="PartTitles">
                     @ViewBag.DictStr[61][@ViewBag.LanguageID]
                 </h3>
-                <p>
+                <p class=" ParlaLogo AboutUsSlidersContent">
                     @ViewBag.DictStr[62][@ViewBag.LanguageID]
                 </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 to_animate" data-animation="scaleAppear"></div>
-            <div class="col-md-8 to_animate" data-animation="scaleAppear">
+            @*<div class="col-md-2 to_animate" data-animation="scaleAppear"></div>*@
+            <div class="col-md-8 ">
+                @*to_animate*@
+                @*data-animation="scaleAppear"*@
                 <form enctype="multipart/form-data" asp-action="Applicationform" asp-controller="EN/Home" method="post" class="Application-form columns_padding_10 bottommargin_40">
                     @Html.AntiForgeryToken()
                     <div class="row">
@@ -52,16 +54,16 @@
                             </div>
                         </div>
                         @*<div class="col-sm-6">
-            <div class="form-group bottommargin_0">
-                <label asp-for="LastName">
-                    <b>
-                        @ViewBag.DictStr[129][@ViewBag.LanguageID]
-                    </b>
-                    <span asp-validation-for="LastName" class="required">*</span>
-                </label>
-                <input asp-for="LastName" type="text" aria-required="true" size="30" value="" name="LastName" id="LastName" class="form-control" placeholder="@ViewBag.DictStr[129][@ViewBag.LanguageID]">
-            </div>
-        </div>*@
+                    <div class="form-group bottommargin_0">
+                        <label asp-for="LastName">
+                            <b>
+                                @ViewBag.DictStr[129][@ViewBag.LanguageID]
+                            </b>
+                            <span asp-validation-for="LastName" class="required">*</span>
+                        </label>
+                        <input asp-for="LastName" type="text" aria-required="true" size="30" value="" name="LastName" id="LastName" class="form-control" placeholder="@ViewBag.DictStr[129][@ViewBag.LanguageID]">
+                    </div>
+                </div>*@
                         <div class="col-sm-12">
                             <div class="form-group bottommargin_0">
                                 <label asp-for="Email">
@@ -108,46 +110,46 @@
                             </div>
                         </div>
                         @*@if (ViewBag.LanguageID == 1)
-                    {
-                        <div class="col-sm-12">
+                            {
+                                <div class="col-sm-12">
 
-                        <div class="Application-form-message form-group bottommargin_0">
-            <label for="EmploymentStatus">
-                <b>
-                    @ViewBag.DictStr[130][@ViewBag.LanguageID]
-                </b>
-                <span asp-validation-for="EmploymentStatus" class="required">*</span>
-            </label>
-        </div>
-        <div class="col-sm-6">
-            <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Employed" name="EmploymentStatus" id="EmploymentStatus">
-            @ViewBag.DictStr[131][@ViewBag.LanguageID]
-        </div>
-        <div class="col-sm-6">
-            <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Self-Employed" name="EmploymentStatus" id="EmploymentStatus">
-            @ViewBag.DictStr[132][@ViewBag.LanguageID]
-        </div>
-        <div class="col-sm-6">
-            <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Unemployed" name="EmploymentStatus" id="EmploymentStatus">
-            @ViewBag.DictStr[133][@ViewBag.LanguageID]
-        </div>
-        <div class="col-sm-6">
-            <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Student" name="EmploymentStatus" id="EmploymentStatus">
-            @ViewBag.DictStr[134][@ViewBag.LanguageID]
-        </div>
-                    </div>
-                        }*@
+                                <div class="Application-form-message form-group bottommargin_0">
+                    <label for="EmploymentStatus">
+                        <b>
+                            @ViewBag.DictStr[130][@ViewBag.LanguageID]
+                        </b>
+                        <span asp-validation-for="EmploymentStatus" class="required">*</span>
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Employed" name="EmploymentStatus" id="EmploymentStatus">
+                    @ViewBag.DictStr[131][@ViewBag.LanguageID]
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Self-Employed" name="EmploymentStatus" id="EmploymentStatus">
+                    @ViewBag.DictStr[132][@ViewBag.LanguageID]
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Unemployed" name="EmploymentStatus" id="EmploymentStatus">
+                    @ViewBag.DictStr[133][@ViewBag.LanguageID]
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="EmploymentStatus" type="radio" aria-required="true" value="Student" name="EmploymentStatus" id="EmploymentStatus">
+                    @ViewBag.DictStr[134][@ViewBag.LanguageID]
+                </div>
+                            </div>
+                                }*@
                         @if (ViewBag.LanguageID == 1)
                         {
                             <div class="col-sm-12">
                                 @*<div class="Application-form-message form-group bottommargin_0">
-                                    <label for="ResumeSubmit">
-                                        <b>
-                                            @ViewBag.DictStr[135][@ViewBag.LanguageID]
-                                        </b>
-                                        <span class="required">*</span>
-                                    </label>
-                                </div>*@
+                            <label for="ResumeSubmit">
+                                <b>
+                                    @ViewBag.DictStr[135][@ViewBag.LanguageID]
+                                </b>
+                                <span class="required">*</span>
+                            </label>
+                        </div>*@
                                 <div class="col-sm-12">
                                     <input type="radio" aria-required="true" value="1" name="ResumeType" id="ResumeUploadFile" checked>
                                     @ViewBag.DictStr[136][@ViewBag.LanguageID]
