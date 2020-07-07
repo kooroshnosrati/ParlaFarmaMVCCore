@@ -421,5 +421,17 @@ new string[]{ "150", "", "", "" }
             Setlanguage(lang);
             return View();
         }
+        public IActionResult News(string lang)
+        {
+            Setlanguage(lang);
+            ViewBag.PageID = "News";
+            return View();
+        }
+        public IActionResult NewsDetail(string lang)
+        {
+            Setlanguage(lang);
+            ViewBag.PageID = "NewsDetail";
+            return View();
+        }
     }
 }
