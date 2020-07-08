@@ -427,8 +427,10 @@ new string[]{ "150", "", "", "" }
             ViewBag.PageID = "News";
             return View();
         }
-        public IActionResult NewsDetail(string lang)
+        public IActionResult NewsDetail(int id,string lang)
         {
+            if (id != 0)
+                ViewBag.NewsID = id;
             Setlanguage(lang);
             ViewBag.PageID = "NewsDetail";
             return View();

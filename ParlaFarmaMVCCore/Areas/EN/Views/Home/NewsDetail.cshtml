@@ -27,63 +27,133 @@
         </div>
     </div>
 </section>
-<section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
-    <div class="flexslider" data-dots="true" data-nav="false">
-        <ul class="slides">
-            <li>
-                <article class="post side-item side-md content-padding ">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="item-media rounded overflow_hidden">
-                                <img src="~/Uploads/DSC01816.jpg" />
+
+@if (ViewBag.NewsID == 1)
+{
+    <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
+        <div class="flexslider" data-dots="true" data-nav="false">
+            <ul class="slides">
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01816.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[149][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="item-content">
-                                <p class="AboutUsSlidersContent" style="margin-top:-33px">
-                                    @ViewBag.DictStr[149][@ViewBag.LanguageID]
-                                </p>
+                    </article>
+                </li>
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01865.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[149][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </li>
-            <li>
-                <article class="post side-item side-md content-padding ">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="item-media rounded overflow_hidden">
-                                <img src="~/Uploads/DSC01865.jpg" />
+                    </article>
+                </li>
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01775 - 1.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[149][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="item-content">
-                                <p class="AboutUsSlidersContent" style="margin-top:-33px">
-                                    @ViewBag.DictStr[149][@ViewBag.LanguageID]
-                                </p>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+}
+
+
+@if (ViewBag.NewsID == 2)
+{
+    <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
+        <div class="flexslider" data-dots="true" data-nav="false">
+            <ul class="slides">
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01911-1.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[150][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </li>
-            <li>
-                <article class="post side-item side-md content-padding ">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="item-media rounded overflow_hidden">
-                                <img src="~/Uploads/DSC01775 - 1.jpg" />
+                    </article>
+                </li>
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01941-1.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[150][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="item-content">
-                                <p class="AboutUsSlidersContent" style="margin-top:-33px">
-                                    @ViewBag.DictStr[149][@ViewBag.LanguageID]
-                                </p>
+                    </article>
+                </li>
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item-media rounded overflow_hidden">
+                                    <img src="~/Uploads/DSC01896-11.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @ViewBag.DictStr[150][@ViewBag.LanguageID]
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </li>
-        </ul>
-    </div>
-</section>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+}
+

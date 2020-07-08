@@ -28,6 +28,15 @@ function navigateMe(pathStr, hashStr) {
         window.location.hash = hashStr;
     }
     window.location.pathname = pathStr;
+    //var searchStr = window.location.search;
+    //if (searchStr.indexOf("lang=") == -1) {
+    //    searchStr += 'lang=' + newLang;
+    //}
+    //else {
+    //    searchStr = searchStr.replace('lang=' + curLang, 'lang=' + newLang);
+    //}
+    ////alert(locStr);
+    //window.location.search = searchStr;
 }
 
 
