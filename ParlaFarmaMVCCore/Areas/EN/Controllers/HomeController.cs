@@ -167,9 +167,9 @@ new string[]{ "143", "Product Strategy", "Məhsul strategiyamız", "" },
 new string[]{ "144", "Dermatology", "Dermatologiya", "" },
 new string[]{ "145", "OTC", "Reseptsiz satılan", "" },
 new string[]{ "146", "Your Message", "mesajınız...", "" },
-new string[]{ "147", "", "", "" },
-new string[]{ "148", "", "", "" },
-new string[]{ "149", "", "", "" },
+new string[]{ "147", "Parla Pharmaceuticals Newsletter", "Parla Pharmaceuticals bülleteni", "" },
+new string[]{ "148", "Read More", "Daha çox oxu", "" },
+new string[]{ "149", "On July 2, Parla Pharmaceuticals received a visit from Sergio Perez Gunella, Argentina’s Ambassador to the Republic of Azerbaijan and Ms. Corina Beatriz Lehmann, Deputy Head of Mission for a roundtable discussion. The parties concentrated their attention on the possible mutual collaboration of the private sectors of both countries in pharmaceutical sector. Officials also got better acquainted with areas of business activity of Parla Pharmaceuticals. They had comprehensive exchange of views on the importance of local production and discussed possible mutual export activities and technology transfer. Parties also highlighted the significant value of the development and long-term sustainability of local pharmaceutical industry and healthcare sector.", "2 iyul tarixində “Parla Pharmaceuticals™” şirkəti Argentina səfirliyi ilə görüş keçirib. Görüşdə Argentinanın Azərbaycandakı səfiri cənab Sergio Perez Gunella və Missiya Rəhbərinin Müavini, xanım Corina Beatriz Lehmann iştirak edib. Hər iki ölkənin əczaçılıq sahəsində özəl sektorunun əlaqələndirilməsi və mümkün əməkdaşlıq imkanları müzakirə olunub. Həmçinin, rəsmilər Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan “Parla Pharmaceuticals™”-ın fəaliyyət istiqaməti ilə yaxından tanış olublar. Tərəflər yerli istehsalın əhəmiyyəti, mümkün qarşılıqlı ixrac imkanları və texnologiya mübadiləsi mövzusunda da danışıqlar aparıblar, əczaçılıq və səhiyyə sektorunun əhəmiyyətinə, yerli əczaçılıq sektorunun inkişafının önəminə diqqət çəkiblər.", "" },
 new string[]{ "150", "", "", "" }
 };
         private readonly IWebHostEnvironment _webHostEnvironment;
