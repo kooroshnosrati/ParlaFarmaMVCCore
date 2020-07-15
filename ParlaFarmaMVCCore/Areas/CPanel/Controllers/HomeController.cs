@@ -17,6 +17,5 @@ namespace ParlaFarmaMVCCore.Areas.CPanel.Controllers
         {
             return View();
         }
-        
     }
 }
