@@ -122,21 +122,13 @@
                     </section>
 
             <style>
-                #MyDiv {
-                    /*background-image: radial-gradient(white, #19bcdb, #11333a 90%);
-                    border-radius: 15px;*/
-                }
-
-                    #MyDiv:hover {
-                    }
-
                 #MyImg {
-                    /*transition: transform 1s;*/
                     height: 80px !important;
                 }
-                /*#MyImg:hover {
-                        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-                    }*/
+                #SLoganImg {
+                    height: 80px !important;
+                }
+
             </style>
             <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
                 <div class="container">
@@ -144,14 +136,12 @@
                         <div class="col-sm-12 display_table">
                             <div class="header_left_logo display_table_cell" style="display:none;">
                                 <a href="~/EN/Home/Index" class="logo top_logo">
-                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt=""> @*~/lib/pharma/images/PARLA Logo.png*@ @*id="MyImg"*@
+                                    <img src="~/lib/pharma/images/PARLA Logo.png" tppabs="" alt=""> 
                                 </a>
                             </div>
-                            <div id="MyDiv" class="header_left_legoo display_table_cell">
-                                @*id="MyDiv"*@
+                            <div class="header_left_legoo display_table_cell">
                                 <a href="~/EN/Home/Index" class="logo">
-                                    @*top_logo*@
-                                    <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="" alt="" id="MyImg"> @*~/lib/pharma/images/PARLA Logo.png*@ @**@
+                                    <img src="~/lib/pharma/images/PARLA W Logo.png" tppabs="" alt="" id="MyImg"> 
                                 </a>
                             </div>
                             <div class="header_mainmenu display_table_cell text-center">
@@ -177,29 +167,29 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurVision" href="javascript:navigateMe('/EN/Home/Index', '#OurVision');">
-                                                        @ViewBag.DictStr[5][@ViewBag.LanguageID]
-                                                    </a>
+                                                        <a id="AOurVision" href="javascript:navigateMe('/EN/Home/Index', '#OurVision');">
+                                                            @ViewBag.DictStr[5][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                     else
                                                     {
-                                                <a id="AOurVision" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurVision');">
-                                                    @ViewBag.DictStr[5][@ViewBag.LanguageID]
-                                                </a>
+                                                        <a id="AOurVision" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurVision');">
+                                                            @ViewBag.DictStr[5][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurMission" href="javascript:navigateMe('/EN/Home/Index', '#OurMission');">
-                                                        @ViewBag.DictStr[6][@ViewBag.LanguageID]
-                                                    </a>
+                                                        <a id="AOurMission" href="javascript:navigateMe('/EN/Home/Index', '#OurMission');">
+                                                            @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                     else
                                                     {
-                                                <a id="AOurMission" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurMission');">
-                                                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
-                                                </a>
+                                                        <a id="AOurMission" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurMission');">
+                                                            @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
 
                                                 </li>
@@ -211,44 +201,44 @@
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/Index', '#ParlaTeam');">
-                                                        @ViewBag.DictStr[8][@ViewBag.LanguageID]
-                                                    </a>
+                                                        <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/Index', '#ParlaTeam');">
+                                                            @ViewBag.DictStr[8][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                     else
                                                     {
-                                                <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');">
-                                                    @ViewBag.DictStr[8][@ViewBag.LanguageID]
-                                                </a>
+                                                        <a id="AParlaTeam" href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');">
+                                                            @ViewBag.DictStr[8][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                 </li>
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/Index', '#OurCulture');">
-                                                        @ViewBag.DictStr[9][@ViewBag.LanguageID]
-                                                    </a>
+                                                        <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/Index', '#OurCulture');">
+                                                            @ViewBag.DictStr[9][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                     else
                                                     {
-                                                <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurCulture');">
-                                                    @ViewBag.DictStr[9][@ViewBag.LanguageID]
-                                                </a>
+                                                        <a id="AOurCulture" href="javascript:navigateMe('/EN/Home/AboutUs', '#OurCulture');">
+                                                            @ViewBag.DictStr[9][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                 </li>
 
                                                 <li>
                                                     @if (@ViewBag.PageID == "Index")
                                                     {
-                                                    <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/Index', '#SocialResponsibility');">
-                                                        @ViewBag.DictStr[10][@ViewBag.LanguageID]
-                                                    </a>
+                                                        <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/Index', '#SocialResponsibility');">
+                                                            @ViewBag.DictStr[10][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                     else
                                                     {
-                                                <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/AboutUs', '#SocialResponsibility');">
-                                                    @ViewBag.DictStr[10][@ViewBag.LanguageID]
-                                                </a>
+                                                        <a id="ASocialResponsibility" href="javascript:navigateMe('/EN/Home/AboutUs', '#SocialResponsibility');">
+                                                            @ViewBag.DictStr[10][@ViewBag.LanguageID]
+                                                        </a>
                                                     }
                                                 </li>
                                             </ul>
@@ -259,10 +249,10 @@
                                             </a>
                                             <ul>
                                                 @*<li>
-                                                    <a href="javascript:navigateMe('/EN/Home/Products');">
-                                                        @ViewBag.DictStr[11][@ViewBag.LanguageID]
-                                                    </a>
-                                                </li>*@
+                                <a href="javascript:navigateMe('/EN/Home/Products');">
+                                    @ViewBag.DictStr[11][@ViewBag.LanguageID]
+                                </a>
+                            </li>*@
                                                 <li>
                                                     <a href="javascript:navigateMe('/EN/Home/Products');">
                                                         @ViewBag.DictStr[12][@ViewBag.LanguageID]
@@ -303,22 +293,22 @@
                                             </ul>
                                         </li>
                                         @*<li>
-                                            <a href="javascript:navigateMe('/EN/Home/Partners');">
-                                                @ViewBag.DictStr[19][@ViewBag.LanguageID]
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
-                                                        @ViewBag.DictStr[20][@ViewBag.LanguageID]
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
-                                                        @ViewBag.DictStr[21][@ViewBag.LanguageID]
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>*@
+                        <a href="javascript:navigateMe('/EN/Home/Partners');">
+                            @ViewBag.DictStr[19][@ViewBag.LanguageID]
+                        </a>
+                        <ul>
+                            <li>
+                                <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
+                                    @ViewBag.DictStr[20][@ViewBag.LanguageID]
+                                </a>
+                            </li>
+                            <li>
+                                <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
+                                    @ViewBag.DictStr[21][@ViewBag.LanguageID]
+                                </a>
+                            </li>
+                        </ul>
+                    </li>*@
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/Career');">
                                                 @ViewBag.DictStr[22][@ViewBag.LanguageID]
@@ -342,8 +332,8 @@
                                             </ul>
                                         </li>
                                         @*<li>
-                                            <a href="#">R & D</a>
-                                        </li>*@
+                        <a href="#">R & D</a>
+                    </li>*@
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/ContactUs');">
                                                 @ViewBag.DictStr[26][@ViewBag.LanguageID]
@@ -353,6 +343,11 @@
                                 </nav>
                                 <!-- eof main nav -->
                                 <!-- header toggler --><span class="toggle_menu"><span></span></span>
+                            </div>
+                            <div class="header_right_legoo display_table_cell">
+                                <a href="~/EN/Home/Index" class="logo">
+                                    <img src="~/lib/pharma/images/Parlayaq Color.gif" id="SLoganImg"> 
+                                </a>
                             </div>
                         </div>
                     </div>
