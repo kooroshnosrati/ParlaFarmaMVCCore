@@ -7206,7 +7206,8 @@ pattern0 {
 }
 
 .page_header {
-	transition: background 0.2s ease-in-out 0s, margin 0.6s ease-in-out 0s;
+	transition: background 0.2s ease-in-out 0s,
+ margin 0.6s ease-in-out 0s;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -7240,7 +7241,8 @@ pattern0 {
 	.page_header.section_padding_25 [class*="container"] {
 		padding-top: 25px;
 		padding-bottom: 25px;
-		transition: padding-top 0.2s linear 0s, padding-bottom 0.2s linear 0s;
+		transition: padding-top 0.2s linear 0s,
+ padding-bottom 0.2s linear 0s;
 	}
 
 	.page_header.section_padding_25.affix [class*="container"] {
