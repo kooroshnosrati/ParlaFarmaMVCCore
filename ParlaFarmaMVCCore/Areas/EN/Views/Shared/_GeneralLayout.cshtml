@@ -141,7 +141,14 @@
                             </div>
                             <div class="header_left_legoo display_table_cell">
                                 <a href="~/EN/Home/Index" class="logo">
-                                    <img src="~/lib/pharma/images/Logo/PES W.png" tppabs="" alt="" id="MyImg"> 
+                                    @if (@ViewBag.LanguageID == 1)
+                                    {
+                                        <img src="~/lib/pharma/images/Logo/PES W.png" tppabs="" alt="" id="MyImg">
+                                    }
+                                    @if (@ViewBag.LanguageID == 2)
+                                    {
+                                        <img src="~/lib/pharma/images/Logo/PSH W.png" tppabs="" alt="" id="MyImg">
+                                    }
                                 </a>
                             </div>
                             <div class="header_mainmenu display_table_cell text-center">
@@ -344,13 +351,11 @@
                                 <!-- eof main nav -->
                                 <!-- header toggler --><span class="toggle_menu"><span></span></span>
                             </div>
-                            <div class="header_right_legoo display_table_cell">
+                            @*<div class="header_right_legoo display_table_cell">
                                 <a href="~/EN/Home/Index" class="logo">
-                                    @*<img src="~/lib/pharma/images/Parlayaq Color.gif" id="SLoganImg">*@
                                     <img src="~/lib/pharma/images/Parlayaq Aq1.png" id="SLoganImg" />
-                                    @*<img src="~/lib/pharma/images/PSH W.png" />*@
                                 </a>
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                 </div>
