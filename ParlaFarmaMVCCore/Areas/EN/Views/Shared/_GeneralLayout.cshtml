@@ -123,11 +123,11 @@
 
             <style>
                 #MyImg {
-                    height: 80px !important;
+                    height: 50px !important;
                 }
 
                 #SLoganImg {
-                    height: 80px !important;
+                    height: 25px !important;
                 }
             </style>
             <header id="HeaderMenu" class="page_header header_color header_darkgrey header_transparent toggler_right section_padding_25">
@@ -141,14 +141,15 @@
                             </div>
                             <div class="header_left_legoo display_table_cell">
                                 <a href="~/EN/Home/Index" class="logo">
-                                    @if (@ViewBag.LanguageID == 1)
+                                    <img src="~/lib/pharma/images/Logo/PES W.png" tppabs="" alt="" id="MyImg">
+                                    @*@if (@ViewBag.LanguageID == 1)
                                     {
-                                        <img src="~/lib/pharma/images/Logo/Logo Slogan-01-1[2].png" tppabs="" alt="" id="MyImg">
+                                        <img src="~/lib/pharma/images/Logo/PES W.png" tppabs="" alt="" id="MyImg">
                                     }
                                     @if (@ViewBag.LanguageID == 2)
                                     {
                                         <img src="~/lib/pharma/images/Logo/PSH W.png" tppabs="" alt="" id="MyImg">
-                                    }
+                                    }*@
                                 </a>
                             </div>
                             <div class="header_mainmenu display_table_cell text-center">
@@ -351,11 +352,19 @@
                                 <!-- eof main nav -->
                                 <!-- header toggler --><span class="toggle_menu"><span></span></span>
                             </div>
-                            @*<div class="header_right_legoo display_table_cell">
-                                    <a href="~/EN/Home/Index" class="logo">
-                                        <img src="~/lib/pharma/images/Parlayaq Aq1.png" id="SLoganImg" />
-                                    </a>
-                                </div>*@
+                            <div class="header_right_legoo display_table_cell">
+                                <a href="~/EN/Home/Index" class="logo">
+                                    @if (@ViewBag.LanguageID == 1)
+                                    {
+                                        <img src="~/lib/pharma/images/Logo/Eng Slogan-04.png" id="SLoganImg" />
+                                    }
+                                    @if (@ViewBag.LanguageID == 2)
+                                    {
+                                        <img src="~/lib/pharma/images/Logo/Aze Slogan-04.png" id="SLoganImg" />
+                                    }
+
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -380,7 +389,7 @@
                         <div class="col-md-3 col-sm-3">
                             <div class="widget_text leftmargin_20">
                                 <a href="~/EN/Home/Index" class="logo vertical_logo bottommargin_20 ">
-                                    <img src="~/lib/pharma/images/Logo/PES W.png" alt="" class="toppadding_0" style="height:90px !important;">
+                                    <img src="~/lib/pharma/images/Logo/PES W.png" alt="" class="toppadding_0" style="height:60px !important;">
                                 </a>
                                 <p class="toppadding_10">
                                     @ViewBag.DictStr[37][@ViewBag.LanguageID]
