@@ -157,24 +157,22 @@
 </section>
 
 <div data-id="OurVision"></div>
-<section id="testimonials" class="parallax section_subscribe ls section_padding_top_0 section_padding_bottom_50 HomePageVisionBackground">
+<section id="testimonials" class="parallax section_subscribe ls section_padding_top_50 section_padding_bottom_50 HomePageVisionBackground">
     <div class="container">
         <div class="row">
-            <article class="author-meta side-item side-md content-padding with_border rounded">
+            <h1 class="section_header PartTitles">
+                @ViewBag.DictStr[5][@ViewBag.LanguageID]
+            </h1>
+            <article class="side-item side-md content-padding with_border rounded">
                 <div class="row" style="">
                     <div class="col-md-4">
-                        <div class="item-media top_rounded overflow_hidden">
-                            @*<img src="~/lib/pharma/images/vision.jpg" alt="">*@
-                            <img src="~/lib/pharma/images/Icons/All Icones-05.png" class="padding_30" />
+                        <div class="item-media top_rounded overflow_hidden toppadding_20 bottompadding_20">
                             <img src="~/lib/pharma/images/Icons/All Icones-06.png" style="width:75%;" class="leftpadding_40" />
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="item-content">
-                            <h2 class="bottommargin_0 PartTitles">
-                                @*@ViewBag.DictStr[5][@ViewBag.LanguageID]*@
-                            </h2>
-                            <br /><br /><br /><br />
+                            <br /><br /><br />
                             <ul style="font-size:25px;">
                                 <li>
                                     @ViewBag.DictStr[37][@ViewBag.LanguageID]
@@ -199,11 +197,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="section_header PartTitles">
-                    <center>
-                        @*@ViewBag.DictStr[6][@ViewBag.LanguageID]*@
-                        <img src="~/lib/pharma/images/Icons/All Icones-03.png" style="width:40%;" /><br />
-                        @*<img src="~/lib/pharma/images/Icons/All Icones-04.png" style="width:25%;" />*@
-                    </center>
+                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                    @*<img src="~/lib/pharma/images/Icons/All Icones-03.png" style="width:40%;" /><br />*@
                 </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="4" data-responsive-lg="4" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-dots="true">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">

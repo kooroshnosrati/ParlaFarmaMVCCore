@@ -5722,6 +5722,9 @@ pattern0 {
 .bottommargin_10 {
 	margin-bottom: 10px;
 }
+.bottommargin_15 {
+	margin-bottom: 15px;
+}
 
 .bottommargin_20 {
 	margin-bottom: 20px;
@@ -5834,7 +5837,7 @@ pattern0 {
 }
 
 .toppadding_0 {
-	padding-top: 10px;
+	padding-top: 0px;
 }
 .toppadding_10 {
 	padding-top: 10px;
@@ -5898,6 +5901,10 @@ pattern0 {
 
 .bottompadding_60 {
 	padding-bottom: 60px;
+}
+
+.leftpadding_5 {
+	padding-left: 5px;
 }
 
 .leftpadding_10 {
