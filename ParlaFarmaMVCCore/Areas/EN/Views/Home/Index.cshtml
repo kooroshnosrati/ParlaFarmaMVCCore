@@ -100,13 +100,16 @@
             <div data-id="ParlaTeam"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
-                    <div class="teaser_icon size_big highlight">
-                        @*<i class="rt-icon2-user"></i>*@
+                    @*<div class="teaser_icon size_big highlight">
+                        <i class="rt-icon2-user"></i>
                         <img src="~/lib/pharma/images/Icons/All Icones-01.png" />
-                    </div>
+                    </div>*@
                     <h4 class="hover-color2">
-                        @*@ViewBag.DictStr[34][@ViewBag.LanguageID]*@
-                        @*<img src="~/lib/pharma/images/Icons/All Icones-02.png" />*@
+                        <div class="teaser_icon" style="position:relative;">
+                            <div style="font-size: 50px;color:#003c72;font-weight: bold !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">@ViewBag.DictStr[34][@ViewBag.LanguageID]</div>
+                            <div style="position: absolute;right: -25px;top: 80%;transform: translateY(-50%);"><img src="~/lib/pharma/images/Slash/Slash - Copy (2).png" /></div>
+                        </div>
+                        <img src="~/lib/pharma/images/Icons/All Icones-02.png" />
                     </h4>
                     <p class="topmargin_30 bottommargin_0">
                         <a href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');" class="theme_button color2 inverse min_width_button">

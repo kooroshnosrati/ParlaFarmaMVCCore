@@ -13175,7 +13175,7 @@ widget_pages
 	line-height: 1;
 	text-align: center;
 	transition: all 0.2s ease-in-out 0s;
-	height:100px;
+	/*height:100px;*/
 }
 
 .teaser_icon[class*='label-'] {
