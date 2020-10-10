@@ -21,9 +21,9 @@
                                             @ViewBag.DictStr[28][@ViewBag.LanguageID]
                                         </p>
                                         @*<a href="#" class="theme_button color2 inverse margin_0">
-                                            @ViewBag.DictStr[29][@ViewBag.LanguageID]
-                                        </a>
-                                        <span class="bottom_corners"></span>*@
+                                                @ViewBag.DictStr[29][@ViewBag.LanguageID]
+                                            </a>
+                                            <span class="bottom_corners"></span>*@
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                         <div class="col-sm-12 text-center">
                             <div class="slide_description_wrapper">
                                 <div class="slide_description">
-                                    <div class="intro-layer with_padding small-padding" >
+                                    <div class="intro-layer with_padding small-padding">
                                         <h5 class="thin"> </h5>
                                         <h2 class="highlight"></h2>
                                         <p style="font-weight:bold;">
@@ -91,7 +91,7 @@
                     @ViewBag.DictStr[32][@ViewBag.LanguageID]
                 </h2>
                 <p class="HomeContentCenter">
-                        @ViewBag.DictStr[33][@ViewBag.LanguageID]
+                    @ViewBag.DictStr[33][@ViewBag.LanguageID]
                 </p>
 
             </div>
@@ -106,7 +106,7 @@
                     </div>
                     <h4 class="hover-color2">
                         @*@ViewBag.DictStr[34][@ViewBag.LanguageID]*@
-                        @*<img src="~/lib/pharma/images/Icons/All Icones-02.png" />*@
+                        <img src="~/lib/pharma/images/Icons/All Icones-02.png" />
                     </h4>
                     <p class="topmargin_30 bottommargin_0">
                         <a href="javascript:navigateMe('/EN/Home/AboutUs', '#ParlaTeam');" class="theme_button color2 inverse min_width_button">
@@ -137,8 +137,8 @@
             <div data-id="SocialResponsibility"></div>
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
                 <div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
-                    <div class="teaser_icon size_big highlight"> 
-                        @*<i class="rt-icon2-paperplane"></i>*@ 
+                    <div class="teaser_icon size_big highlight">
+                        @*<i class="rt-icon2-paperplane"></i>*@
                         <img src="~/lib/pharma/images/Icons/All Icones-11.png" />
                     </div>
                     <h4 class="topmargin_20 hover-color2">
@@ -157,25 +157,22 @@
 </section>
 
 <div data-id="OurVision"></div>
-<section id="testimonials" class="parallax section_subscribe ls section_padding_top_0 section_padding_bottom_50 HomePageVisionBackground">
+<section id="testimonials" class="parallax section_subscribe ls section_padding_top_50 section_padding_bottom_50 HomePageVisionBackground">
     <div class="container">
         <div class="row">
-            <article class="author-meta side-item side-md content-padding with_border rounded">
+            <h1 class="section_header PartTitles">
+                @ViewBag.DictStr[5][@ViewBag.LanguageID]
+            </h1>
+            <article class="side-item side-md content-padding with_border rounded">
                 <div class="row" style="">
                     <div class="col-md-4">
-                        <div class="item-media top_rounded overflow_hidden">
-                            @*<img src="~/lib/pharma/images/vision.jpg" alt="">*@
-                            @*<img src="~/lib/pharma/images/Icons/All Icones-05.png" />
-                            <img src="~/lib/pharma/images/Icons/All Icones-06.png" />*@
-                            <img src="~/lib/pharma/images/Icons/Icons-13.png" />
+                        <div class="item-media top_rounded overflow_hidden toppadding_20 bottompadding_20">
+                            <img src="~/lib/pharma/images/Icons/All Icones-06.png" style="width:75%;" class="leftpadding_40" />
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="item-content">
-                            <h2 class="bottommargin_0 PartTitles">
-                                @*@ViewBag.DictStr[5][@ViewBag.LanguageID]*@
-                            </h2>
-                            <br /><br /><br /><br />
+                            <br /><br /><br />
                             <ul style="font-size:25px;">
                                 <li>
                                     @ViewBag.DictStr[37][@ViewBag.LanguageID]
@@ -200,11 +197,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="section_header PartTitles">
-                    <center>
-                        @*@ViewBag.DictStr[6][@ViewBag.LanguageID]*@
-                        <img src="~/lib/pharma/images/Icons/All Icones-03.png" /><br />
-                        <img src="~/lib/pharma/images/Icons/All Icones-04.png" style="width:30%;" />
-                    </center>
+                    @ViewBag.DictStr[6][@ViewBag.LanguageID]
+                    @*<img src="~/lib/pharma/images/Icons/All Icones-03.png" style="width:40%;" /><br />*@
                 </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="4" data-responsive-lg="4" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-dots="true">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
@@ -474,33 +468,39 @@
 </section>
 <section id="features" class="ls section_padding_top_0 section_padding_bottom_50 columns_margin_bottom_30">
     <div class="container">
-        <div class="row HomeContentJustify">
+        <div class="row">
             @*<div class="col-md-4">
                     <h2 class="section_header">Why Parla?</h2>
                 </div>*@
             <div class="col-md-6 col-sm-6">
                 <div class="teaser media hover_icon">
                     <div class="media-left">
-                        <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-diamond2"></i> </div>
+                        @*<div class="teaser_icon rounded main_bg_color size_small">
+                                <i class="rt-icon2-diamond2"></i>
+                            </div>*@
+                        <img src="~/lib/pharma/images/Icons/Separate Icons-17.png" style="width:48px;" />
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
                             @ViewBag.DictStr[44][@ViewBag.LanguageID]
                         </h5>
-                        <p>
+                        <p class="HomeContentJustify">
                             @ViewBag.DictStr[45][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
+                    @*<div class="media-left">
+                            <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
+                        </div>*@
                     <div class="media-left">
-                        <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
+                        <img src="~/lib/pharma/images/Icons/Separate Icons-18.png" style="width:48px;" />
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
                             @ViewBag.DictStr[46][@ViewBag.LanguageID]
                         </h5>
-                        <p>
+                        <p class="HomeContentJustify">
                             @ViewBag.DictStr[47][@ViewBag.LanguageID]
                         </p>
                     </div>
@@ -508,27 +508,33 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="teaser media hover_icon">
+                    @*<div class="media-left">
+            <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-tag2"></i> </div>
+        </div>*@
                     <div class="media-left">
-                        <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-tag2"></i> </div>
+                        <img src="~/lib/pharma/images/Icons/Separate Icons-19.png" style="width:48px;" />
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
                             @ViewBag.DictStr[48][@ViewBag.LanguageID]
                         </h5>
-                        <p>
+                        <p class="HomeContentJustify">
                             @ViewBag.DictStr[49][@ViewBag.LanguageID]
                         </p>
                     </div>
                 </div>
                 <div class="teaser media hover_icon">
+                    @*<div class="media-left">
+            <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
+        </div>*@
                     <div class="media-left">
-                        <div class="teaser_icon rounded main_bg_color size_small"> <i class="rt-icon2-cloud"></i> </div>
+                        <img src="~/lib/pharma/images/Icons/Separate Icons-20.png" style="width:48px;" />
                     </div>
                     <div class="media-body toppadding_10 HomeWhyParlaMediaBody">
                         <h5 class="hover-color2">
                             @ViewBag.DictStr[50][@ViewBag.LanguageID]
                         </h5>
-                        <p>
+                        <p class="HomeContentJustify">
                             @ViewBag.DictStr[51][@ViewBag.LanguageID]
                         </p>
                     </div>
