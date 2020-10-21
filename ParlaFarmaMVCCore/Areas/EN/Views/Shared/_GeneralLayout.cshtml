@@ -105,7 +105,7 @@
                             @if (@ViewBag.Language != "en")
                             {
                             <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">
-                                EN &nbsp;<div class="flag flag-england"></div>
+                                EN &nbsp;<div class="flag flag-gb"></div>
                             </a>
                             }
                             @if (@ViewBag.Language != "az")
@@ -467,7 +467,9 @@
         </div>*@
                                 <div class="media small-teaser">
                                     <div class="media-left media-middle">
-                                        <a href="https://www.linkedin.com/company/parla-pharmaceuticals/" target="_blank" class="social-icon color-icon border-icon -icon soc-linkedin"></a>
+                                        <a href="https://www.linkedin.com/company/parla-pharmaceuticals/" target="_blank" class="">
+                                            <img src="~/lib/pharma/images/Icons/Linkedin-25.png" style="width:40px;" />
+                                        </a>
                                     </div>
                                     <div class="media-body media-middle"> LinkedIn </div>
                                 </div>
