@@ -333,8 +333,8 @@ new string[]{ "150", "", "", "" }
                 {
                     cls_MailManagement cls_MailManagement = new cls_MailManagement();
                     cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
-                    cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
-                    cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
+                    //cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
+                    //cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
                     cls_MailManagement.Subject = "Parla Pharma Contact US Page : " + vmdl_ContactUsIno.Subject;
                     cls_MailManagement.Body = string.Format("Dear Info User : {6} Mr./Miss {0} Has Sent you an email through Contact Us Page. {6} His/Her Name : {1} " +
                                                 "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.PhoneNumber, vmdl_ContactUsIno.Email, vmdl_ContactUsIno.Subject, vmdl_ContactUsIno.MessageBody, Environment.NewLine );
@@ -387,8 +387,8 @@ new string[]{ "150", "", "", "" }
 
                 cls_MailManagement cls_MailManagement = new cls_MailManagement();
                 cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
-                cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
-                cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
+                //cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
+                //cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
                 cls_MailManagement.Subject = "Parla Pharma Application Form Page" ;
                 if (hasAttachment)
                     cls_MailManagement.Attachments.Add(AttachmentfilePath);
