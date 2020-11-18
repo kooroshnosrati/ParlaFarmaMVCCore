@@ -292,11 +292,17 @@ new string[]{ "150", "", "", "" }
             ViewBag.PageID = "AboutUs";
             return View();
         }
-        public IActionResult Products(string lang)
+        public IActionResult ProductsStrategy(string lang)
         {
             Setlanguage(lang);
             return View();
         }
+        public IActionResult ProductsDetail(string lang)
+        {
+            Setlanguage(lang);
+            return View();
+        }
+        
         public IActionResult PressCenter(string lang)
         {
             Setlanguage(lang);
