@@ -20,7 +20,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
     {
         public List<string[]> DictStr = new List<string[]>();
         public List<string[]> DictStr1 = new List<string[]>(){
-new string[]{ "0", "Opening Hours: Mon - Sat 9:00 – 18:00", "Açılış saatları: Mon - Sat 9:00 - 18:00", "" },
+new string[]{ "0", "Working Hours: Mon - Fri 9:00 – 18:00", "İş saatları: Mon - Fri 9:00 - 18:00", "" },
 new string[]{ "1", "Follow Us:", "Bizi izlə:", "" },
 new string[]{ "2", "Home", "Əsas səhifə", "" },
 new string[]{ "3", "About Us", "Haqqımızda", "" },
@@ -33,8 +33,8 @@ new string[]{ "9", "Parla Culture", "Korporativ mədəniyyət", "" },
 new string[]{ "10", "Social Responsibility", "Sosial məsuliyyət", "" },
 new string[]{ "11", "Products", "Məhsullar", "" },
 new string[]{ "12", "By A-Z", "A-Z ", "" },
-new string[]{ "13", "By therapeutic area", "Terapevtik sahə üzrə", "" },
-new string[]{ "14", "Pharmacovigilance", "Farmakonəzarət", "" },
+new string[]{ "13", "Product Strategy", "Məhsul strategiyası", "" },
+new string[]{ "14", "Portfolio", "Portfel", "" },
 new string[]{ "15", "News and Media", "Xəbərlər", "" },
 new string[]{ "16", "News", "Xəbərlər", "" },
 new string[]{ "17", "Press-releases", "Pres-relizlər", "" },
@@ -52,7 +52,7 @@ new string[]{ "28", "We promise a healthier tomorrow for our patients", "Biz dah
 new string[]{ "29", "Discover Now", "Daha ətraflı", "" },
 new string[]{ "30", "Our aim is to improve healthcare access and quality of life", "Bizim məqsədimiz səhiyyə xidmətlərinin daha əlçatan olmasına nail olmaq və insanların həyat keyfiyyətini yaxşılaşdırmaqdır", "" },
 new string[]{ "31", "We focus on contributing to benefit our patients, society and environment", "Cəmiyyətimizə, pasiyentlərimizə və ətraf mühitə öz töhfəmizi vermək üçün dayanmadan çalışırıq", "" },
-new string[]{ "32", "Welcome to Our Website", "Vebsaytımıza xoş gəlmisiniz!", "" },
+new string[]{ "32", "Welcome to our website", "Vebsaytımıza xoş gəlmisiniz!", "" },
 new string[]{ "33", "We are the first science-based pharmaceutical company in Azerbaijan, focusing on the full production of high-technology medicines.", "Parla Pharmaceuticals yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş Azərbaycanda ilk elmi əsaslı əczaçılıq şirkətidir.", "" },
 new string[]{ "34", "Parla Team", "Komandamız", "" },
 new string[]{ "35", "Parla Culture", "Korporativ mədəniyyət", "" },
@@ -150,9 +150,9 @@ new string[]{ "126", "Corporate culture", "Korporativ mühit", "" },
 new string[]{ "127", "16E Keykab khanim Safaraliyeva, Time Business Center, 6th floor", "Kövkəb Səfərəliyeva küç. 16E, Time Business Mərkəzi, 6-cı mərtəbə", "" },
 new string[]{ "128", "Stay Tunned", "Bizi izləyin", "" },
 new string[]{ "129", "", "Soyad", "" },
-new string[]{ "130", "", "", "" },
-new string[]{ "131", "", "", "" },
-new string[]{ "132", "", "", "" },
+new string[]{ "130", "Parla Pharmaceuticals Press-Release", "Parla Pharmaceuticals Press relizləri", "" },
+new string[]{ "131", "Azerbaijan starts producing high-technology medicines.", "Azərbaycan yüksək texnologiyalı dərman vasitələrinin istehsalına başlayır.", "" },
+new string[]{ "132", "Parla Pharmaceuticals, the first science-based pharmaceutical company in Azerbaijan, has officially announced the launch of production of local medicines to meet the needs of the population and to export. The production facility, which will produce high-tech medicines along with classic medicines, will soon be operational. All pharmaceutical products will meet European and American pharmaceutical standards. At the initial stage, about 100 medicines will be produced, and in the next 5 years this number will reach 400. Along with classic chemical medicines, modern biotechnological and nanotechnological pharmaceutical products are planned to be produced.\"Our goal is to fully meet the needs of the population with innovative and high-tech medicines and to export these products worldwide. By this way, we will strengthen the country's pharmaceutical industry and support patients' access to quality medicines at affordable prices and promote local production. Local production of medicines will contribute to strengthen the positive trends not only in health, but also in the country's economy as a whole. The steps taken by our esteemed President Ilham Aliyev and First Vice President Mehriban Aliyeva, especially in recent years, to support local production inspire us to move forward with confidence in this area. I am confident that Parla will soon be recognized as a \"Made in Azerbaijan\" brand in the world market, \"said Arash Nosrati Heravi, CEO of Parla Pharmaceuticals.", "Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan “Parla Pharmaceuticals” əhalinin təlabatını ödəmək və ixrac məqsədilə yerli dərman preparatlarının istehsalına başlaması barədə rəsmi açıqlama verib. Klassik dərman vasitələri ilə yanaşı yüksək texnologiyalı dərmanların istehsalını həyata keçirəcək zavod tezliklə fəaliyyət göstərəcək. Bütün dərman vasitələri  Avropa və Amerika əczaçılıq standartlarına cavab verəcək. İlkin mərhələdə 100-dək adda dərman vasitələri istehsal olunacaq, növbəti 5 il ərzində isə bu say 400-ə çatacaq. Bu məhsullar arasında klassik dərmanlarla yanaşı, müasir biotexnoloji və nanotexnoloji vasitələrin də olması planlaşdırırlır. “Bizim məqsədimiz innovativ və yüksək texnologiyalara əsaslanan dərmanlarla əhalinin təlabatını tam ödəmək və həmin preparatların ölkə xaricində satışını təşkil etməkdir.  Bununla da biz ölkənin əczaçılıq sənayesini gücləndirəcək və pasiyentlərin münasib qiymətə keyfiyyətli dərman məhsullarına əlçatanlığını dəstəkləyəcəyik və yerli istehsalı təşviq etməyə nail olacağıq. Dərman preparatlarının yerli istehsalı təkcə səhiyyədə deyil, ümumiyyətlə, ölkə iqtisadiyyatında müsbət meylləri gücləndirməyə xidmət edəcək. Hörmətli prezidentimiz cənab İlham Əliyev və ölkənin birinci Vitse Prezidenti Mehriban xanım Əliyevanın xüsusilə son dövrlərdə yerli istehsala dəstək istiqamətində atdığı addımlar bizi bu sahədə inamla irəliləməyə daha da ruhlandırır.  Əminəm ki, Parla qısa zamanda “Made in Azerbaijan” brendi kimi dünya bazarında tanınacaq”-, deyə “Parla Pharmaceuticals” şirkətinin direktoru Arash Nosrati Heravi qeyd edib.", "" },
 new string[]{ "133", "", "", "" },
 new string[]{ "134", "", "", "" },
 new string[]{ "135", "", "", "" },
@@ -167,10 +167,10 @@ new string[]{ "143", "Product Strategy", "Məhsul strategiyamız", "" },
 new string[]{ "144", "Dermatology", "Dermatologiya", "" },
 new string[]{ "145", "OTC", "Reseptsiz satılan", "" },
 new string[]{ "146", "Your Message", "mesajınız...", "" },
-new string[]{ "147", "Parla Pharmaceuticals Newsletter", "Parla Pharmaceuticals bülleteni", "" },
+new string[]{ "147", "Parla Pharmaceuticals Newsletter", "Parla Pharmaceuticals xəbər büllüteni", "" },
 new string[]{ "148", "Read More", "Daha çox oxu", "" },
-new string[]{ "149", "On July 2, Parla Pharmaceuticals received a visit from Sergio Perez Gunella, Argentina’s Ambassador to the Republic of Azerbaijan and Ms. Corina Beatriz Lehmann, Deputy Head of Mission for a roundtable discussion. The parties concentrated their attention on the possible mutual collaboration of the private sectors of both countries in pharmaceutical sector. Officials also got better acquainted with areas of business activity of Parla Pharmaceuticals. They had comprehensive exchange of views on the importance of local production and discussed possible mutual export activities and technology transfer. Parties also highlighted the significant value of the development and long-term sustainability of local pharmaceutical industry and healthcare sector.", "2 iyul tarixində “Parla Pharmaceuticals™” şirkəti Argentina səfirliyi ilə görüş keçirib. Görüşdə Argentinanın Azərbaycandakı səfiri cənab Sergio Perez Gunella və Missiya Rəhbərinin Müavini, xanım Corina Beatriz Lehmann iştirak edib. Hər iki ölkənin əczaçılıq sahəsində özəl sektorunun əlaqələndirilməsi və mümkün əməkdaşlıq imkanları müzakirə olunub. Həmçinin, rəsmilər Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan “Parla Pharmaceuticals™”-ın fəaliyyət istiqaməti ilə yaxından tanış olublar. Tərəflər yerli istehsalın əhəmiyyəti, mümkün qarşılıqlı ixrac imkanları və texnologiya mübadiləsi mövzusunda da danışıqlar aparıblar, əczaçılıq və səhiyyə sektorunun əhəmiyyətinə, yerli əczaçılıq sektorunun inkişafının önəminə diqqət çəkiblər.", "" },
-new string[]{ "150", "", "", "" }
+new string[]{ "149", "On July 2, Parla Pharmaceuticals received a visit from Sergio Perez Gunella, Argentina’s Ambassador to the Republic of Azerbaijan and Ms. Corina Beatriz Lehmann, Deputy Head of Mission for a roundtable discussion. The parties concentrated their attention on the possible mutual collaboration of the private sectors of both countries in pharmaceutical sector. Officials also got better acquainted with areas of business activity of Parla Pharmaceuticals. They had comprehensive exchange of views on the importance of local production and discussed possible mutual export activities and technology transfer. Parties also highlighted the significant value of the development and long-term sustainability of local pharmaceutical industry and healthcare sector.", "2 iyul tarixində Parla Pharmaceuticals şirkəti Argentina səfirliyi ilə görüş keçirib. Görüşdə Argentinanın Azərbaycandakı səfiri cənab Sergio Perez Gunella və Missiya Rəhbərinin Müavini, xanım Corina Beatriz Lehmann iştirak edib. Hər iki ölkənin əczaçılıq sahəsində özəl sektorunun əlaqələndirilməsi və mümkün əməkdaşlıq imkanları müzakirə olunub. Həmçinin, rəsmilər Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan Parla Pharmaceuticals-ın fəaliyyət istiqaməti ilə yaxından tanış olublar. Tərəflər yerli istehsalın əhəmiyyəti, mümkün qarşılıqlı ixrac imkanları və texnologiya mübadiləsi mövzusunda da danışıqlar aparıblar, əczaçılıq və səhiyyə sektorunun əhəmiyyətinə, yerli əczaçılıq sektorunun inkişafının önəminə diqqət çəkiblər.", "" },
+new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Antonio Dimate Cardenas, Colombia’s Ambassador to the Republic of Azerbaijan. The parties concentrated their attention on the possible export of pharmaceuticals products, especially high tech - biotechnology medicines from Azerbaijan to Colombia. Also in this meeting, both parties agreed to look the possibility of making Colombia as a hub for exporting Parla’s products to South American market.", "3 iyul tarixində Parla Pharmaceuticals şirkəti Kolumbiyanın Azərbaycan Respublikasındakı səfiri cənab Antonio Dimate Cardenas ilə görüş keçirib. Görüşdə xüsusilə yüksək texnologiyalı- biotexnoloji əczaçılıq məhsullarının Azərbaycandan Kolumbiyaya ixracı əsas müzakirə mövzusu olub. Həmçinin, tərəflər Kolumbiyanın Cənubi Amerika bazarına ixrac üçün əsas mərkəzə çevrilməsi fikrini müzakirə ediblər.", "" },
 };
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
@@ -433,12 +433,26 @@ new string[]{ "150", "", "", "" }
             ViewBag.PageID = "News";
             return View();
         }
-        public IActionResult NewsDetail(int id,string lang)
+        public IActionResult NewsDetail(int id, string lang)
         {
             if (id != 0)
                 ViewBag.NewsID = id;
             Setlanguage(lang);
             ViewBag.PageID = "NewsDetail";
+            return View();
+        }
+        public IActionResult PressRelease(string lang)
+        {
+            Setlanguage(lang);
+            ViewBag.PageID = "PressRelease";
+            return View();
+        }
+        public IActionResult PressReleaseDetail(int id, string lang)
+        {
+            if (id != 0)
+                ViewBag.NewsID = id;
+            Setlanguage(lang);
+            ViewBag.PageID = "PressReleaseDetail";
             return View();
         }
     }
