@@ -151,8 +151,8 @@ new string[]{ "127", "16E Keykab khanim Safaraliyeva, Time Business Center, 6th 
 new string[]{ "128", "Stay Tunned", "Bizi izləyin", "" },
 new string[]{ "129", "", "Soyad", "" },
 new string[]{ "130", "Parla Pharmaceuticals Press-Release", "Parla Pharmaceuticals Press relizləri", "" },
-new string[]{ "131", "Azerbaijan starts producing high-technology medicines.", "Azərbaycan yüksək texnologiyalı dərman vasitələrinin istehsalına başlayır.", "" },
-new string[]{ "132", "Parla Pharmaceuticals, the first science-based pharmaceutical company in Azerbaijan, has officially announced the launch of production of local medicines to meet the needs of the population and to export. The production facility, which will produce high-tech medicines along with classic medicines, will soon be operational. All pharmaceutical products will meet European and American pharmaceutical standards. At the initial stage, about 100 medicines will be produced, and in the next 5 years this number will reach 400. Along with classic chemical medicines, modern biotechnological and nanotechnological pharmaceutical products are planned to be produced.\"Our goal is to fully meet the needs of the population with innovative and high-tech medicines and to export these products worldwide. By this way, we will strengthen the country's pharmaceutical industry and support patients' access to quality medicines at affordable prices and promote local production. Local production of medicines will contribute to strengthen the positive trends not only in health, but also in the country's economy as a whole. The steps taken by our esteemed President Ilham Aliyev and First Vice President Mehriban Aliyeva, especially in recent years, to support local production inspire us to move forward with confidence in this area. I am confident that Parla will soon be recognized as a \"Made in Azerbaijan\" brand in the world market, \"said Arash Nosrati Heravi, CEO of Parla Pharmaceuticals.", "Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan “Parla Pharmaceuticals” əhalinin təlabatını ödəmək və ixrac məqsədilə yerli dərman preparatlarının istehsalına başlaması barədə rəsmi açıqlama verib. Klassik dərman vasitələri ilə yanaşı yüksək texnologiyalı dərmanların istehsalını həyata keçirəcək zavod tezliklə fəaliyyət göstərəcək. Bütün dərman vasitələri  Avropa və Amerika əczaçılıq standartlarına cavab verəcək. İlkin mərhələdə 100-dək adda dərman vasitələri istehsal olunacaq, növbəti 5 il ərzində isə bu say 400-ə çatacaq. Bu məhsullar arasında klassik dərmanlarla yanaşı, müasir biotexnoloji və nanotexnoloji vasitələrin də olması planlaşdırırlır. “Bizim məqsədimiz innovativ və yüksək texnologiyalara əsaslanan dərmanlarla əhalinin təlabatını tam ödəmək və həmin preparatların ölkə xaricində satışını təşkil etməkdir.  Bununla da biz ölkənin əczaçılıq sənayesini gücləndirəcək və pasiyentlərin münasib qiymətə keyfiyyətli dərman məhsullarına əlçatanlığını dəstəkləyəcəyik və yerli istehsalı təşviq etməyə nail olacağıq. Dərman preparatlarının yerli istehsalı təkcə səhiyyədə deyil, ümumiyyətlə, ölkə iqtisadiyyatında müsbət meylləri gücləndirməyə xidmət edəcək. Hörmətli prezidentimiz cənab İlham Əliyev və ölkənin birinci Vitse Prezidenti Mehriban xanım Əliyevanın xüsusilə son dövrlərdə yerli istehsala dəstək istiqamətində atdığı addımlar bizi bu sahədə inamla irəliləməyə daha da ruhlandırır.  Əminəm ki, Parla qısa zamanda “Made in Azerbaijan” brendi kimi dünya bazarında tanınacaq”-, deyə “Parla Pharmaceuticals” şirkətinin direktoru Arash Nosrati Heravi qeyd edib.", "" },
+new string[]{ "131", "Azerbaijan starts producing high-technology medicines", "Azərbaycan yüksək texnologiyalı dərman vasitələrinin istehsalına başlayır", "" },
+new string[]{ "132", "Parla Pharmaceuticals, the first science-based pharmaceutical company in Azerbaijan, has officially announced the launch of production of local medicines to meet the needs of the population and to export. The production facility, which will produce high-tech medicines along with classic medicines, will soon be operational. All pharmaceutical products will meet European and American pharmaceutical standards.<br/>At the initial stage, about 100 medicines will be produced, and in the next 5 years this number will reach 400. Along with classic chemical medicines, modern biotechnological and nanotechnological pharmaceutical products are planned to be produced.<br/>”Our goal is to fully meet the needs of the population with innovative and high-tech medicines and to export these products worldwide. By this way, we will strengthen the country's pharmaceutical industry and support patients' access to quality medicines at affordable prices and promote local production. Local production of medicines will contribute to strengthen the positive trends not only in health, but also in the country's economy as a whole. The steps taken by our esteemed President Ilham Aliyev and First Vice President Mehriban Aliyeva, especially in recent years, to support local production inspire us to move forward with confidence in this area. I am confident that Parla will soon be recognized as a ”Made in Azerbaijan” brand in the world market, ”said Arash Nosrati Heravi, CEO of Parla Pharmaceuticals.<br/>", "Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olan “Parla Pharmaceuticals” əhalinin təlabatını ödəmək və ixrac məqsədilə yerli dərman preparatlarının istehsalına başlaması barədə rəsmi açıqlama verib. Klassik dərman vasitələri ilə yanaşı yüksək texnologiyalı dərmanların istehsalını həyata keçirəcək zavod tezliklə fəaliyyət göstərəcək. Bütün dərman vasitələri  Avropa və Amerika əczaçılıq standartlarına cavab verəcək.<br/>İlkin mərhələdə 100-dək adda dərman vasitələri istehsal olunacaq, növbəti 5 il ərzində isə bu say 400-ə çatacaq. Bu məhsullar arasında klassik dərmanlarla yanaşı, müasir biotexnoloji və nanotexnoloji vasitələrin də olması planlaşdırırlır.<br/>“Bizim məqsədimiz innovativ və yüksək texnologiyalara əsaslanan dərmanlarla əhalinin təlabatını tam ödəmək və həmin preparatların ölkə xaricində satışını təşkil etməkdir.  Bununla da biz ölkənin əczaçılıq sənayesini gücləndirəcək və pasiyentlərin münasib qiymətə keyfiyyətli dərman məhsullarına əlçatanlığını dəstəkləyəcəyik və yerli istehsalı təşviq etməyə nail olacağıq. Dərman preparatlarının yerli istehsalı təkcə səhiyyədə deyil, ümumiyyətlə, ölkə iqtisadiyyatında müsbət meylləri gücləndirməyə xidmət edəcək. Hörmətli prezidentimiz cənab İlham Əliyev və ölkənin birinci Vitse Prezidenti Mehriban xanım Əliyevanın xüsusilə son dövrlərdə yerli istehsala dəstək istiqamətində atdığı addımlar bizi bu sahədə inamla irəliləməyə daha da ruhlandırır.  Əminəm ki, Parla qısa zamanda “Made in Azerbaijan” brendi kimi dünya bazarında tanınacaq”-, deyə “Parla Pharmaceuticals” şirkətinin direktoru Arash Nosrati Heravi qeyd edib.<br/>", "" },
 new string[]{ "133", "", "", "" },
 new string[]{ "134", "", "", "" },
 new string[]{ "135", "", "", "" },
@@ -174,7 +174,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
 };
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
-        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment) 
+        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment)
         {
             _context = applicationDbContext;
             _webHostEnvironment = webHostEnvironment;
@@ -265,11 +265,11 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
         public IActionResult Index(string lang)
         {
             Setlanguage(lang);
-            
+
             try
             {
                 string kk = $"{ this.Request.PathBase }";
-                ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/Index"; 
+                ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/Index";
                 ViewBag.PageID = "Index";
                 //List <Slider> sliders = new List<Slider>();
                 //foreach (Slider item in _context.Tbl_Sliders.Where(m => m.Lang == 1))
@@ -288,7 +288,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
         {
             Setlanguage(lang);
 
-            ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/AboutUs"; 
+            ViewBag.PageURL = $"{this.Request.Scheme}://{this.Request.Host}/EN/Home/AboutUs";
             ViewBag.PageID = "AboutUs";
             return View();
         }
@@ -302,7 +302,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
             Setlanguage(lang);
             return View();
         }
-        
+
         public IActionResult PressCenter(string lang)
         {
             Setlanguage(lang);
@@ -327,7 +327,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ContactUs(string lang, [FromForm]vmdl_ContactUsIno vmdl_ContactUsIno)
+        public IActionResult ContactUs(string lang, [FromForm] vmdl_ContactUsIno vmdl_ContactUsIno)
         {
             string RefererStr = this.Request.Headers["Referer"];
             string ResumeStr = $"{this.Request.Scheme}://{this.Request.Host}/Uploads/"; // {this.Request.PathBase}";
@@ -343,7 +343,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                     cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
                     cls_MailManagement.Subject = "Parla Pharma Contact US Page : " + vmdl_ContactUsIno.Subject;
                     cls_MailManagement.Body = string.Format("Dear Info User : {6} Mr./Miss {0} Has Sent you an email through Contact Us Page. {6} His/Her Name : {1} " +
-                                                "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.PhoneNumber, vmdl_ContactUsIno.Email, vmdl_ContactUsIno.Subject, vmdl_ContactUsIno.MessageBody, Environment.NewLine );
+                                                "{6} Phone Number : {2} {6} Email : {3} {6} Subject : {4} {6} Message Body : {6} {5}", vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.FullName, vmdl_ContactUsIno.PhoneNumber, vmdl_ContactUsIno.Email, vmdl_ContactUsIno.Subject, vmdl_ContactUsIno.MessageBody, Environment.NewLine);
                     cls_MailManagement.SendEmail();
                 }
             }
@@ -368,7 +368,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
             ViewBag.ErrorMessage = "";
             bool isSent = false;
             string ErrorMessageStr = "";
-                 
+
             string AttachmentfilePath = "";
             bool hasAttachment = false;
             string ResumeStr = $"{this.Request.Scheme}://{this.Request.Host}/Uploads/"; // {this.Request.PathBase}";
@@ -395,16 +395,16 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                 //cls_MailManagement.To.Add(new cls_emailAccount("Koorosh.nosrati@live.com", "Kourosh Nosrati Heravi"));
                 //cls_MailManagement.To.Add(new cls_emailAccount("valeh.farid@parlapharma.com", "Valeh Parla"));
                 cls_MailManagement.To.Add(new cls_emailAccount("info@parlapharma.com", "Info User of Parla Pharma"));
-                cls_MailManagement.Subject = "Parla Pharma Application Form Page" ;
+                cls_MailManagement.Subject = "Parla Pharma Application Form Page";
                 if (hasAttachment)
                     cls_MailManagement.Attachments.Add(AttachmentfilePath);
                 cls_MailManagement.IsBodyHtml = true;
                 cls_MailManagement.Body = string.Format(
                     "Dear Info User : {7} Mr./Miss {0} Has Sent you an email through Application Form Page.{7}" +
                     "His/Her Name : {0} {7} Phone Number : {1} {7} Email : {2} {7} Available Start Date : {3} {7} " +
-                    "Emplyment Status : {4} {7} He/She Apply's for {5} {7} His/Her Resume : <a href=\"{6}\">Resume Link</a> {7}", 
-                    vmdl_ApplicationForm.FirstName + " " + vmdl_ApplicationForm.LastName, 
-                    vmdl_ApplicationForm.Phone, 
+                    "Emplyment Status : {4} {7} He/She Apply's for {5} {7} His/Her Resume : <a href=\"{6}\">Resume Link</a> {7}",
+                    vmdl_ApplicationForm.FirstName + " " + vmdl_ApplicationForm.LastName,
+                    vmdl_ApplicationForm.Phone,
                     vmdl_ApplicationForm.Email,
                     vmdl_ApplicationForm.AvailableStartDate,
                     vmdl_ApplicationForm.EmploymentStatus,
