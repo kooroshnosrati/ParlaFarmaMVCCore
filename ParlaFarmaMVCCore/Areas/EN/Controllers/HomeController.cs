@@ -174,13 +174,18 @@ new string[]{ "150", "", "", "" }
 };
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
-        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment) 
+        
+        private IHttpContextAccessor _accessor;
+
+
+        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment, IHttpContextAccessor accessor)
         {
             _context = applicationDbContext;
             _webHostEnvironment = webHostEnvironment;
 
-
-
+            /*_accessor = accessor;
+            string iP = _accessor.HttpContext.Connection.RemoteIpAddress.ToString();*/
+            int k = 0;
             //string myStr = "public List<string[]> DictStr1 = new List<string[]>(){";
             //int counter1 = 0;
             //foreach (Dictionary item in _context.Tbl_Dictionary)
