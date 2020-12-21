@@ -174,10 +174,12 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
 };
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
-        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment)
+        private IHttpContextAccessor _accessor;
+        public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment, IHttpContextAccessor accessor)
         {
             _context = applicationDbContext;
             _webHostEnvironment = webHostEnvironment;
+            _accessor = accessor;
 
 
 
@@ -229,6 +231,120 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                 DictStr.Add(itemstr);
             }
         }
+        private string GetCountryCode(string ipAddress)
+        {
+            //string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+            //string ipAddress = "5.134.48.0";
+            //  This example requires the Chilkat API to have been previously unlocked.
+            //  See Global Unlock Sample for sample code.
+
+            //  The IP address used in this example is 104.40.211.35
+            //string ipAddress = iP; // "104.40.211.35";
+
+            //  First we'll try the service at freegeoip.net.
+            //  They have a limit of 10,000 queries per hour, and also
+            //  provide free source code to run your own server.
+
+            Chilkat.Rest rest = new Chilkat.Rest();
+
+            //  Connect to freegeoip.net
+            bool bTls = false;
+            int port = 80;
+            bool bAutoReconnect = true;
+            bool success = rest.Connect("freegeoip.net", port, bTls, bAutoReconnect);
+            if (success == false)
+            {
+                return rest.LastErrorText;
+            }
+
+            //  Query the IP address to return JSON.
+            string responseJson = rest.FullRequestNoBody("GET", "/json/" + ipAddress);
+            if (rest.LastMethodSuccess != true)
+            {
+                return rest.LastErrorText;
+            }
+
+            //  Just in case we are still connected..
+            int maxWaitMs = 10;
+            rest.Disconnect(maxWaitMs);
+
+            Chilkat.JsonObject json = new Chilkat.JsonObject();
+            json.Load(responseJson);
+            json.EmitCompact = false;
+
+            string TempStr = json.Emit();
+
+            //  The JSON we get back looks like this:
+            //  {
+            //   "ip": "104.40.211.35",
+            //    "country_code": "US",
+            //    "country_name": "United States",
+            //    "region_code": "WA",
+            //    "region_name": "Washington",
+            //    "city": "Redmond",
+            //    "zip_code": "98052",
+            //    "time_zone": "America/Los_Angeles",
+            //    "latitude": 47.6801,
+            //    "longitude": -122.1206,
+            //    "metro_code": 819
+            //  }
+
+            //  Examine a few bits of information:
+            //ViewBag.txt = "country name = " + json.StringOf("country_name");
+            TempStr = json.StringOf("country_code");
+            if (TempStr == "AZ")
+            {
+                return TempStr;
+            }
+            //  -----------------------------------------------------
+            //  Now to use ip-api.com, which is mostly the same..
+
+            success = rest.Connect("ip-api.com", port, bTls, bAutoReconnect);
+            if (success == false)
+            {
+                return rest.LastErrorText;
+            }
+
+            //  Query the IP address to return JSON.
+            responseJson = rest.FullRequestNoBody("GET", "/json/" + ipAddress);
+            if (rest.LastMethodSuccess != true)
+            {
+                return rest.LastErrorText;
+            }
+
+            //  Just in case we are still connected..
+            rest.Disconnect(maxWaitMs);
+
+            json.Load(responseJson);
+            json.EmitCompact = false;
+
+            TempStr = json.Emit();
+
+            //  The JSON we get back looks like this:
+            //  This is very strange, because the two services don't agree.
+            //  {
+            //   "as": "AS8075 Microsoft Corporation",
+            //    "city": "Amsterdam",
+            //    "country": "Netherlands",
+            //    "countryCode": "NL",
+            //    "isp": "Microsoft Corporation",
+            //    "lat": 52.35,
+            //    "lon": 4.9167,
+            //    "org": "Microsoft Azure",
+            //    "query": "104.40.211.35",
+            //    "region": "NH",
+            //    "regionName": "North Holland",
+            //    "status": "success",
+            //    "timezone": "Europe/Amsterdam",
+            //    "zip": "1091"
+            //  }
+
+            //  Examine a few bits of information:
+            //ViewBag.txt = "country name = " + json.StringOf("country");
+            return json.StringOf("countryCode");
+            //int k = 0;
+
+        }
         private void Setlanguage(string lang)
         {
             try
@@ -236,8 +352,18 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                 ViewBag.DictStr = DictStr;
                 if (lang == null)
                 {
-                    ViewBag.Language = "en";
-                    ViewBag.LanguageID = 1;
+                    string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+                    
+                    if (GetCountryCode(ipAddress) == "AZ")
+                    {
+                        ViewBag.Language = "az";
+                        ViewBag.LanguageID = 1;
+                    }
+                    else
+                    {
+                        ViewBag.Language = "en";
+                        ViewBag.LanguageID = 1;
+                    }
                     return;
                 }
                 switch (lang.ToLower())
