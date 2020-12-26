@@ -357,7 +357,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                     if (GetCountryCode(ipAddress) == "AZ")
                     {
                         ViewBag.Language = "az";
-                        ViewBag.LanguageID = 1;
+                        ViewBag.LanguageID = 2;
                     }
                     else
                     {
