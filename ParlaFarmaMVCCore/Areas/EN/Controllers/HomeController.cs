@@ -353,8 +353,8 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
                 if (lang == null)
                 {
                     string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
-                    
-                    if (GetCountryCode(ipAddress) == "AZ")
+                    ViewBag.CountryID = GetCountryCode(ipAddress);
+                    if (ViewBag.CountryID == "AZ")
                     {
                         ViewBag.Language = "az";
                         ViewBag.LanguageID = 2;
