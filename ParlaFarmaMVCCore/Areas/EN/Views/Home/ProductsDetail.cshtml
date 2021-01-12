@@ -168,6 +168,55 @@
     </div>
 </section>
 
+<section class="intro_section page_mainslider ParlaLogo color bottompadding_0 padding_50">
+    <div class="flexslider" data-dots="true" data-nav="false">
+        <ul class="slides">
+            <li>
+                <article class="post side-item side-md content-padding ">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="item-content">
+                                <h3 class="section_header">
+                                    <span style="color:#003c72;font-family:avantgarden;font-weight:bold;">Tamurin ™</span>@*<span style="background-color:hotpink;color:white;font-family:avantgarden;font-weight:bold;" class="rounded leftpadding_5 rightpadding_5">250</span>*@<br />
+                                    <div style="color: #00adee;font-size:20px;font-family:avantgarden;">Tamsulosin 0.4 mg</div>
+                                </h3>
+                                <p class="AboutUsSlidersContent">
+                                    @if (ViewBag.Language == "en")
+                                    {
+                                        @:<b>International  nonproprietary  name: </b> Tamsulosin<br />
+                                        @:Tamsulosin is an α-blocker
+                                        <span id="MoreLessP4" style="color:cornflowerblue;cursor:pointer;">More...</span>
+                                        <span id="Product4" style="display:none;">
+                                            that quickly relieves the symptoms of benign prostatic hyperplasia and improves the quality of life of patients.
+                                            <br />Tamsulosin should be prescribed by a doctor, read the
+                                            <a href="~/lib/pharma/images/Products/Docs/Tamurin (30.10.2020) print.pdf" target="_blank">instructions</a> before use.
+                                        </span>
+                                    }
+                                    @if (ViewBag.Language == "az")
+                                    {
+                                        @:<b>Beynəlxalq patentləşdirilməmiş adi:</b> Tamsulosin<br />
+                                        @:Tamsulosin - prostat vəzinin xoşxassəli hiperplaziya simptomlarını 
+                                        <span id="MoreLessP4" style="color:cornflowerblue;cursor:pointer;">çox oxu...</span>
+                                        <span id="Product4" style="display:none;">
+                                            tez aradan qaldıran və pasientlərin həyat keyfiyyətini yaxşılaşdıran α-blokatordur.
+                                            <br />Tamsulosin həkim tərəfindən təyin olunmalıdır, istifadədən əvvəl <a href="~/lib/pharma/images/Products/Docs/Tamurin (30.10.2020) print.pdf" target="_blank">təlimatla</a> tanış olun.
+                                        </span>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item-media rounded overflow_hidden">
+                                @*<img src="~/lib/pharma/images/Our company 1st slider.jpg" alt="">*@
+                                <img src="~/lib/pharma/images/Products/tamurin-2-web.png" />
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+</section>
 
 @section Scripts {
 
@@ -185,6 +234,10 @@
             $("#MoreLessP3").click(function () {
                 $("#MoreLessP3").hide();
                 $("#Product3").show();
+            });
+            $("#MoreLessP4").click(function () {
+                $("#MoreLessP4").hide();
+                $("#Product4").show();
             });
         });
     </script>

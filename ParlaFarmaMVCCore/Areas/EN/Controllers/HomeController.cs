@@ -233,6 +233,7 @@ new string[]{ "150", "On July 3, Parla Pharmaceuticals received a visit from Ant
         }
         private string GetCountryCode(string ipAddress)
         {
+            return "";
             //string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
             //string ipAddress = "5.134.48.0";
             //  This example requires the Chilkat API to have been previously unlocked.
