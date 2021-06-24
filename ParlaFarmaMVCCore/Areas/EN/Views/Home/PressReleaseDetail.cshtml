@@ -16,20 +16,21 @@
     </div>
 </section>
 
-<section class="ls section_padding_top_50 section_padding_bottom_0">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 ">
-                <h2 class="section_header">
-                        @ViewBag.DictStr[131][@ViewBag.LanguageID]
-                    </h2>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 @if (ViewBag.NewsID == 1)
 {
+    <section class="ls section_padding_top_50 section_padding_bottom_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <h2 class="section_header">
+                        @ViewBag.DictStr[131][@ViewBag.LanguageID]
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
         <div class="flexslider" data-dots="true" data-nav="false">
             <ul class="slides">
@@ -37,15 +38,15 @@
                     <article class="post side-item side-md content-padding ">
                         <div class="row">
                             @*<div class="col-md-7">
-                                <div class="item-media rounded overflow_hidden">
-                                    <img src="~/Uploads/DSC01816.jpg" />
-                                </div>
-                            </div>*@
+                                    <div class="item-media rounded overflow_hidden">
+                                        <img src="~/Uploads/DSC01816.jpg" />
+                                    </div>
+                                </div>*@
                             <div class="col-md-12">
                                 <div class="item-content">
                                     <p class="AboutUsSlidersContent" style="margin-top:-33px">
                                         @Html.Raw(@ViewBag.DictStr[132][@ViewBag.LanguageID])
-                                        
+
                                     </p>
                                 </div>
                             </div>
@@ -57,3 +58,7 @@
     </section>
 }
 
+
+@*@if (ViewBag.NewsID == 2)
+{
+}*@

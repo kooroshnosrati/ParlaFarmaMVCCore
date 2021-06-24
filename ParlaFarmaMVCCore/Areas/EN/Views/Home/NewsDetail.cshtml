@@ -157,3 +157,50 @@
     </section>
 }
 
+@if (ViewBag.NewsID == 3)
+{
+    <section class="ls section_padding_top_50 section_padding_bottom_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <h2 class="section_header">
+                        @ViewBag.DictStr[134][@ViewBag.LanguageID]
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="intro_section page_mainslider ParlaLogo color bottompadding_50 padding_50">
+        <div class="flexslider" data-dots="true" data-nav="false">
+            <ul class="slides">
+                <li>
+                    <article class="post side-item side-md content-padding ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="item-media rounded overflow_hidden ">
+                                    @if (ViewBag.LanguageID == 1)
+                                    {
+                                        <img src="~/Uploads/cover ingilis.png" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Uploads/cover.png" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="item-content">
+                                    <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        @Html.Raw(@ViewBag.DictStr[133][@ViewBag.LanguageID])
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+}
