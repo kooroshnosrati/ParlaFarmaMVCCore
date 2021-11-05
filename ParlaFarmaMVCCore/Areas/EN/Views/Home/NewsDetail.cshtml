@@ -207,7 +207,7 @@
     </section>
 }
 
-@if (ViewBag.NewsID == 4)
+@if (ViewBag.NewsID == 4 && @ViewBag.LanguageID == 2)
 {
     <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
         <div class="flexslider" data-dots="true" data-nav="false">
@@ -350,7 +350,7 @@
     </section>
 }
 
-@if (ViewBag.NewsID == 5)
+@if (ViewBag.NewsID == 5 && @ViewBag.LanguageID == 2)
 {
     <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
         <div class="flexslider" data-dots="true" data-nav="false">
@@ -498,7 +498,7 @@
     </section>
 }
 
-@if (ViewBag.NewsID == 6)
+@if (ViewBag.NewsID == 6 && @ViewBag.LanguageID == 2)
 {
     <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
         <div class="flexslider" data-dots="true" data-nav="false">
@@ -508,12 +508,18 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <div class="item-media rounded overflow_hidden" style="margin:20px">
-                                    <img src="~/Uploads/PARLA Logo - Cover.png" />
+                                    @*<img src="~/Uploads/PARLA Logo - Cover.png" />*@
+                                    <video controls loop autoplay style="width:100%;height:100%;">
+                                        <source src="~/Uploads/ushaghlarinGelejeyi/ushaghlarinGelejeyi.mp4" type="video/mp4">
+                                        <source src="~/Uploads/ushaghlarinGelejeyi/ushaghlarinGelejeyi.ogg" type="video/ogg">
+                                        Your browser does not support HTML video.
+                                    </video>
                                 </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="item-content">
                                     <p class="AboutUsSlidersContent" style="margin-top:-33px">
+                                        <br />
                                         @ViewBag.DictStr[152][@ViewBag.LanguageID]
                                     </p>
                                 </div>
@@ -526,7 +532,7 @@
     </section>
 }
 
-@if (ViewBag.NewsID == 7)
+@if (ViewBag.NewsID == 7 && @ViewBag.LanguageID == 2)
 {
     <section class="intro_section page_mainslider ParlaLogo color bottompadding_50">
         <div class="flexslider" data-dots="true" data-nav="false">
