@@ -182,7 +182,7 @@ namespace ParlaFarmaMVCCore.Areas.EN.Controllers
         public HomeController(ApplicationDbContext applicationDbContext, IWebHostEnvironment webHostEnvironment, IHttpContextAccessor accessor)
         {
             _context = applicationDbContext;
-            _webHostEnvironment = webHostEnvironment;
+            _webHostEnvironment = webHostEnvironment; 
             _accessor = accessor;
 
 
