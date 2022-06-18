@@ -31,12 +31,18 @@
                         <img src="~/Uploads/ParlasinAzerbaijan/parla sin FINAL-News.png" class="with_border" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @*@ViewBag.DictStr[147][@ViewBag.LanguageID]*@
-                                "Parlasın Azərbaycan!" layihəsinə start verildi
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:25px;">
+                                @ViewBag.DictStr[135][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[135][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/7');" class="theme_button color2 inverse min_width_button">
@@ -54,11 +60,18 @@
                         <img src="~/Uploads/PARLA Logo.png" class="with_border" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:20px;">
+                                @ViewBag.DictStr[155][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[155][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/6');" class="theme_button color2 inverse min_width_button">
@@ -76,11 +89,18 @@
                         <img src="~/Uploads/Ulduz-news.jpg" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:20px;">
+                                @ViewBag.DictStr[156][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[156][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/5');" class="theme_button color2 inverse min_width_button">
@@ -98,11 +118,18 @@
                         <img src="~/Uploads/Hamayesh-News.jpg" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:25px;">
+                                @ViewBag.DictStr[157][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[157][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/4');" class="theme_button color2 inverse min_width_button">
@@ -124,11 +151,18 @@
                         <img src="~/Uploads/17 esas[4383].png" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:28px;">
+                                @ViewBag.DictStr[158][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else 
+                        {
+                            <h4>
+                                @ViewBag.DictStr[158][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/3');" class="theme_button color2 inverse min_width_button">
@@ -146,11 +180,18 @@
                         <img src="~/Uploads/DSC01896-1.jpg" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4>
+                                @ViewBag.DictStr[159][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[159][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/2');" class="theme_button color2 inverse min_width_button">
@@ -168,11 +209,18 @@
                         <img src="~/Uploads/DSC01775.jpg" />
                     </div>
                     <div class="item-content">
-                        <h4>
-                            @*<a href="pipeline-single.html">*@
-                                @ViewBag.DictStr[147][@ViewBag.LanguageID]
-                            @*</a>*@
-                        </h4>
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4>
+                                @ViewBag.DictStr[160][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4>
+                                @ViewBag.DictStr[160][@ViewBag.LanguageID]
+                            </h4>
+                        }
                         <p></p>
                         <p class="topmargin_20">
                             <a href="javascript:navigateMe('/EN/Home/NewsDetail/1');" class="theme_button color2 inverse min_width_button">
