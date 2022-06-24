@@ -23,7 +23,57 @@
 </section>
 <section class="ls section_padding_top_50 section_padding_bottom_130">
     <div class="container">
+        
         <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
+
+            <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
+                <article class="vertical-item content-padding with_border rounded text-center">
+                    <div class="item-media top_rounded overflow_hidden">
+                        <img src="~/Uploads/PARLA Logo.png" class="with_border" />
+                    </div>
+                    <div class="item-content">
+                        <h4 style="padding-top:20px;padding-bottom:20px;">
+                            @ViewBag.DictStr[167][@ViewBag.LanguageID]
+                        </h4>
+                        <p></p>
+                        <p class="topmargin_20">
+                            <a href="javascript:navigateMe('/EN/Home/NewsDetail/9');" class="theme_button color2 inverse min_width_button">
+                                @ViewBag.DictStr[148][@ViewBag.LanguageID]
+                            </a>
+                            <br />2022/06/24
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
+                <article class="vertical-item content-padding with_border rounded text-center">
+                    <div class="item-media top_rounded overflow_hidden">
+                        <img src="~/Uploads/PARLA Logo.png" class="with_border" />
+                    </div>
+                    <div class="item-content">
+                        @if(ViewBag.Language == "az")
+                        {
+                            <h4 style="font-size:16px;">
+                                @ViewBag.DictStr[168][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4 style="font-size:18px;">
+                                @ViewBag.DictStr[168][@ViewBag.LanguageID]
+                            </h4>
+                        }
+                        <p></p>
+                        <p class="topmargin_20">
+                            <a href="javascript:navigateMe('/EN/Home/NewsDetail/8');" class="theme_button color2 inverse min_width_button">
+                                @ViewBag.DictStr[148][@ViewBag.LanguageID]
+                            </a>
+                            <br />2022/06/17,18
+                        </p>
+                    </div>
+                </article>
+            </div>
 
             <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded text-center">
@@ -33,13 +83,13 @@
                     <div class="item-content">
                         @if(ViewBag.Language == "az")
                         {
-                            <h4 style="font-size:25px;">
+                            <h4 style="font-size:20px;">
                                 @ViewBag.DictStr[135][@ViewBag.LanguageID]
                             </h4>
                         }
                         else
                         {
-                            <h4>
+                            <h4 style="font-size:21px;">
                                 @ViewBag.DictStr[135][@ViewBag.LanguageID]
                             </h4>
                         }
@@ -68,7 +118,7 @@
                         }
                         else
                         {
-                            <h4>
+                            <h4 style="font-size:20px;">
                                 @ViewBag.DictStr[155][@ViewBag.LanguageID]
                             </h4>
                         }
@@ -82,6 +132,10 @@
                     </div>
                 </article>
             </div>
+
+        </div>
+
+        <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
 
             <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded text-center">
@@ -141,10 +195,6 @@
                 </article>
             </div>
 
-        </div>
-
-        <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
-
             <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded text-center">
                     <div class="item-media top_rounded overflow_hidden">
@@ -203,6 +253,10 @@
                 </article>
             </div>
 
+        </div>
+
+        <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
+
             <div class="isotope-item col-lg-3 col-md-4 col-sm-6">
                 <article class="vertical-item content-padding with_border rounded text-center">
                     <div class="item-media top_rounded overflow_hidden">
@@ -231,6 +285,7 @@
                     </div>
                 </article>
             </div>
+
         </div>
     </div>
 </section>
