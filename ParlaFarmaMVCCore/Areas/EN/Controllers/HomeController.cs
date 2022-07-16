@@ -245,17 +245,17 @@ new string[]{ "172", "3rd EndoUpdate event went perfectly by active participatio
 
 
 
-            DictStr = DictStr1;
-            //int counter = 0;
-            //foreach (Dictionary item in _context.Tbl_Dictionary)
-            //{
-            //    string[] itemstr = new string[4];
-            //    itemstr[0] = (counter++).ToString();
-            //    itemstr[1] = item.EN;
-            //    itemstr[2] = item.AZ;
-            //    itemstr[3] = item.RU;
-            //    DictStr.Add(itemstr);
-            //}
+            //DictStr = DictStr1;
+            int counter = 0;
+            foreach (Dictionary item in _context.Tbl_Dictionary)
+            {
+                string[] itemstr = new string[4];
+                itemstr[0] = (counter++).ToString();
+                itemstr[1] = item.EN;
+                itemstr[2] = item.AZ;
+                itemstr[3] = item.RU;
+                DictStr.Add(itemstr);
+            }
         }
         private string GetCountryCode(string ipAddress)
         {
