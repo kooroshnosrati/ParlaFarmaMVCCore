@@ -190,7 +190,10 @@ new string[]{ "166", "By Category", "Kateqoriyaya görə", "" },
 new string[]{ "167", "UroClub", "UroClub", "" },
 new string[]{ "168", "Symposium of Azerbaijani Andrologists and Urologists", " 	Azərbaycan Androloqlarının və Uroloqlarının birqə simpozimu", "" },
 new string[]{ "169", "Images from the event “XIX SYMPOSIUM OF AZERBAIJAN UROLOGISTS AND ANDROLOGISTS“ took place in Guba on June 17-18, 2022 with the participation of “PARLA Pharmaceuticals“.", "“PARLA Pharmaceuticals”  şirkətinin iştirakı ilə 2022-ci il 17-18 iyun tarixlərində Qubada keçirilən “AZƏRBAYCAN UROLOQ VƏ ANDROLOQLARIN XIX SİMPOZİMU” adlı tədbirindən görüntülər.", "" },
-new string[]{ "170", "On June 24th 2022, the first Uroclub event was held with the participation of young Urologists of Azerbaijan with support of Parla Pharmaceuticals. During the event, Urologists discussed news of urology and andrology from UROtech22 and National Andrology Congress of Turkish andrology society, exchanged views and held a detailed question and answer session. <br/> UroClub is an Parla Pharmaceuticals initiative which is interactive platform for young Urologists to exchange their knowledge and ideas. Many innovative and interactive <br/> meetings are planned to be held within the platform in the future.", "24 iyun 2022-ci il tarixində Parla Pharmaceuticals şirkətinin dəstəyi və ölkəmizin gənc uroloqların iştirakı ilə UroClub-un ilk tədbiri keçirildi. Tədbirdə uroloqlar “UROtech22” və Türk Androloji Cəmiyyətinin Milli Androloji Konqreslərindən urologiya və andrologiyadaki yenilikləri müzakirə edib, geniş fikir mübadiləsi aparıb və sual-cavab sessiyası keçiriblər. <br/> UroClub Parla Pharmaceuticals şirkətinin təşəbbüsi ilə yaradılan gənc uroloqlar üçün interaktiv bilik və fikir mübadiləsi platformasıdır. <br/> Gələcəkdə platforma çərçivəsində çox sayda innovativ və interaktiv tədbirlərin keçirilməsi planlaşdırılır.", "" }
+new string[]{ "170", "On June 24th 2022, the first Uroclub event was held with the participation of young Urologists of Azerbaijan with support of Parla Pharmaceuticals. During the event, Urologists discussed news of urology and andrology from UROtech22 and National Andrology Congress of Turkish andrology society, exchanged views and held a detailed question and answer session. <br/> UroClub is an Parla Pharmaceuticals initiative which is interactive platform for young Urologists to exchange their knowledge and ideas. Many innovative and interactive <br/> meetings are planned to be held within the platform in the future.", "24 iyun 2022-ci il tarixində Parla Pharmaceuticals şirkətinin dəstəyi və ölkəmizin gənc uroloqların iştirakı ilə UroClub-un ilk tədbiri keçirildi. Tədbirdə uroloqlar “UROtech22” və Türk Androloji Cəmiyyətinin Milli Androloji Konqreslərindən urologiya və andrologiyadaki yenilikləri müzakirə edib, geniş fikir mübadiləsi aparıb və sual-cavab sessiyası keçiriblər. <br/> UroClub Parla Pharmaceuticals şirkətinin təşəbbüsi ilə yaradılan gənc uroloqlar üçün interaktiv bilik və fikir mübadiləsi platformasıdır. <br/> Gələcəkdə platforma çərçivəsində çox sayda innovativ və interaktiv tədbirlərin keçirilməsi planlaşdırılır.", "" },
+new string[]{ "171", "3rd Endoupdate event", "3-cü “EndoUpdate” tədbiri", "" },
+new string[]{ "172", "3rd EndoUpdate event went perfectly by active participation of young and talented endocrinologists and other specialties doctors, they shared their knowledge about “Disorders of water and salt metabolism” in a very positive and specific atmosphere. <br/>The event was organized with the support of “Parla Pharmaceuticals” under Corporate Social Responsibility program.", "30 iyun tarixində gənc endokrinoloq və başqa ixtisas həkimlərin iştirakı ilə 3-cü “EndoUpdate” tədbiri keçirilib. Tədbir zamanı “Su-duz mübadiləsinin pozğunluqları” mövzusunda çıxışlar oldu, birgə fikir mübadiləsi aparılıb və ətraflı sual-cavab sessiyası baş tutub. <br/>Tədbir “Parla Pharmaceuticals” şirkətinin dəstəyi ilə Korporativ Sosial Məsuliyyət proqramı çərçivəsində keçirilib.", "" }
+
 };
 
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -215,9 +218,6 @@ new string[]{ "170", "On June 24th 2022, the first Uroclub event was held with t
             //streamWriter.WriteLine(myStr);
             //streamWriter.Close();
             //int kk = 0;
-
-
-
 
             if (_context.Tbl_Dictionary.Count() == 0)
             {
@@ -245,17 +245,17 @@ new string[]{ "170", "On June 24th 2022, the first Uroclub event was held with t
 
 
 
-            //DictStr = DictStr1;
-            int counter = 0;
-            foreach (Dictionary item in _context.Tbl_Dictionary)
-            {
-                string[] itemstr = new string[4];
-                itemstr[0] = (counter++).ToString();
-                itemstr[1] = item.EN;
-                itemstr[2] = item.AZ;
-                itemstr[3] = item.RU;
-                DictStr.Add(itemstr);
-            }
+            DictStr = DictStr1;
+            //int counter = 0;
+            //foreach (Dictionary item in _context.Tbl_Dictionary)
+            //{
+            //    string[] itemstr = new string[4];
+            //    itemstr[0] = (counter++).ToString();
+            //    itemstr[1] = item.EN;
+            //    itemstr[2] = item.AZ;
+            //    itemstr[3] = item.RU;
+            //    DictStr.Add(itemstr);
+            //}
         }
         private string GetCountryCode(string ipAddress)
         {
