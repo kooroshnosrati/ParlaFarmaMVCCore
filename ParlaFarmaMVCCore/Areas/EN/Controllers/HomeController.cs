@@ -30,7 +30,7 @@ new string[]{ "6", "Mission", "Missiyamız", "" },
 new string[]{ "7", "Values", "Dəyərlərimiz", "" },
 new string[]{ "8", "Team", "Komandamız", "" },
 new string[]{ "9", "Parla Culture", "Korporativ mədəniyyət", "" },
-new string[]{ "10", "Corporate Social Responsibility", "Korporative Sosial Məsuliyyət", "" },
+new string[]{ "10", "CSR", "KSM", "" },
 new string[]{ "11", "Products", "Məhsullar", "" },
 new string[]{ "12", "By A-Z", "A-Z ", "" },
 new string[]{ "13", "Product Strategy", "Məhsul strategiyası", "" },
@@ -245,17 +245,17 @@ new string[]{ "172", "3rd EndoUpdate event went perfectly by active participatio
 
 
 
-            //DictStr = DictStr1;
-            int counter = 0;
-            foreach (Dictionary item in _context.Tbl_Dictionary)
-            {
-                string[] itemstr = new string[4];
-                itemstr[0] = (counter++).ToString();
-                itemstr[1] = item.EN;
-                itemstr[2] = item.AZ;
-                itemstr[3] = item.RU;
-                DictStr.Add(itemstr);
-            }
+            DictStr = DictStr1;
+            //int counter = 0;
+            //foreach (Dictionary item in _context.Tbl_Dictionary)
+            //{
+            //    string[] itemstr = new string[4];
+            //    itemstr[0] = (counter++).ToString();
+            //    itemstr[1] = item.EN;
+            //    itemstr[2] = item.AZ;
+            //    itemstr[3] = item.RU;
+            //    DictStr.Add(itemstr);
+            //}
         }
         private string GetCountryCode(string ipAddress)
         {
