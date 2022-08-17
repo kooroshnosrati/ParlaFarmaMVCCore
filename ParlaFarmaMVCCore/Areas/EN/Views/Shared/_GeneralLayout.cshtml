@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
 
@@ -55,16 +55,16 @@
         </button>
         @*<div class="widget widget_search">
             <form method="get" class="searchform search-form form-inline" action="http://webdesign-finder.com/html/pharma/">
-                <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button">Search</button>
+            <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button">Search</button>
             </form>
-        </div>*@
+            </div>*@
     </div>
     <!-- Unyson messages modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
         <div class="fw-messages-wrap ls with_padding">
             <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
             @*<ul class="list-unstyled">
-                    <li>Are you a healthcare professional?</li>
+                <li>Are you a healthcare professional?</li>
                 </ul>
                 <button id="ModalYes" value="Yes"></button>
                 <button id="ModalNo" value="No"></button>*@
@@ -89,19 +89,19 @@
                         <div class="col-sm-4 text-center text-sm-right greylinks">
                             @*<span class="rightpadding_10">
                                 @ViewBag.DictStr[1][@ViewBag.LanguageID]
-                            </span>*@
+                                </span>*@
                             @*<a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
                                 <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
                                 <a class="social-icon color-icon soc-google" href="#" title="Twitter"></a>
-                            <a class="social-icon color-icon soc-linkedin" href="https://www.linkedin.com/company/parla-pharmaceuticals/" title="linkedin"></a>
-                            <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>*@
+                                <a class="social-icon color-icon soc-linkedin" href="https://www.linkedin.com/company/parla-pharmaceuticals/" title="linkedin"></a>
+                                <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>*@
 
                             &nbsp;&nbsp;&nbsp;
                             @if (@ViewBag.Language != "en")
                             {
-                            <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">
-                                EN &nbsp;<div class="flag flag-gb"></div>
-                            </a>
+                                <a href="javascript:ChangeLanguage('@ViewBag.Language', 'en');" alt="English" title="English" target="_self">
+                                    EN &nbsp;<div class="flag flag-gb"></div>
+                                </a>
                             }
                             @if (@ViewBag.Language != "az")
                             {
@@ -258,12 +258,13 @@
                                                         @ViewBag.DictStr[166][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
-@*                                                <li>
+                                                @*                                                <li>
                                                     <a href="javascript:navigateMe('/EN/Home/ProductsDetail');">
-                                                        @ViewBag.DictStr[14][@ViewBag.LanguageID]
+                                                    @ViewBag.DictStr[14][@ViewBag.LanguageID]
                                                     </a>
-                                                </li>
-*@                                                <li>
+                                                    </li>
+                                                *@
+                                                <li>
                                                     <a href="javascript:navigateMe('/EN/Home/ProductsStrategy');">
                                                         @ViewBag.DictStr[13][@ViewBag.LanguageID]
                                                     </a>
@@ -285,29 +286,30 @@
                                                         @ViewBag.DictStr[17][@ViewBag.LanguageID]
                                                     </a>
                                                 </li>
-@*                                                <li>
+                                                @*                                                <li>
                                                     <a href="#">
-                                                        @ViewBag.DictStr[18][@ViewBag.LanguageID]
+                                                    @ViewBag.DictStr[18][@ViewBag.LanguageID]
                                                     </a>
-                                                </li>
-*@                                            </ul>
+                                                    </li>
+                                                *@
+                                            </ul>
                                         </li>
                                         @*<li>
-                                                <a href="javascript:navigateMe('/EN/Home/Partners');">
-                                                    @ViewBag.DictStr[19][@ViewBag.LanguageID]
-                                                </a>
-                                                <ul>
-                                                    <li>
-                                                        <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
-                                                            @ViewBag.DictStr[20][@ViewBag.LanguageID]
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
-                                                            @ViewBag.DictStr[21][@ViewBag.LanguageID]
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                            <a href="javascript:navigateMe('/EN/Home/Partners');">
+                                            @ViewBag.DictStr[19][@ViewBag.LanguageID]
+                                            </a>
+                                            <ul>
+                                            <li>
+                                            <a id="ADistributors" href="javascript:navigateMe('/EN/Home/Partners', '#Distributors');">
+                                            @ViewBag.DictStr[20][@ViewBag.LanguageID]
+                                            </a>
+                                            </li>
+                                            <li>
+                                            <a id="AExportDevelopment" href="javascript:navigateMe('/EN/Home/Partners', '#ExportDevelopment');">
+                                            @ViewBag.DictStr[21][@ViewBag.LanguageID]
+                                            </a>
+                                            </li>
+                                            </ul>
                                             </li>*@
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/Career');">
@@ -332,7 +334,7 @@
                                             </ul>
                                         </li>
                                         @*<li>
-                                                <a href="#">R & D</a>
+                                            <a href="#">R & D</a>
                                             </li>*@
                                         <li>
                                             <a href="javascript:navigateMe('/EN/Home/ContactUs');">
@@ -428,7 +430,7 @@
                                 </p>
                                 <ul class="list1 no-bullets">
                                     <li> <i class="rt-icon2-device-phone"></i> +99412 310 52 19 </li>
-                                    <li> <i class="rt-icon2-globe-outline"></i> <a href="~/EN/Home/Index" >www.parlapharma.com</a> </li>
+                                    <li> <i class="rt-icon2-globe-outline"></i> <a href="~/EN/Home/Index">www.parlapharma.com</a> </li>
                                     <li> <i class="rt-icon2-mail2"></i> <a href="mailto:info@parlapharma.com">info@parlapharma.com</a> </li>
                                 </ul>
                             </div>
@@ -446,33 +448,57 @@
                                         @*<a href="#" class="social-icon color-icon border-icon -icon soc-facebook"></a>*@
                                         <img src="~/lib/pharma/images/Icons/Separate Icons-22.png" style="width:40px;" />
                                     </div>
-                                    <div class="media-body media-middle"> Facebook </div>
-                                </div>
-                                @*<div class="media small-teaser">
-            <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-twitter"></a> </div>
-            <div class="media-body media-middle"> Twitter </div>
-        </div>*@
-                                <div class="media small-teaser">
-                                    <div class="media-left media-middle">
-                                        <a href="https://www.linkedin.com/company/parla-pharmaceuticals/" target="_blank" class="">
-                                            <img src="~/lib/pharma/images/Icons/Linkedin-25.png" style="width:40px;" />
+                                    <div class="media-body media-middle">
+                                        <a href="https://www.facebook.com/parlapharma/" target="_blank">
+                                            Facebook
                                         </a>
                                     </div>
-                                    <div class="media-body media-middle"> LinkedIn </div>
                                 </div>
+                                @*<div class="media small-teaser">
+                                    <div class="media-left media-middle"> <a href="#" class="social-icon color-icon border-icon -icon soc-twitter"></a> </div>
+                                    <div class="media-body media-middle"> Twitter </div>
+                                    </div>*@
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle">
+                                        <img src="~/lib/pharma/images/Icons/Linkedin-25.png" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a href="https://www.linkedin.com/company/parla-pharmaceuticals/" target="_blank" class="">LinkedIn</a>
+                                    </div>
+                                </div>
+
                                 <div class="media small-teaser">
                                     <div class="media-left media-middle">
                                         @*<a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a>*@
                                         <img src="~/lib/pharma/images/Icons/Separate Icons-23.png" style="width:40px;" />
                                     </div>
-                                    <div class="media-body media-middle"> Whatsapp </div>
+                                    <div class="media-body media-middle">
+                                        <a href="https://wa.me/+994512320417" target="_blank">
+                                            Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media small-teaser">
+                                    <div class="media-left media-middle">
+                                        @*<a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a>*@
+                                        <img src="~/lib/pharma/images/Icons/youtube-26.png" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a href="https://www.youtube.com/channel/UCeGsUOlyz-DgZFruHcz39gQ" target="_blank">
+                                            Youtube
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="media small-teaser">
                                     <div class="media-left media-middle">
                                         @*<a href="#" class="social-icon color-icon border-icon -icon soc-pinterest"></a>*@
                                         <img src="~/lib/pharma/images/Icons/Separate Icons-21.png" style="width:40px;" />
                                     </div>
-                                    <div class="media-body media-middle"> Instagram </div>
+                                    <div class="media-body media-middle">
+                                        <a href="https://www.instagram.com/parlapharma/" target="_blank">
+                                            Instagram
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
