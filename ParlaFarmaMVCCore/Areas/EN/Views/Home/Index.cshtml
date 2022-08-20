@@ -203,15 +203,59 @@
 <section id="testimonials" class="parallax section_subscribe ds section_padding_top_50 section_padding_bottom_50 HomePageMissionBackground">
     <div class="container">
         <div class="row">
+            <h1 class="section_header PartTitles">
+                @ViewBag.DictStr[6][@ViewBag.LanguageID]
+            </h1>
+            <article class="side-item side-md content-padding with_border rounded">
+                <div class="row" style="">
+                    <div class="col-md-4">
+                        <div class="item-media top_rounded overflow_hidden toppadding_20 bottompadding_20">
+                            <img src="~/lib/pharma/images/OurValues/mission icon.png" style="width:75%;" class="leftpadding_40" />
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="item-content">
+                            <br /><br /><br />
+                            <ul style="font-size:25px;">
+                                <li>
+                                    @ViewBag.DictStr[39][@ViewBag.LanguageID]
+                                </li>
+                            </ul>
+                            <ul style="font-size:25px;">
+                                <li>
+                                    @ViewBag.DictStr[40][@ViewBag.LanguageID]
+                                </li>
+                            </ul>
+                            <ul style="font-size:25px;">
+                                <li>
+                                    @ViewBag.DictStr[41][@ViewBag.LanguageID]
+                                </li>
+                            </ul>
+                            <ul style="font-size:25px;">
+                                <li>
+                                    @ViewBag.DictStr[42][@ViewBag.LanguageID]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!--
+<div data-id="OurMission"></div>
+<section id="testimonials" class="parallax section_subscribe ds section_padding_top_50 section_padding_bottom_50 HomePageMissionBackground">
+    <div class="container">
+        <div class="row">
             <div class="col-md-12">
                 <h2 class="section_header PartTitles">
                     @ViewBag.DictStr[6][@ViewBag.LanguageID]
-                    @*<img src="~/lib/pharma/images/Icons/All Icones-03.png" style="width:40%;" /><br />*@
                 </h2>
                 <div id="gallery-owl-carousel" class="owl-carousel dots-center with_border_items" data-items="4" data-responsive-lg="4" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-dots="true">
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            @*<img src="~/lib/pharma/images/Mission/1.png" alt="">*@
                             <img src="~/lib/pharma/images/Mission/All Icones-15.png" />
                             <div class="media-links">
                                 <div class="links-wrap">
@@ -226,7 +270,6 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            @*<img src="~/lib/pharma/images/Mission/2.png" alt="">*@
                             <img src="~/lib/pharma/images/Mission/All Icones-16.png" />
                             <div class="media-links">
                                 <div class="links-wrap">
@@ -242,7 +285,6 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            @*<img src="~/lib/pharma/images/Mission/3.png" alt="">*@
                             <img src="~/lib/pharma/images/Mission/All Icones-13.png" />
                             <div class="media-links">
                                 <div class="links-wrap">
@@ -257,7 +299,6 @@
                     </article>
                     <article class="vertical-item content-padding big-padding post format-standard with_border rounded text-center">
                         <div class="item-media">
-                            @*<img src="~/lib/pharma/images/Mission/4.png" alt="">*@
                             <img src="~/lib/pharma/images/Mission/All Icones-14.png" />
                             <div class="media-links">
                                 <div class="links-wrap">
@@ -274,7 +315,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <div data-id="OurValues"></div>
 <partial name="_OurValuesPartial" />
