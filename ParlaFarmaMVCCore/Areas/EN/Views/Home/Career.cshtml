@@ -258,10 +258,101 @@
             </div>
             @{
                 DateTime now = DateTime.Now;
-                DateTime expdate = new DateTime(2021, 01, 31);
+                DateTime expdate = new DateTime(2022, 10, 20);
                 bool chk = now < expdate;
+                
             }
             @if (ViewBag.LanguageID == 1 && chk)
+            {
+                <div class="col-sm-12" id="MedicalrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Medical sales representative, Baku
+                    </h3>
+                    <i class="fa fa-map-marker"> Baku, Azerbaijan</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2021-09-13 - 2021-10-20</i>
+                </div>
+                <div class="col-sm-12" id="MedicalrepresentativeBakuDetail" style="display:none;">
+
+                    <p>Join our professional and talented team! </p>
+                    <p>Below vacancy is currently available at Parla Pharmaceuticals</p>
+                    <p>Position: Medical representative</p>
+                    <p></p>
+                    <p><b>Requirements:</b></p>
+                    <ul>
+                        <li>At least 3 years’ experience in the sales system of pharmaceutical business (Endocrinology and cardiology background preferred);</li>
+                        <li>Driver's license - Category B.</li>
+                        <li>Communicative, responsible and able to work in a team;</li>
+                        <li>Knowledge of Microsoft Office programs (World, Excel, Power Point);</li>
+                        <li>Azerbaijani - fluent, English and Russian are desirable;</li>
+                    </ul>
+                    <p></p>
+                    <p>Candidates with higher medical or pharmaceutical education will be preferred.</p>
+                    <p></p>
+                    <p><b>We offer:</b></p>
+                    <ul>
+                        <li>Training and development opportunities within the company;</li>
+                        <li>Corporate culture and professional work environment;</li>
+                        <li>Company car provision;</li>
+                        <li>Private Health Insurance after 3 months’ probation period;</li>
+                        <li>Covering mobile expenses;</li>
+                    </ul>
+                    <p>Interested candidates may send their resumes till October 20, 2022  to <a href="mailto:hr@parlapharma.com">hr@parlapharma.com</a>  indicating related job title in the subject line.</p>
+                </div>
+                <hr />
+            }
+            else if (ViewBag.LanguageID == 2 && chk)
+            {
+                <div class="col-sm-12" id="MedicalrepresentativeBaku">
+                    <h3 class="module-header Vacancieslist">
+                        Tibbi satış nümayəndəsi, Bakı 
+                    </h3>
+                    <i class="fa fa-map-marker"> Bakı, Azərbaycan</i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"> 2022-09-13 - 2022-10-20</i>
+                </div>
+                <div class="col-sm-12" id="MedicalrepresentativeBakuDetail" style="display:none;">
+
+                    <p>İstedadlı insanlarla işləmək, professional mühitdə inkişaf etmək və potensialınızı həyata keçirmək üçün fürsət veririk. Həmçinin ümid edirik ki, bizimlə birlikdə pasiyentlərin həyatını yaxşılaşdırmaq üçün mümkün olan hər şeyi edəcəksiniz!</p>
+                    <p>"Parla Pharmaceuticals" şirkəti, yüksək texnologiyalı dərmanların tam istehsalına yönəlmiş, Azərbaycanın ilk elmi əsaslı əczaçılıq şirkəti olaraq 2019-cu ilin sentyabr ayında təsis edilmişdir. İlkin məqsəd əlverişli qiymətə yüksək keyfiyyətli əczaçılıq məhsulları istehsal etməkdir və missiyamız əczaçılıq bazarında və cəmiyyətdə müştəri yönümlü yanaşmanı və liderliyi inkişaf etdirməkdir. Qabaqcıl biotexnoloji və nanotexnoloji məhsulların ixracı əsas istiqamətlərdən biridir. Parla bütün dünyada Azərbaycanın ən yaxşı Əczaçılıq brendi olmaqda iddialıdır.</p>
+                    <p></p>
+                    <p><b>Vəzifə:</b></p>
+                    <ul>
+                        <li>Şirkətin dərman məhsullarını təqdim etmək </li>
+                        <li>Bazar təhlili aparmaq</li>
+                        <li>Satış dinamikasını izləmək</li>
+                        <li>Fəaliyyət planı tərtib  edərək həyata keçirmək və elektron sistemdə qeydiyyat aparmaq</li>
+                        <li>Maarifləndirici tədbirlər, sosial layihələrin həyata keçirilməsində iştirak etmək</li>
+                    </ul>
+
+                    <p></p>
+                    <p><b>Namizədə tələblər:</b></p>
+                    <ul>
+                        <li>İş təcrübəsi: əczaçılıq biznesində satış sistemində ən azı 3 il</li>
+                        <li>Ali tibbi və ya əczaçılıq təhsili olanlara üstünlük verilir;</li>
+                        <li>Microsoft Office proqramları biliyi – yaxşı (Word, Excel, Power Point);</li>
+                        <li>Azərbaycan dili əla, Rus dili arzuolunandır;</li>
+                        <li>Ünsiyyətcil, məsuliyyətli və komandada işləmək bacarığı;</li>
+                        <li>Analitik düşünmə qabiliyyəti;</li>
+                        <li>Sürücülük vəsiqəsi - B kateqoriyası.</li>
+                    </ul>
+
+                    <p></p>
+                    <p><b>İş şəraiti:</b></p>
+                    <ul>
+                        <li>•	I-V günlər, 8 saatlıq iş rejimi</li>
+                        <li>•	Şirkət daxil təlim və inkişaf imkanları</li>
+                        <li>•	Şirkət avtomobili</li>
+                        <li>•	Mobil xərclərin qarşılanması</li>
+                        <li>•	Sınaq müddətindən sonra könüllü tibbi sığorta</li>
+                    </ul>
+
+
+                    <p></p>
+                    <p>CV-lərinizi məktubun mövzu hissəsində <b>“Tibbi satış nümayəndəsi”</b> qeyd etməklə  <b>20 oktyabr 2022-ci il</b> tarixinədək <a href="mailto:hr@parlapharma.com">hr@parlapharma.com</a> ünvanına göndərməyinizi xahiş edirik.</p>
+                </div>
+                <hr />
+            }
+
+@*            @if (ViewBag.LanguageID == 1 && chk)
             {
                 <div class="col-sm-12" id="MedicalrepresentativeBaku">
                     <h3 class="module-header Vacancieslist">
@@ -360,7 +451,7 @@
                     <p>CV-lərinizi mövzu hissəsində “Parla Gənclər Akademiyası” qeyd edərək 31 yanvar 2021-ci il tarixinədək  <a href="mailto:hr@parlapharma.com">hr@parlapharma.com</a>  e-mail ünvanına göndərin.</p>
                 </div>
                 <hr />
-            }
+            }*@
 
             @*@if (ViewBag.LanguageID == 1 && chk)
             {
