@@ -13,6 +13,7 @@ using ParlaFarmaMVCCore.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
+
 namespace ParlaFarmaMVCCore.Areas.EN.Controllers
 {
     [Area("EN")]
